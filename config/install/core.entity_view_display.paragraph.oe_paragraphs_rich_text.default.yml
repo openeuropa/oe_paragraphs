@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_paragraphs_rich_text.field_oe_paragraphs_text_long
+    - paragraphs.paragraphs_type.oe_paragraphs_rich_text
+  module:
+    - text
+id: paragraph.oe_paragraphs_rich_text.default
+targetEntityType: paragraph
+bundle: oe_paragraphs_rich_text
+mode: default
+content:
+  field_oe_paragraphs_text_long:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

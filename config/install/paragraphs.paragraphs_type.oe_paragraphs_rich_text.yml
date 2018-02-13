@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_paragraphs_rich_text
+label: 'Rich text'
+icon_uuid: null
+description: 'A simple paragraph containing rich text.'
+behavior_plugins: {  }
