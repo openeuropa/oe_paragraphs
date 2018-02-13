@@ -3,3 +3,6 @@ type: module
 description: Provides Paragraph types based on ECL components.
 core: 8.x
 package: OpenEuropa
+
+dependencies:
+  - paragraphs:paragraphs
