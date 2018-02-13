@@ -1,6 +1,6 @@
 {
     "name": "openeuropa/oe_paragraphs",
-    "description": "Drupal module providing Paragraph types based on ECL components.",
+    "description": "Drupal module providing a collection of Paragraph types based on ECL components.",
     "type": "drupal-project",
     "license": "EUPL-1.1",
     "minimum-stability": "dev",
