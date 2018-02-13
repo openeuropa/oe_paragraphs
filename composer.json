@@ -17,13 +17,7 @@
         "drupal/core": "^8.5"
     },
     "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "post-install-cmd": [
-            "@drupal-scaffold"
-        ],
-        "post-update-cmd": [
-            "@drupal-scaffold"
-        ]
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
     },
     "extra": {
         "installer-paths": {
