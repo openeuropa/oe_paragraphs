@@ -6,3 +6,11 @@ core: 8.x
 
 dependencies:
   - oe_paragraphs
+
+config_devel:
+  - core.entity_form_display.node.oe_paragraphs_demo_landing_page.default
+  - core.entity_view_display.node.oe_paragraphs_demo_landing_page.default
+  - core.entity_view_display.node.oe_paragraphs_demo_landing_page.teaser
+  - field.field.node.oe_paragraphs_demo_landing_page.field_oe_paragraphs_demo_body
+  - field.storage.node.field_oe_paragraphs_demo_body
+  - node.type.oe_paragraphs_demo_landing_page
