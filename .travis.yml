@@ -1,33 +1,35 @@
-sudo: required
+language: php
 
-git:
-  depth: 1
+php:
+  - 7.1
 
-services:
-  - docker
-  - docker-compose
+sudo: false
+
+mysql:
+  database: oe_paragraphs
+  username: root
+  encoding: utf8
 
 env:
-  global:
-    - DOCKER_COMPOSE_VERSION=1.17.1
-  matrix:
-    - DRUPAL_VERSION=8.5.x-dev
-    - DRUPAL_VERSION=8.6.x-dev
-
-before_install:
-  - docker-compose up -d
-  - docker ps
+  - TEST_SUITE=^8.5
+  - TEST_SUITE=^8.6
+  - TEST_SUITE=grumphp
 
 install:
-  - docker-compose exec -u web web composer require drupal/core:$DRUPAL_VERSION
+  - test $TEST_SUITE == "grumphp" && composer install || composer require drupal/core:$TEST_SUITE
 
 before_script:
-  - docker-compose exec -u web web ./vendor/bin/run drupal:site-setup
-  - docker-compose exec -u web web ./vendor/bin/run drupal:site-install
+  - DRUPAL_DIR=$(pwd)/build
+  - mysql -e 'create database oe_paragraphs'
+  - ./vendor/bin/run drupal:site-setup
+  - test $TEST_SUITE == "grumphp" || ./vendor/bin/run drupal:site-install
+  # Start a web server and wait until it comes online.
+  - test $TEST_SUITE == "grumphp" || nohup php -S localhost:8888 --docroot $DRUPAL_DIR > /dev/null 2>&1 &
+  - test $TEST_SUITE == "grumphp" || until curl -s localhost:8888; do true; done > /dev/null
 
 script:
-  - docker-compose exec -u web web ./vendor/bin/grumphp run
-  - docker-compose exec -u web web ./vendor/bin/behat
+  - test $TEST_SUITE != "grumphp" || ./vendor/bin/grumphp run
+  - test $TEST_SUITE == "grumphp" || ./vendor/bin/behat
 
 notifications:
   email: false
