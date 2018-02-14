@@ -67,3 +67,9 @@ $ docker-compose exec -u web web ./vendor/bin/run drupal:site-install
 
 Your test site will be available at
 [http://localhost:8080/build](http://localhost:8080/build).
+
+To run the Behat test:
+
+```
+$ docker-compose exec -u web web ./vendor/bin/behat
+```
