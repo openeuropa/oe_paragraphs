@@ -1,11 +1,11 @@
 <?php
 
-declare(strict_types = 1);
-
 /**
  * @file
  * Contains \OEParagraphsSubContext.
  */
+
+declare(strict_types = 1);
 
 use Behat\Gherkin\Node\TableNode;
 use Drupal\Core\Entity\ContentEntityInterface;
@@ -45,7 +45,7 @@ class OEParagraphsSubContext extends DrupalSubContextBase {
     $bundle_id = $this->getBundleIdByLabel($entity_type_id, $bundle_label);
 
     // Retrieve the machine names of the paragraph types.
-    $expected_paragraph_type_ids = array_map(function ($label) {
+    $exp_par_type_ids = array_map(function ($label) {
       return $this->getEntityIdByLabel('paragraphs_type', $label);
     }, $table->getColumn(0));
 
@@ -65,12 +65,12 @@ class OEParagraphsSubContext extends DrupalSubContextBase {
         continue;
       };
 
-      $actual_paragraph_type_ids = $this->getEntityReferenceTargetBundles($entity, $field_name);
+      $actual_par_type_ids = $this->getEntityReferenceTargetBundles($entity, $field_name);
 
       // Check if the target paragraph types match the expected ones.
-      sort($actual_paragraph_type_ids);
-      sort($expected_paragraph_type_ids);
-      PHPUnit_Framework_Assert::assertEquals($expected_paragraph_type_ids, $actual_paragraph_type_ids);
+      sort($actual_par_type_ids);
+      sort($exp_par_type_ids);
+      PHPUnit_Framework_Assert::assertEquals($exp_par_type_ids, $actual_par_type_ids);
 
       // We found the field and the paragraph types match the expectation, so
       // we're done.

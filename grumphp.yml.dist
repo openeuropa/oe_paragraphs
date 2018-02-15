@@ -1,3 +1,2 @@
 imports:
-  - { resource: vendor/ec-europa/oe-code-review/dist/library-conventions.yml }
-
+  - { resource: vendor/ec-europa/oe-code-review/dist/drupal-conventions.yml }

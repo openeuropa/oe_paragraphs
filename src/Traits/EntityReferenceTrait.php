@@ -50,8 +50,8 @@ trait EntityReferenceTrait {
     // targeted.
     if (empty($handler_settings['target_bundles'])) {
       /** @var \Drupal\Core\Entity\EntityTypeBundleInfoInterface $entity_type_bundle_info */
-      $entity_type_bundle_info = \Drupal::service('entity_type.bundle.info');
-      return array_keys($entity_type_bundle_info->getBundleInfo($field_definition->getFieldStorageDefinition()->getSetting('target_type')));
+      $entity_type_bundle = \Drupal::service('entity_type.bundle.info');
+      return array_keys($entity_type_bundle->getBundleInfo($field_definition->getFieldStorageDefinition()->getSetting('target_type')));
     }
     return array_keys($handler_settings['target_bundles']);
   }

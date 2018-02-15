@@ -47,8 +47,8 @@ trait EntityTypeTrait {
    */
   protected static function getBundleIdByLabel(string $entity_type_id, string $label): string {
     /** @var \Drupal\Core\Entity\EntityTypeBundleInfoInterface $entity_type_bundle_info */
-    $entity_type_bundle_info = \Drupal::service('entity_type.bundle.info');
-    foreach ($entity_type_bundle_info->getBundleInfo($entity_type_id) as $bundle_id => $info) {
+    $entity_type_bundle = \Drupal::service('entity_type.bundle.info');
+    foreach ($entity_type_bundle->getBundleInfo($entity_type_id) as $bundle_id => $info) {
       if (strcasecmp($info['label'], $label) === 0) {
         return $bundle_id;
       }

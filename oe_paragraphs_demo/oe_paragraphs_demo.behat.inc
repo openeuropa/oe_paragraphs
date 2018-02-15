@@ -1,11 +1,11 @@
 <?php
 
-declare(strict_types = 1);
-
 /**
  * @file
  * Contains \OEParagraphsDemoSubContext.
  */
+
+declare(strict_types = 1);
 
 use Drupal\DrupalExtension\Context\DrupalSubContextBase;
 
