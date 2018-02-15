@@ -37,4 +37,3 @@ config_devel:
 
   # Links
   - field.storage.paragraph.field_oe_paragraphs_links
-  
