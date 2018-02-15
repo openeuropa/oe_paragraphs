@@ -28,6 +28,7 @@ trait EntityReferenceTrait {
    */
   protected static function getEntityReferenceTargetEntityId(ContentEntityInterface $entity, string $field_name): string {
     $field_definition = $entity->getFieldDefinition($field_name);
+
     return $field_definition->getFieldStorageDefinition()->getSetting('target_type');
   }
 
@@ -53,6 +54,7 @@ trait EntityReferenceTrait {
       $entity_type_bundle = \Drupal::service('entity_type.bundle.info');
       return array_keys($entity_type_bundle->getBundleInfo($field_definition->getFieldStorageDefinition()->getSetting('target_type')));
     }
+
     return array_keys($handler_settings['target_bundles']);
   }
 

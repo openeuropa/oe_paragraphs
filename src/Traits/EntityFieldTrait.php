@@ -30,14 +30,15 @@ trait EntityFieldTrait {
     /** @var \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager */
     $entity_field_manager = \Drupal::service('entity_field.manager');
     $field_map = $entity_field_manager->getFieldMapByFieldType($field_type);
+    $fields = [];
 
     if (!empty($field_map[$entity_type_id])) {
-      return array_keys(array_filter($field_map[$entity_type_id], function (array $field_info) use ($bundle) {
+      $fields = array_keys(array_filter($field_map[$entity_type_id], function (array $field_info) use ($bundle) {
         return in_array($bundle, $field_info['bundles']);
       }));
     }
 
-    return [];
+    return $fields;
   }
 
 }

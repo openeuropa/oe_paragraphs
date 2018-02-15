@@ -36,13 +36,16 @@ trait EntityTrait {
   protected static function createNewEntity(string $entity_type_id, string $bundle): EntityInterface {
     /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager */
     $entity_type_manager = \Drupal::entityTypeManager();
+
     try {
       $entity_storage = $entity_type_manager->getStorage($entity_type_id);
     }
     catch (InvalidPluginDefinitionException $e) {
       throw new \RuntimeException("The entity type '$entity_type_id' is not defined.", 0, $e);
     }
+
     $bundle_key = $entity_storage->getEntityType()->getKey('bundle');
+
     return $entity_storage->create([$bundle_key => $bundle]);
   }
 
@@ -72,6 +75,7 @@ trait EntityTrait {
       $bundle_key = $this->getEntityTypeBundleKey($entity_type_id);
       $query->condition($bundle_key, $bundle, 'IN');
     }
+
     $result = $query->execute();
 
     return reset($result);
