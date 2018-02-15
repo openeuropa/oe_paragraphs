@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.oe_paragraphs_demo_landing_page.field_oe_paragraphs_demo_body
     - node.type.oe_paragraphs_demo_landing_page
   module:
     - user
@@ -14,4 +15,5 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_oe_paragraphs_demo_body: true
