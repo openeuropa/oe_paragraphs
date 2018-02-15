@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_paragraphs_links_block
+label: 'Links block'
+icon_uuid: null
+description: 'A set of links with an optional title.'
+behavior_plugins: {  }

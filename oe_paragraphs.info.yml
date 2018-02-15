@@ -6,6 +6,7 @@ package: OpenEuropa
 
 dependencies:
   - drupal:text
+  - drupal:link
   - paragraphs:paragraphs
 
 config_devel:
@@ -18,8 +19,21 @@ config_devel:
   - field.field.paragraph.oe_paragraphs_rich_text.field_oe_paragraphs_text_long
   - paragraphs.paragraphs_type.oe_paragraphs_rich_text
 
+  # Links block
+  - core.entity_form_display.paragraph.oe_paragraphs_links_block.default
+  - core.entity_view_display.paragraph.oe_paragraphs_links_block.default
+  - field.field.paragraph.oe_paragraphs_links_block.field_oe_paragraphs_text
+  - field.field.paragraph.oe_paragraphs_links_block.field_oe_paragraphs_links
+  - paragraphs.paragraphs_type.oe_paragraphs_links_block
+
   # Field types
   # -----------
 
   # Long text
   - field.storage.paragraph.field_oe_paragraphs_text_long
+
+  # Text field
+  - field.storage.paragraph.field_oe_paragraphs_text
+
+  # Links
+  - field.storage.paragraph.field_oe_paragraphs_links
