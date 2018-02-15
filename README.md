@@ -1,6 +1,8 @@
 OpenEuropa Paragraphs
 =====================
 
+[![Build Status](https://travis-ci.org/openeuropa/oe_paragraphs.svg?branch=master)](https://travis-ci.org/openeuropa/oe_paragraphs)
+
 This module integrates the
 [ECL](https://github.com/ec-europa/europa-component-library) - the component
 library of the European Commission - with the
