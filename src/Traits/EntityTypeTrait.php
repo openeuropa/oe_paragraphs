@@ -25,6 +25,7 @@ trait EntityTypeTrait {
   protected static function getEntityTypeIdByLabel(string $label): string {
     /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager */
     $entity_type_manager = \Drupal::entityTypeManager();
+
     foreach ($entity_type_manager->getDefinitions() as $definition) {
       if (strcasecmp((string) $definition->getLabel(), $label) === 0) {
         return $definition->id();
@@ -48,6 +49,7 @@ trait EntityTypeTrait {
   protected static function getBundleIdByLabel(string $entity_type_id, string $label): string {
     /** @var \Drupal\Core\Entity\EntityTypeBundleInfoInterface $entity_type_bundle_info */
     $entity_type_bundle = \Drupal::service('entity_type.bundle.info');
+
     foreach ($entity_type_bundle->getBundleInfo($entity_type_id) as $bundle_id => $info) {
       if (strcasecmp($info['label'], $label) === 0) {
         return $bundle_id;
@@ -70,9 +72,11 @@ trait EntityTypeTrait {
     /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager */
     $entity_type_manager = \Drupal::entityTypeManager();
     $label_key = $entity_type_manager->getDefinition($entity_type)->getKey('label');
+
     if (empty($label_key)) {
       throw new \RuntimeException("The '$entity_type' entity type does not have a label key.");
     }
+
     return $label_key;
   }
 
@@ -89,9 +93,11 @@ trait EntityTypeTrait {
     /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager */
     $entity_type_manager = \Drupal::entityTypeManager();
     $bundle_key = $entity_type_manager->getDefinition($entity_type)->getKey('label');
+
     if (empty($bundle_key)) {
       throw new \RuntimeException("The '$entity_type' entity type does not have a bundle key.");
     }
+
     return $bundle_key;
   }
 
