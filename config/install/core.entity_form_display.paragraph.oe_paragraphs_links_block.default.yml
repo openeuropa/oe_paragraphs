@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_paragraphs_links_block.field_oe_paragraphs_text
+    - paragraphs.paragraphs_type.oe_paragraphs_links_block
+id: paragraph.oe_paragraphs_links_block.default
+targetEntityType: paragraph
+bundle: oe_paragraphs_links_block
+mode: default
+content:
+  field_oe_paragraphs_text:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
