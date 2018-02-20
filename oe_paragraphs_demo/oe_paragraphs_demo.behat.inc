@@ -20,7 +20,7 @@ class OEParagraphsDemoSubContext extends DrupalSubContextBase {
    * @When I go to the add form of the demo landing page
    */
   public function visitDemoLandingPageAddForm(): void {
-    $this->visitPath('node/add/oe_paragraphs_demo_landing_page');
+    $this->visitPath('node/add/oe_demo_landing_page');
   }
 
 }

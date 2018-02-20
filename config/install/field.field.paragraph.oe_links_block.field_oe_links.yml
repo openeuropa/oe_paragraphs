@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oe_paragraphs_links
-    - paragraphs.paragraphs_type.oe_paragraphs_links_block
+    - field.storage.paragraph.field_oe_links
+    - paragraphs.paragraphs_type.oe_links_block
   module:
     - link
-id: paragraph.oe_paragraphs_links_block.field_oe_paragraphs_links
-field_name: field_oe_paragraphs_links
+id: paragraph.oe_links_block.field_oe_links
+field_name: field_oe_links
 entity_type: paragraph
-bundle: oe_paragraphs_links_block
+bundle: oe_links_block
 label: Links
 description: ''
 required: false

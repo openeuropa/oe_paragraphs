@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.oe_paragraphs_demo_landing_page.field_oe_paragraphs_demo_body
-    - node.type.oe_paragraphs_demo_landing_page
+    - field.field.node.oe_demo_landing_page.field_oe_demo_body
+    - node.type.oe_demo_landing_page
   module:
     - entity_reference_revisions
     - user
-id: node.oe_paragraphs_demo_landing_page.default
+id: node.oe_demo_landing_page.default
 targetEntityType: node
-bundle: oe_paragraphs_demo_landing_page
+bundle: oe_demo_landing_page
 mode: default
 content:
-  field_oe_paragraphs_demo_body:
+  field_oe_demo_body:
     type: entity_reference_revisions_entity_view
     weight: 101
     label: hidden

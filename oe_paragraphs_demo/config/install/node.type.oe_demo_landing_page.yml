@@ -9,7 +9,7 @@ third_party_settings:
       - main
     parent: 'main:'
 name: 'Demo landing page'
-type: oe_paragraphs_demo_landing_page
+type: oe_demo_landing_page
 description: 'A landing page that demonstrates the capabilities of the different Paragraph types supplied by the OE Paragraphs module.'
 help: ''
 new_revision: true

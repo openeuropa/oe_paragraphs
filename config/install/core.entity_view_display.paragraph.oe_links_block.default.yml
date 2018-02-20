@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.oe_paragraphs_links_block.field_oe_paragraphs_links
-    - field.field.paragraph.oe_paragraphs_links_block.field_oe_paragraphs_text
-    - paragraphs.paragraphs_type.oe_paragraphs_links_block
+    - field.field.paragraph.oe_links_block.field_oe_links
+    - field.field.paragraph.oe_links_block.field_oe_text
+    - paragraphs.paragraphs_type.oe_links_block
   module:
     - link
-id: paragraph.oe_paragraphs_links_block.default
+id: paragraph.oe_links_block.default
 targetEntityType: paragraph
-bundle: oe_paragraphs_links_block
+bundle: oe_links_block
 mode: default
 content:
-  field_oe_paragraphs_links:
+  field_oe_links:
     weight: 1
     label: above
     settings:
@@ -24,7 +24,7 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_oe_paragraphs_text:
+  field_oe_text:
     weight: 0
     label: above
     settings:

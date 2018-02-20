@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.oe_paragraphs_rich_text.field_oe_paragraphs_text_long
-    - paragraphs.paragraphs_type.oe_paragraphs_rich_text
+    - field.field.paragraph.oe_rich_text.field_oe_text_long
+    - paragraphs.paragraphs_type.oe_rich_text
   module:
     - text
-id: paragraph.oe_paragraphs_rich_text.default
+id: paragraph.oe_rich_text.default
 targetEntityType: paragraph
-bundle: oe_paragraphs_rich_text
+bundle: oe_rich_text
 mode: default
 content:
-  field_oe_paragraphs_text_long:
+  field_oe_text_long:
     weight: 0
     settings:
       rows: 5

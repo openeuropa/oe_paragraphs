@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.oe_demo_landing_page.field_oe_demo_body
+    - node.type.oe_demo_landing_page
+  module:
+    - user
+id: node.oe_demo_landing_page.teaser
+targetEntityType: node
+bundle: oe_demo_landing_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_oe_demo_body: true

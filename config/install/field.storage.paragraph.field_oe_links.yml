@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   module:
+    - link
     - paragraphs
-    - text
-id: paragraph.field_oe_paragraphs_text_long
-field_name: field_oe_paragraphs_text_long
+id: paragraph.field_oe_links
+field_name: field_oe_links
 entity_type: paragraph
-type: text_long
+type: link
 settings: {  }
-module: text
+module: link
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
