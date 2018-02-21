@@ -16,9 +16,9 @@
         "drupal/core": "^8.5",
         "drupal/drupal-extension": "^4.0.0@alpha",
         "drush/drush": "^9",
-        "ec-europa/oe-code-review": "^0.1",
-        "ec-europa/oe-task-runner": "^0.3",
-        "phpunit/phpunit": "^4.8.28"
+        "phpunit/phpunit": "^4.8.28",
+        "openeuropa/code-review": "^0.2",
+        "openeuropa/task-runner": "^0.4"
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
@@ -30,10 +30,10 @@
             "build/themes/contrib/{$name}": ["type:drupal-theme"]
         }
     },
-    "repositories": [
-        {
+    "repositories": {
+        "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
-    ]
+    }
 }
