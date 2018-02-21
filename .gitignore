@@ -5,6 +5,4 @@ composer.lock
 grumphp.yml
 runner.yml
 vendor
-*/.DS_Store
-**/*/.DS_Store
 .DS_Store
