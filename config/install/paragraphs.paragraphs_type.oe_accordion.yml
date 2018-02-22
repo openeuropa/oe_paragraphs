@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_accordion
+label: 'Accordion Paragraph'
+icon_uuid: null
+description: "Accordions are a collection of collapsible items, each of which is composed of the following fields:\r\n\r\n<ul>\r\n <li>An icon (select box with the ECL icons) </li>\r\n <li>A title</li>\r\n <li>A long text</li>\r\n</ul>"
+behavior_plugins: {  }
