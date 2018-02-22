@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_text
+    - paragraphs.paragraphs_type.oe_accordion_item
+id: paragraph.oe_accordion_item.field_oe_text
+field_name: field_oe_text
+entity_type: paragraph
+bundle: oe_accordion_item
+label: Title
+description: 'Accordion title.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

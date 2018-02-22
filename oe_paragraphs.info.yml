@@ -26,6 +26,18 @@ config_devel:
   - field.field.paragraph.oe_links_block.field_oe_links
   - paragraphs.paragraphs_type.oe_links_block
 
+  - core.entity_form_display.paragraph.oe_accordion_item.default
+  - core.entity_view_display.paragraph.oe_accordion_item.default
+  - field.field.paragraph.oe_accordion_item.field_oe_icon
+  - field.field.paragraph.oe_accordion_item.field_oe_text
+  - field.field.paragraph.oe_accordion_item.field_oe_text_long
+  - paragraphs.paragraphs_type.oe_accordion_item
+
+  - core.entity_form_display.paragraph.oe_accordion.default
+  - core.entity_view_display.paragraph.oe_accordion.default
+  - field.field.paragraph.oe_accordion.field_oe_paragraphs
+  - paragraphs.paragraphs_type.oe_accordion
+
   # Field types
   # -----------
 
@@ -37,3 +49,8 @@ config_devel:
 
   # Links
   - field.storage.paragraph.field_oe_links
+
+  # Icons (select field)
+  - field.storage.paragraph.field_oe_icon
+
+  - field.storage.paragraph.field_oe_paragraphs
