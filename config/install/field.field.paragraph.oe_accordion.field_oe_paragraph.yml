@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_paragraph
+    - paragraphs.paragraphs_type.oe_accordion
+  module:
+    - entity_reference_revisions
+id: paragraph.oe_accordion.field_oe_paragraph
+field_name: field_oe_paragraph
+entity_type: paragraph
+bundle: oe_accordion
+label: Paragraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      accordion_item:
+        weight: 5
+        enabled: false
+      oe_accordion:
+        weight: 6
+        enabled: false
+      oe_links_block:
+        weight: 7
+        enabled: false
+      oe_rich_text:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions
