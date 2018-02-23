@@ -6,6 +6,7 @@ dependencies:
     - node.type.oe_demo_landing_page
     - paragraphs.paragraphs_type.oe_links_block
     - paragraphs.paragraphs_type.oe_rich_text
+    - paragraphs.paragraphs_type.oe_accordion
   module:
     - entity_reference_revisions
 id: node.oe_demo_landing_page.field_oe_demo_body
@@ -25,6 +26,7 @@ settings:
     target_bundles:
       oe_rich_text: oe_rich_text
       oe_links_block: oe_links_block
+      oe_accordion: oe_accordion
     target_bundles_drag_drop:
       oe_rich_text:
         enabled: true
@@ -32,4 +34,7 @@ settings:
       oe_links_block:
         enabled: true
         weight: 3
+      oe_accordion:
+        enabled: true
+        weight: 4
 field_type: entity_reference_revisions

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_icon
+    - paragraphs.paragraphs_type.oe_accordion_item
+  module:
+    - options
+id: paragraph.oe_accordion_item.field_oe_icon
+field_name: field_oe_icon
+entity_type: paragraph
+bundle: oe_accordion_item
+label: Icon
+description: 'The icons accordingly to the ECL.'
+required: true
+translatable: false
+default_value:
+  -
+    value: arrow-down
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -26,8 +26,23 @@ config_devel:
   - field.field.paragraph.oe_links_block.field_oe_links
   - paragraphs.paragraphs_type.oe_links_block
 
-  # Field types
-  # -----------
+  # Accordion item
+  - core.entity_form_display.paragraph.oe_accordion_item.default
+  - core.entity_view_display.paragraph.oe_accordion_item.default
+  - field.field.paragraph.oe_accordion_item.field_oe_icon
+  - field.field.paragraph.oe_accordion_item.field_oe_text
+  - field.field.paragraph.oe_accordion_item.field_oe_text_long
+  - paragraphs.paragraphs_type.oe_accordion_item
+
+  # Accordion
+  - core.entity_form_display.paragraph.oe_accordion.default
+  - core.entity_view_display.paragraph.oe_accordion.default
+  - field.field.paragraph.oe_accordion.field_oe_paragraphs
+  - paragraphs.paragraphs_type.oe_accordion
+
+
+  # Field types already included
+  # -----------------------------
 
   # Long text
   - field.storage.paragraph.field_oe_text_long
@@ -37,3 +52,9 @@ config_devel:
 
   # Links
   - field.storage.paragraph.field_oe_links
+
+  # Icons (select field)
+  - field.storage.paragraph.field_oe_icon
+
+  # Paragraph field (entity reference type)
+  - field.storage.paragraph.field_oe_paragraphs

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_accordion
+label: Accordion
+icon_uuid: null
+description: "Accordions are a collection of collapsible items, each of which is composed by the following fields:\r\n\r\nAn icon\r\nA title\r\nA long text"
+behavior_plugins: {  }

@@ -1,0 +1,191 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_oe_icon
+field_name: field_oe_icon
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: arrow-down
+      label: 'Arrow down'
+    -
+      value: external
+      label: External
+    -
+      value: arrow-up
+      label: 'Arrow up'
+    -
+      value: audio
+      label: Audio
+    -
+      value: book
+      label: Book
+    -
+      value: breadcrumb
+      label: Breadcrumb
+    -
+      value: brochure
+      label: Brochure
+    -
+      value: budget
+      label: Budget
+    -
+      value: calendar
+      label: Calendar
+    -
+      value: camera
+      label: Camera
+    -
+      value: check
+      label: Check
+    -
+      value: close
+      label: Close
+    -
+      value: close-dark
+      label: 'Close dark'
+    -
+      value: copy
+      label: Copy
+    -
+      value: data
+      label: Data
+    -
+      value: digital
+      label: Digital
+    -
+      value: down
+      label: Down
+    -
+      value: download
+      label: Download
+    -
+      value: edit
+      label: Edit
+    -
+      value: energy
+      label: Energy
+    -
+      value: error
+      label: Error
+    -
+      value: euro
+      label: Euro
+    -
+      value: facebook
+      label: Facebook
+    -
+      value: faq
+      label: Faq
+    -
+      value: feedback
+      label: Feedback
+    -
+      value: file
+      label: File
+    -
+      value: generic-lang
+      label: 'Generic language'
+    -
+      value: global
+      label: Global
+    -
+      value: googleplus
+      label: 'Google Plus'
+    -
+      value: growth
+      label: Growth
+    -
+      value: image
+      label: Image
+    -
+      value: in
+      label: In
+    -
+      value: info
+      label: Info
+    -
+      value: infographic
+      label: Infographic
+    -
+      value: language
+      label: Language
+    -
+      value: left
+      label: Left
+    -
+      value: linkedin
+      label: LinkedIn
+    -
+      value: livestreaming
+      label: 'Live streaming'
+    -
+      value: location
+      label: Location
+    -
+      value: multiple-files
+      label: 'Multiple files'
+    -
+      value: organigram
+      label: Organigram
+    -
+      value: package
+      label: Package
+    -
+      value: presentation
+      label: Presentation
+    -
+      value: regulation
+      label: Regulation
+    -
+      value: right
+      label: Right
+    -
+      value: rss
+      label: RSS
+    -
+      value: search
+      label: Search
+    -
+      value: share
+      label: Share
+    -
+      value: slides
+      label: Slides
+    -
+      value: spinner
+      label: Spinner
+    -
+      value: spreadsheet
+      label: Spreadsheet
+    -
+      value: success
+      label: Success
+    -
+      value: tag-close
+      label: 'Tag close'
+    -
+      value: twitter
+      label: Twitter
+    -
+      value: up
+      label: Up
+    -
+      value: video
+      label: Video
+    -
+      value: warning
+      label: Warning
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
