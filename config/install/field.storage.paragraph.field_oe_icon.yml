@@ -12,175 +12,175 @@ settings:
   allowed_values:
     -
       value: arrow-down
-      label: arrow-down
+      label: Arrow down
     -
       value: external
-      label: external
+      label: External
     -
       value: arrow-up
-      label: arrow-up
+      label: Arrow up
     -
       value: audio
-      label: audio
+      label: Audio
     -
       value: book
-      label: book
+      label: Book
     -
       value: breadcrumb
-      label: breadcrumb
+      label: Breadcrumb
     -
       value: brochure
-      label: brochure
+      label: Brochure
     -
       value: budget
-      label: budget
+      label: Budget
     -
       value: calendar
-      label: calendar
+      label: Calendar
     -
       value: camera
-      label: camera
+      label: Camera
     -
       value: check
-      label: check
+      label: Check
     -
       value: close
-      label: close
+      label: Close
     -
       value: close-dark
-      label: close-dark
+      label: Close dark
     -
       value: copy
-      label: copy
+      label: Copy
     -
       value: data
-      label: data
+      label: Data
     -
       value: digital
-      label: digital
+      label: Digital
     -
       value: down
-      label: down
+      label: Down
     -
       value: download
-      label: download
+      label: Download
     -
       value: edit
-      label: edit
+      label: Edit
     -
       value: energy
-      label: energy
+      label: Energy
     -
       value: error
-      label: error
+      label: Error
     -
       value: euro
-      label: euro
+      label: Euro
     -
       value: facebook
-      label: facebook
+      label: Facebook
     -
       value: faq
-      label: faq
+      label: Faq
     -
       value: feedback
-      label: feedback
+      label: Feedback
     -
       value: file
-      label: file
+      label: File
     -
       value: generic-lang
-      label: generic-lang
+      label: Generic-lang
     -
       value: global
-      label: global
+      label: Global
     -
       value: googleplus
-      label: googleplus
+      label: Googleplus
     -
       value: growth
-      label: growth
+      label: Growth
     -
       value: image
-      label: image
+      label: Image
     -
       value: in
-      label: in
+      label: In
     -
       value: info
-      label: info
+      label: Info
     -
       value: infographic
-      label: infographic
+      label: Infographic
     -
       value: language
-      label: language
+      label: Language
     -
       value: left
-      label: left
+      label: Left
     -
       value: linkedin
-      label: linkedin
+      label: Linkedin
     -
       value: livestreaming
-      label: livestreaming
+      label: Livestreaming
     -
       value: location
-      label: location
+      label: Location
     -
       value: multiple-files
-      label: multiple-files
+      label: Multiple-files
     -
       value: organigram
-      label: organigram
+      label: Organigram
     -
       value: package
-      label: package
+      label: Package
     -
       value: presentation
-      label: presentation
+      label: Presentation
     -
       value: regulation
-      label: regulation
+      label: Regulation
     -
       value: right
-      label: right
+      label: Right
     -
       value: rss
-      label: rss
+      label: Rss
     -
       value: search
-      label: search
+      label: Search
     -
       value: share
-      label: share
+      label: Share
     -
       value: slides
-      label: slides
+      label: Slides
     -
       value: spinner
-      label: spinner
+      label: Spinner
     -
       value: spreadsheet
-      label: spreadsheet
+      label: Spreadsheet
     -
       value: success
-      label: success
+      label: Success
     -
       value: tag-close
-      label: tag-close
+      label: Tag close
     -
       value: twitter
-      label: twitter
+      label: Twitter
     -
       value: up
-      label: up
+      label: Up
     -
       value: video
-      label: video
+      label: Video
     -
       value: warning
-      label: warning
+      label: Warning
   allowed_values_function: ''
 module: options
 locked: false
