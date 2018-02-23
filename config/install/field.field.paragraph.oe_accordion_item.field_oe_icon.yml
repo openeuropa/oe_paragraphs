@@ -12,7 +12,7 @@ entity_type: paragraph
 bundle: oe_accordion_item
 label: Icon
 description: 'The icons accordingly to the ECL.'
-required: false
+required: true
 translatable: false
 default_value:
   -

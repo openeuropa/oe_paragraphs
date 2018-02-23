@@ -90,13 +90,13 @@ settings:
       label: File
     -
       value: generic-lang
-      label: Generic-lang
+      label: Generic language
     -
       value: global
       label: Global
     -
       value: googleplus
-      label: Googleplus
+      label: Google Plus
     -
       value: growth
       label: Growth
@@ -120,16 +120,16 @@ settings:
       label: Left
     -
       value: linkedin
-      label: Linkedin
+      label: LinkedIn
     -
       value: livestreaming
-      label: Livestreaming
+      label: Live streaming
     -
       value: location
       label: Location
     -
       value: multiple-files
-      label: Multiple-files
+      label: Multiple files
     -
       value: organigram
       label: Organigram
@@ -147,7 +147,7 @@ settings:
       label: Right
     -
       value: rss
-      label: Rss
+      label: RSS
     -
       value: search
       label: Search
