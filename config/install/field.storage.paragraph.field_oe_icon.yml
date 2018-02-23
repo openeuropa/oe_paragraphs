@@ -12,13 +12,13 @@ settings:
   allowed_values:
     -
       value: arrow-down
-      label: Arrow down
+      label: 'Arrow down'
     -
       value: external
       label: External
     -
       value: arrow-up
-      label: Arrow up
+      label: 'Arrow up'
     -
       value: audio
       label: Audio
@@ -48,7 +48,7 @@ settings:
       label: Close
     -
       value: close-dark
-      label: Close dark
+      label: 'Close dark'
     -
       value: copy
       label: Copy
@@ -90,13 +90,13 @@ settings:
       label: File
     -
       value: generic-lang
-      label: Generic language
+      label: 'Generic language'
     -
       value: global
       label: Global
     -
       value: googleplus
-      label: Google Plus
+      label: 'Google Plus'
     -
       value: growth
       label: Growth
@@ -123,13 +123,13 @@ settings:
       label: LinkedIn
     -
       value: livestreaming
-      label: Live streaming
+      label: 'Live streaming'
     -
       value: location
       label: Location
     -
       value: multiple-files
-      label: Multiple files
+      label: 'Multiple files'
     -
       value: organigram
       label: Organigram
@@ -168,7 +168,7 @@ settings:
       label: Success
     -
       value: tag-close
-      label: Tag close
+      label: 'Tag close'
     -
       value: twitter
       label: Twitter
