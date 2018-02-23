@@ -40,6 +40,12 @@ config_devel:
   - field.field.paragraph.oe_accordion.field_oe_paragraphs
   - paragraphs.paragraphs_type.oe_accordion
 
+  # Quotes block
+  - core.entity_form_display.paragraph.oe_quote.default
+  - core.entity_view_display.paragraph.oe_quote.default
+  - field.field.paragraph.oe_quote.field_oe_text
+  - field.field.paragraph.oe_quote.field_oe_text_long
+  - paragraphs.paragraphs_type.oe_quote
 
   # Field types already included
   # -----------------------------
