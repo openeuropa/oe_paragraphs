@@ -9,7 +9,7 @@ field_name: field_oe_text
 entity_type: paragraph
 bundle: oe_quote
 label: Attribution
-description: "Attribution: Acknowledgement of the use of someone else's information, data, or other work (The quote author).\r\n\r\n"
+description: "Attribution: Acknowledgement of the use of someone else's information, data, or other work (The quote author)."
 required: true
 translatable: true
 default_value: {  }

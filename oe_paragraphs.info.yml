@@ -5,6 +5,7 @@ core: 8.x
 package: OpenEuropa
 
 dependencies:
+  - allowed_formats:allowed_formats
   - drupal:text
   - drupal:link
   - paragraphs:paragraphs
