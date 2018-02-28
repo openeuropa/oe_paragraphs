@@ -6,6 +6,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
+        "drupal/allowed_formats": "~1.1",
         "drupal/paragraphs": "~1.2",
         "php": "^7.1"
     },
@@ -21,13 +22,7 @@
         "openeuropa/task-runner": "^0.4"
     },
     "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "post-install-cmd": [
-            "@drupal-scaffold"
-        ],
-        "post-update-cmd": [
-            "@drupal-scaffold"
-        ]
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
     },
     "extra": {
         "installer-paths": {
