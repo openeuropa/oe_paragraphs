@@ -11,57 +11,66 @@ dependencies:
   - paragraphs:paragraphs
 
 config_devel:
-  # Paragraph types
-  # ---------------
+  install:
+    # Paragraph types
+    # ---------------
 
-  # Rich text
-  - core.entity_form_display.paragraph.oe_rich_text.default
-  - core.entity_view_display.paragraph.oe_rich_text.default
-  - field.field.paragraph.oe_rich_text.field_oe_text_long
-  - paragraphs.paragraphs_type.oe_rich_text
+    # Rich text
+    - core.entity_form_display.paragraph.oe_rich_text.default
+    - core.entity_view_display.paragraph.oe_rich_text.default
+    - field.field.paragraph.oe_rich_text.field_oe_text_long
+    - paragraphs.paragraphs_type.oe_rich_text
 
-  # Links block
-  - core.entity_form_display.paragraph.oe_links_block.default
-  - core.entity_view_display.paragraph.oe_links_block.default
-  - field.field.paragraph.oe_links_block.field_oe_text
-  - field.field.paragraph.oe_links_block.field_oe_links
-  - paragraphs.paragraphs_type.oe_links_block
+    # Links block
+    - core.entity_form_display.paragraph.oe_links_block.default
+    - core.entity_view_display.paragraph.oe_links_block.default
+    - field.field.paragraph.oe_links_block.field_oe_text
+    - field.field.paragraph.oe_links_block.field_oe_links
+    - paragraphs.paragraphs_type.oe_links_block
 
-  # Accordion item
-  - core.entity_form_display.paragraph.oe_accordion_item.default
-  - core.entity_view_display.paragraph.oe_accordion_item.default
-  - field.field.paragraph.oe_accordion_item.field_oe_icon
-  - field.field.paragraph.oe_accordion_item.field_oe_text
-  - field.field.paragraph.oe_accordion_item.field_oe_text_long
-  - paragraphs.paragraphs_type.oe_accordion_item
+    # Accordion item
+    - core.entity_form_display.paragraph.oe_accordion_item.default
+    - core.entity_view_display.paragraph.oe_accordion_item.default
+    - field.field.paragraph.oe_accordion_item.field_oe_icon
+    - field.field.paragraph.oe_accordion_item.field_oe_text
+    - field.field.paragraph.oe_accordion_item.field_oe_text_long
+    - paragraphs.paragraphs_type.oe_accordion_item
 
-  # Accordion
-  - core.entity_form_display.paragraph.oe_accordion.default
-  - core.entity_view_display.paragraph.oe_accordion.default
-  - field.field.paragraph.oe_accordion.field_oe_paragraphs
-  - paragraphs.paragraphs_type.oe_accordion
+    # Accordion
+    - core.entity_form_display.paragraph.oe_accordion.default
+    - core.entity_view_display.paragraph.oe_accordion.default
+    - field.field.paragraph.oe_accordion.field_oe_paragraphs
+    - paragraphs.paragraphs_type.oe_accordion
 
-  # Quotes block
-  - core.entity_form_display.paragraph.oe_quote.default
-  - core.entity_view_display.paragraph.oe_quote.default
-  - field.field.paragraph.oe_quote.field_oe_text
-  - field.field.paragraph.oe_quote.field_oe_text_long
-  - paragraphs.paragraphs_type.oe_quote
+    # Quotes block
+    - core.entity_form_display.paragraph.oe_quote.default
+    - core.entity_view_display.paragraph.oe_quote.default
+    - field.field.paragraph.oe_quote.field_oe_text
+    - field.field.paragraph.oe_quote.field_oe_text_long
+    - paragraphs.paragraphs_type.oe_quote
 
-  # Field types already included
-  # -----------------------------
+    # Field types already included
+    # -----------------------------
 
-  # Long text
-  - field.storage.paragraph.field_oe_text_long
+    # Long text
+    - field.storage.paragraph.field_oe_text_long
 
-  # Text field
-  - field.storage.paragraph.field_oe_text
+    # Text field
+    - field.storage.paragraph.field_oe_text
 
-  # Links
-  - field.storage.paragraph.field_oe_links
+    # Links
+    - field.storage.paragraph.field_oe_links
 
-  # Icons (select field)
-  - field.storage.paragraph.field_oe_icon
+    # Icons (select field)
+    - field.storage.paragraph.field_oe_icon
 
-  # Paragraph field (entity reference type)
-  - field.storage.paragraph.field_oe_paragraphs
+    # Paragraph field (entity reference type)
+    - field.storage.paragraph.field_oe_paragraphs
+
+  optional:
+    # Paragraph multilingual configuration
+    - language.content_settings.paragraph.oe_accordion
+    - language.content_settings.paragraph.oe_accordion_item
+    - language.content_settings.paragraph.oe_links_block
+    - language.content_settings.paragraph.oe_quote
+    - language.content_settings.paragraph.oe_rich_text
