@@ -35,6 +35,11 @@
             "build/themes/contrib/{$name}": ["type:drupal-theme"]
         }
     },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\oe_paragraphs\\": "src"
+        }
+    },
     "repositories": {
         "drupal": {
             "type": "composer",
