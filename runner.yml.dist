@@ -1,8 +1,10 @@
 drupal:
   root: "build"
-  base_url: "http://localhost:8888"
+  base_url: "http://web:8080/build"
+  site:
+    profile: "minimal"
   database:
-    host: "localhost"
+    host: "mysql"
     port: "3306"
     name: "oe_paragraphs"
     user: "root"
