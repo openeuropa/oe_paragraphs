@@ -4,5 +4,5 @@ dependencies: {  }
 id: oe_quote
 label: Quote
 icon_uuid: null
-description: "Editors will be able to add the quotation to the specific content type where Quote paragraph type is attached."
+description: 'Editors will be able to add the quotation to the specific content type where Quote paragraph type is attached.'
 behavior_plugins: {  }
