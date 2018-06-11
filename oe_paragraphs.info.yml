@@ -11,8 +11,8 @@ dependencies:
   - drupal:file
   - drupal:image
   - drupal:link
-  - drupal:text
   - drupal:options
+  - drupal:text
   - paragraphs:paragraphs
 
 config_devel:

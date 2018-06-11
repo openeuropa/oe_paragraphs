@@ -5,7 +5,9 @@ package: OpenEuropa
 core: 8.x
 
 dependencies:
-  - oe_paragraphs
+  - drupal:path
+  - drupal:menu_ui
+  - oe_paragraphs:oe_paragraphs
 
 config_devel:
   install:
