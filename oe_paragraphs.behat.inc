@@ -13,6 +13,7 @@ use Drupal\DrupalExtension\Context\DrupalSubContextBase;
 use Drupal\oe_paragraphs\Traits\EntityFieldTrait;
 use Drupal\oe_paragraphs\Traits\EntityReferenceTrait;
 use Drupal\oe_paragraphs\Traits\EntityTrait;
+use PHPUnit\Framework\Assert;
 
 /**
  * Behat step definitions for testing the OE Paragraphs module.
@@ -70,7 +71,7 @@ class OEParagraphsSubContext extends DrupalSubContextBase {
       // Check if the target paragraph types match the expected ones.
       sort($actual_par_type_ids);
       sort($exp_par_type_ids);
-      PHPUnit_Framework_Assert::assertEquals($exp_par_type_ids, $actual_par_type_ids);
+      Assert::assertEquals($exp_par_type_ids, $actual_par_type_ids);
 
       // We found the field and the paragraph types match the expectation, so
       // we're done.
