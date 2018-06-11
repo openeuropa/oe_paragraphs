@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_list_item_block
+label: 'List item block'
+icon_uuid: null
+description: 'Display multiple list items organised in columns.'
+behavior_plugins: {  }

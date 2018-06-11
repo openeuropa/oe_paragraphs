@@ -65,6 +65,15 @@ config_devel:
     - field.field.paragraph.oe_list_item.field_oe_date
     - paragraphs.paragraphs_type.oe_list_item
 
+    # List item block
+    - core.entity_form_display.paragraph.oe_list_item_block.default
+    - core.entity_view_display.paragraph.oe_list_item_block.default
+    - field.field.paragraph.oe_list_item_block.field_oe_link
+    - field.field.paragraph.oe_list_item_block.field_oe_list_item_block_variant
+    - field.field.paragraph.oe_list_item_block.field_oe_paragraphs
+    - field.field.paragraph.oe_list_item_block.field_oe_title
+    - paragraphs.paragraphs_type.oe_list_item_block
+
     # Field types already included
     # -----------------------------
 
@@ -88,6 +97,9 @@ config_devel:
 
     # Single link field (link)
     - field.storage.paragraph.field_oe_link
+
+    # List item block variant (select field)
+    - field.storage.paragraph.field_oe_list_item_block_variant
 
     # Item list variant (select field)
     - field.storage.paragraph.field_oe_list_item_variant

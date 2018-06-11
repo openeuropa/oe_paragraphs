@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_link
+    - paragraphs.paragraphs_type.oe_list_item_block
+  module:
+    - link
+id: paragraph.oe_list_item_block.field_oe_link
+field_name: field_oe_link
+entity_type: paragraph
+bundle: oe_list_item_block
+label: 'Call to action'
+description: 'Internal or external link to use for a call to action button. Used on all variants.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

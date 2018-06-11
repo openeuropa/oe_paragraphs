@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_title
+    - paragraphs.paragraphs_type.oe_list_item_block
+id: paragraph.oe_list_item_block.field_oe_title
+field_name: field_oe_title
+entity_type: paragraph
+bundle: oe_list_item_block
+label: Title
+description: 'Block title. Optional. Used on all variants.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_paragraphs
+    - paragraphs.paragraphs_type.oe_list_item
+    - paragraphs.paragraphs_type.oe_list_item_block
+  module:
+    - entity_reference_revisions
+id: paragraph.oe_list_item_block.field_oe_paragraphs
+field_name: field_oe_paragraphs
+entity_type: paragraph
+bundle: oe_list_item_block
+label: Items
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      oe_list_item: oe_list_item
+    target_bundles_drag_drop:
+      oe_accordion:
+        weight: 8
+        enabled: false
+      oe_accordion_item:
+        weight: 9
+        enabled: false
+      oe_links_block:
+        weight: 10
+        enabled: false
+      oe_list_item:
+        enabled: true
+        weight: 11
+      oe_list_item_block:
+        weight: 12
+        enabled: false
+      oe_quote:
+        weight: 13
+        enabled: false
+      oe_rich_text:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

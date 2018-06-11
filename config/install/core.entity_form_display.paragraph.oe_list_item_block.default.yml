@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_list_item_block.field_oe_link
+    - field.field.paragraph.oe_list_item_block.field_oe_list_item_block_variant
+    - field.field.paragraph.oe_list_item_block.field_oe_paragraphs
+    - field.field.paragraph.oe_list_item_block.field_oe_title
+    - paragraphs.paragraphs_type.oe_list_item_block
+  module:
+    - entity_reference_revisions
+    - link
+id: paragraph.oe_list_item_block.default
+targetEntityType: paragraph
+bundle: oe_list_item_block
+mode: default
+content:
+  field_oe_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_oe_list_item_block_variant:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_oe_paragraphs:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_oe_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
