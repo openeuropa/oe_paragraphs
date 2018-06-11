@@ -2,13 +2,28 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_list_item.field_oe_link
     - field.field.paragraph.oe_list_item.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item
+  module:
+    - link
 id: paragraph.oe_list_item.default
 targetEntityType: paragraph
 bundle: oe_list_item
 mode: default
 content:
+  field_oe_link:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_oe_title:
     weight: 0
     label: above
