@@ -56,6 +56,7 @@ config_devel:
     - field.field.paragraph.oe_list_item.field_oe_link
     - field.field.paragraph.oe_list_item.field_oe_list_item_variant
     - field.field.paragraph.oe_list_item.field_oe_text_long
+    - field.field.paragraph.oe_list_item.field_oe_image
     - paragraphs.paragraphs_type.oe_list_item
 
     # Field types already included
@@ -82,8 +83,11 @@ config_devel:
     # Single link field (link)
     - field.storage.paragraph.field_oe_link
 
-    # Item list variant (text list)
+    # Item list variant (select field)
     - field.storage.paragraph.field_oe_list_item_variant
+
+    # Single image field.
+    - field.storage.paragraph.field_oe_image
 
   optional:
     # Paragraph multilingual configuration

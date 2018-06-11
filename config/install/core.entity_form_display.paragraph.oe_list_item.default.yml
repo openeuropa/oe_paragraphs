@@ -2,13 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_list_item.field_oe_image
     - field.field.paragraph.oe_list_item.field_oe_link
     - field.field.paragraph.oe_list_item.field_oe_list_item_variant
     - field.field.paragraph.oe_list_item.field_oe_text_long
     - field.field.paragraph.oe_list_item.field_oe_title
+    - image.style.thumbnail
     - paragraphs.paragraphs_type.oe_list_item
   module:
     - allowed_formats
+    - image
     - link
     - text
 id: paragraph.oe_list_item.default
@@ -16,6 +19,14 @@ targetEntityType: paragraph
 bundle: oe_list_item
 mode: default
 content:
+  field_oe_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_oe_link:
     weight: 1
     settings:
