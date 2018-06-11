@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_text_long
+    - paragraphs.paragraphs_type.oe_list_item
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    plain_text: plain_text
+    restricted_html: '0'
+    full_html: '0'
+id: paragraph.oe_list_item.field_oe_text_long
+field_name: field_oe_text_long
+entity_type: paragraph
+bundle: oe_list_item
+label: Description
+description: 'List item description, displayed below the title. Used only on the following variants: default, thumbnail primary and secondary and date.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

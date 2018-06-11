@@ -55,6 +55,7 @@ config_devel:
     - field.field.paragraph.oe_list_item.field_oe_title
     - field.field.paragraph.oe_list_item.field_oe_link
     - field.field.paragraph.oe_list_item.field_oe_list_item_variant
+    - field.field.paragraph.oe_list_item.field_oe_text_long
     - paragraphs.paragraphs_type.oe_list_item
 
     # Field types already included

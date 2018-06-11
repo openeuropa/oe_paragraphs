@@ -4,11 +4,13 @@ dependencies:
   config:
     - field.field.paragraph.oe_list_item.field_oe_link
     - field.field.paragraph.oe_list_item.field_oe_list_item_variant
+    - field.field.paragraph.oe_list_item.field_oe_text_long
     - field.field.paragraph.oe_list_item.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item
   module:
     - link
     - options
+    - text
 id: paragraph.oe_list_item.default
 targetEntityType: paragraph
 bundle: oe_list_item
@@ -32,6 +34,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_oe_text_long:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_oe_title:
     weight: 0
