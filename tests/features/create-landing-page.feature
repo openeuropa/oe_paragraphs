@@ -8,5 +8,6 @@ Feature: Create a landing page
     Then the following paragraph types are available for "demo landing page" content:
       | Accordion   |
       | Links block |
+      | List item   |
       | Quote       |
       | Rich text   |
