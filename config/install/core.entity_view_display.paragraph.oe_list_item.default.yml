@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_list_item.field_oe_date
     - field.field.paragraph.oe_list_item.field_oe_image
     - field.field.paragraph.oe_list_item.field_oe_link
     - field.field.paragraph.oe_list_item.field_oe_list_item_variant
@@ -9,6 +10,7 @@ dependencies:
     - field.field.paragraph.oe_list_item.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item
   module:
+    - datetime
     - image
     - link
     - options
@@ -18,6 +20,15 @@ targetEntityType: paragraph
 bundle: oe_list_item
 mode: default
 content:
+  field_oe_date:
+    weight: 5
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_oe_image:
     weight: 4
     label: above

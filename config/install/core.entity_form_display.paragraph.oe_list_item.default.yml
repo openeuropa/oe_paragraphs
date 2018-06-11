@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_list_item.field_oe_date
     - field.field.paragraph.oe_list_item.field_oe_image
     - field.field.paragraph.oe_list_item.field_oe_link
     - field.field.paragraph.oe_list_item.field_oe_list_item_variant
@@ -11,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.oe_list_item
   module:
     - allowed_formats
+    - datetime
     - image
     - link
     - text
@@ -19,8 +21,17 @@ targetEntityType: paragraph
 bundle: oe_list_item
 mode: default
 content:
-  field_oe_image:
+  field_oe_date:
     weight: 5
+    settings:
+      date_order: DMY
+      time_type: none
+      increment: 15
+    third_party_settings: {  }
+    type: datetime_datelist
+    region: content
+  field_oe_image:
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -61,7 +72,7 @@ content:
     type: string_textfield
     region: content
   translation:
-    weight: 4
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

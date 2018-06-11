@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_date
+    - paragraphs.paragraphs_type.oe_list_item
+  module:
+    - datetime
+id: paragraph.oe_list_item.field_oe_date
+field_name: field_oe_date
+entity_type: paragraph
+bundle: oe_list_item
+label: Date
+description: 'Date information. Used only on date variant.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
