@@ -3,10 +3,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.oe_list_item.field_oe_link
+    - field.field.paragraph.oe_list_item.field_oe_list_item_variant
     - field.field.paragraph.oe_list_item.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item
   module:
     - link
+    - options
 id: paragraph.oe_list_item.default
 targetEntityType: paragraph
 bundle: oe_list_item
@@ -23,6 +25,13 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_oe_list_item_variant:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_oe_title:
     weight: 0

@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.oe_list_item.field_oe_link
+    - field.field.paragraph.oe_list_item.field_oe_list_item_variant
     - field.field.paragraph.oe_list_item.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item
   module:
@@ -13,15 +14,21 @@ bundle: oe_list_item
 mode: default
 content:
   field_oe_link:
-    weight: 1
+    weight: 2
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
-  field_oe_title:
+  field_oe_list_item_variant:
     weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_oe_title:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -29,7 +36,7 @@ content:
     type: string_textfield
     region: content
   translation:
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }

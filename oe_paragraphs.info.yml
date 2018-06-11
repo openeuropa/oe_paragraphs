@@ -54,6 +54,7 @@ config_devel:
     - core.entity_view_display.paragraph.oe_list_item.default
     - field.field.paragraph.oe_list_item.field_oe_title
     - field.field.paragraph.oe_list_item.field_oe_link
+    - field.field.paragraph.oe_list_item.field_oe_list_item_variant
     - paragraphs.paragraphs_type.oe_list_item
 
     # Field types already included
@@ -79,6 +80,9 @@ config_devel:
 
     # Single link field (link)
     - field.storage.paragraph.field_oe_link
+
+    # Item list variant (text list)
+    - field.storage.paragraph.field_oe_list_item_variant
 
   optional:
     # Paragraph multilingual configuration
