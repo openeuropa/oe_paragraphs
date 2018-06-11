@@ -8,15 +8,15 @@ dependencies:
     - field.field.paragraph.oe_list_item_block.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item_block
   module:
-    - entity_reference_revisions
     - link
+    - paragraphs
 id: paragraph.oe_list_item_block.default
 targetEntityType: paragraph
 bundle: oe_list_item_block
 mode: default
 content:
   field_oe_link:
-    weight: 1
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -24,7 +24,7 @@ content:
     type: link_default
     region: content
   field_oe_list_item_block_variant:
-    weight: 3
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -32,14 +32,17 @@ content:
   field_oe_paragraphs:
     weight: 2
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: oe_list_item
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_oe_title:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''

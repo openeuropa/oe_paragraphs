@@ -17,7 +17,7 @@ bundle: oe_list_item_block
 mode: default
 content:
   field_oe_link:
-    weight: 1
+    weight: 3
     label: above
     settings:
       trim_length: 80
@@ -29,7 +29,7 @@ content:
     type: link
     region: content
   field_oe_list_item_block_variant:
-    weight: 3
+    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -45,7 +45,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_oe_title:
-    weight: 0
+    weight: 1
     label: above
     settings:
       link_to_entity: false

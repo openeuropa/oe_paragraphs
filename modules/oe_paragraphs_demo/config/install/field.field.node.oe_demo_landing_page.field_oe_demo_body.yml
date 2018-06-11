@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.oe_accordion
     - paragraphs.paragraphs_type.oe_links_block
     - paragraphs.paragraphs_type.oe_list_item
+    - paragraphs.paragraphs_type.oe_list_item_block
     - paragraphs.paragraphs_type.oe_quote
     - paragraphs.paragraphs_type.oe_rich_text
   module:
@@ -31,6 +32,7 @@ settings:
       oe_accordion: oe_accordion
       oe_quote: oe_quote
       oe_list_item: oe_list_item
+      oe_list_item_block: oe_list_item_block
     target_bundles_drag_drop:
       oe_rich_text:
         enabled: true
@@ -50,4 +52,7 @@ settings:
       oe_list_item:
         enabled: true
         weight: 10
+      oe_list_item_block:
+        enabled: true
+        weight: 12
 field_type: entity_reference_revisions
