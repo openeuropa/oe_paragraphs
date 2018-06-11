@@ -49,6 +49,12 @@ config_devel:
     - field.field.paragraph.oe_quote.field_oe_text_long
     - paragraphs.paragraphs_type.oe_quote
 
+    # List item
+    - core.entity_form_display.paragraph.oe_list_item.default
+    - core.entity_view_display.paragraph.oe_list_item.default
+    - field.field.paragraph.oe_list_item.field_oe_title
+    - paragraphs.paragraphs_type.oe_list_item
+
     # Field types already included
     # -----------------------------
 
@@ -67,10 +73,14 @@ config_devel:
     # Paragraph field (entity reference type)
     - field.storage.paragraph.field_oe_paragraphs
 
+    # Title field (text)
+    - field.storage.paragraph.field_oe_title
+
   optional:
     # Paragraph multilingual configuration
     - language.content_settings.paragraph.oe_accordion
     - language.content_settings.paragraph.oe_accordion_item
     - language.content_settings.paragraph.oe_links_block
+    - language.content_settings.paragraph.oe_list_item
     - language.content_settings.paragraph.oe_quote
     - language.content_settings.paragraph.oe_rich_text
