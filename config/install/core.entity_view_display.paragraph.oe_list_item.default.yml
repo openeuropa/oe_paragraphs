@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.oe_list_item.field_oe_image
     - field.field.paragraph.oe_list_item.field_oe_link
     - field.field.paragraph.oe_list_item.field_oe_list_item_variant
+    - field.field.paragraph.oe_list_item.field_oe_meta
     - field.field.paragraph.oe_list_item.field_oe_text_long
     - field.field.paragraph.oe_list_item.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item
@@ -56,6 +57,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_oe_meta:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_oe_text_long:
     weight: 3

@@ -63,6 +63,7 @@ config_devel:
     - field.field.paragraph.oe_list_item.field_oe_text_long
     - field.field.paragraph.oe_list_item.field_oe_image
     - field.field.paragraph.oe_list_item.field_oe_date
+    - field.field.paragraph.oe_list_item.field_oe_meta
     - paragraphs.paragraphs_type.oe_list_item
 
     # List item block
@@ -109,6 +110,9 @@ config_devel:
 
     # Single date field.
     - field.storage.paragraph.field_oe_date
+
+    # Meta (multiple strings).
+    - field.storage.paragraph.field_oe_meta
 
   optional:
     # Paragraph multilingual configuration
