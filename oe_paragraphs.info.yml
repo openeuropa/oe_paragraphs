@@ -120,5 +120,6 @@ config_devel:
     - language.content_settings.paragraph.oe_accordion_item
     - language.content_settings.paragraph.oe_links_block
     - language.content_settings.paragraph.oe_list_item
+    - language.content_settings.paragraph.oe_list_item_block
     - language.content_settings.paragraph.oe_quote
     - language.content_settings.paragraph.oe_rich_text

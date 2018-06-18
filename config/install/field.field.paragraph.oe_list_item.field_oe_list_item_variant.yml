@@ -14,9 +14,7 @@ label: Variant
 description: 'Choose how the list item should be displayed.'
 required: true
 translatable: true
-default_value:
-  -
-    value: list_item_default
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: list_string

@@ -11,7 +11,7 @@ bundle: oe_list_item
 label: Meta
 description: 'Additional meta information to show above the title.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
