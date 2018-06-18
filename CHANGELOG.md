@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.1.1](https://github.com/openeuropa/oe_paragraphs/tree/0.1.1) (2018-06-18)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.1.0...0.1.1)
+
+**Merged pull requests:**
+
+- OPENEUROPA-662: Make sure new paragraphs are translatable [\#13](https://github.com/openeuropa/oe_paragraphs/pull/13) ([ademarco](https://github.com/ademarco))
+
 ## [0.1.0](https://github.com/openeuropa/oe_paragraphs/tree/0.1.0) (2018-06-14)
 **Closed issues:**
 
@@ -7,6 +14,7 @@
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for 0.1.0 release. [\#12](https://github.com/openeuropa/oe_paragraphs/pull/12) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-628: Implement additional paragraph types [\#11](https://github.com/openeuropa/oe_paragraphs/pull/11) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-380: Fix OpenEuropa Paragraphs technical debt issues [\#10](https://github.com/openeuropa/oe_paragraphs/pull/10) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-559: Add multilingual configuration to existing paragraphs [\#9](https://github.com/openeuropa/oe_paragraphs/pull/9) ([imanoleguskiza](https://github.com/imanoleguskiza))
