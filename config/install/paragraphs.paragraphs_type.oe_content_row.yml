@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_content_row
+label: 'Content row'
+icon_uuid: null
+description: 'Allows to group multiple paragraphs together. An in-page navigation can be shown optionally.'
+behavior_plugins: {  }

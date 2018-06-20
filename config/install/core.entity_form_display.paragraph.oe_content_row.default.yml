@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_content_row.field_oe_content_row_variant
+    - field.field.paragraph.oe_content_row.field_oe_paragraphs
+    - paragraphs.paragraphs_type.oe_content_row
+  module:
+    - paragraphs
+id: paragraph.oe_content_row.default
+targetEntityType: paragraph
+bundle: oe_content_row
+mode: default
+content:
+  field_oe_content_row_variant:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_oe_paragraphs:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
