@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.oe_content_row.field_oe_content_row_variant
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
+    - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
   module:
     - paragraphs
@@ -29,6 +30,14 @@ content:
       default_paragraph_type: _none
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
+  field_oe_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true

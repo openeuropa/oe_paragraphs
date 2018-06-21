@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_title
+    - paragraphs.paragraphs_type.oe_content_row
+id: paragraph.oe_content_row.field_oe_title
+field_name: field_oe_title
+entity_type: paragraph
+bundle: oe_content_row
+label: Title
+description: 'The title to show for the inpage navigation. Used only for the inpage navigation variant.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
