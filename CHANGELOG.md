@@ -1,10 +1,18 @@
 # Change Log
 
+## [0.2.0](https://github.com/openeuropa/oe_paragraphs/tree/0.2.0) (2018-06-22)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.1.1...0.2.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-687: Add the content row paragraph type [\#15](https://github.com/openeuropa/oe_paragraphs/pull/15) ([brummbar](https://github.com/brummbar))
+
 ## [0.1.1](https://github.com/openeuropa/oe_paragraphs/tree/0.1.1) (2018-06-18)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.1.0...0.1.1)
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for 0.1.1 release. [\#14](https://github.com/openeuropa/oe_paragraphs/pull/14) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-662: Make sure new paragraphs are translatable [\#13](https://github.com/openeuropa/oe_paragraphs/pull/13) ([ademarco](https://github.com/ademarco))
 
 ## [0.1.0](https://github.com/openeuropa/oe_paragraphs/tree/0.1.0) (2018-06-14)
