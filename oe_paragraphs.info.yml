@@ -130,6 +130,7 @@ config_devel:
     # Paragraph multilingual configuration
     - language.content_settings.paragraph.oe_accordion
     - language.content_settings.paragraph.oe_accordion_item
+    - language.content_settings.paragraph.oe_content_row
     - language.content_settings.paragraph.oe_links_block
     - language.content_settings.paragraph.oe_list_item
     - language.content_settings.paragraph.oe_list_item_block

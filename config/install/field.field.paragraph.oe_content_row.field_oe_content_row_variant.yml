@@ -13,7 +13,7 @@ bundle: oe_content_row
 label: Variant
 description: 'Choose the type of the row. Select "inpage" to show an inpage navigation to the left of the content.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
