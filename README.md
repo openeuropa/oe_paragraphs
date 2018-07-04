@@ -62,9 +62,9 @@ $ docker-compose up -d
 Then:
 
 ```
-$ docker-compose exec -u web web composer install
-$ docker-compose exec -u web web ./vendor/bin/run drupal:site-setup
-$ docker-compose exec -u web web ./vendor/bin/run drupal:site-install
+$ docker-compose exec web composer install
+$ docker-compose exec web ./vendor/bin/run drupal:site-setup
+$ docker-compose exec web ./vendor/bin/run drupal:site-install
 ```
 
 Your test site will be available at
@@ -73,5 +73,5 @@ Your test site will be available at
 To run the Behat test:
 
 ```
-$ docker-compose exec -u web web ./vendor/bin/behat
+$ docker-compose exec web ./vendor/bin/behat
 ```
