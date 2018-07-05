@@ -2,7 +2,7 @@
     "name": "openeuropa/oe_paragraphs",
     "description": "Drupal module providing a collection of Paragraph types based on ECL components.",
     "type": "drupal-module",
-    "license": "EUPL-1.1",
+    "license": "EUPL-1.2",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
