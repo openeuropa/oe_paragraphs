@@ -33,7 +33,7 @@
         "composer-exit-on-patch-failure": true,
         "patches": {
             "drupal/core": {
-                "https://www.drupal.org/project/drupal/issues/2599228": "https://www.drupal.org/files/issues/2599228-31-tests-only.patch"
+                "https://www.drupal.org/project/drupal/issues/2599228": "https://www.drupal.org/files/issues/2018-05-17/2599228-51.patch"
             }
         },
         "installer-paths": {
