@@ -4,7 +4,7 @@ workspace:
 
 services:
   web:
-    image: fpfis/php71-build:latest
+    image: fpfis/httpd-php-dev:7.1
     environment:
       - DOCUMENT_ROOT=/test/oe_paragraphs
   mysql:
@@ -12,36 +12,28 @@ services:
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
 
-matrix:
-  DRUPAL_VERSION:
-    - 8.6.x
-
 pipeline:
   composer-install:
     group: prepare
-    image: fpfis/php71-build
+    image: fpfis/httpd-php-dev:7.1
     volumes:
       - /cache:/cache
     commands:
-      - composer require --dev webflo/drupal-core-require-dev:${DRUPAL_VERSION=8.6.x}
+      - composer install
 
   site-install:
-    image: fpfis/php71-build
+    image: fpfis/httpd-php-dev:7.1
     commands:
-      - ./vendor/bin/run drupal:site-setup
       - ./vendor/bin/run drupal:site-install
-      # Reset permission since installation runs as root. @todo Fix this.
-      - chown -R 1000:1000 build/sites/default
-      - chmod -R 777 /tmp
 
   grumphp:
     group: test
-    image: fpfis/php71-build
+    image: fpfis/httpd-php-dev:7.1
     commands:
       - ./vendor/bin/grumphp run
 
   behat:
     group: test
-    image: fpfis/php71-build
+    image: fpfis/httpd-php-dev:7.1
     commands:
       - ./vendor/bin/behat
