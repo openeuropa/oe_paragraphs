@@ -20,7 +20,7 @@
         "drupal/drupal-extension": "^4.0.0@alpha",
         "drush/drush": "^9",
         "nikic/php-parser": "~3",
-        "openeuropa/code-review": "^0.3",
+        "openeuropa/code-review": "~0.3",
         "openeuropa/task-runner": "^0.5",
         "webflo/drupal-core-require-dev": "~8.6"
     },
