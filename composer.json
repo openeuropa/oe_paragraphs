@@ -12,39 +12,34 @@
         "php": "^7.1"
     },
     "require-dev": {
-        "cweagans/composer-patches": "~1.0",
         "composer/installers": "^1.2",
+        "cweagans/composer-patches": "~1.0",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/config_devel": "~1.2",
-        "drupal/core": "^8.5",
         "drupal/drupal-extension": "^4.0.0@alpha",
         "drush/drush": "^9",
         "nikic/php-parser": "~3",
         "openeuropa/code-review": "~0.3",
-        "openeuropa/task-runner": "^0.5",
-        "webflo/drupal-core-require-dev": "~8.6@alpha"
+        "openeuropa/drupal-core-require-dev": "~8.6",
+        "openeuropa/task-runner": "~0.5"
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "post-install-cmd": "./vendor/bin/run drupal:site-setup",
         "post-update-cmd": "./vendor/bin/run drupal:site-setup"
     },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\oe_paragraphs\\": "./src/"
+        }
+    },
     "extra": {
         "composer-exit-on-patch-failure": true,
-        "patches": {
-            "drupal/core": {
-                "https://www.drupal.org/project/drupal/issues/2599228": "https://www.drupal.org/files/issues/2018-05-17/2599228-51.patch"
-            }
-        },
+        "enable-patching": true,
         "installer-paths": {
             "build/core": ["type:drupal-core"],
             "build/modules/contrib/{$name}": ["type:drupal-module"],
             "build/themes/contrib/{$name}": ["type:drupal-theme"]
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Drupal\\oe_paragraphs\\": "src"
         }
     },
     "repositories": {
