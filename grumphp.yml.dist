@@ -1,6 +1,8 @@
 imports:
   - { resource: vendor/openeuropa/code-review/dist/drupal-conventions.yml }
 parameters:
+  tasks.phpmd.ruleset:
+    - 'vendor/openeuropa/code-review/Resources/phpmd-ruleset.xml'
   tasks.phpcs.ignore_patterns:
     - vendor/
     - build/

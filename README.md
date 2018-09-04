@@ -2,6 +2,7 @@ OpenEuropa Paragraphs
 =====================
 
 [![Build Status](https://drone.fpfis.eu/api/badges/openeuropa/oe_paragraphs/status.svg?branch=master)](https://drone.fpfis.eu/openeuropa/oe_paragraphs)
+[![Packagist](https://img.shields.io/packagist/v/openeuropa/oe_paragraphs.svg)](https://packagist.org/packages/openeuropa/oe_paragraphs)
 
 This module integrates the
 [ECL](https://github.com/ec-europa/europa-component-library) - the component

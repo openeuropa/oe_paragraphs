@@ -19,7 +19,7 @@ pipeline:
     volumes:
       - /cache:/cache
     commands:
-      - composer install
+      - composer update ${COMPOSER_BOUNDARY}
 
   site-install:
     image: fpfis/httpd-php-dev:7.1
@@ -37,3 +37,8 @@ pipeline:
     image: fpfis/httpd-php-dev:7.1
     commands:
       - ./vendor/bin/behat
+
+matrix:
+  COMPOSER_BOUNDARY:
+    - '--prefer-lowest'
+    - ''
