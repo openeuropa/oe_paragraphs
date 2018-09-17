@@ -13,13 +13,27 @@ services:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
 
 pipeline:
-  composer-install:
+  composer-install-lowest:
     group: prepare
     image: fpfis/httpd-php-dev:7.1
     volumes:
       - /cache:/cache
     commands:
-      - composer update ${COMPOSER_BOUNDARY}
+      - composer update --prefer-lowest --ansi
+    when:
+      matrix:
+        COMPOSER_BOUNDARY: lowest
+
+  composer-install-highest:
+    group: prepare
+    image: fpfis/httpd-php-dev:7.1
+    volumes:
+      - /cache:/cache
+    commands:
+      - composer install --ansi
+    when:
+      matrix:
+        COMPOSER_BOUNDARY: highest
 
   site-install:
     image: fpfis/httpd-php-dev:7.1
@@ -40,5 +54,5 @@ pipeline:
 
 matrix:
   COMPOSER_BOUNDARY:
-    - '--prefer-lowest'
-    - ''
+    - lowest
+    - highest

@@ -19,9 +19,9 @@
         "drupal/drupal-extension": "~4.0@alpha",
         "drush/drush": "~9.3",
         "nikic/php-parser": "~3.1.5",
-        "openeuropa/code-review": "dev-master",
-        "openeuropa/drupal-core-require-dev": "~8.6@alpha",
-        "openeuropa/task-runner": "~0.7.1"
+        "openeuropa/code-review": "~1.0.0-alpha3",
+        "openeuropa/drupal-core-require-dev": "^8.6@rc",
+        "openeuropa/task-runner": "~1.0"
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
