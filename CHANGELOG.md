@@ -1,10 +1,37 @@
 # Change Log
 
+## [0.2.3](https://github.com/openeuropa/oe_paragraphs/tree/0.2.3) (2018-09-27)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.2...0.2.3)
+
+**Merged pull requests:**
+
+- OPENEUROPA-1238: Allow minor updates for PHP Parser. [\#25](https://github.com/openeuropa/oe_paragraphs/pull/25) ([pfrenssen](https://github.com/pfrenssen))
+- OPENEUROPA-781: Relax dependencies. [\#24](https://github.com/openeuropa/oe_paragraphs/pull/24) ([aritomelo](https://github.com/aritomelo))
+- OPENEUROPA-1165: Create a docker-compose.yml.dist file [\#23](https://github.com/openeuropa/oe_paragraphs/pull/23) ([netlooker](https://github.com/netlooker))
+
+## [0.2.2](https://github.com/openeuropa/oe_paragraphs/tree/0.2.2) (2018-08-09)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.1...0.2.2)
+
+**Merged pull requests:**
+
+- OPENEUROPA-772: Add openeuropa/drupal-core-require-dev on composer.json. [\#22](https://github.com/openeuropa/oe_paragraphs/pull/22) ([voidtek](https://github.com/voidtek))
+- OPENEUROPA-632: Add minimum stability to drupal core. [\#21](https://github.com/openeuropa/oe_paragraphs/pull/21) ([imanoleguskiza](https://github.com/imanoleguskiza))
+- OPENEUROPA-721: Update code-review and grump.yml.dist file. [\#20](https://github.com/openeuropa/oe_paragraphs/pull/20) ([imanoleguskiza](https://github.com/imanoleguskiza))
+
+## [0.2.1](https://github.com/openeuropa/oe_paragraphs/tree/0.2.1) (2018-07-19)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.0...0.2.1)
+
+**Merged pull requests:**
+
+- OPENEUROPA-369: Make sure that all OpenEuropa projects are released under EUPL-1.2 [\#19](https://github.com/openeuropa/oe_paragraphs/pull/19) ([drupol](https://github.com/drupol))
+- OPENEUROPA-582: Update images on docker-compose and drone file. [\#18](https://github.com/openeuropa/oe_paragraphs/pull/18) ([voidtek](https://github.com/voidtek))
+
 ## [0.2.0](https://github.com/openeuropa/oe_paragraphs/tree/0.2.0) (2018-06-22)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.1.1...0.2.0)
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for 0.2.0 release. [\#16](https://github.com/openeuropa/oe_paragraphs/pull/16) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-687: Add the content row paragraph type [\#15](https://github.com/openeuropa/oe_paragraphs/pull/15) ([brummbar](https://github.com/brummbar))
 
 ## [0.1.1](https://github.com/openeuropa/oe_paragraphs/tree/0.1.1) (2018-06-18)
