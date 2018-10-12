@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.oe_quote.field_oe_text
-    - field.field.paragraph.oe_quote.field_oe_text_long
+    - field.field.paragraph.oe_quote.field_oe_plain_text_long
     - paragraphs.paragraphs_type.oe_quote
   module:
     - text
@@ -20,7 +20,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_oe_text_long:
+  field_oe_plain_text_long:
     weight: 0
     settings:
       rows: 5
