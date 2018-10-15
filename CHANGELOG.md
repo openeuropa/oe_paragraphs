@@ -1,10 +1,18 @@
 # Change Log
 
+## [0.3.0](https://github.com/openeuropa/oe_paragraphs/tree/0.3.0) (2018-10-15)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.3...0.3.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-794: Use new plain long text field for quote text. [\#28](https://github.com/openeuropa/oe_paragraphs/pull/28) ([nagyad](https://github.com/nagyad))
+
 ## [0.2.3](https://github.com/openeuropa/oe_paragraphs/tree/0.2.3) (2018-09-27)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.2...0.2.3)
 
 **Merged pull requests:**
 
+- OPENEUROPA-1241: Update CHANGELOG.md. [\#26](https://github.com/openeuropa/oe_paragraphs/pull/26) ([voidtek](https://github.com/voidtek))
 - OPENEUROPA-1238: Allow minor updates for PHP Parser. [\#25](https://github.com/openeuropa/oe_paragraphs/pull/25) ([pfrenssen](https://github.com/pfrenssen))
 - OPENEUROPA-781: Relax dependencies. [\#24](https://github.com/openeuropa/oe_paragraphs/pull/24) ([aritomelo](https://github.com/aritomelo))
 - OPENEUROPA-1165: Create a docker-compose.yml.dist file [\#23](https://github.com/openeuropa/oe_paragraphs/pull/23) ([netlooker](https://github.com/netlooker))
