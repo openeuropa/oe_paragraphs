@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_plain_text_long
+    - paragraphs.paragraphs_type.oe_quote
+id: paragraph.oe_quote.field_oe_plain_text_long
+field_name: field_oe_plain_text_long
+entity_type: paragraph
+bundle: oe_quote
+label: 'Quote text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
