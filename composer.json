@@ -7,13 +7,12 @@
     "prefer-stable": true,
     "require": {
         "drupal/allowed_formats": "^1.1",
-        "drupal/core": "^8.6",
+        "openeuropa/drupal-core-require": "^8.6",
         "drupal/paragraphs": "^1.3",
         "php": "^7.1"
     },
     "require-dev": {
         "composer/installers": "~1.5",
-        "cweagans/composer-patches": "~1.6",
         "drupal-composer/drupal-scaffold": "~2.2",
         "drupal/config_devel": "~1.2",
         "drupal/drupal-extension": "^4.0.0@alpha",

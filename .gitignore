@@ -6,4 +6,4 @@ grumphp.yml
 runner.yml
 vendor
 .DS_Store
-docker-compose.yml
+docker-compose.*.yml
