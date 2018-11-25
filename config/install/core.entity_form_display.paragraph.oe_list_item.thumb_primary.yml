@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.paragraph.thumb_primary
     - field.field.paragraph.oe_list_item.field_oe_date
     - field.field.paragraph.oe_list_item.field_oe_image
     - field.field.paragraph.oe_list_item.field_oe_link
@@ -9,16 +10,26 @@ dependencies:
     - field.field.paragraph.oe_list_item.field_oe_meta
     - field.field.paragraph.oe_list_item.field_oe_text_long
     - field.field.paragraph.oe_list_item.field_oe_title
+    - image.style.thumbnail
     - paragraphs.paragraphs_type.oe_list_item
   module:
     - allowed_formats
+    - image
     - link
     - text
-id: paragraph.oe_list_item.default
+id: paragraph.oe_list_item.thumb_primary
 targetEntityType: paragraph
 bundle: oe_list_item
-mode: default
+mode: thumb_primary
 content:
+  field_oe_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_oe_link:
     weight: 0
     settings:
@@ -28,7 +39,7 @@ content:
     type: link_default
     region: content
   field_oe_meta:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -57,7 +68,6 @@ content:
 hidden:
   created: true
   field_oe_date: true
-  field_oe_image: true
   field_oe_list_item_variant: true
   status: true
   translation: true

@@ -17,6 +17,13 @@ dependencies:
 
 config_devel:
   install:
+    # Form modes.
+    - core.entity_form_mode.paragraph.date
+    - core.entity_form_mode.paragraph.highlight
+    - core.entity_form_mode.paragraph.inpage_navigation
+    - core.entity_form_mode.paragraph.thumb_primary
+    - core.entity_form_mode.paragraph.thumb_secondary
+
     # Paragraph types
     # ---------------
 
@@ -56,7 +63,11 @@ config_devel:
     - paragraphs.paragraphs_type.oe_quote
 
     # List item
+    - core.entity_form_display.paragraph.oe_list_item.date
     - core.entity_form_display.paragraph.oe_list_item.default
+    - core.entity_form_display.paragraph.oe_list_item.highlight
+    - core.entity_form_display.paragraph.oe_list_item.thumb_primary
+    - core.entity_form_display.paragraph.oe_list_item.thumb_secondary
     - core.entity_view_display.paragraph.oe_list_item.default
     - field.field.paragraph.oe_list_item.field_oe_title
     - field.field.paragraph.oe_list_item.field_oe_link
@@ -78,6 +89,7 @@ config_devel:
 
     # Content row
     - core.entity_form_display.paragraph.oe_content_row.default
+    - core.entity_form_display.paragraph.oe_content_row.inpage_navigation
     - core.entity_view_display.paragraph.oe_content_row.default
     - field.field.paragraph.oe_content_row.field_oe_content_row_variant
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
