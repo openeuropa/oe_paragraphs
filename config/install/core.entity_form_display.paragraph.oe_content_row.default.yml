@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.oe_content_row.field_oe_content_row_variant
-    - field.field.paragraph.oe_content_row.field_oe_paragraphs
     - field.field.paragraph.oe_content_row.field_oe_paragraph_variant
+    - field.field.paragraph.oe_content_row.field_oe_paragraphs
     - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
   module:

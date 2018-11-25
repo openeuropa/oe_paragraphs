@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.oe_list_item.field_oe_link
     - field.field.paragraph.oe_list_item.field_oe_list_item_variant
     - field.field.paragraph.oe_list_item.field_oe_meta
+    - field.field.paragraph.oe_list_item.field_oe_paragraph_variant
     - field.field.paragraph.oe_list_item.field_oe_text_long
     - field.field.paragraph.oe_list_item.field_oe_title
     - image.style.thumbnail
@@ -24,28 +25,22 @@ mode: highlight
 content:
   field_oe_image:
     type: image_image
-    weight: 4
+    weight: 3
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
   field_oe_link:
-    weight: 1
+    weight: 0
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
-  field_oe_list_item_variant:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_oe_meta:
-    weight: 5
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -53,7 +48,7 @@ content:
     type: string_textfield
     region: content
   field_oe_text_long:
-    weight: 3
+    weight: 2
     settings:
       rows: 3
       placeholder: ''
@@ -64,7 +59,7 @@ content:
     type: text_textarea
     region: content
   field_oe_title:
-    weight: 2
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -74,6 +69,8 @@ content:
 hidden:
   created: true
   field_oe_date: true
+  field_oe_list_item_variant: true
+  field_oe_paragraph_variant: true
   status: true
   translation: true
   uid: true
