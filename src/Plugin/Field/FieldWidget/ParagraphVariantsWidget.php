@@ -438,7 +438,18 @@ class ParagraphVariantsWidget extends InlineParagraphsWidget {
         }
       }
 
-      $display = $widget_state['paragraphs'][$delta]['display'] ?? EntityFormDisplay::collectRenderDisplay($paragraphs_entity, $this->getSetting('form_display_mode'));
+      // Re-use the entity form display selected in previous form builds.
+      if (isset($widget_state['paragraphs'][$delta]['display'])) {
+        $display = $widget_state['paragraphs'][$delta]['display'];
+      }
+      else {
+        // Extract from the current entity value or use the one configured in
+        // the widget.
+        $display = EntityFormDisplay::collectRenderDisplay(
+          $paragraphs_entity,
+          $paragraphs_entity->get('field_oe_paragraph_variant')->first()->value ?? $this->getSetting('form_display_mode')
+        );
+      }
 
       // @todo Remove as part of https://www.drupal.org/node/2640056
       if (\Drupal::moduleHandler()->moduleExists('field_group')) {
@@ -530,19 +541,22 @@ class ParagraphVariantsWidget extends InlineParagraphsWidget {
 
       if ($item_mode === 'edit') {
         $view_modes = \Drupal::service('entity_display.repository')->getFormModeOptionsByBundle($paragraphs_entity->getEntityTypeId(), $paragraphs_entity->bundle());
-        $element['variant'] = [
-          '#type' => 'select',
-          '#title' => $this->t('Variant'),
-          '#options' => $view_modes,
-          '#default_value' => $display->id(),
-          '#weight' => -0.0001,
-          '#executes_submit_callback' => TRUE,
-          '#submit' => [[$this, 'submitVariant']],
-          '#ajax' => [
-            'callback' => [$this, 'ajaxChangeVariantCallback'],
-            'wrapper' => $widget_state['ajax_wrapper_id'],
-          ],
-        ];
+        if (count($view_modes) > 1) {
+          $element['variant'] = [
+            '#type' => 'select',
+            '#title' => $this->t('Variant'),
+            '#options' => $view_modes,
+            '#default_value' => $display->getMode(),
+            '#weight' => -0.0001,
+            '#executes_submit_callback' => TRUE,
+            '#submit' => [[$this, 'submitVariant']],
+            '#ajax' => [
+              'callback' => [$this, 'ajaxChangeVariantCallback'],
+              'wrapper' => $widget_state['ajax_wrapper_id'],
+            ],
+            '#limit_validation_errors' => [array_merge($parents, [$field_name, $delta, 'variant'])],
+          ];
+        }
       }
     }
     else {
@@ -598,6 +612,20 @@ class ParagraphVariantsWidget extends InlineParagraphsWidget {
 
     static::setWidgetState($parents, $field_name, $form_state, $field_state);
     $form_state->setRebuild();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function massageFormValues(array $values, array $form, FormStateInterface $form_state): array {
+    $values = parent::massageFormValues($values, $form, $form_state);
+
+    foreach ($values as $delta => $item) {
+      // Save variants in the dedicated field.
+      $values[$delta]['entity']->set('field_oe_paragraph_variant', $item['variant'] ?? 'default');
+    }
+
+    return $values;
   }
 
 }
