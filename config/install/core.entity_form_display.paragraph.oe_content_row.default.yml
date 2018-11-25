@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.oe_content_row.field_oe_content_row_variant
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
+    - field.field.paragraph.oe_content_row.field_oe_paragraph_variant
     - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
   module:
@@ -28,6 +29,7 @@ content:
 hidden:
   created: true
   field_oe_content_row_variant: true
+  field_oe_paragraph_variant: true
   field_oe_title: true
   status: true
   translation: true

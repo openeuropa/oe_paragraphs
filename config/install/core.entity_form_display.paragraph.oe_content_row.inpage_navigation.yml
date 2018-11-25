@@ -5,27 +5,14 @@ dependencies:
     - core.entity_form_mode.paragraph.inpage_navigation
     - field.field.paragraph.oe_content_row.field_oe_content_row_variant
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
+    - field.field.paragraph.oe_content_row.field_oe_paragraph_variant
     - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
-  module:
-    - paragraphs
 id: paragraph.oe_content_row.inpage_navigation
 targetEntityType: paragraph
 bundle: oe_content_row
 mode: inpage_navigation
 content:
-  field_oe_paragraphs:
-    weight: 1
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-    third_party_settings: {  }
-    type: entity_reference_paragraphs
-    region: content
   field_oe_title:
     weight: 0
     settings:
@@ -37,6 +24,8 @@ content:
 hidden:
   created: true
   field_oe_content_row_variant: true
+  field_oe_paragraphs: true
+  field_oe_paragraph_variant: true
   status: true
   translation: true
   uid: true
