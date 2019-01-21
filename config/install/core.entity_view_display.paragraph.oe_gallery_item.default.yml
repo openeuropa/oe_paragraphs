@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_gallery_item.field_oe_responsive
+    - field.field.paragraph.oe_gallery_item.field_oe_columns
+    - field.field.paragraph.oe_gallery_item.field_oe_icon
+    - field.field.paragraph.oe_gallery_item.field_oe_image
+    - field.field.paragraph.oe_gallery_item.field_oe_title
+    - paragraphs.paragraphs_type.oe_gallery_item
+  module:
+    - image
+    - options
+id: paragraph.oe_gallery_item.default
+targetEntityType: paragraph
+bundle: oe_gallery_item
+mode: default
+content:
+  field_oe_responsive:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_oe_columns:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_oe_icon:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_oe_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_oe_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

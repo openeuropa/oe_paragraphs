@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_gallery_item.field_oe_responsive
+    - field.field.paragraph.oe_gallery_item.field_oe_columns
+    - field.field.paragraph.oe_gallery_item.field_oe_icon
+    - field.field.paragraph.oe_gallery_item.field_oe_image
+    - field.field.paragraph.oe_gallery_item.field_oe_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.oe_gallery_item
+  module:
+    - image
+id: paragraph.oe_gallery_item.default
+targetEntityType: paragraph
+bundle: oe_gallery_item
+mode: default
+content:
+  field_oe_responsive:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_oe_columns:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_oe_icon:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_oe_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_oe_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

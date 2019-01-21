@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_gallery_row.field_oe_gallery_item
+    - paragraphs.paragraphs_type.oe_gallery_row
+  module:
+    - entity_reference_revisions
+id: paragraph.oe_gallery_row.default
+targetEntityType: paragraph
+bundle: oe_gallery_row
+mode: default
+content:
+  field_oe_gallery_item:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

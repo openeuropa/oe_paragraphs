@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_oe_columns
+field_name: field_oe_columns
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ecl-col-md-4
+      label: '3 colums'
+    -
+      value: ecl-col-md-3
+      label: '4 colums'
+    -
+      value: ecl-col-md-2
+      label: '6 colums'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
