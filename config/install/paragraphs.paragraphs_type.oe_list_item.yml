@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: oe_list_item
-label: 'List item'
+label: 'Listing item'
 icon_uuid: null
 description: 'Use a "List item" when you wish to display content teasers. A list item is available in the following variants: default, date item, highlighted and thumbnail with primary or secondary image.'
 behavior_plugins: {  }
