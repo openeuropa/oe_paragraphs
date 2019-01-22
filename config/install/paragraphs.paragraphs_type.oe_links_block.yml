@@ -4,5 +4,5 @@ dependencies: {  }
 id: oe_links_block
 label: 'Links block'
 icon_uuid: null
-description: 'A set of links with an optional title.'
+description: 'A set of links with an optional title. This component should be placed in the sidebar only.'
 behavior_plugins: {  }

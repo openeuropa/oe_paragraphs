@@ -129,3 +129,9 @@ Please read [the full documentation](https://github.com/openeuropa/openeuropa) f
 We use [SemVer](http://semver.org/) for versioning. For the available versions, see the [tags on this repository](https://github.com/openeuropa/oe_paragraphs/tags).
 
 [1]: https://www.drupal.org/docs/develop/using-composer/using-composer-to-manage-drupal-site-dependencies#managing-contributed
+
+## Components
+
+#### Links block
+The links block component displays a list of links, with an optional title. It is used for instance with the dropdown component.
+The component is intended to be used in the sidebar area only. Currently it is not being used in the main content area.
