@@ -16,11 +16,11 @@
         "drupal-composer/drupal-scaffold": "~2.2",
         "drupal/config_devel": "~1.2",
         "drupal/drupal-extension": "^4.0.0@alpha",
-        "drush/drush": "~9.0",
+        "drush/drush": "~9.0@stable",
         "nikic/php-parser": "^3.1.5",
         "openeuropa/code-review": "^1.0.0-alpha4",
         "openeuropa/drupal-core-require-dev": "^8.6",
-        "openeuropa/task-runner": "~1.0"
+        "openeuropa/task-runner": "~1.0.0-beta4"
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
