@@ -13,14 +13,8 @@ targetEntityType: paragraph
 bundle: oe_content_row
 mode: default
 content:
-  field_oe_content_row_variant:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_oe_paragraphs:
-    weight: 2
+    weight: 0
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -31,15 +25,10 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
-  field_oe_title:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   created: true
+  field_oe_content_row_variant: true
+  field_oe_title: true
   status: true
+  translation: true
   uid: true

@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * OE Paragraphs module.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function oe_paragraphs_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  if($entity_type !== 'paragraph') {
+    return $fields;
+  }
+
+  $fields['oe_paragraphs_field_variant'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Variant'))
+    ->setRequired(FALSE)
+    ->setTranslatable(FALSE)
+    ->setRevisionable(TRUE)
+    ->setSetting('max_length', 255)
+    ->setDisplayConfigurable('form', FALSE)
+    ->setDisplayConfigurable('view', FALSE);
+
+  return $fields;
+}
