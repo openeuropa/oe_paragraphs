@@ -3,14 +3,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.oe_list_item_block.field_oe_link
-    - field.field.paragraph.oe_list_item_block.field_oe_list_item_block_variant
     - field.field.paragraph.oe_list_item_block.field_oe_paragraphs
     - field.field.paragraph.oe_list_item_block.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item_block
   module:
     - entity_reference_revisions
     - link
-    - options
 id: paragraph.oe_list_item_block.default
 targetEntityType: paragraph
 bundle: oe_list_item_block
@@ -27,13 +25,6 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-    region: content
-  field_oe_list_item_block_variant:
-    weight: 0
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_oe_paragraphs:
     weight: 2

@@ -5,7 +5,6 @@ dependencies:
     - field.field.paragraph.oe_list_item.field_oe_date
     - field.field.paragraph.oe_list_item.field_oe_image
     - field.field.paragraph.oe_list_item.field_oe_link
-    - field.field.paragraph.oe_list_item.field_oe_list_item_variant
     - field.field.paragraph.oe_list_item.field_oe_meta
     - field.field.paragraph.oe_list_item.field_oe_text_long
     - field.field.paragraph.oe_list_item.field_oe_title
@@ -14,7 +13,6 @@ dependencies:
     - datetime
     - image
     - link
-    - options
     - text
 id: paragraph.oe_list_item.default
 targetEntityType: paragraph
@@ -50,13 +48,6 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-    region: content
-  field_oe_list_item_variant:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_oe_meta:
     weight: 6

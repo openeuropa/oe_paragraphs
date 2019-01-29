@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.oe_list_item.field_oe_date
     - field.field.paragraph.oe_list_item.field_oe_image
     - field.field.paragraph.oe_list_item.field_oe_link
-    - field.field.paragraph.oe_list_item.field_oe_list_item_variant
     - field.field.paragraph.oe_list_item.field_oe_meta
     - field.field.paragraph.oe_list_item.field_oe_text_long
     - field.field.paragraph.oe_list_item.field_oe_title
@@ -68,7 +67,6 @@ content:
 hidden:
   created: true
   field_oe_date: true
-  field_oe_list_item_variant: true
   status: true
   translation: true
   uid: true

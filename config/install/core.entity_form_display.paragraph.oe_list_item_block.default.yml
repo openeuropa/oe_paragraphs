@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.oe_list_item_block.field_oe_link
-    - field.field.paragraph.oe_list_item_block.field_oe_list_item_block_variant
     - field.field.paragraph.oe_list_item_block.field_oe_paragraphs
     - field.field.paragraph.oe_list_item_block.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item_block
@@ -22,12 +21,6 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
-    region: content
-  field_oe_list_item_block_variant:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_oe_paragraphs:
     weight: 2
