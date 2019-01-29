@@ -5,7 +5,7 @@ dependencies:
     - field.field.node.oe_demo_landing_page.field_oe_demo_body
     - node.type.oe_demo_landing_page
   module:
-    - paragraphs
+    - oe_paragraphs
     - path
 id: node.oe_demo_landing_page.default
 targetEntityType: node
@@ -19,7 +19,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_oe_demo_body:
-    type: entity_reference_paragraphs
+    type: oe_paragraphs_variants
     weight: 121
     settings:
       title: Paragraph
@@ -28,6 +28,12 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: _none
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
   langcode:
