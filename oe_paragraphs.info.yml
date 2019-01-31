@@ -57,7 +57,6 @@ config_devel:
     - core.entity_form_display.paragraph.oe_quote.default
     - core.entity_view_display.paragraph.oe_quote.default
     - field.field.paragraph.oe_quote.field_oe_text
-    - field.field.paragraph.oe_quote.field_oe_text_long
     - paragraphs.paragraphs_type.oe_quote
 
     # Listing item
@@ -73,7 +72,6 @@ config_devel:
     - core.entity_view_display.paragraph.oe_list_item.default
     - field.field.paragraph.oe_list_item.field_oe_title
     - field.field.paragraph.oe_list_item.field_oe_link
-    - field.field.paragraph.oe_list_item.field_oe_list_item_variant
     - field.field.paragraph.oe_list_item.field_oe_text_long
     - field.field.paragraph.oe_list_item.field_oe_image
     - field.field.paragraph.oe_list_item.field_oe_date
@@ -84,15 +82,14 @@ config_devel:
     - core.entity_form_display.paragraph.oe_list_item_block.default
     - core.entity_view_display.paragraph.oe_list_item_block.default
     - field.field.paragraph.oe_list_item_block.field_oe_link
-    - field.field.paragraph.oe_list_item_block.field_oe_list_item_block_variant
     - field.field.paragraph.oe_list_item_block.field_oe_paragraphs
     - field.field.paragraph.oe_list_item_block.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item_block
 
     # Content row
     - core.entity_form_display.paragraph.oe_content_row.default
+    - core.entity_form_display.paragraph.oe_content_row.inpage_navigation
     - core.entity_view_display.paragraph.oe_content_row.default
-    - field.field.paragraph.oe_content_row.field_oe_content_row_variant
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
     - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
@@ -121,12 +118,6 @@ config_devel:
     # Single link field (link)
     - field.storage.paragraph.field_oe_link
 
-    # List item block variant (select field)
-    - field.storage.paragraph.field_oe_list_item_block_variant
-
-    # Item list variant (select field)
-    - field.storage.paragraph.field_oe_list_item_variant
-
     # Single image field.
     - field.storage.paragraph.field_oe_image
 
@@ -135,9 +126,6 @@ config_devel:
 
     # Meta (multiple strings).
     - field.storage.paragraph.field_oe_meta
-
-    # Row variant.
-    - field.storage.paragraph.field_oe_content_row_variant
 
   optional:
     # Paragraph multilingual configuration
