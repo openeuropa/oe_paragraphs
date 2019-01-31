@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the OE Paragraphs module.
+ */
+
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Copy the values to the new variant field and delete the old variant fields.
+ */
+function oe_paragraphs_update_8001(&$sandbox) {
+  if (!isset($sandbox['total'])) {
+    // Initialise batch variables and settings.
+    $sandbox['variant_fields'] = [
+      'oe_content_row' => 'field_oe_content_row_variant',
+      'oe_list_item_block' => 'field_oe_list_item_block_variant',
+      'oe_list_item' => 'field_oe_list_item_variant'
+    ];
+    $paragraph_ids = [];
+
+    foreach ($sandbox['variant_fields'] as $bundle => $field) {
+      // Make sure we have the old fields in the database.
+      $all_bundle_fields = \Drupal::service('entity_field.manager')->getFieldDefinitions('paragraph', $bundle);
+      if (!isset($all_bundle_fields[$field])) {
+        continue;
+      }
+
+      // Take all entities that has a value in one of the old fields.
+      $query = \Drupal::entityQuery('paragraph');
+      $query->exists($field);
+      $result = $query->execute();
+      if (!empty($result)) {
+        $paragraph_ids += $result;
+      }
+
+      $sandbox['total'] = count($paragraph_ids);
+      $sandbox['current'] = 0;
+      $sandbox['paragraphs_per_batch'] = 25;
+    }
+
+    // Make sure we have the new base field created before we copy values.
+    $storage_definition = BaseFieldDefinition::create('string')
+      ->setLabel(t('Variant'))
+      ->setRequired(FALSE)
+      ->setTranslatable(FALSE)
+      ->setRevisionable(TRUE)
+      ->setSetting('max_length', 255)
+      ->setDisplayConfigurable('form', FALSE)
+      ->setDisplayConfigurable('view', FALSE);
+
+    \Drupal::entityDefinitionUpdateManager()
+      ->installFieldStorageDefinition('field_oe_paragraphs_variant', 'paragraph', 'oe_paragraphs', $storage_definition);
+  }
+
+  // Return if we have nothing to process.
+  if ($sandbox['total'] === 0) {
+    \Drupal::messenger()->addMessage($sandbox['current'] . ' paragraphs processed.');
+    $sandbox['#finished'] = 1;
+    return;
+  }
+
+  // Get the current slice of paragraph ids.
+  $pids = array_slice($paragraph_ids, $sandbox['current'], $sandbox['paragraphs_per_batch']);
+  $entity_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
+
+  foreach ($pids as $pid) {
+    $paragraph = $entity_storage->load($pid);
+    $bundle = $paragraph->bundle();
+    // Set the new field with the old value.
+    $paragraph->set(
+      'field_oe_paragraphs_variant',
+      $paragraph->get($sandbox['variant_fields'][$bundle])->getValue()
+    );
+    // Set the old field to NULL.
+    $paragraph->set($sandbox['variant_fields'][$bundle], NULL);
+    $paragraph->save();
+
+    $sandbox['current']++;
+  }
+
+  \Drupal::messenger()->addMessage($sandbox['current'] . ' paragraphs processed.');
+
+  $sandbox['#finished'] = ($sandbox['current'] / $sandbox['total']);
+  if ($sandbox['#finished'] === 1) {
+    // Cleanup the fields after copy.
+    foreach ($sandbox['variant_fields'] as $bundle => $field) {
+      FieldStorageConfig::loadByName('paragraph', $field)->delete();
+    }
+  }
+}

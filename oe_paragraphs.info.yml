@@ -21,8 +21,6 @@ config_devel:
     - core.entity_form_mode.paragraph.date
     - core.entity_form_mode.paragraph.highlight
     - core.entity_form_mode.paragraph.inpage_navigation
-    - core.entity_form_mode.paragraph.thumb_primary
-    - core.entity_form_mode.paragraph.thumb_secondary
 
     # Paragraph types
     # ---------------
