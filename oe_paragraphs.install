@@ -5,6 +5,10 @@
  * Install, update and uninstall functions for the OE Paragraphs module.
  */
 
+use Drupal\Core\Config\FileStorage;
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\Core\Entity\Entity\EntityFormMode;
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
 use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\field\Entity\FieldStorageConfig;
 
@@ -59,6 +63,12 @@ function oe_paragraphs_update_8001(&$sandbox) {
   if ($sandbox['total'] === 0) {
     \Drupal::messenger()->addMessage($sandbox['current'] . ' paragraphs processed.');
     $sandbox['#finished'] = 1;
+
+    // Cleanup the fields after copy.
+    foreach ($sandbox['variant_fields'] as $bundle => $field) { // if total 0 do the following.
+      FieldStorageConfig::loadByName('paragraph', $field)->delete();
+    }
+
     return;
   }
 
@@ -82,12 +92,52 @@ function oe_paragraphs_update_8001(&$sandbox) {
   }
 
   \Drupal::messenger()->addMessage($sandbox['current'] . ' paragraphs processed.');
-
   $sandbox['#finished'] = ($sandbox['current'] / $sandbox['total']);
+
   if ($sandbox['#finished'] === 1) {
     // Cleanup the fields after copy.
-    foreach ($sandbox['variant_fields'] as $bundle => $field) {
+    foreach ($sandbox['variant_fields'] as $bundle => $field) { // if total 0 do the following.
       FieldStorageConfig::loadByName('paragraph', $field)->delete();
+    }
+
+    // Start the sync for new configurations.
+    $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/install');
+
+    // New form modes.
+    $form_modes = $storage->listAll('core.entity_form_mode.');
+    foreach ($form_modes as $mode) {
+      $values = $storage->read($mode);
+      $form_mode = EntityFormMode::create($values);
+      $form_mode->save();
+    }
+
+    // Update form displays.
+    $form_displays = $storage->listAll('core.entity_form_display.');
+    foreach ($form_displays as $display) {
+      $values = $storage->read($display);
+      $form_display = EntityFormDisplay::load($values['id']);
+      if ($form_display) {
+        foreach ($values as $key => $value) {
+          $form_display->set($key, $value);
+        }
+      }
+      else {
+        $form_display = EntityFormDisplay::create($values);
+      }
+
+      $form_display->save();
+    }
+
+    // Update view displays.
+    $view_displays = $storage->listAll('core.entity_view_display.');
+    foreach ($view_displays as $display) {
+      $values = $storage->read($display);
+      $view_display = EntityViewDisplay::load($values['id']);
+      foreach ($values as $key => $value) {
+        $view_display->set($key, $value);
+      }
+
+      $view_display->save();
     }
   }
 }
