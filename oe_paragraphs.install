@@ -79,11 +79,15 @@ function oe_paragraphs_update_8001(&$sandbox) {
   foreach ($pids as $pid) {
     $paragraph = $entity_storage->load($pid);
     $bundle = $paragraph->bundle();
+    $value = $paragraph->get($sandbox['variant_fields'][$bundle])->getValue();
+
+    // Check for values that needs conversion.
+    if (strpos($value[0]['value'], 'list_item_') !== FALSE) {
+      $value[0]['value'] = substr($value[0]['value'], strlen('list_item_'));
+    }
+
     // Set the new field with the old value.
-    $paragraph->set(
-      'field_oe_paragraphs_variant',
-      $paragraph->get($sandbox['variant_fields'][$bundle])->getValue()
-    );
+    $paragraph->set('field_oe_paragraphs_variant', $value);
     // Set the old field to NULL.
     $paragraph->set($sandbox['variant_fields'][$bundle], NULL);
     $paragraph->save();
