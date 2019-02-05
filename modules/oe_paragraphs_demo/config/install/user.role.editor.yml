@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 2
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create oe_demo_landing_page content'
+  - 'delete all revisions'
+  - 'delete any oe_demo_landing_page content'
+  - 'delete oe_demo_landing_page revisions'
+  - 'delete own oe_demo_landing_page content'
+  - 'edit any oe_demo_landing_page content'
+  - 'edit own oe_demo_landing_page content'
+  - 'revert all revisions'
+  - 'revert oe_demo_landing_page revisions'
+  - 'view all revisions'
+  - 'view oe_demo_landing_page revisions'
+  - 'view own unpublished content'
+  - 'view unpublished paragraphs'
