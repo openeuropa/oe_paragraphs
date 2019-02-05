@@ -7,10 +7,11 @@ default:
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\DrupalContext
   extensions:
-    Behat\MinkExtension:
+    Drupal\MinkExtension:
       goutte: ~
       browser_name: 'chrome'
       javascript_session: selenium2
+      ajax_timeout: 10
       selenium2:
         wd_host: '${selenium.host}:${selenium.port}/wd/hub'
         capabilities: { "browser": "chrome", "version": "*" }
