@@ -2,18 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.paragraph.inpage_navigation
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
     - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
   module:
     - oe_paragraphs
-id: paragraph.oe_content_row.default
+id: paragraph.oe_content_row.inpage_navigation
 targetEntityType: paragraph
 bundle: oe_content_row
-mode: default
+mode: inpage_navigation
 content:
   field_oe_paragraphs:
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -31,9 +32,16 @@ content:
     third_party_settings: {  }
     type: oe_paragraphs_variants
     region: content
+  field_oe_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
-  field_oe_title: true
   status: true
   translation: true
   uid: true
