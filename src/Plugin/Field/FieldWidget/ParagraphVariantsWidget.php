@@ -13,7 +13,7 @@ use Drupal\Core\Render\Element;
 use Drupal\paragraphs\Plugin\Field\FieldWidget\ParagraphsWidget;
 
 /**
- * Class ParagraphVariantsWidget
+ * Class ParagraphVariantsWidget.
  *
  * @FieldWidget(
  *   id = "oe_paragraphs_variants",
@@ -83,9 +83,9 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
       $entity_type = $entity_type_manager->getDefinition($target_type);
       $bundle_key = $entity_type->getKey('bundle');
 
-      $paragraphs_entity = $entity_type_manager->getStorage($target_type)->create(array(
+      $paragraphs_entity = $entity_type_manager->getStorage($target_type)->create([
         $bundle_key => $widget_state['selected_bundle'],
-      ));
+      ]);
       $paragraphs_entity->setParentEntity($host, $field_name);
 
       $item_mode = 'edit';
@@ -181,18 +181,18 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
       $element_parents[] = $delta;
       $element_parents[] = 'subform';
 
-      $id_prefix = implode('-', array_merge($parents, array($field_name, $delta)));
+      $id_prefix = implode('-', array_merge($parents, [$field_name, $delta]));
       $wrapper_id = Html::getUniqueId($id_prefix . '-item-wrapper');
 
-      $element += array(
+      $element += [
         '#type' => 'container',
-        '#element_validate' => array(array($this, 'elementValidate')),
+        '#element_validate' => [[$this, 'elementValidate']],
         '#paragraph_type' => $paragraphs_entity->bundle(),
-        'subform' => array(
+        'subform' => [
           '#type' => 'container',
           '#parents' => $element_parents,
-        ),
-      );
+        ],
+      ];
 
       $element['#prefix'] = '<div id="' . $wrapper_id . '">';
       $element['#suffix'] = '</div>';
@@ -270,7 +270,9 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
           '#name' => $id_prefix . '_duplicate',
           '#weight' => 502,
           '#submit' => [[get_class($this), 'duplicateSubmit']],
-          '#limit_validation_errors' => [array_merge($parents, [$field_name, $delta])],
+          '#limit_validation_errors' => [
+            array_merge($parents, [$field_name, $delta]),
+          ],
           '#delta' => $delta,
           '#ajax' => [
             'callback' => [get_class($this), 'itemAjax'],
@@ -291,7 +293,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
             '#limit_validation_errors' => [],
             '#delta' => $delta,
             '#ajax' => [
-              'callback' => array(get_class($this), 'itemAjax'),
+              'callback' => [get_class($this), 'itemAjax'],
               'wrapper' => $widget_state['ajax_wrapper_id'],
             ],
             '#access' => $this->removeButtonAccess($paragraphs_entity),
@@ -306,7 +308,9 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
               '#name' => $id_prefix . '_collapse',
               '#weight' => 1,
               '#submit' => [[get_class($this), 'paragraphsItemSubmit']],
-              '#limit_validation_errors' => [array_merge($parents, [$field_name, $delta])],
+              '#limit_validation_errors' => [
+                array_merge($parents, [$field_name, $delta]),
+              ],
               '#delta' => $delta,
               '#ajax' => [
                 'callback' => [get_class($this), 'itemAjax'],
@@ -356,7 +360,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
           if (!$paragraphs_entity->access('view')) {
             $info['preview'] = [
               '#theme' => 'paragraphs_info_icon',
-              '#message' => $this->t('You are not allowed to view this @title.', array('@title' => $this->getSetting('title'))),
+              '#message' => $this->t('You are not allowed to view this @title.', ['@title' => $this->getSetting('title')]),
               '#icon' => 'view',
             ];
           }
@@ -452,11 +456,11 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
             $field_definition = $paragraphs_entity->get($field)->getFieldDefinition();
 
             // Do a check if we have to add a class to the form element. We need
-            // those classes (paragraphs-content and paragraphs-behavior) to show
-            // and hide elements, depending of the active perspective.
+            // those classes (paragraphs-content and paragraphs-behavior)
+            // to show and hide elements, depending of the active perspective.
             // We need them to filter out entity reference revisions fields that
-            // reference paragraphs, cause otherwise we have problems with showing
-            // and hiding the right fields in nested paragraphs.
+            // reference paragraphs, cause otherwise we have problems
+            // with showing and hiding the right fields in nested paragraphs.
             $is_paragraph_field = FALSE;
             if ($field_definition->getType() == 'entity_reference_revisions') {
               // Check if we are referencing paragraphs.
@@ -478,7 +482,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
               else {
                 $element['subform'][$field]['widget']['#after_build'][] = [
                   static::class,
-                  'addTranslatabilityClue'
+                  'addTranslatabilityClue',
                 ];
               }
             }
@@ -533,7 +537,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
         }
       }
       else {
-        $element['subform'] = array();
+        $element['subform'] = [];
       }
 
       // If we have any info items lets add them to the top section.
@@ -577,7 +581,9 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
               'callback' => [$this, 'ajaxChangeVariantCallback'],
               'wrapper' => $widget_state['ajax_wrapper_id'],
             ],
-            '#limit_validation_errors' => [array_merge($parents, [$field_name, $delta, 'variant'])],
+            '#limit_validation_errors' => [
+              array_merge($parents, [$field_name, $delta, 'variant']),
+            ],
           ];
         }
       }

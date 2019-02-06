@@ -21,7 +21,7 @@ function oe_paragraphs_update_8001(&$sandbox) {
     $sandbox['variant_fields'] = [
       'oe_content_row' => 'field_oe_content_row_variant',
       'oe_list_item_block' => 'field_oe_list_item_block_variant',
-      'oe_list_item' => 'field_oe_list_item_variant'
+      'oe_list_item' => 'field_oe_list_item_variant',
     ];
     $paragraph_ids = [];
 
@@ -65,7 +65,7 @@ function oe_paragraphs_update_8001(&$sandbox) {
     $sandbox['#finished'] = 1;
 
     // Cleanup the fields after copy.
-    foreach ($sandbox['variant_fields'] as $bundle => $field) { // if total 0 do the following.
+    foreach ($sandbox['variant_fields'] as $bundle => $field) {
       FieldStorageConfig::loadByName('paragraph', $field)->delete();
     }
 
@@ -100,7 +100,7 @@ function oe_paragraphs_update_8001(&$sandbox) {
 
   if ($sandbox['#finished'] === 1) {
     // Cleanup the fields after copy.
-    foreach ($sandbox['variant_fields'] as $bundle => $field) { // if total 0 do the following.
+    foreach ($sandbox['variant_fields'] as $bundle => $field) {
       FieldStorageConfig::loadByName('paragraph', $field)->delete();
     }
 
