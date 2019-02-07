@@ -23,11 +23,16 @@ use Drupal\paragraphs\Plugin\Field\FieldWidget\ParagraphsWidget;
  *     "entity_reference_revisions"
  *   }
  * )
+ *
+ * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
  */
 class ParagraphVariantsWidget extends ParagraphsWidget {
 
   /**
    * {@inheritdoc}
+   *
+   * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+   * @SuppressWarnings(PHPMD.NPathComplexity)
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
     $field_name = $this->fieldDefinition->getName();

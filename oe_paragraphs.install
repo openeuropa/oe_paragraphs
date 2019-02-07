@@ -17,7 +17,7 @@ use Drupal\field\Entity\FieldStorageConfig;
 /**
  * Copy the values to the new variant field and delete the old variant fields.
  */
-function oe_paragraphs_update_8001(&$sandbox) {
+function oe_paragraphs_update_8001(array &$sandbox) {
   if (!isset($sandbox['total'])) {
     // Initialise batch variables and settings.
     $sandbox['variant_fields'] = [
