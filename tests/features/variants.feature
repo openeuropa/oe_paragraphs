@@ -9,31 +9,86 @@ Feature: Paragraph types show different fields based on variants.
     Given I am logged in as a user with the "Editor" role
     And I click "Add content"
     And I press "List additional actions"
-    When I press "Add Listing item"
 
-    # Date variant.
-    Then I should not see "Date information. Used only on date variant."
+    # Rich text.
+    When I press "Add Rich text"
+    And the following fields should be present "Title, Text"
+
+    # Links block.
+    When I click "Add content"
+    And I press "List additional actions"
+    And I press "Add Links block"
+    Then the following fields should be present "Title, URL, Link text"
+
+    # Accordion.
+    When I click "Add content"
+    And I press "List additional actions"
+    And I press "Add Accordion"
+    Then the following fields should be present "Icon, Title, Body"
+
+    # Quote.
+    When I click "Add content"
+    And I press "List additional actions"
+    And I press "Add Quote"
+    Then the following fields should be present "Quote, Attribution"
+
+    # Listing item Date variant.
+    When I click "Add content"
+    And I press "List additional actions"
+    And I press "Add Listing item"
+    Then the following fields should not be present "Day, Month, Year"
+    And the following fields should be present "Variant, Link, Title, Description, Meta"
     When I select "Date" from "Variant"
     And I wait for AJAX to finish
-    Then I should see "Date information. Used only on date variant."
+    Then the following fields should be present "Variant, Link, Title, Description, Meta, Day, Month, Year"
 
-    # Thumbnail variant.
-    And I should not see "Image"
-    And I should not see "List item image. Used only on thumbnail variants."
+    # Listing item Highlight variant.
+    When I click "Add content"
+    And I press "List additional actions"
+    And I press "Add Listing item"
+    Then the following field should not be present "Image"
+    And the following fields should be present "Variant, Link, Title, Description, Meta"
+    When I select "Highlight" from "Variant"
+    And I wait for AJAX to finish
+    Then the following fields should be present "Variant, Link, Title, Description, Meta, Image"
+
+    # Listing item Thumbnail primary variant.
+    When I click "Add content"
+    And I press "List additional actions"
+    And I press "Add Listing item"
+    Then the following field should not be present "Image"
+    And the following fields should be present "Variant, Link, Title, Description, Meta"
     When I select "Thumbnail primary" from "Variant"
     And I wait for AJAX to finish
-    Then I should see "Image"
-    And I should see "List item image. Used only on thumbnail variants."
+    Then the following fields should be present "Variant, Link, Title, Meta, Image"
+    And the following field should not be present "Description"
 
-    # Navigate to a new form.
-    And I follow "Add content"
+    # Listing item Thumbnail secondary variant.
+    When I click "Add content"
+    And I press "List additional actions"
+    And I press "Add Listing item"
+    Then the following field should not be present "Image"
+    And the following fields should be present "Variant, Link, Title, Description, Meta"
+    When I select "Thumbnail secondary" from "Variant"
+    And I wait for AJAX to finish
+    Then the following fields should be present "Variant, Link, Title, Meta, Image, Description"
 
-    # Inpage naviagtion variant.
-    When I press "List additional actions"
+    # Content row Inpage navigation variant.
+    When I click "Add content"
+    And I press "List additional actions"
     And I press "Add Content row"
-    Then I should not see "Navigation title"
-    And I should not see "The title to show for the inpage navigation. Used only for the inpage navigation variant."
+    Then the following field should not be present "Navigation title"
+    And the following fields should be present "Variant"
     When I select "Inpage navigation" from "Variant"
     And I wait for AJAX to finish
-    Then I should see "Navigation title"
-    And I should see "The title to show for the inpage navigation. Used only for the inpage navigation variant."
+    Then the following fields should be present "Variant, Navigation title"
+
+    # Listing item block.
+    When I click "Add content"
+    And I press "List additional actions"
+    And I press "Add Listing item block"
+    Then the following fields should not be present "Day, Month, Year"
+    And the following fields should be present "Layout, Variant, Link, Title, Description, Meta, URL, Link text"
+    When I select "Date" from "Variant"
+    And I wait for AJAX to finish
+    Then the following fields should be present "Layout, Variant, Link, Title, Description, Meta, URL, Link text, Day, Month, Year"
