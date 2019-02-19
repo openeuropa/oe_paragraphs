@@ -17,7 +17,7 @@ use Drupal\field\Entity\FieldStorageConfig;
 /**
  * Copy the values to the new variant field and delete the old variant fields.
  */
-function oe_paragraphs_update_8001(array &$sandbox) {
+function oe_paragraphs_update_8001(array &$sandbox): void {
   if (!isset($sandbox['total'])) {
     // Initialise batch variables and settings.
     $sandbox['variant_fields'] = [
@@ -50,7 +50,6 @@ function oe_paragraphs_update_8001(array &$sandbox) {
     // Make sure we have the new base field created before we copy values.
     $storage_definition = BaseFieldDefinition::create('string')
       ->setLabel(t('Variant'))
-      ->setRequired(FALSE)
       ->setTranslatable(FALSE)
       ->setRevisionable(TRUE)
       ->setSetting('max_length', 255)
@@ -58,10 +57,10 @@ function oe_paragraphs_update_8001(array &$sandbox) {
       ->setDisplayConfigurable('view', FALSE);
 
     \Drupal::entityDefinitionUpdateManager()
-      ->installFieldStorageDefinition('field_oe_paragraphs_variant', 'paragraph', 'oe_paragraphs', $storage_definition);
+      ->installFieldStorageDefinition('oe_paragraphs_variant', 'paragraph', 'oe_paragraphs', $storage_definition);
 
     // Start the sync for new configurations.
-    $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/install');
+    $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/updates/update_8001');
 
     // Create the new field from config.
     $new_field_config = [
@@ -69,11 +68,14 @@ function oe_paragraphs_update_8001(array &$sandbox) {
       'field.field.paragraph.oe_list_item_block.field_oe_list_item_block_layout',
     ];
 
+    $config_manager = \Drupal::service('config.manager');
+    $entity_manager = \Drupal::entityTypeManager();
+
     foreach ($new_field_config as $config_name) {
       $config_record = $storage->read($config_name);
-      $entity_type = \Drupal::service('config.manager')->getEntityTypeIdByName($config_name);
+      $entity_type = $config_manager->getEntityTypeIdByName($config_name);
       /** @var \Drupal\Core\Config\Entity\ConfigEntityStorageInterface $entity_storage */
-      $entity_storage = \Drupal::entityTypeManager()->getStorage($entity_type);
+      $entity_storage = $entity_manager->getStorage($entity_type);
       $entity = $entity_storage->createFromStorageRecord($config_record);
       $entity->save();
     }
@@ -118,7 +120,6 @@ function oe_paragraphs_update_8001(array &$sandbox) {
 
   // Return if we have nothing to process.
   if ($sandbox['total'] === 0) {
-    \Drupal::messenger()->addMessage($sandbox['current'] . ' paragraphs processed.');
     $sandbox['#finished'] = 1;
 
     // Cleanup the fields after copy.
@@ -150,7 +151,7 @@ function oe_paragraphs_update_8001(array &$sandbox) {
     }
     else {
       // Set the new field with the old value.
-      $paragraph->set('field_oe_paragraphs_variant', $value);
+      $paragraph->set('oe_paragraphs_variant', $value);
     }
 
     // Set the old field to NULL.
@@ -160,7 +161,6 @@ function oe_paragraphs_update_8001(array &$sandbox) {
     $sandbox['current']++;
   }
 
-  \Drupal::messenger()->addMessage($sandbox['current'] . ' paragraphs processed.');
   $sandbox['#finished'] = ($sandbox['current'] / $sandbox['total']);
 
   if ($sandbox['#finished'] === 1) {

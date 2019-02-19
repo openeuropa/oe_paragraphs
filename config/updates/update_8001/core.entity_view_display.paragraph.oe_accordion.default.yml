@@ -5,30 +5,19 @@ dependencies:
     - field.field.paragraph.oe_accordion.field_oe_paragraphs
     - paragraphs.paragraphs_type.oe_accordion
   module:
-    - paragraphs
+    - entity_reference_revisions
 id: paragraph.oe_accordion.default
 targetEntityType: paragraph
 bundle: oe_accordion
 mode: default
 content:
   field_oe_paragraphs:
-    type: entity_reference_paragraphs
+    type: entity_reference_revisions_entity_view
     weight: 0
+    label: above
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
-  translation:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden:
-  created: true
-  status: true
-  uid: true
+hidden: {  }

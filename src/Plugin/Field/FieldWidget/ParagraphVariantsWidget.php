@@ -433,7 +433,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
         // the widget.
         $display = EntityFormDisplay::collectRenderDisplay(
           $paragraphs_entity,
-          $paragraphs_entity->get('field_oe_paragraphs_variant')->first()->value ?? $this->getSetting('form_display_mode')
+          $paragraphs_entity->get('oe_paragraphs_variant')->first()->value ?? $this->getSetting('form_display_mode')
         );
       }
 
@@ -657,7 +657,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
     foreach ($values as $delta => $item) {
       if (isset($values[$delta]['entity'])) {
         // Save variants in the dedicated field.
-        $values[$delta]['entity']->set('field_oe_paragraphs_variant', $item['variant'] ?? 'default');
+        $values[$delta]['entity']->set('oe_paragraphs_variant', $item['variant'] ?? 'default');
       }
     }
 

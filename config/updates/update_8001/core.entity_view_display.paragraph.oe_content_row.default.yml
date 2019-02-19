@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_content_row.field_oe_paragraphs
+    - field.field.paragraph.oe_content_row.field_oe_title
+    - paragraphs.paragraphs_type.oe_content_row
+  module:
+    - entity_reference_revisions
+id: paragraph.oe_content_row.default
+targetEntityType: paragraph
+bundle: oe_content_row
+mode: default
+content:
+  field_oe_paragraphs:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_oe_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

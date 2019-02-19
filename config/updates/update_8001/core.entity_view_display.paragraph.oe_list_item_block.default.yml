@@ -8,8 +8,9 @@ dependencies:
     - field.field.paragraph.oe_list_item_block.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item_block
   module:
+    - entity_reference_revisions
     - link
-    - oe_paragraphs
+    - options
 id: paragraph.oe_list_item_block.default
 targetEntityType: paragraph
 bundle: oe_list_item_block
@@ -17,51 +18,38 @@ mode: default
 content:
   field_oe_link:
     weight: 3
+    label: above
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    type: link_default
+    type: link
     region: content
   field_oe_list_item_block_layout:
-    weight: 0
+    weight: 4
+    label: above
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: list_default
     region: content
   field_oe_paragraphs:
     weight: 2
+    label: above
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: '0'
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: oe_list_item
-      features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
-        add_above: 0
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: oe_paragraphs_variants
+    type: entity_reference_revisions_entity_view
     region: content
   field_oe_title:
     weight: 1
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
-  translation:
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden:
-  created: true
-  status: true
-  uid: true
+hidden: {  }

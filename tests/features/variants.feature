@@ -1,22 +1,23 @@
 @api
-Feature: Paragraph types have different variants
+Feature: Paragraph types show different fields based on variants.
   As a content editor
-  I need to be able to chose paragraph variants, so the form is showing the variant fields only
+  I need to be able to chose paragraph variants
+  so that the form is showing the variant fields only.
 
   @javascript
-  Scenario: I can chose paragraph variants and the form is changing accordingly
+  Scenario: I can chose paragraph variants and the form is changing accordingly.
     Given I am logged in as a user with the "Editor" role
-    And I follow "Add content"
+    And I click "Add content"
     And I press "List additional actions"
     When I press "Add Listing item"
 
-    # Date variant
+    # Date variant.
     Then I should not see "Date information. Used only on date variant."
     When I select "Date" from "Variant"
     And I wait for AJAX to finish
     Then I should see "Date information. Used only on date variant."
 
-    # Thumbnail variant
+    # Thumbnail variant.
     And I should not see "Image"
     And I should not see "List item image. Used only on thumbnail variants."
     When I select "Thumbnail primary" from "Variant"
@@ -24,10 +25,10 @@ Feature: Paragraph types have different variants
     Then I should see "Image"
     And I should see "List item image. Used only on thumbnail variants."
 
-    # Navigate to a new form
+    # Navigate to a new form.
     And I follow "Add content"
 
-    # Inpage naviagtion variant
+    # Inpage naviagtion variant.
     When I press "List additional actions"
     And I press "Add Content row"
     Then I should not see "Navigation title"
