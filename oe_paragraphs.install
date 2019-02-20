@@ -145,11 +145,16 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
   foreach ($pids as $pid) {
     $paragraph = $entity_storage->load($pid);
     $bundle = $paragraph->bundle();
-    $value = $paragraph->get($sandbox['variant_fields'][$bundle])->getValue();
+    $value = $paragraph->get($sandbox['variant_fields'][$bundle])->value;
 
     // Check for values that needs conversion.
-    if (strpos($value[0]['value'], 'list_item_') !== FALSE) {
-      $value[0]['value'] = substr($value[0]['value'], strlen('list_item_'));
+    if (strpos($value, 'list_item_') !== FALSE) {
+      $value = substr($value, strlen('list_item_'));
+    }
+
+    // Normalize inpage value to the new display name.
+    if ($value === 'inpage') {
+      $value = 'inpage_navigation';
     }
 
     // Take out list block item values as they are not variants but layouts.
