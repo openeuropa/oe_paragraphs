@@ -12,25 +12,29 @@ Feature: Paragraph types show different fields based on variants.
 
     # Rich text.
     When I press "Add Rich text"
-    And the following fields should be present "Title, Text"
+    Then the following fields should be present "Title, Text"
+    And the following field should not be present "Variant"
 
     # Links block.
     When I click "Add content"
     And I press "List additional actions"
     And I press "Add Links block"
     Then the following fields should be present "Title, URL, Link text"
+    And the following field should not be present "Variant"
 
     # Accordion.
     When I click "Add content"
     And I press "List additional actions"
     And I press "Add Accordion"
     Then the following fields should be present "Icon, Title, Body"
+    And the following field should not be present "Variant"
 
     # Quote.
     When I click "Add content"
     And I press "List additional actions"
     And I press "Add Quote"
     Then the following fields should be present "Quote, Attribution"
+    And the following field should not be present "Variant"
 
     # Listing item Date variant.
     When I click "Add content"
