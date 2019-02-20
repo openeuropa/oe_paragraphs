@@ -36,53 +36,40 @@ Feature: Paragraph types show different fields based on variants.
     Then the following fields should be present "Quote, Attribution"
     And the following field should not be present "Variant"
 
-    # Listing item Date variant.
+    # Listing item "Default" variant.
     When I click "Add content"
     And I press "List additional actions"
     And I press "Add Listing item"
-    Then the following fields should not be present "Day, Month, Year"
-    And the following fields should be present "Variant, Link, Title, Description, Meta"
+    Then the following fields should be present "Variant, Link, Title, Description, Meta"
+    And the following fields should not be present "Day, Month, Year"
+    # Listing item "Date" variant.
     When I select "Date" from "Variant"
     And I wait for AJAX to finish
     Then the following fields should be present "Variant, Link, Title, Description, Meta, Day, Month, Year"
-
-    # Listing item Highlight variant.
-    When I click "Add content"
-    And I press "List additional actions"
-    And I press "Add Listing item"
-    Then the following field should not be present "Image"
-    And the following fields should be present "Variant, Link, Title, Description, Meta"
+    And the following field should not be present "Image"
+    # Listing item "Highlight" variant.
     When I select "Highlight" from "Variant"
     And I wait for AJAX to finish
     Then the following fields should be present "Variant, Link, Title, Description, Meta, Image"
-
-    # Listing item Thumbnail primary variant.
-    When I click "Add content"
-    And I press "List additional actions"
-    And I press "Add Listing item"
-    Then the following field should not be present "Image"
-    And the following fields should be present "Variant, Link, Title, Description, Meta"
+    And the following field should not be present "Day, Month, Year"
+    # Listing item "Thumbnail primary" variant.
     When I select "Thumbnail primary" from "Variant"
     And I wait for AJAX to finish
     Then the following fields should be present "Variant, Link, Title, Meta, Image"
-    And the following field should not be present "Description"
-
-    # Listing item Thumbnail secondary variant.
-    When I click "Add content"
-    And I press "List additional actions"
-    And I press "Add Listing item"
-    Then the following field should not be present "Image"
-    And the following fields should be present "Variant, Link, Title, Description, Meta"
+    And the following field should not be present "Description, Day, Month, Year"
+    # Listing item "Thumbnail secondary" variant.
     When I select "Thumbnail secondary" from "Variant"
     And I wait for AJAX to finish
     Then the following fields should be present "Variant, Link, Title, Meta, Image, Description"
+    And the following field should not be present "Day, Month, Year"
 
-    # Content row Inpage navigation variant.
+    # Content row.
     When I click "Add content"
     And I press "List additional actions"
     And I press "Add Content row"
-    Then the following field should not be present "Navigation title"
-    And the following fields should be present "Variant"
+    Then the following fields should be present "Variant"
+    And the following field should not be present "Navigation title"
+    # Content row "Inpage navigation" variant.
     When I select "Inpage navigation" from "Variant"
     And I wait for AJAX to finish
     Then the following fields should be present "Variant, Navigation title"
@@ -91,8 +78,8 @@ Feature: Paragraph types show different fields based on variants.
     When I click "Add content"
     And I press "List additional actions"
     And I press "Add Listing item block"
-    Then the following fields should not be present "Day, Month, Year"
-    And the following fields should be present "Layout, Variant, Link, Title, Description, Meta, URL, Link text"
+    Then the following fields should be present "Layout, Variant, Link, Title, Description, Meta, URL, Link text"
+    And the following fields should not be present "Day, Month, Year"
     When I select "Date" from "Variant"
     And I wait for AJAX to finish
     Then the following fields should be present "Layout, Variant, Link, Title, Description, Meta, URL, Link text, Day, Month, Year"
