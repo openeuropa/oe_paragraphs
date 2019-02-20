@@ -12,6 +12,7 @@ use Drupal\Core\Entity\Entity\EntityFormDisplay;
 use Drupal\Core\Entity\Entity\EntityFormMode;
 use Drupal\Core\Entity\Entity\EntityViewDisplay;
 use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 
 /**
@@ -61,6 +62,23 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
 
     // Start the sync for new configurations.
     $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/updates/8001');
+
+    // Change field descriptions.
+    $fields_description = [
+      'paragraph.oe_content_row.field_oe_title' => 'The title to show for the inpage navigation.',
+      'paragraph.oe_list_item.field_oe_text_long' => 'List item description, displayed below the title.',
+      'paragraph.oe_list_item_block.field_oe_link' => 'Internal or external link to use for a call to action button.',
+      'paragraph.oe_list_item_block.field_oe_title' => 'Block title. Optional.',
+      'paragraph.oe_list_item.field_oe_image' => 'List item image.',
+      'paragraph.oe_list_item.field_oe_date' => 'Date information.',
+      'paragraph.oe_list_item.field_oe_title' => 'The title to show for the inpage navigation.',
+      'paragraph.oe_list_item.field_oe_link' => 'Internal or external link to use for a call to action button.',
+    ];
+    foreach ($fields_description as $id => $description) {
+      $field = FieldConfig::load($id);
+      $field->setDescription($description);
+      $field->save();
+    }
 
     // Create the new field from config.
     $new_field_config = [

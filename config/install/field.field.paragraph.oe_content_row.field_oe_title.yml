@@ -9,7 +9,7 @@ field_name: field_oe_title
 entity_type: paragraph
 bundle: oe_content_row
 label: 'Navigation title'
-description: 'The title to show for the inpage navigation. Used only for the inpage navigation variant.'
+description: 'The title to show for the inpage navigation.'
 required: false
 translatable: true
 default_value: {  }

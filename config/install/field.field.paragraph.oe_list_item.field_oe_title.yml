@@ -9,7 +9,7 @@ field_name: field_oe_title
 entity_type: paragraph
 bundle: oe_list_item
 label: Title
-description: 'Link item title. Used on all variants.'
+description: 'Link item title.'
 required: true
 translatable: true
 default_value: {  }

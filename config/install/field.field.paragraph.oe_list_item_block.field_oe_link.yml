@@ -11,7 +11,7 @@ field_name: field_oe_link
 entity_type: paragraph
 bundle: oe_list_item_block
 label: 'Call to action'
-description: 'Internal or external link to use for a call to action button. Used on all variants.'
+description: 'Internal or external link to use for a call to action button.'
 required: false
 translatable: true
 default_value: {  }

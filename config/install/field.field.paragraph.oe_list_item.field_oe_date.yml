@@ -11,7 +11,7 @@ field_name: field_oe_date
 entity_type: paragraph
 bundle: oe_list_item
 label: Date
-description: 'Date information. Used only on date variant.'
+description: 'Date information.'
 required: false
 translatable: true
 default_value: {  }
