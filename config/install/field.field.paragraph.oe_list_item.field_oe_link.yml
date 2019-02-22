@@ -11,7 +11,7 @@ field_name: field_oe_link
 entity_type: paragraph
 bundle: oe_list_item
 label: Link
-description: 'Internal or external link the list item links to. Used on all variants.'
+description: 'Internal or external link the list item links to.'
 required: true
 translatable: true
 default_value: {  }

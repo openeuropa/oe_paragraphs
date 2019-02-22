@@ -4,8 +4,8 @@ dependencies:
   module:
     - options
     - paragraphs
-id: paragraph.field_oe_list_item_block_variant
-field_name: field_oe_list_item_block_variant
+id: paragraph.field_oe_list_item_block_layout
+field_name: field_oe_list_item_block_layout
 entity_type: paragraph
 type: list_string
 settings:

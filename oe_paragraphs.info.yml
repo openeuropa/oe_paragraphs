@@ -17,6 +17,11 @@ dependencies:
 
 config_devel:
   install:
+    # Form modes.
+    - core.entity_form_mode.paragraph.date
+    - core.entity_form_mode.paragraph.highlight
+    - core.entity_form_mode.paragraph.inpage_navigation
+
     # Paragraph types
     # ---------------
 
@@ -52,34 +57,40 @@ config_devel:
     - core.entity_form_display.paragraph.oe_quote.default
     - core.entity_view_display.paragraph.oe_quote.default
     - field.field.paragraph.oe_quote.field_oe_text
-    - field.field.paragraph.oe_quote.field_oe_text_long
     - paragraphs.paragraphs_type.oe_quote
 
-    # List item
+    # Listing item
+    - core.entity_form_display.paragraph.oe_list_item.thumbnail_primary
+    - core.entity_form_display.paragraph.oe_list_item.thumbnail_secondary
+    - core.entity_form_display.paragraph.oe_list_item.date
+    - core.entity_form_display.paragraph.oe_list_item.highlight
     - core.entity_form_display.paragraph.oe_list_item.default
+    - core.entity_form_mode.paragraph.thumbnail_primary
+    - core.entity_form_mode.paragraph.thumbnail_secondary
+    - core.entity_form_mode.paragraph.date
+    - core.entity_form_mode.paragraph.highlight
     - core.entity_view_display.paragraph.oe_list_item.default
     - field.field.paragraph.oe_list_item.field_oe_title
     - field.field.paragraph.oe_list_item.field_oe_link
-    - field.field.paragraph.oe_list_item.field_oe_list_item_variant
     - field.field.paragraph.oe_list_item.field_oe_text_long
     - field.field.paragraph.oe_list_item.field_oe_image
     - field.field.paragraph.oe_list_item.field_oe_date
     - field.field.paragraph.oe_list_item.field_oe_meta
     - paragraphs.paragraphs_type.oe_list_item
 
-    # List item block
+    # Listing item block
     - core.entity_form_display.paragraph.oe_list_item_block.default
     - core.entity_view_display.paragraph.oe_list_item_block.default
     - field.field.paragraph.oe_list_item_block.field_oe_link
-    - field.field.paragraph.oe_list_item_block.field_oe_list_item_block_variant
+    - field.field.paragraph.oe_list_item_block.field_oe_list_item_block_layout
     - field.field.paragraph.oe_list_item_block.field_oe_paragraphs
     - field.field.paragraph.oe_list_item_block.field_oe_title
     - paragraphs.paragraphs_type.oe_list_item_block
 
     # Content row
     - core.entity_form_display.paragraph.oe_content_row.default
+    - core.entity_form_display.paragraph.oe_content_row.inpage_navigation
     - core.entity_view_display.paragraph.oe_content_row.default
-    - field.field.paragraph.oe_content_row.field_oe_content_row_variant
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
     - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
@@ -108,12 +119,6 @@ config_devel:
     # Single link field (link)
     - field.storage.paragraph.field_oe_link
 
-    # List item block variant (select field)
-    - field.storage.paragraph.field_oe_list_item_block_variant
-
-    # Item list variant (select field)
-    - field.storage.paragraph.field_oe_list_item_variant
-
     # Single image field.
     - field.storage.paragraph.field_oe_image
 
@@ -123,8 +128,8 @@ config_devel:
     # Meta (multiple strings).
     - field.storage.paragraph.field_oe_meta
 
-    # Row variant.
-    - field.storage.paragraph.field_oe_content_row_variant
+    # List item block layout
+    - field.storage.paragraph.field_oe_list_item_block_layout
 
   optional:
     # Paragraph multilingual configuration

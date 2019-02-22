@@ -18,7 +18,7 @@ field_name: field_oe_image
 entity_type: paragraph
 bundle: oe_list_item
 label: Image
-description: 'List item image. Used only on thumbnail variants.'
+description: 'List item image.'
 required: false
 translatable: true
 default_value: {  }

@@ -17,5 +17,6 @@ config_devel:
     - field.field.node.oe_demo_landing_page.field_oe_demo_body
     - field.storage.node.field_oe_demo_body
     - node.type.oe_demo_landing_page
+    - user.role.editor
   optional:
     - language.content_settings.node.oe_demo_landing_page

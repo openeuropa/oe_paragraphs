@@ -1,0 +1,185 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the OE Paragraphs module.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Config\FileStorage;
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\Core\Entity\Entity\EntityFormMode;
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Copy the values to the new variant field and delete the old variant fields.
+ */
+function oe_paragraphs_update_8001(array &$sandbox): void {
+  if (!isset($sandbox['total'])) {
+    // Initialise batch variables and settings.
+    $sandbox['variant_fields'] = [
+      'oe_content_row' => 'field_oe_content_row_variant',
+      'oe_list_item_block' => 'field_oe_list_item_block_variant',
+      'oe_list_item' => 'field_oe_list_item_variant',
+    ];
+    $paragraph_ids = [];
+
+    foreach ($sandbox['variant_fields'] as $bundle => $field) {
+      // Make sure we have the old fields in the database.
+      $all_bundle_fields = \Drupal::service('entity_field.manager')->getFieldDefinitions('paragraph', $bundle);
+      if (!isset($all_bundle_fields[$field])) {
+        continue;
+      }
+
+      // Take all entities that has a value in one of the old fields.
+      $query = \Drupal::entityQuery('paragraph');
+      $query->exists($field);
+      $result = $query->execute();
+      if (!empty($result)) {
+        $paragraph_ids += $result;
+      }
+    }
+
+    $sandbox['total'] = count($paragraph_ids);
+    $sandbox['current'] = 0;
+    $sandbox['paragraphs_per_batch'] = 25;
+
+    // Make sure we have the new base field created before we copy values.
+    $storage_definition = BaseFieldDefinition::create('string')
+      ->setLabel(t('Variant'))
+      ->setTranslatable(FALSE)
+      ->setRevisionable(TRUE)
+      ->setSetting('max_length', 255)
+      ->setDisplayConfigurable('form', FALSE)
+      ->setDisplayConfigurable('view', FALSE);
+
+    \Drupal::entityDefinitionUpdateManager()
+      ->installFieldStorageDefinition('oe_paragraphs_variant', 'paragraph', 'oe_paragraphs', $storage_definition);
+
+    // Start the sync for new configurations.
+    $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/updates/8001');
+
+    // Change field descriptions.
+    $fields_description = [
+      'paragraph.oe_content_row.field_oe_title' => 'The title to show for the inpage navigation.',
+      'paragraph.oe_list_item.field_oe_text_long' => 'List item description, displayed below the title.',
+      'paragraph.oe_list_item_block.field_oe_link' => 'Internal or external link to use for a call to action button.',
+      'paragraph.oe_list_item_block.field_oe_title' => 'Block title. Optional.',
+      'paragraph.oe_list_item.field_oe_image' => 'List item image.',
+      'paragraph.oe_list_item.field_oe_date' => 'Date information.',
+      'paragraph.oe_list_item.field_oe_title' => 'The title to show for the inpage navigation.',
+      'paragraph.oe_list_item.field_oe_link' => 'Internal or external link to use for a call to action button.',
+    ];
+    foreach ($fields_description as $id => $description) {
+      $field = FieldConfig::load($id);
+      $field->setDescription($description);
+      $field->save();
+    }
+
+    // Create the new field from config.
+    $new_field_config = [
+      'field.storage.paragraph.field_oe_list_item_block_layout',
+      'field.field.paragraph.oe_list_item_block.field_oe_list_item_block_layout',
+    ];
+
+    // Clear the field widget cache.
+    \Drupal::service('plugin.manager.field.widget')->clearCachedDefinitions();
+
+    $config_manager = \Drupal::service('config.manager');
+    $entity_manager = \Drupal::entityTypeManager();
+    foreach ($new_field_config as $config_name) {
+      $config_record = $storage->read($config_name);
+      $entity_type = $config_manager->getEntityTypeIdByName($config_name);
+      /** @var \Drupal\Core\Config\Entity\ConfigEntityStorageInterface $entity_storage */
+      $entity_storage = $entity_manager->getStorage($entity_type);
+      $entity = $entity_storage->createFromStorageRecord($config_record);
+      $entity->save();
+    }
+
+    // New form modes.
+    $form_modes = $storage->listAll('core.entity_form_mode.');
+    foreach ($form_modes as $mode) {
+      $values = $storage->read($mode);
+      $form_mode = EntityFormMode::create($values);
+      $form_mode->save();
+    }
+
+    // Update form displays.
+    $form_displays = $storage->listAll('core.entity_form_display.');
+    foreach ($form_displays as $display) {
+      $values = $storage->read($display);
+      $form_display = EntityFormDisplay::load($values['id']);
+      if ($form_display) {
+        foreach ($values as $key => $value) {
+          $form_display->set($key, $value);
+        }
+      }
+      else {
+        $form_display = EntityFormDisplay::create($values);
+      }
+
+      $form_display->save();
+    }
+
+    // Update view displays.
+    $view_displays = $storage->listAll('core.entity_view_display.');
+    foreach ($view_displays as $display) {
+      $values = $storage->read($display);
+      $view_display = EntityViewDisplay::load($values['id']);
+      foreach ($values as $key => $value) {
+        $view_display->set($key, $value);
+      }
+
+      $view_display->save();
+    }
+  }
+
+  // Get the current slice of paragraph ids.
+  $pids = array_slice($paragraph_ids, $sandbox['current'], $sandbox['paragraphs_per_batch']);
+  $entity_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
+
+  foreach ($pids as $pid) {
+    $paragraph = $entity_storage->load($pid);
+    $bundle = $paragraph->bundle();
+    $value = $paragraph->get($sandbox['variant_fields'][$bundle])->value;
+
+    // Check for values that needs conversion.
+    if (strpos($value, 'list_item_') !== FALSE) {
+      $value = substr($value, strlen('list_item_'));
+    }
+
+    // Normalize inpage value to the new display name.
+    if ($value === 'inpage') {
+      $value = 'inpage_navigation';
+    }
+
+    // Take out list block item values as they are not variants but layouts.
+    if ($sandbox['variant_fields'][$bundle] === 'field_oe_list_item_block_variant') {
+      // Set the layout filed with the value.
+      $paragraph->set('field_oe_list_item_block_layout', $value);
+    }
+    else {
+      // Set the new field with the old value.
+      $paragraph->set('oe_paragraphs_variant', $value);
+    }
+
+    // Set the old field to NULL.
+    $paragraph->set($sandbox['variant_fields'][$bundle], NULL);
+    $paragraph->save();
+
+    $sandbox['current']++;
+  }
+
+  $sandbox['#finished'] = empty($sandbox['total']) ? 1 : ($sandbox['current'] / $sandbox['total']);
+
+  if ($sandbox['#finished'] === 1) {
+    // Cleanup the fields after copy.
+    foreach ($sandbox['variant_fields'] as $bundle => $field) {
+      FieldStorageConfig::loadByName('paragraph', $field)->delete();
+    }
+  }
+}
