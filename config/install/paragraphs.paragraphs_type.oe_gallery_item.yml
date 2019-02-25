@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_gallery_item
+label: 'Gallery item'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

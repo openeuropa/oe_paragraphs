@@ -1,0 +1,57 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_gallery_item
+    - paragraphs.paragraphs_type.oe_gallery_item
+    - paragraphs.paragraphs_type.oe_gallery_row
+  module:
+    - entity_reference_revisions
+id: paragraph.oe_gallery_row.field_oe_gallery_item
+field_name: field_oe_gallery_item
+entity_type: paragraph
+bundle: oe_gallery_row
+label: 'Gallery item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      oe_gallery_item: oe_gallery_item
+    target_bundles_drag_drop:
+      oe_accordion:
+        weight: 11
+        enabled: false
+      oe_accordion_item:
+        weight: 12
+        enabled: false
+      oe_content_row:
+        weight: 13
+        enabled: false
+      oe_gallery_item:
+        enabled: true
+        weight: 14
+      oe_gallery_row:
+        weight: 15
+        enabled: false
+      oe_links_block:
+        weight: 16
+        enabled: false
+      oe_list_item:
+        weight: 17
+        enabled: false
+      oe_list_item_block:
+        weight: 18
+        enabled: false
+      oe_quote:
+        weight: 19
+        enabled: false
+      oe_rich_text:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

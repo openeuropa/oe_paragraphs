@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_gallery_row.field_oe_gallery_item
+    - paragraphs.paragraphs_type.oe_gallery_row
+  module:
+    - paragraphs
+id: paragraph.oe_gallery_row.default
+targetEntityType: paragraph
+bundle: oe_gallery_row
+mode: default
+content:
+  field_oe_gallery_item:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
