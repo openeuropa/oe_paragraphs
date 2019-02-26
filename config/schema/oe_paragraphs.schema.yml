@@ -1,0 +1,2 @@
+field.widget.settings.oe_paragraphs_variants:
+  type: field.widget.settings.paragraphs
