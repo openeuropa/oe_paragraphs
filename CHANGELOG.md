@@ -1,10 +1,24 @@
 # Change Log
 
+## [0.4.0](https://github.com/openeuropa/oe_paragraphs/tree/0.4.0) (2019-02-28)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.3.0...0.4.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-1620 Add schema for the field widget. [\#39](https://github.com/openeuropa/oe_paragraphs/pull/39) ([nagyad](https://github.com/nagyad))
+- OPENEUROPA-1565 Implement variant selection for paragraphs [\#38](https://github.com/openeuropa/oe_paragraphs/pull/38) ([nagyad](https://github.com/nagyad))
+- OPENEUROPA-1520: Use drupal core. [\#37](https://github.com/openeuropa/oe_paragraphs/pull/37) ([imanoleguskiza](https://github.com/imanoleguskiza))
+- OPENEUROPA-1548: Provide documentation for Links block component. [\#36](https://github.com/openeuropa/oe_paragraphs/pull/36) ([nagyad](https://github.com/nagyad))
+- OPENEUROPA-1547: Rename Listing item paragraph bundle to Listing. [\#35](https://github.com/openeuropa/oe_paragraphs/pull/35) ([nagyad](https://github.com/nagyad))
+- OPENEUROPA-1533: Add --strict flag for Behat tests executions. [\#34](https://github.com/openeuropa/oe_paragraphs/pull/34) ([sergepavle](https://github.com/sergepavle))
+- OPENEUROPA-1322: Use the proper Docker way of overriding docker-composer.yml file. [\#30](https://github.com/openeuropa/oe_paragraphs/pull/30) ([drupol](https://github.com/drupol))
+
 ## [0.3.0](https://github.com/openeuropa/oe_paragraphs/tree/0.3.0) (2018-10-15)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.3...0.3.0)
 
 **Merged pull requests:**
 
+- Update Changelog for upcoming release 0.3.0. [\#29](https://github.com/openeuropa/oe_paragraphs/pull/29) ([drupol](https://github.com/drupol))
 - OPENEUROPA-794: Use new plain long text field for quote text. [\#28](https://github.com/openeuropa/oe_paragraphs/pull/28) ([nagyad](https://github.com/nagyad))
 
 ## [0.2.3](https://github.com/openeuropa/oe_paragraphs/tree/0.2.3) (2018-09-27)
