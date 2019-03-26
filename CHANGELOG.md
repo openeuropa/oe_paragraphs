@@ -1,10 +1,18 @@
 # Change Log
 
+## [0.4.1](https://github.com/openeuropa/oe_paragraphs/tree/0.4.1) (2019-03-26)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.4.0...0.4.1)
+
+**Merged pull requests:**
+
+- Maintenance: Add missing use statement. [\#41](https://github.com/openeuropa/oe_paragraphs/pull/41) ([nagyad](https://github.com/nagyad))
+
 ## [0.4.0](https://github.com/openeuropa/oe_paragraphs/tree/0.4.0) (2019-02-28)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.3.0...0.4.0)
 
 **Merged pull requests:**
 
+- Release-0.4.0 Update changelog. [\#40](https://github.com/openeuropa/oe_paragraphs/pull/40) ([nagyad](https://github.com/nagyad))
 - OPENEUROPA-1620 Add schema for the field widget. [\#39](https://github.com/openeuropa/oe_paragraphs/pull/39) ([nagyad](https://github.com/nagyad))
 - OPENEUROPA-1565 Implement variant selection for paragraphs [\#38](https://github.com/openeuropa/oe_paragraphs/pull/38) ([nagyad](https://github.com/nagyad))
 - OPENEUROPA-1520: Use drupal core. [\#37](https://github.com/openeuropa/oe_paragraphs/pull/37) ([imanoleguskiza](https://github.com/imanoleguskiza))
