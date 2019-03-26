@@ -9,7 +9,9 @@ use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Entity\Entity\EntityFormDisplay;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Form\SubformState;
 use Drupal\Core\Render\Element;
+use Drupal\Core\TypedData\TranslationStatusInterface;
 use Drupal\paragraphs\Plugin\Field\FieldWidget\ParagraphsWidget;
 
 /**
