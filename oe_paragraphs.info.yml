@@ -14,6 +14,7 @@ dependencies:
   - drupal:options
   - drupal:text
   - paragraphs:paragraphs
+  - oe_media_avportal:oe_media_avportal
 
 config_devel:
   install:
