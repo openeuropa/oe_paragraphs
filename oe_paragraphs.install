@@ -183,3 +183,38 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
     }
   }
 }
+
+/**
+ * Update the content translation settings of the existing paragraphs types.
+ */
+function oe_paragraphs_update_8002(&$sandbox) {
+  // We need to update all paragraph types to hide the non-translatable fields
+  // on translation forms because otherwise the paragraphs don't work with
+  // content moderation.
+  // @see https://www.drupal.org/docs/8/modules/paragraphs/multilingual-and-content-moderation
+  $ids = [
+    'paragraph.oe_accordion',
+    'paragraph.oe_accordion_item',
+    'paragraph.oe_content_row',
+    'paragraph.oe_links_block',
+    'paragraph.oe_list_item',
+    'paragraph.oe_list_item_block',
+    'paragraph.oe_quote',
+    'paragraph.oe_rich_text',
+  ];
+
+  /** @var \Drupal\language\ContentLanguageSettingsInterface[] $content_settings */
+  $content_settings = \Drupal::entityTypeManager()->getStorage('language_content_settings')->loadMultiple($ids);
+  foreach ($content_settings as $settings) {
+    $bundle_settings = $settings->getThirdPartySetting('content_translation', 'bundle_settings');
+    if (!$bundle_settings) {
+      continue;
+    }
+
+    if ($bundle_settings['untranslatable_fields_hide'] !== '1') {
+      $bundle_settings['untranslatable_fields_hide'] = '1';
+      $settings->setThirdPartySetting('content_translation', 'bundle_settings', $bundle_settings);
+      $settings->save();
+    }
+  }
+}
