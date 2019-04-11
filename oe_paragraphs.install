@@ -186,14 +186,12 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
 
 /**
  * Update the content translation settings of the existing paragraphs types.
- *
- * We need to update all paragraph types to hide the non-translatable fields on
- * translation forms because otherwise the paragraphs don't work with
- * content moderation.
- *
- * @see https://www.drupal.org/docs/8/modules/paragraphs/multilingual-and-content-moderation
  */
 function oe_paragraphs_update_8002(&$sandbox) {
+  // We need to update all paragraph types to hide the non-translatable fields
+  // on translation forms because otherwise the paragraphs don't work with
+  // content moderation.
+  // @see https://www.drupal.org/docs/8/modules/paragraphs/multilingual-and-content-moderation
   $ids = [
     'paragraph.oe_accordion',
     'paragraph.oe_accordion_item',
