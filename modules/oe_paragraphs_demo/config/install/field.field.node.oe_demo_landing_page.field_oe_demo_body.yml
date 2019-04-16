@@ -6,6 +6,7 @@ dependencies:
     - node.type.oe_demo_landing_page
     - paragraphs.paragraphs_type.oe_accordion
     - paragraphs.paragraphs_type.oe_content_row
+    - paragraphs.paragraphs_type.oe_contextual_navigation
     - paragraphs.paragraphs_type.oe_links_block
     - paragraphs.paragraphs_type.oe_list_item
     - paragraphs.paragraphs_type.oe_list_item_block
@@ -35,6 +36,7 @@ settings:
       oe_list_item: oe_list_item
       oe_content_row: oe_content_row
       oe_list_item_block: oe_list_item_block
+      oe_contextual_navigation: oe_contextual_navigation
     target_bundles_drag_drop:
       oe_rich_text:
         enabled: true
@@ -60,4 +62,7 @@ settings:
       oe_list_item_block:
         enabled: true
         weight: 12
+      oe_contextual_navigation:
+        enabled: true
+        weight: 13
 field_type: entity_reference_revisions

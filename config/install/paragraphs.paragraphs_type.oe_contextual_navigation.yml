@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_contextual_navigation
+label: 'Contextual navigation'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
