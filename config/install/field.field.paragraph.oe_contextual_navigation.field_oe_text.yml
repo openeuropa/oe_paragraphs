@@ -9,7 +9,7 @@ field_name: field_oe_text
 entity_type: paragraph
 bundle: oe_contextual_navigation
 label: 'More label'
-description: ''
+description: 'The label for the link that displays all the links.'
 required: false
 translatable: true
 default_value: {  }

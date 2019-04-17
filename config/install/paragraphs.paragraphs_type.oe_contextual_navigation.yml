@@ -4,5 +4,5 @@ dependencies: {  }
 id: oe_contextual_navigation
 label: 'Contextual navigation'
 icon_uuid: null
-description: ''
+description: 'The contextual navigation allows editors to add a number of links that helps the user navigate the page. The links, their visibility limit and navigation label can be configured using the available fields.'
 behavior_plugins: {  }
