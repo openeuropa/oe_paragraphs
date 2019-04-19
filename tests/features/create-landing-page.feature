@@ -6,10 +6,11 @@ Feature: Create a landing page
 
   Scenario: All supported paragraph types are available
     Then the following paragraph types are available for "demo landing page" content:
-      | Accordion          |
-      | Content row        |
-      | Links block        |
-      | Listing item       |
-      | Listing item block |
-      | Quote              |
-      | Rich text          |
+      | Accordion             |
+      | Content row           |
+      | Links block           |
+      | Listing item          |
+      | Listing item block    |
+      | Quote                 |
+      | Rich text             |
+      | Contextual navigation |

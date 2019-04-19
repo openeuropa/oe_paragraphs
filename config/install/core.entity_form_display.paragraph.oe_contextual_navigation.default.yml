@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_contextual_navigation.field_oe_limit
+    - field.field.paragraph.oe_contextual_navigation.field_oe_links
+    - field.field.paragraph.oe_contextual_navigation.field_oe_text
+    - field.field.paragraph.oe_contextual_navigation.field_oe_title
+    - paragraphs.paragraphs_type.oe_contextual_navigation
+  module:
+    - link
+id: paragraph.oe_contextual_navigation.default
+targetEntityType: paragraph
+bundle: oe_contextual_navigation
+mode: default
+content:
+  field_oe_limit:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_oe_links:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_oe_text:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_oe_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

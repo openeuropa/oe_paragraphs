@@ -15,6 +15,14 @@ Feature: Paragraph types show different fields based on variants.
     Then the following fields should be present "Title, Text"
     And the following field should not be present "Variant"
 
+    # Contextual navigation.
+    When I click "Add content"
+    And I press "List additional actions"
+    And I press "Add Contextual navigation"
+    And I wait for AJAX to finish
+    Then the following fields should be present "Navigation label, URL, Limit, More label"
+    And the following field should not be present "Variant"
+
     # Links block.
     When I click "Add content"
     And I press "List additional actions"
