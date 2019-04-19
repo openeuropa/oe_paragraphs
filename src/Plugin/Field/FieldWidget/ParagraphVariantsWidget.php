@@ -657,7 +657,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
     $values = parent::massageFormValues($values, $form, $form_state);
 
     foreach ($values as $delta => $item) {
-      if (isset($values[$delta]['entity'])) {
+      if (isset($values[$delta]['entity']) && isset($item['variant'])) {
         // Save variants in the dedicated field.
         $values[$delta]['entity']->set('oe_paragraphs_variant', $item['variant'] ?? 'default');
       }
