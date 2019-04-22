@@ -7,6 +7,10 @@ default:
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\Tests\oe_paragraphs\Behat\DrupalContext
+        - Drupal\Tests\oe_paragraphs\Behat\ParagraphsContext
+        - OpenEuropa\Behat\TransformationContext:
+            pages:
+              content management: "/admin/content"
   extensions:
     Drupal\MinkExtension:
       goutte: ~

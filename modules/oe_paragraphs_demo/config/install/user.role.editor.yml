@@ -20,4 +20,5 @@ permissions:
   - 'view all revisions'
   - 'view oe_demo_landing_page revisions'
   - 'view own unpublished content'
+  - 'view the administration theme'
   - 'view unpublished paragraphs'
