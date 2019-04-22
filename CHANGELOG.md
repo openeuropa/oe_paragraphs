@@ -1,10 +1,20 @@
 # Change Log
 
+## [0.5.0](https://github.com/openeuropa/oe_paragraphs/tree/0.5.0) (2019-04-22)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.4.1...0.5.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-1843: Paragraph variant doesn't stay selected when resaving the content [\#47](https://github.com/openeuropa/oe_paragraphs/pull/47) ([brummbar](https://github.com/brummbar))
+- OPENEUROPA-1803: Create new Contextual navigation paragraph type. [\#46](https://github.com/openeuropa/oe_paragraphs/pull/46) ([sergepavle](https://github.com/sergepavle))
+- OPENEUROPA-1752: Hiding non-translatable fields on translation forms for all paragraph types. [\#44](https://github.com/openeuropa/oe_paragraphs/pull/44) ([upchuk](https://github.com/upchuk))
+
 ## [0.4.1](https://github.com/openeuropa/oe_paragraphs/tree/0.4.1) (2019-03-26)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.4.0...0.4.1)
 
 **Merged pull requests:**
 
+- Release-0.4.1 [\#42](https://github.com/openeuropa/oe_paragraphs/pull/42) ([nagyad](https://github.com/nagyad))
 - Maintenance: Add missing use statement. [\#41](https://github.com/openeuropa/oe_paragraphs/pull/41) ([nagyad](https://github.com/nagyad))
 
 ## [0.4.0](https://github.com/openeuropa/oe_paragraphs/tree/0.4.0) (2019-02-28)
