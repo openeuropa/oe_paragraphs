@@ -161,7 +161,7 @@ class ParagraphsContext extends RawDrupalContext {
   }
 
   /**
-   * Returns a collection of fields that belong directly to a paragraph.
+   * Finds and returns the paragraph at a given position.
    *
    * @param string $paragraph_type
    *   The label of the paragraph type.

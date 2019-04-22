@@ -94,7 +94,7 @@ Feature: Paragraph types show different fields based on variants.
     Then the following fields should be present "Layout, Variant, Link, Title, Description, Meta, URL, Link text, Day, Month, Year"
 
   # This scenario covers the bug discovered in OPENEUROPA-1843.
-  @javascript @run
+  @javascript
   Scenario: Paragraph variant is correctly saved and persisted when re-saving the content.
     Given I am logged in as a user with the "Editor" role
     And I go to "the content management page"
