@@ -6,7 +6,6 @@ package: OpenEuropa
 
 dependencies:
   - allowed_formats:allowed_formats
-  - drupal:content_translation
   - drupal:datetime
   - drupal:file
   - drupal:image
