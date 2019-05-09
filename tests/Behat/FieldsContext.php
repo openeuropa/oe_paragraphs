@@ -4,14 +4,18 @@ declare(strict_types = 1);
 
 namespace Drupal\Tests\oe_paragraphs\Behat;
 
+use Behat\Gherkin\Node\TableNode;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
+use Drupal\Tests\oe_paragraphs\Traits\TraversingTrait;
 use Drupal\Tests\oe_paragraphs\Traits\UtilityTrait;
+use PHPUnit\Framework\Assert;
 
 /**
  * Provides extra steps definitions to handle fields.
  */
 class FieldsContext extends RawDrupalContext {
 
+  use TraversingTrait;
   use UtilityTrait;
 
   /**
@@ -43,6 +47,27 @@ class FieldsContext extends RawDrupalContext {
     }
 
     $fields[$position]->setValue($value);
+  }
+
+  /**
+   * Checks that a select field has exclusively the provided options.
+   *
+   * @param string $select
+   *   The name of the select element.
+   * @param \Behat\Gherkin\Node\TableNode $table
+   *   The list of expected options.
+   *
+   * @Then the available options in the :select select should be:
+   */
+  public function assertSelectOptions(string $select, TableNode $table): void {
+    $field = $this->findSelect($this->unescapeStepArgument($select));
+    $available_options = $this->getSelectOptions($field);
+    sort($available_options);
+
+    $options = array_map([$this, 'unescapeStepArgument'], $table->getColumn(0));
+    sort($options);
+
+    Assert::assertEquals($options, $available_options, "The '{$select}' select options don't match the expected ones.");
   }
 
 }
