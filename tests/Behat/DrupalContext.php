@@ -5,11 +5,14 @@ declare(strict_types = 1);
 namespace Drupal\Tests\oe_paragraphs\Behat;
 
 use Drupal\DrupalExtension\Context\RawDrupalContext;
+use Drupal\Tests\oe_paragraphs\Traits\UtilityTrait;
 
 /**
  * Defines generic step definitions.
  */
 class DrupalContext extends RawDrupalContext {
+
+  use UtilityTrait;
 
   /**
    * Assert that certain fields are present on the page.
@@ -57,23 +60,6 @@ class DrupalContext extends RawDrupalContext {
         throw new \Exception("Field should not be found, but is present: " . $field);
       }
     }
-  }
-
-  /**
-   * Explodes and sanitizes a comma separated step argument.
-   *
-   * @param string $argument
-   *   The string argument.
-   *
-   * @return array
-   *   The argument as array, with trimmed non-empty values.
-   */
-  protected function explodeCommaSeparatedStepArgument($argument): array {
-    $argument = explode(',', $argument);
-    $argument = array_map('trim', $argument);
-    $argument = array_filter($argument);
-
-    return $argument;
   }
 
 }

@@ -23,6 +23,23 @@ trait UtilityTrait {
   }
 
   /**
+   * Explodes and sanitizes a comma separated step argument.
+   *
+   * @param string $argument
+   *   The string argument.
+   *
+   * @return array
+   *   The argument as array, with trimmed non-empty values.
+   */
+  protected function explodeCommaSeparatedStepArgument(string $argument): array {
+    $argument = explode(',', $argument);
+    $argument = array_map('trim', $argument);
+    $argument = array_filter($argument);
+
+    return $argument;
+  }
+
+  /**
    * Creates an XPath selector to match by class.
    *
    * @param string $class
