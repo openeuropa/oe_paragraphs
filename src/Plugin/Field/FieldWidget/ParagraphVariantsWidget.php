@@ -581,7 +581,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
             '#title' => $this->t('Variant'),
             '#options' => $view_modes,
             '#default_value' => $display->getMode(),
-            '#weight' => -0.0001,
+            '#weight' => -0.0002,
             '#executes_submit_callback' => TRUE,
             '#submit' => [[$this, 'submitVariant']],
             '#ajax' => [
@@ -590,6 +590,19 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
             ],
             '#limit_validation_errors' => [
               array_merge($parents, [$field_name, $delta, 'variant']),
+            ],
+          ];
+          $element['variant_submit'] = [
+            '#type' => 'submit',
+            '#name' => str_replace('-', '_', $id_prefix) . '_variant_submit',
+            '#value' => t('Change variant'),
+            '#weight' => -0.0001,
+            '#submit' => [[$this, 'submitVariant']],
+            '#limit_validation_errors' => [
+              array_merge($parents, [$field_name, $delta, 'variant']),
+            ],
+            '#attributes' => [
+              'class' => ['js-hide'],
             ],
           ];
         }
@@ -632,15 +645,19 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
    *   The current state of the form.
    */
   public function submitVariant(array $form, FormStateInterface $form_state): void {
-    $select = $form_state->getTriggeringElement();
+    // The triggering element can be either the "Change variant" button or the
+    // select itself.
+    $triggering_element = $form_state->getTriggeringElement();
+    // Retrieve the field item and select element.
+    $item = NestedArray::getValue($form, array_slice($triggering_element['#array_parents'], 0, -1));
+    $select = $item['variant'];
 
-    $widget = NestedArray::getValue($form, array_slice($select['#array_parents'], 0, -2));
+    $widget = NestedArray::getValue($form, array_slice($item['#array_parents'], 0, -1));
     $field_name = $this->fieldDefinition->getName();
     $parents = $widget['#field_parents'];
     $field_state = static::getWidgetState($parents, $field_name, $form_state);
 
-    $element = NestedArray::getValue($form, array_slice($select['#array_parents'], 0, -1));
-    $delta = $element['#delta'];
+    $delta = $item['#delta'];
     $paragraphs_entity = $field_state['paragraphs'][$delta]['entity'];
     $form_mode = $form_state->getValue($select['#parents']);
     $display = EntityFormDisplay::collectRenderDisplay($paragraphs_entity, $form_mode);
