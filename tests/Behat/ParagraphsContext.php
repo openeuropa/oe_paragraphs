@@ -222,7 +222,7 @@ class ParagraphsContext extends RawDrupalContext {
     // Find all paragraphs of the specified type, using the displayed label.
     $xpath = '//span' . $this->xpathHasClassSelector('paragraph-type-label') . '[text()="' . $paragraph_type . '"]'
       // Find the closest "top" wrapper.
-      . '/ancestor-or-self::div' . $this->xpathHasClassSelector('paragraph-top')
+      . '/ancestor::div' . $this->xpathHasClassSelector('paragraph-top')
       // The parent is the paragraph wrapper.
       . '/..';
 
