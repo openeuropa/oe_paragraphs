@@ -4,9 +4,11 @@ declare(strict_types = 1);
 
 namespace Drupal\Tests\oe_paragraphs\Behat;
 
+use Behat\Gherkin\Node\TableNode;
 use Behat\Mink\Element\NodeElement;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Drupal\Tests\oe_paragraphs\Traits\UtilityTrait;
+use PHPUnit\Framework\Assert;
 
 /**
  * Provides steps definitions to interact with paragraphs.
@@ -164,6 +166,44 @@ class ParagraphsContext extends RawDrupalContext {
   }
 
   /**
+   * Asserts that a paragraph presents buttons to reference a set of paragraphs.
+   *
+   * @param string $field
+   *   The field label.
+   * @param string $paragraph_type
+   *   The label of the paragraph type.
+   * @param string $position
+   *   The ordinal position of the paragraph amongst its type.
+   * @param \Behat\Gherkin\Node\TableNode $table
+   *   The list of expected referencable paragraphs.
+   *
+   * @Then the :field field in the :position :paragraph_type (paragraph )can reference( the paragraphs):
+   */
+  public function assertParagraphReferencableParagraphs(string $field, string $paragraph_type, string $position, TableNode $table) {
+    $paragraph_type = $this->unescapeStepArgument($paragraph_type);
+    $position = $this->convertOrdinalToNumber($position) - 1;
+
+    $paragraph = $this->findParagraph($paragraph_type, $position);
+    $element = $this->getParagraphReferenceField($paragraph, $field);
+
+    // After the multi-value field table, a div is wrapping all the buttons.
+    $xpath = '/table/following-sibling::div' . $this->xpathHasClassSelector('clearfix') .
+      '//input' . $this->xpathHasClassSelector('field-add-more-submit');
+    $buttons = $element->findAll('xpath', $xpath);
+
+    $actual = array_map(function (NodeElement $element) {
+      // Remove the "Add " substring from the button.
+      return substr($element->getValue(), 4);
+    }, $buttons);
+    sort($actual);
+
+    $expected = $table->getColumn(0);
+    sort($expected);
+
+    Assert::assertEquals($expected, $actual);
+  }
+
+  /**
    * Finds and returns the paragraph at a given position.
    *
    * @param string $paragraph_type
@@ -221,6 +261,45 @@ class ParagraphsContext extends RawDrupalContext {
     $collection = new NodeElement($direct_fields . ' | ' . $variant_field, $this->getSession());
 
     return $collection;
+  }
+
+  /**
+   * Finds a paragraph reference field in a paragraph element.
+   *
+   * @param \Behat\Mink\Element\NodeElement $paragraph
+   *   The paragraph element.
+   * @param string $label
+   *   The label of the paragraph reference field.
+   *
+   * @return \Behat\Mink\Element\NodeElement
+   *   The paragraph reference field element.
+   *
+   * @throws \Exception
+   *   Thrown when the field is not found.
+   */
+  protected function getParagraphReferenceField(NodeElement $paragraph, string $label): NodeElement {
+    $subform = $paragraph->find('xpath', '/div' . $this->xpathHasClassSelector('paragraphs-subform'));
+
+    // Find the table by its header.
+    $xpath = '//table[./thead//h4[text()="' . $this->unescapeStepArgument($label) . '"]]' .
+      // Get the closest form item wrapper.
+      '//ancestor::div' . $this->xpathHasClassSelector('form-item') .
+      // Assure that this form item is rendered by a paragraph widget.
+      '[./parent::div' . $this->xpathHasClassSelector('paragraphs-tabs-wrapper') .
+      // Find the closest paragraph field. Due to ajax we cannot check for the
+      // direct parent, but we already asserted that this is a paragraph widget,
+      // so we stop at the first one found.
+      '/ancestor::div' . $this->xpathHasClassSelector('field--type-entity-reference-revisions') . '[1]' .
+      // Verify that this field belongs to the correct paragraph.
+      '/parent::div[@id="' . $subform->getAttribute('id') . '"]]';
+
+    $field = $paragraph->find('xpath', $xpath);
+
+    if (!$field) {
+      throw new \Exception(sprintf('Could not find field %s in the specified paragraph.', $label));
+    }
+
+    return $field;
   }
 
 }
