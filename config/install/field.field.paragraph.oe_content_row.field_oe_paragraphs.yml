@@ -47,7 +47,7 @@ settings:
         enabled: true
         weight: 12
       oe_list_item:
-        enabled: true
+        enabled: false
         weight: 13
       oe_list_item_block:
         enabled: true
