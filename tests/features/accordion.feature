@@ -12,8 +12,19 @@ Feature: Accordion paragraph.
     And I press "Add Accordion"
     # Neither accordion nor accordion item paragraphs have variants.
     Then the following fields should not be present "Variant"
+    # Remove the accordion item that is shown by default in the page so we are
+    # able to test the required fields of the accordion itself.
+    When I press "Remove" in the 1st "Accordion item" paragraph actions
+    And I press "Save"
+    Then I should see the following error messages:
+      | error messages               |
+      | Paragraphs field is required |
+    And the "Paragraphs" field in the 1st "Accordion" paragraph can reference:
+      | Accordion item |
 
-    When I press "Save"
+    # Test accordion item required fields.
+    When I press "Add Accordion item"
+    And I press "Save"
     Then I should see the following error messages:
       | error messages          |
       | Title field is required |
@@ -23,6 +34,7 @@ Feature: Accordion paragraph.
     And I press "Save"
     Then I should see the heading "Required fields accordion"
 
+  # Smoke test scenario for CRUD paragraph capabilities.
   Scenario: Accordion and accordion item CRUD operations.
     Given I am logged in as a user with the "Editor" role
     When I go to "the content management page"
