@@ -18,7 +18,10 @@ Feature: Listing item paragraph.
       | Thumbnail secondary |
 
     # Test the fields in the "default" variant.
-    And the following fields should be present "Description, Meta"
+    # The title field check here is ambiguous as another title field is
+    # present in the page. The required fields step will assure that
+    # a title field is actually present in the paragraph.
+    And the following fields should be present "Link, Title, Description, Meta"
     And the following fields should not be present "Day, Month, Year, Image"
     When I press "Save"
     Then I should see the following error messages:
@@ -29,7 +32,7 @@ Feature: Listing item paragraph.
     # Test the fields in the "date" variant.
     When I select "Date" from "Variant" in the 1st "Listing item" paragraph
     And I press "Change variant"
-    Then the following fields should be present "Description, Day, Month, Year, Meta"
+    Then the following fields should be present "Link, Title, Description, Day, Month, Year, Meta"
     And the following fields should not be present "Image"
     When I press "Save"
     Then I should see the following error messages:
@@ -40,7 +43,7 @@ Feature: Listing item paragraph.
     # Test the fields in the "highlight" variant.
     When I select "Highlight" from "Variant" in the 1st "Listing item" paragraph
     And I press "Change variant"
-    Then the following fields should be present "Description, Image, Meta"
+    Then the following fields should be present "Link, Title, Description, Image, Meta"
     And the following fields should not be present "Day, Month, Year"
     When I press "Save"
     Then I should see the following error messages:
@@ -51,7 +54,7 @@ Feature: Listing item paragraph.
     # Test the fields in the "thumbnail primary" variant.
     When I select "Thumbnail primary" from "Variant" in the 1st "Listing item" paragraph
     And I press "Change variant"
-    Then the following fields should be present "Image, Meta"
+    Then the following fields should be present "Link, Title, Image, Meta"
     And the following fields should not be present "Day, Month, Year, Description"
     When I press "Save"
     Then I should see the following error messages:
@@ -62,7 +65,7 @@ Feature: Listing item paragraph.
     # Test the fields in the "thumbnail secondary" variant.
     When I select "Thumbnail secondary" from "Variant" in the 1st "Listing item" paragraph
     And I press "Change variant"
-    Then the following fields should be present "Image, Meta, Description"
+    Then the following fields should be present "Link, Title, Image, Meta, Description"
     And the following fields should not be present "Day, Month, Year"
     When I press "Save"
     Then I should see the following error messages:
@@ -70,7 +73,7 @@ Feature: Listing item paragraph.
       | Link field is required  |
       | Title field is required |
 
-    When I select "Thumbnail secondary" from "Variant" in the 1st "Listing item" paragraph
+    When I select "Default" from "Variant" in the 1st "Listing item" paragraph
     And I press "Change variant"
     And I fill in "Link" with "http://example.org" in the 1st "Listing item" paragraph
     And I fill in "Title" with "Sample link" in the 1st "Listing item" paragraph
