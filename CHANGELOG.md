@@ -1,14 +1,25 @@
 # Change Log
 
+## [1.0.0-beta1](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0-beta1) (2019-05-15)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.6.0...1.0.0-beta1)
+
+**Merged pull requests:**
+
+- OPENEUROPA-1891: Update list of paragraphs that can be referenced inside content rows. [\#54](https://github.com/openeuropa/oe_paragraphs/pull/54) ([nagyad](https://github.com/nagyad))
+- OPENEUROPA-1891: Listing item should not be under content-row. [\#53](https://github.com/openeuropa/oe_paragraphs/pull/53) ([nagyad](https://github.com/nagyad))
+- OPENEUROPA-1848: Remove hard dependency from content\_translation. [\#50](https://github.com/openeuropa/oe_paragraphs/pull/50) ([nagyad](https://github.com/nagyad))
+
 ## [0.6.0](https://github.com/openeuropa/oe_paragraphs/tree/0.6.0) (2019-05-07)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.5.0...0.6.0)
 
 **Closed issues:**
 
+- Inpage navigation lost when paragraph "Edit mode" is set to "closed" [\#45](https://github.com/openeuropa/oe_paragraphs/issues/45)
 - Content translation and required Drupal core patch [\#43](https://github.com/openeuropa/oe_paragraphs/issues/43)
 
 **Merged pull requests:**
 
+- OPENEUROPA-1813: Create release 0.6.0. [\#51](https://github.com/openeuropa/oe_paragraphs/pull/51) ([voidtek](https://github.com/voidtek))
 - OPENEUROPA-1813: Upgrading to 8.7. [\#49](https://github.com/openeuropa/oe_paragraphs/pull/49) ([upchuk](https://github.com/upchuk))
 
 ## [0.5.0](https://github.com/openeuropa/oe_paragraphs/tree/0.5.0) (2019-04-22)
