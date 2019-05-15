@@ -218,3 +218,22 @@ function oe_paragraphs_update_8002(&$sandbox) {
     }
   }
 }
+
+/**
+ * Update list of paragraphs that can be referenced inside content rows.
+ */
+function oe_paragraphs_update_8003(&$sandbox) {
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/updates/8003');
+
+  $values = $storage->read('field.field.paragraph.oe_content_row.field_oe_paragraphs');
+  $field = FieldConfig::load($values['id']);
+
+  if (!$field) {
+    return t('Could not load default field for content row paragraph.');
+  }
+
+  foreach ($values as $key => $value) {
+    $field->set($key, $value);
+  }
+  $field->save();
+}
