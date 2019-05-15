@@ -29,7 +29,6 @@ settings:
     target_bundles:
       oe_accordion: oe_accordion
       oe_links_block: oe_links_block
-      oe_list_item: oe_list_item
       oe_list_item_block: oe_list_item_block
       oe_quote: oe_quote
       oe_rich_text: oe_rich_text
