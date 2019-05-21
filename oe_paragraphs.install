@@ -254,3 +254,16 @@ function oe_paragraphs_update_8004(&$sandbox) {
   }
   $form_display->save();
 }
+
+/**
+ * Fix description for limit field.
+ */
+function oe_paragraphs_update_8005(array &$sandbox): void {
+  if (!$fields = \Drupal::entityTypeManager()->getStorage('field_config')->loadByProperties(['field_name' => 'field_oe_limit'])) {
+    return;
+  }
+  /** @var \Drupal\Core\Config\Entity\ConfigEntityInterface $field */
+  $field = reset($fields);
+  $field->set('description', 'The number of items to display. When empty, defaults to 4.');
+  $field->save();
+}
