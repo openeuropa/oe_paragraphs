@@ -4,9 +4,11 @@ default:
       paths:
         - %paths.base%/tests/features
       contexts:
-        - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\Tests\oe_paragraphs\Behat\DrupalContext
+        - Drupal\Tests\oe_paragraphs\Behat\FieldsContext
         - Drupal\Tests\oe_paragraphs\Behat\ParagraphsContext
         - OpenEuropa\Behat\TransformationContext:
             pages:
@@ -25,5 +27,9 @@ default:
       api_driver: "drupal"
       drupal:
         drupal_root: "build"
+      selectors:
+        message_selector: ".messages,.ecl-message"
+        error_message_selector: ".messages.messages--error,.ecl-message--error"
+        success_message_selector: ".messages.messages--status,.ecl-message--success"
   formatters:
     progress: ~

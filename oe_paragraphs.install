@@ -224,7 +224,6 @@ function oe_paragraphs_update_8002(&$sandbox) {
  */
 function oe_paragraphs_update_8003(&$sandbox) {
   $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/updates/8003');
-
   $values = $storage->read('field.field.paragraph.oe_content_row.field_oe_paragraphs');
   $field = FieldConfig::load($values['id']);
 
@@ -236,4 +235,22 @@ function oe_paragraphs_update_8003(&$sandbox) {
     $field->set($key, $value);
   }
   $field->save();
+}
+
+/**
+ * Updates the form display for the accordion paragraph.
+ */
+function oe_paragraphs_update_8004(&$sandbox) {
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/updates/8004');
+  $values = $storage->read('core.entity_form_display.paragraph.oe_accordion.default');
+  $form_display = EntityFormDisplay::load($values['id']);
+
+  if (!$form_display) {
+    return t('Could not load default form display for accordion paragraph.');
+  }
+
+  foreach ($values as $key => $value) {
+    $form_display->set($key, $value);
+  }
+  $form_display->save();
 }
