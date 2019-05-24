@@ -43,7 +43,6 @@ pipeline:
     image: fpfis/httpd-php-ci:7.1
     commands:
       - ./vendor/bin/run drupal:site-install
-      - chown -R www-data:www-data /test/oe_paragraphs/*
 
   grumphp:
     group: test
