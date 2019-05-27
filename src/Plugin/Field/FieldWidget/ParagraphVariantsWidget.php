@@ -35,6 +35,8 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
    *
    * @SuppressWarnings(PHPMD.CyclomaticComplexity)
    * @SuppressWarnings(PHPMD.NPathComplexity)
+   *
+   * Based on commit #0fafd516 from paragraphs module.
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
     $field_name = $this->fieldDefinition->getName();
@@ -120,7 +122,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
       else {
         // If the node is being translated, the paragraphs should be all open
         // when the form is not being rebuilt (E.g. when clicked on a paragraphs
-        // action) and when the the translation is being added.
+        // action) and when the translation is being added.
         if (!$form_state->isRebuilding() && $host->getTranslationStatus($langcode) == TranslationStatusInterface::TRANSLATION_CREATED) {
           $item_mode = 'edit';
         }
@@ -288,6 +290,11 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
           '#access' => $this->duplicateButtonAccess($paragraphs_entity),
         ];
 
+        // Force the closed mode when the user cannot edit the Paragraph.
+        if (!$paragraphs_entity->access('update')) {
+          $item_mode = 'closed';
+        }
+
         if ($item_mode != 'remove') {
           $widget_actions['dropdown_actions']['remove_button'] = [
             '#type' => 'submit',
@@ -364,10 +371,10 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
             ];
           }
 
-          if (!$paragraphs_entity->access('view')) {
+          if (!$paragraphs_entity->isPublished()) {
             $info['preview'] = [
               '#theme' => 'paragraphs_info_icon',
-              '#message' => $this->t('You are not allowed to view this @title.', ['@title' => $this->getSetting('title')]),
+              '#message' => $this->t('Unpublished'),
               '#icon' => 'view',
             ];
           }
@@ -458,6 +465,17 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
         $display->buildForm($paragraphs_entity, $element['subform'], $form_state);
         $hide_untranslatable_fields = $paragraphs_entity->isDefaultTranslationAffectedOnly();
 
+        $summary = $paragraphs_entity->getSummaryItems();
+        if (!empty($summary)) {
+          $element['top']['summary']['fields_info'] = [
+            '#theme' => 'paragraphs_summary',
+            '#summary' => $summary,
+            '#expanded' => TRUE,
+            '#access' => $paragraphs_entity->access('update') || $paragraphs_entity->access('view'),
+          ];
+        }
+        $info = array_merge($info, $paragraphs_entity->getIcons());
+
         foreach (Element::children($element['subform']) as $field) {
           if ($paragraphs_entity->hasField($field)) {
             $field_definition = $paragraphs_entity->get($field)->getFieldDefinition();
@@ -478,6 +496,12 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
 
             if (!$is_paragraph_field) {
               $element['subform'][$field]['#attributes']['class'][] = 'paragraphs-content';
+              $element['top']['summary']['fields_info'] = [
+                '#theme' => 'paragraphs_summary',
+                '#summary' => $summary,
+                '#expanded' => TRUE,
+                '#access' => $paragraphs_entity->access('update') || $paragraphs_entity->access('view'),
+              ];
             }
             $translatable = $field_definition->isTranslatable();
             // Hide untranslatable fields when configured to do so except
@@ -529,12 +553,12 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
         else {
           // The closed paragraph is displayed as a summary.
           if ($paragraphs_entity) {
-            $summary = $paragraphs_entity->getSummary();
+            $summary = $paragraphs_entity->getSummaryItems();
             if (!empty($summary)) {
               $element['top']['summary']['fields_info'] = [
-                '#markup' => $summary,
-                '#prefix' => '<div class="paragraphs-collapsed-description">',
-                '#suffix' => '</div>',
+                '#theme' => 'paragraphs_summary',
+                '#summary' => $summary,
+                '#expanded' => FALSE,
                 '#access' => $paragraphs_entity->access('update') || $paragraphs_entity->access('view'),
               ];
             }
