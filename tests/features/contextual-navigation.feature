@@ -15,13 +15,18 @@ Feature: Contextual navigation paragraph.
     And the following fields should not be present "Variant"
 
     When I press "Save"
-    # No fields are required.
+    Then I should see the following error messages:
+      | error messages              |
+      | URL field is required       |
+      | Link text field is required |
+
+    When I fill in "URL" with "<front>" in the 1st "Contextual navigation" paragraph
+    And I fill in "Link text" with "Back to the home" in the 1st "Contextual navigation" paragraph
+    And I press "Save"
     Then I should see the heading "Contextual navigation test page"
 
     When I click "Edit"
     And I fill in "Navigation label" with "Quick links" in the 1st "Contextual navigation" paragraph
-    And I fill in "URL" with "<front>" in the 1st "Contextual navigation" paragraph
-    And I fill in "Link text" with "Back to the home" in the 1st "Contextual navigation" paragraph
     And I fill in "Limit" with "97" in the 1st "Contextual navigation" paragraph
     And I fill in "More label" with "See more" in the 1st "Contextual navigation" paragraph
     And I press "Save"
