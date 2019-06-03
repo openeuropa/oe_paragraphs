@@ -256,14 +256,18 @@ function oe_paragraphs_update_8004(&$sandbox) {
 }
 
 /**
- * Fix description for limit field.
+ * Fix description for limit field on contextual navigation paragraph.
  */
-function oe_paragraphs_update_8005(array &$sandbox): void {
-  if (!$fields = \Drupal::entityTypeManager()->getStorage('field_config')->loadByProperties(['field_name' => 'field_oe_limit'])) {
+function oe_paragraphs_update_8005(array &$sandbox) {
+  /** @var \Drupal\field\Entity\FieldConfig $field */
+  $field = \Drupal::entityTypeManager()
+    ->getStorage('field_config')
+    ->load('paragraph.oe_contextual_navigation.field_oe_limit');
+
+  if (!$field) {
     return t('Could not load limit field on contextual navigation paragraph.');
   }
-  /** @var \Drupal\Core\Config\Entity\ConfigEntityInterface $field */
-  $field = $fields['field_oe_limit'];
+
   $field->set('description', 'The number of items to display. When empty, defaults to 4.');
   $field->save();
 }
