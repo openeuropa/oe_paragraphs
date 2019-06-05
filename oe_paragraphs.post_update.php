@@ -10,7 +10,7 @@ declare(strict_types = 1);
 /**
  * Fix description for limit field on contextual navigation paragraph.
  */
-function oe_paragraphs_post_update_contextual_navigation_fix(array &$sandbox) {
+function oe_paragraphs_post_update_contextual_navigation_fix_description(array &$sandbox) {
   /** @var \Drupal\field\Entity\FieldConfig $field */
   $field = \Drupal::entityTypeManager()
     ->getStorage('field_config')
