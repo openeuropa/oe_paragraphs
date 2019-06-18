@@ -1,10 +1,21 @@
 # Change Log
 
+## [1.0.0-beta2](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0-beta2) (2019-06-18)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.0.0-beta1...1.0.0-beta2)
+
+**Merged pull requests:**
+
+- OPENEUROPA-1913: Make link text and url in contextual navigation required [\#59](https://github.com/openeuropa/oe_paragraphs/pull/59) ([dxvargas](https://github.com/dxvargas))
+- OPENEUROPA-1885: Update method to paragraphs commit: 0fafd516. [\#57](https://github.com/openeuropa/oe_paragraphs/pull/57) ([nagyad](https://github.com/nagyad))
+- OPENEUROPA-1862: Fix description for limit field. [\#56](https://github.com/openeuropa/oe_paragraphs/pull/56) ([imanoleguskiza](https://github.com/imanoleguskiza))
+- OPENEUROPA-1789: Create Behat tests for all the Paragraph types and variants [\#52](https://github.com/openeuropa/oe_paragraphs/pull/52) ([brummbar](https://github.com/brummbar))
+
 ## [1.0.0-beta1](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0-beta1) (2019-05-15)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.6.0...1.0.0-beta1)
 
 **Merged pull requests:**
 
+- Update changelog for release 1.0.0-beta1. [\#55](https://github.com/openeuropa/oe_paragraphs/pull/55) ([brummbar](https://github.com/brummbar))
 - OPENEUROPA-1891: Update list of paragraphs that can be referenced inside content rows. [\#54](https://github.com/openeuropa/oe_paragraphs/pull/54) ([nagyad](https://github.com/nagyad))
 - OPENEUROPA-1891: Listing item should not be under content-row. [\#53](https://github.com/openeuropa/oe_paragraphs/pull/53) ([nagyad](https://github.com/nagyad))
 - OPENEUROPA-1848: Remove hard dependency from content\_translation. [\#50](https://github.com/openeuropa/oe_paragraphs/pull/50) ([nagyad](https://github.com/nagyad))
