@@ -29,6 +29,7 @@ Feature: Content row paragraph.
     Then I should see the heading "Content row test page"
 
     When I click "Edit"
+    And I press "Edit" in the 1st "Content row" paragraph actions
     And I fill in "Navigation title" with "Quick links" in the 1st "Content row" paragraph
     And I press "Save"
     Then I should see the heading "Content row test page"
