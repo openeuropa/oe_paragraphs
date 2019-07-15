@@ -32,6 +32,14 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
 
   /**
    * {@inheritdoc}
+   */
+  public static function defaultSettings() {
+    // Make edit_mode closed by default.
+    return ['edit_mode' => 'closed'] + parent::defaultSettings();
+  }
+
+  /**
+   * {@inheritdoc}
    *
    * @SuppressWarnings(PHPMD.CyclomaticComplexity)
    * @SuppressWarnings(PHPMD.NPathComplexity)
