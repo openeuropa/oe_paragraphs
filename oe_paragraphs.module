@@ -31,3 +31,15 @@ function oe_paragraphs_entity_base_field_info(EntityTypeInterface $entity_type):
 
   return $fields;
 }
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function oe_paragraphs_entity_type_alter(array &$entity_types) {
+  // Make our field widget the default for paragraphs.
+  /** @var \Drupal\Core\Entity\ContentEntityType $paragraph */
+  $paragraph = $entity_types['paragraph'];
+  $settings = $paragraph->get('default_reference_revision_settings');
+  $settings['entity_form_display']['type'] = 'oe_paragraphs_variants';
+  $paragraph->set('default_reference_revision_settings', $settings);
+}
