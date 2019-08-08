@@ -15,8 +15,8 @@ Feature: Content row paragraph.
     And the following field should not be present "Navigation title"
     And the "Paragraphs" field in the 1st "Content row" paragraph can reference:
       | Accordion             |
-      | Contextual navigation |
       | Links block           |
+      | Contextual navigation |
       | Listing item block    |
       | Quote                 |
       | Rich text             |
