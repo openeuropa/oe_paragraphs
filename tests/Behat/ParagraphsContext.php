@@ -195,10 +195,8 @@ class ParagraphsContext extends RawDrupalContext {
       // Remove the "Add " substring from the button.
       return substr($element->getValue(), 4);
     }, $buttons);
-    sort($actual);
 
     $expected = $table->getColumn(0);
-    sort($expected);
 
     Assert::assertEquals($expected, $actual);
   }
