@@ -8,7 +8,9 @@
 declare(strict_types = 1);
 
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
 
 /**
  * Implements hook_entity_base_field_info().
@@ -30,4 +32,28 @@ function oe_paragraphs_entity_base_field_info(EntityTypeInterface $entity_type):
     ->setDisplayConfigurable('view', FALSE);
 
   return $fields;
+}
+
+/**
+ * Set dynamic allowed values for the "Content row: Column layout".
+ *
+ * @param \Drupal\Core\Field\FieldStorageDefinitionInterface $definition
+ *   The field definition.
+ * @param \Drupal\Core\Entity\FieldableEntityInterface|null $entity
+ *   The entity being created if applicable.
+ * @param bool $cacheable
+ *   Boolean indicating if the results are cacheable.
+ *
+ * @return array
+ *   An array of possible key and value options.
+ *
+ * @see options_allowed_values()
+ */
+function _oe_paragraphs_allowed_values_content_row_column_layout(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, $cacheable): array {
+  return [
+    '2' => t('2 columns (equal width | 6-6)'),
+    '8-4' => t('2 columns (non-equal width | 8-4)'),
+    '3' => t('3 columns (equal width | 4-4-4)'),
+    '3-6-3' => t('3 columns (non-equal width | 3-6-3)'),
+  ];
 }
