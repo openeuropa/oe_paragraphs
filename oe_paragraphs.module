@@ -50,10 +50,13 @@ function oe_paragraphs_entity_base_field_info(EntityTypeInterface $entity_type):
  * @see options_allowed_values()
  */
 function _oe_paragraphs_allowed_values_content_row_column_layout(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, $cacheable): array {
-  return [
+  $allowed_values = [
     '2' => t('2 columns (equal width | 6-6)'),
     '8-4' => t('2 columns (non-equal width | 8-4)'),
     '3' => t('3 columns (equal width | 4-4-4)'),
     '3-6-3' => t('3 columns (non-equal width | 3-6-3)'),
   ];
+
+  \Drupal::moduleHandler()->alter('oe_paragraphs_allowed_values_content_row_column_layout', $allowed_values);
+  return $allowed_values;
 }
