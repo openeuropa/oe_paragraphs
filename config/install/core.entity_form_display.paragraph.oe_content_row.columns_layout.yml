@@ -2,25 +2,26 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.paragraph.columns_layout
     - field.field.paragraph.oe_content_row.field_oe_content_row_layout
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
     - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
   module:
     - oe_paragraphs
-id: paragraph.oe_content_row.default
+id: paragraph.oe_content_row.columns_layout
 targetEntityType: paragraph
 bundle: oe_content_row
-mode: default
+mode: columns_layout
 content:
   field_oe_content_row_layout:
-    weight: 1
+    type: options_select
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_oe_paragraphs:
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs

@@ -2,16 +2,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_content_row.field_oe_content_row_layout
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
     - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
   module:
     - entity_reference_revisions
+    - options
 id: paragraph.oe_content_row.default
 targetEntityType: paragraph
 bundle: oe_content_row
 mode: default
 content:
+  field_oe_content_row_layout:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_oe_paragraphs:
     weight: 2
     label: above
