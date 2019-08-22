@@ -12,7 +12,7 @@ use Drupal\DrupalExtension\Context\DrupalSubContextBase;
 /**
  * Behat step definitions for testing the OE Paragraphs demo module.
  */
-class OEParagraphsDemoSubContext extends DrupalSubContextBase {
+class OeParagraphsDemoSubContext extends DrupalSubContextBase {
 
   /**
    * Navigates to the add form of a demo landing page.
