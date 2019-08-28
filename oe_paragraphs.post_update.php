@@ -29,9 +29,14 @@ function oe_paragraphs_post_update_contextual_navigation_fix_description(array &
 /**
  * Make oe_links required in contextual navigation.
  */
-function oe_paragraphs_post_update_00001_field_oe_links(array &$sandbox): void {
+function oe_paragraphs_post_update_00001_make_oe_links_required_in_contextual_navigation(array &$sandbox): void {
   $field = FieldConfig::load('paragraph.oe_contextual_navigation.field_oe_links');
+
+  if (!$field) {
+    return t('Could not load the oe_links field in contextual navigation paragraph.');
+  }
+
   $field->setRequired(TRUE);
-  $field->setSetting('title', 1);
+  $field->setSetting('title', 2);
   $field->save();
 }

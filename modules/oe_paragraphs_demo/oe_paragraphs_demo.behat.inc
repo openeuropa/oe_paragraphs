@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \OEParagraphsDemoSubContext.
+ * Contains \OeParagraphsDemoSubContext.
  */
 
 declare(strict_types = 1);
