@@ -29,7 +29,7 @@ function oe_paragraphs_post_update_contextual_navigation_fix_description(array &
 /**
  * Make oe_links required in contextual navigation.
  */
-function oe_paragraphs_post_update_00001_make_oe_links_required_in_contextual_navigation(array &$sandbox): void {
+function oe_paragraphs_post_update_00001_make_oe_links_required_in_contextual_navigation(array &$sandbox) {
   $field = FieldConfig::load('paragraph.oe_contextual_navigation.field_oe_links');
 
   if (!$field) {
