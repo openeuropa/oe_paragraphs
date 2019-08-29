@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \OEParagraphsSubContext.
+ * Contains \OeParagraphsSubContext.
  */
 
 declare(strict_types = 1);
@@ -18,7 +18,7 @@ use PHPUnit\Framework\Assert;
 /**
  * Behat step definitions for testing the OE Paragraphs module.
  */
-class OEParagraphsSubContext extends DrupalSubContextBase {
+class OeParagraphsSubContext extends DrupalSubContextBase {
 
   use EntityFieldTrait;
   use EntityReferenceTrait;
