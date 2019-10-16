@@ -1,10 +1,19 @@
 # Change Log
 
+## [1.0.0](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0) (2019-10-16)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.0.0-beta2...1.0.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-0000: Update post update hook to recent naming conventions. [\#72](https://github.com/openeuropa/oe_paragraphs/pull/72) ([brummbar](https://github.com/brummbar))
+- OPENEUROPA-2113: Provide a missing post update. [\#68](https://github.com/openeuropa/oe_paragraphs/pull/68) ([nagyad](https://github.com/nagyad))
+
 ## [1.0.0-beta2](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0-beta2) (2019-06-18)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.0.0-beta1...1.0.0-beta2)
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for release 1.0.0-beta2. [\#60](https://github.com/openeuropa/oe_paragraphs/pull/60) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-1913: Make link text and url in contextual navigation required [\#59](https://github.com/openeuropa/oe_paragraphs/pull/59) ([dxvargas](https://github.com/dxvargas))
 - OPENEUROPA-1885: Update method to paragraphs commit: 0fafd516. [\#57](https://github.com/openeuropa/oe_paragraphs/pull/57) ([nagyad](https://github.com/nagyad))
 - OPENEUROPA-1862: Fix description for limit field. [\#56](https://github.com/openeuropa/oe_paragraphs/pull/56) ([imanoleguskiza](https://github.com/imanoleguskiza))
