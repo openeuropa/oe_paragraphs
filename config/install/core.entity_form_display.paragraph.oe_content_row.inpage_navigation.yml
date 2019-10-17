@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.paragraph.inpage_navigation
+    - field.field.paragraph.oe_content_row.field_oe_content_row_layout
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
     - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
@@ -42,6 +43,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_oe_content_row_layout: true
   status: true
   translation: true
   uid: true

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_content_row_layout
+    - paragraphs.paragraphs_type.oe_content_row
+  module:
+    - options
+id: paragraph.oe_content_row.field_oe_content_row_layout
+field_name: field_oe_content_row_layout
+entity_type: paragraph
+bundle: oe_content_row
+label: Layout
+description: 'Column layout for displaying content items. If none selected, the content will be displayed in one column.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

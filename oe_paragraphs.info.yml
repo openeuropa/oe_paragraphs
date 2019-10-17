@@ -17,6 +17,7 @@ dependencies:
 config_devel:
   install:
     # Form modes.
+    - core.entity_form_mode.paragraph.columns_layout
     - core.entity_form_mode.paragraph.date
     - core.entity_form_mode.paragraph.highlight
     - core.entity_form_mode.paragraph.inpage_navigation
@@ -87,11 +88,13 @@ config_devel:
     - paragraphs.paragraphs_type.oe_list_item_block
 
     # Content row
+    - core.entity_form_display.paragraph.oe_content_row.columns_layout
     - core.entity_form_display.paragraph.oe_content_row.default
     - core.entity_form_display.paragraph.oe_content_row.inpage_navigation
     - core.entity_view_display.paragraph.oe_content_row.default
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
     - field.field.paragraph.oe_content_row.field_oe_title
+    - field.field.paragraph.oe_content_row.field_oe_content_row_layout
     - paragraphs.paragraphs_type.oe_content_row
 
     # Field types already included
@@ -129,6 +132,9 @@ config_devel:
 
     # List item block layout
     - field.storage.paragraph.field_oe_list_item_block_layout
+
+    # Content row layout
+    - field.storage.paragraph.field_oe_content_row_layout
 
   optional:
     # Paragraph multilingual configuration

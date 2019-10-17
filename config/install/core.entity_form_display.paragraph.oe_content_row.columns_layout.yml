@@ -2,19 +2,26 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.paragraph.columns_layout
     - field.field.paragraph.oe_content_row.field_oe_content_row_layout
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
     - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
   module:
     - oe_paragraphs
-id: paragraph.oe_content_row.default
+id: paragraph.oe_content_row.columns_layout
 targetEntityType: paragraph
 bundle: oe_content_row
-mode: default
+mode: columns_layout
 content:
-  field_oe_paragraphs:
+  field_oe_content_row_layout:
+    type: options_select
     weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_oe_paragraphs:
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -34,7 +41,6 @@ content:
     region: content
 hidden:
   created: true
-  field_oe_content_row_layout: true
   field_oe_title: true
   status: true
   translation: true
