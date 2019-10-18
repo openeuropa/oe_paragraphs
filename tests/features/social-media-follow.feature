@@ -4,7 +4,7 @@ Feature: Social media follow paragraph.
   I need to be able to use Social media follow paragraphs
   so I can see links where to follow the content.
 
-  Scenario: Social media follow paragraph creation.
+  Scenario Outline: Social media follow paragraph creation.
     Given I am logged in as a user with the "Editor" role
     When I go to "the content management page"
     And I click "Add content"
@@ -16,9 +16,15 @@ Feature: Social media follow paragraph.
       | error messages          |
       | Title field is required |
     And I fill in "Title" with "Follow this page" in the 1st "Social media follow" paragraph
+    And I select "<options>" from "Variant"
     And I fill in "URL" with "http://facebook.com"
     And I fill in "Link text" with "Facebook"
     And I select "Facebook" from "Link type"
     And I press "Save"
     Then I should see the heading "Social media follow paragraph test page"
     And I should see the text "Facebook"
+
+    Examples:
+    | options    |
+    | Horizontal |
+    | Vertical   |
