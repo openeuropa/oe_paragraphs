@@ -14,3 +14,4 @@ Feature: Create a landing page
       | Quote                 |
       | Rich text             |
       | Contextual navigation |
+      | Social media follow   |
