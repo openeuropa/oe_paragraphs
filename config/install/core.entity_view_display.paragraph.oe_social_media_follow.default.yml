@@ -8,8 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.oe_social_media_follow
   module:
     - typed_link
-_core:
-  default_config_hash: UjhKLRRdBE7rVTG_qT4LoVJjgGS-WqQJmZIvhZaJ_pc
 id: paragraph.oe_social_media_follow.default
 targetEntityType: paragraph
 bundle: oe_social_media_follow
