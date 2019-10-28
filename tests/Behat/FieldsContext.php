@@ -70,4 +70,34 @@ class FieldsContext extends RawDrupalContext {
     Assert::assertEquals($options, $available_options, "The '{$select}' select options don't match the expected ones.");
   }
 
+  /**
+   * Selects an option at a specific occurrence of a list.
+   *
+   * @param string $select
+   *   The value to be selected.
+   * @param string $position
+   *   The ordinal position of the list amongst the ones with same label.
+   * @param string $option
+   *   The list of options.
+   *
+   * @throws \Exception
+   *   Thrown when the specified occurrence of the list or the list itself is
+   *   not found.
+   *
+   * @Then I select :select from the :position :option
+   */
+  public function selectNthOption(string $select, string $position, string $option): void {
+    $field = $this->unescapeStepArgument($option);
+    $select = $this->unescapeStepArgument($select);
+    $position = $this->convertOrdinalToNumber($position) - 1;
+
+    // Find all the fields with the specified name.
+    $fields = $this->getSession()->getPage()->findAll('named', ['field', $field]);
+    if (!$fields || !isset($fields[$position])) {
+      throw new \Exception(sprintf('Could not find field "%s" in position "%s".', $field, $position));
+    }
+
+    $fields[$position]->selectOption($select);
+  }
+
 }
