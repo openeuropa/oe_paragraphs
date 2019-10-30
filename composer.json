@@ -19,6 +19,7 @@
         "drupal/config_devel": "~1.2",
         "drupal/drupal-extension": "~4.0",
         "drush/drush": "~9.0",
+        "guzzlehttp/guzzle": "~6.3",
         "nikic/php-parser": "~3.0",
         "openeuropa/behat-transformation-context" : "~0.1",
         "openeuropa/code-review": "~1.0@beta",
@@ -28,7 +29,8 @@
     },
     "_readme": [
         "We explicitly require consolidation/robo to allow lower 'composer update --prefer-lowest' to complete successfully.",
-        "We explicitly require consolidation/annotated-command to allow lower 'composer update --prefer-lowest' to complete successfully."
+        "We explicitly require consolidation/annotated-command to allow lower 'composer update --prefer-lowest' to complete successfully.",
+        "We explicitly require guzzlehttp/guzzle to allow tests after 'composer update --prefer-lowest' to complete successfully."
     ],
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -61,9 +63,6 @@
         }
     },
     "config": {
-        "sort-packages": true,
-        "platform": {
-            "php": "7.1.9"
-        }
+        "sort-packages": true
     }
 }
