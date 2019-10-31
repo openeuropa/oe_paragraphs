@@ -46,7 +46,7 @@ function oe_paragraphs_post_update_10001(array &$sandbox) {
  * Installs Social media follow paragraph.
  */
 function oe_paragraphs_post_update_10002(array &$sandbox): void {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/install');
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10002');
 
   \Drupal::entityTypeManager()->getStorage('paragraphs_type')
     ->create($storage->read('paragraphs.paragraphs_type.oe_social_media_follow'))
