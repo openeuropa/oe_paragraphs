@@ -58,6 +58,8 @@ function oe_paragraphs_post_update_10002(array &$sandbox): void {
     'field.field.paragraph.oe_social_media_follow.field_oe_title',
     'field.field.paragraph.oe_social_media_follow.field_oe_social_media_variant',
     'field.field.paragraph.oe_social_media_follow.field_oe_social_media_links',
+    'core.entity_form_display.paragraph.oe_social_media_follow.default',
+    'core.entity_view_display.paragraph.oe_social_media_follow.default',
   ];
 
   $config_manager = \Drupal::service('config.manager');
