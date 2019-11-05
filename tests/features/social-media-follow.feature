@@ -4,7 +4,6 @@ Feature: Social media follow paragraph.
   I need to be able to use Social media follow paragraphs
   so I can add social media links to the content.
 
-  @ale
   Scenario Outline: Social media follow paragraph creation.
     Given I am logged in as a user with the "Editor" role
     When I go to "the content management page"
