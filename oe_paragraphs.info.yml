@@ -13,6 +13,7 @@ dependencies:
   - drupal:options
   - drupal:text
   - paragraphs:paragraphs
+  - typed_link:typed_link
 
 config_devel:
   install:
@@ -93,6 +94,14 @@ config_devel:
     - field.field.paragraph.oe_content_row.field_oe_paragraphs
     - field.field.paragraph.oe_content_row.field_oe_title
     - paragraphs.paragraphs_type.oe_content_row
+
+    # Social media follow
+    - core.entity_form_display.paragraph.oe_social_media_follow.default
+    - core.entity_view_display.paragraph.oe_social_media_follow.default
+    - field.field.paragraph.oe_social_media_follow.field_oe_social_media_links
+    - field.field.paragraph.oe_social_media_follow.field_oe_social_media_variant
+    - field.field.paragraph.oe_social_media_follow.field_oe_title
+    - paragraphs.paragraphs_type.oe_social_media_follow
 
     # Field types already included
     # -----------------------------

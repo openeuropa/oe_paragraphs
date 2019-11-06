@@ -8,6 +8,7 @@
 declare(strict_types = 1);
 
 use Drupal\field\Entity\FieldConfig;
+use Drupal\Core\Config\FileStorage;
 
 /**
  * Fix description for limit field on contextual navigation paragraph.
@@ -39,4 +40,37 @@ function oe_paragraphs_post_update_10001(array &$sandbox) {
   $field->setRequired(TRUE);
   $field->setSetting('title', 2);
   $field->save();
+}
+
+/**
+ * Installs Social media follow paragraph.
+ */
+function oe_paragraphs_post_update_10002(array &$sandbox): void {
+  \Drupal::service('module_installer')->install(['typed_link']);
+
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10002');
+
+  \Drupal::entityTypeManager()->getStorage('paragraphs_type')
+    ->create($storage->read('paragraphs.paragraphs_type.oe_social_media_follow'))
+    ->save();
+
+  $field_config = [
+    'field.storage.paragraph.field_oe_social_media_variant',
+    'field.storage.paragraph.field_oe_social_media_links',
+    'field.field.paragraph.oe_social_media_follow.field_oe_title',
+    'field.field.paragraph.oe_social_media_follow.field_oe_social_media_variant',
+    'field.field.paragraph.oe_social_media_follow.field_oe_social_media_links',
+    'core.entity_form_display.paragraph.oe_social_media_follow.default',
+    'core.entity_view_display.paragraph.oe_social_media_follow.default',
+  ];
+
+  $config_manager = \Drupal::service('config.manager');
+  $entity_manager = \Drupal::entityTypeManager();
+  foreach ($field_config as $config) {
+    $config_record = $storage->read($config);
+    $entity_type = $config_manager->getEntityTypeIdByName($config);
+    $entity_storage = $entity_manager->getStorage($entity_type);
+    $entity = $entity_storage->createFromStorageRecord($config_record);
+    $entity->save();
+  }
 }

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_social_media_links
+    - paragraphs.paragraphs_type.oe_social_media_follow
+  module:
+    - typed_link
+id: paragraph.oe_social_media_follow.field_oe_social_media_links
+field_name: field_oe_social_media_links
+entity_type: paragraph
+bundle: oe_social_media_follow
+label: 'Social media links'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: typed_link

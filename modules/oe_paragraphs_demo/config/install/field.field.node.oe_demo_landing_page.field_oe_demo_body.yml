@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.oe_list_item_block
     - paragraphs.paragraphs_type.oe_quote
     - paragraphs.paragraphs_type.oe_rich_text
+    - paragraphs.paragraphs_type.oe_social_media_follow
   module:
     - entity_reference_revisions
 id: node.oe_demo_landing_page.field_oe_demo_body
@@ -37,6 +38,7 @@ settings:
       oe_content_row: oe_content_row
       oe_list_item_block: oe_list_item_block
       oe_contextual_navigation: oe_contextual_navigation
+      oe_social_media_follow: oe_social_media_follow
     target_bundles_drag_drop:
       oe_rich_text:
         enabled: true
@@ -65,4 +67,7 @@ settings:
       oe_contextual_navigation:
         enabled: true
         weight: 13
+      oe_social_media_follow:
+        enabled: true
+        weight: 20
 field_type: entity_reference_revisions

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_social_media_follow
+label: 'Social media follow'
+icon_uuid: null
+description: 'The Social media follow paragraph allows the editor to add a list of social media links.'
+behavior_plugins: {  }

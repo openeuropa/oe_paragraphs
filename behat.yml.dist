@@ -31,5 +31,7 @@ default:
         message_selector: ".messages,.ecl-message"
         error_message_selector: ".messages.messages--error,.ecl-message--error"
         success_message_selector: ".messages.messages--status,.ecl-message--success"
+      region_map:
+        social media links form element: ".field--name-field-oe-social-media-links"
   formatters:
     progress: ~
