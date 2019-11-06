@@ -61,8 +61,7 @@ The Listing item block paragraph allows editors to group multiple Listing item p
 An optional link can be added to the block.
 
 #### Quote
-The Quote paragraph allows editors to add a quotation.
-Editors will be able to add the quotation to the specific content type where Quote paragraph type is attached.
+The Quote paragraph allows editors to add a quotation with quote and its attribution.
 
 #### Rich text
 The Rich text paragraph adds an optional title field and a long text field.
