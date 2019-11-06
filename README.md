@@ -34,8 +34,7 @@ In order to enable the module in your project run:
 ## Paragraphs
 
 #### Accordion
-The Accordion paragraph is a collection of collapsible items with icon, title and long text required fields. It can be
-referenced from content types field. 
+The Accordion paragraph is a collection of collapsible items with icon, title and long text required fields.
 
 #### Accordion item
 The Accordion item paragraph is a single accordion with icon, title and long text required fields. It is intended to be 
@@ -51,7 +50,7 @@ links, their visibility limit and navigation label can be configured using the a
 
 #### Links block
 The Links block paragraph displays a list of links, with an optional title. It is used for instance with the dropdown component.
-The component is intended to be used in the sidebar area only. Currently it is not being used in the main content area.
+This is a paragraph, which should not be used in the sidebar. Currently it is not being used in the main content area.
 
 #### Listing item
 The Listing item paragraph displays content teasers. A list item is available in the following variants: default, date 
@@ -62,7 +61,7 @@ The Listing item block paragraph allows editors to group multiple Listing item p
 An optional link can be added to the block.
 
 #### Quote
-The Quote paragraph allows editors to add quotation to a specific node.
+The Quote paragraph allows editors to add a quotation.
 Editors will be able to add the quotation to the specific content type where Quote paragraph type is attached.
 
 #### Rich text
