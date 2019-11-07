@@ -1,10 +1,22 @@
 # Change Log
 
-## [1.0.0](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0) (2019-10-16)
+## [1.1.0](https://github.com/openeuropa/oe_paragraphs/tree/1.1.0) (2019-11-07)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.0.0...1.1.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-2258: Undo use of PHP 7.2. [\#76](https://github.com/openeuropa/oe_paragraphs/pull/76) ([dxvargas](https://github.com/dxvargas))
+- OPENEUROPA-2464: Use PHP 7.1 in docker-compose. [\#75](https://github.com/openeuropa/oe_paragraphs/pull/75) ([dxvargas](https://github.com/dxvargas))
+- OPENEUROPA-2342: Create social media follow paragraph. [\#74](https://github.com/openeuropa/oe_paragraphs/pull/74) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-0000: Update paragraphs README documentation. [\#71](https://github.com/openeuropa/oe_paragraphs/pull/71) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-2258: Use PHP 7.2 [\#70](https://github.com/openeuropa/oe_paragraphs/pull/70) ([dxvargas](https://github.com/dxvargas))
+
+## [1.0.0](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0) (2019-10-17)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.0.0-beta2...1.0.0)
 
 **Merged pull requests:**
 
+- OPENEUROPA-0000: Update changelog for release 1.0.0. [\#73](https://github.com/openeuropa/oe_paragraphs/pull/73) ([brummbar](https://github.com/brummbar))
 - OPENEUROPA-0000: Update post update hook to recent naming conventions. [\#72](https://github.com/openeuropa/oe_paragraphs/pull/72) ([brummbar](https://github.com/brummbar))
 - OPENEUROPA-2113: Provide a missing post update. [\#68](https://github.com/openeuropa/oe_paragraphs/pull/68) ([nagyad](https://github.com/nagyad))
 
