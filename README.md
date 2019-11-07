@@ -50,7 +50,6 @@ links, their visibility limit and navigation label can be configured using the a
 
 #### Links block
 The Links block paragraph displays a list of links, with an optional title. It is used for instance with the dropdown component.
-This is a paragraph, which should not be used in the sidebar. Currently it is not being used in the main content area.
 
 #### Listing item
 The Listing item paragraph displays content teasers. A list item is available in the following variants: default, date 
