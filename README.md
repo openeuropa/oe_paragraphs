@@ -31,6 +31,40 @@ In order to enable the module in your project run:
 ./vendor/bin/drush en oe_paragraphs
 ```
 
+## Paragraphs
+
+#### Accordion
+The Accordion paragraph is a collection of collapsible items with icon, title and long text required fields.
+
+#### Accordion item
+The Accordion item paragraph is a single accordion with icon, title and long text required fields. It is intended to be 
+used exclusively in conjunction with the "Accordion" paragraph.
+
+#### Content row
+The Content row paragraph allows editors to group multiple paragraphs together. An in-page navigation can be shown 
+optionally.
+
+#### Contextual navigation
+The Contextual navigation paragraph allows editors to add a number of links that helps the user navigate the page. The 
+links, their visibility limit and navigation label can be configured using the available fields.
+
+#### Links block
+The Links block paragraph displays a list of links, with an optional title. It is used for instance with the dropdown component.
+
+#### Listing item
+The Listing item paragraph displays content teasers. A list item is available in the following variants: default, date 
+item, highlighted and thumbnail with primary or secondary image.
+
+#### Listing item block
+The Listing item block paragraph allows editors to group multiple Listing item paragraphs in one, two or three columns.
+An optional link can be added to the block.
+
+#### Quote
+The Quote paragraph allows editors to add a quotation with quote and its attribution.
+
+#### Rich text
+The Rich text paragraph adds an optional title field and a long text field.
+
 ## Development setup
 
 You can build a test site by running the following steps.
@@ -129,9 +163,3 @@ Please read [the full documentation](https://github.com/openeuropa/openeuropa) f
 We use [SemVer](http://semver.org/) for versioning. For the available versions, see the [tags on this repository](https://github.com/openeuropa/oe_paragraphs/tags).
 
 [1]: https://www.drupal.org/docs/develop/using-composer/using-composer-to-manage-drupal-site-dependencies#managing-contributed
-
-## Components
-
-#### Links block
-The links block component displays a list of links, with an optional title. It is used for instance with the dropdown component.
-The component is intended to be used in the sidebar area only. Currently it is not being used in the main content area.
