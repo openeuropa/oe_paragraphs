@@ -62,4 +62,22 @@ class DrupalContext extends RawDrupalContext {
     }
   }
 
+  /**
+   * Checks that a given image is present in the page.
+   *
+   * @param string $filename
+   *   The image filename.
+   *
+   * @Then I (should )see the image :filename
+   */
+  public function assertImagePresent(string $filename): void {
+    // Drupal appends an underscore and a number to the filename when duplicate
+    // files are uploaded, for example when a test runs more then once.
+    // We split up the filename and extension and match for both.
+    $parts = pathinfo($filename);
+    $extension = $parts['extension'];
+    $filename = $parts['filename'];
+    $this->assertSession()->elementExists('css', "img[src*='.$extension'][src*='$filename']");
+  }
+
 }

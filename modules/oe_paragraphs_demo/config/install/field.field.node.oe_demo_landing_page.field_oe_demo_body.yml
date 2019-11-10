@@ -36,6 +36,7 @@ settings:
       oe_quote: oe_quote
       oe_list_item: oe_list_item
       oe_content_row: oe_content_row
+      oe_text_feature_media: oe_text_feature_media
       oe_list_item_block: oe_list_item_block
       oe_contextual_navigation: oe_contextual_navigation
       oe_social_media_follow: oe_social_media_follow

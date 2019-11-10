@@ -74,3 +74,34 @@ function oe_paragraphs_post_update_10002(array &$sandbox): void {
     $entity->save();
   }
 }
+
+/**
+ * Installs Text with Featured media paragraph.
+ */
+function oe_paragraphs_post_update_10003(array &$sandbox): void {
+
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10003');
+
+  \Drupal::entityTypeManager()->getStorage('paragraphs_type')
+    ->create($storage->read('paragraphs.paragraphs_type.oe_text_feature_media'))
+    ->save();
+
+  $field_config = [
+    'field.field.paragraph.oe_text_feature_media.field_oe_title',
+    'field.field.paragraph.oe_text_feature_media.field_oe_image',
+    'field.field.paragraph.oe_text_feature_media.field_oe_text_long',
+    'field.field.paragraph.oe_text_feature_media.field_oe_plain_text_long',
+    'core.entity_form_display.paragraph.oe_text_feature_media.default',
+    'core.entity_view_display.paragraph.oe_text_feature_media.default',
+  ];
+
+  $config_manager = \Drupal::service('config.manager');
+  $entity_manager = \Drupal::entityTypeManager();
+  foreach ($field_config as $config) {
+    $config_record = $storage->read($config);
+    $entity_type = $config_manager->getEntityTypeIdByName($config);
+    $entity_storage = $entity_manager->getStorage($entity_type);
+    $entity = $entity_storage->createFromStorageRecord($config_record);
+    $entity->save();
+  }
+}

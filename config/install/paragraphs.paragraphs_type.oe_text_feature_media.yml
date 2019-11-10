@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_text_feature_media
+label: 'Text with Featured media'
+icon_uuid: null
+description: 'Shows a rich text with a title and a featured media on the right, if any.'
+behavior_plugins: {  }
