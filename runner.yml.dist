@@ -10,6 +10,7 @@ drupal:
     user: "root"
     password: ""
   post_install:
+    - "./vendor/bin/drush en oe_paragraphs_media -y"
     - "./vendor/bin/drush en oe_paragraphs_demo -y"
     - "./vendor/bin/drush en config_devel -y"
     - "./vendor/bin/drush en field_ui -y"
