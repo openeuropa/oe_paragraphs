@@ -1,0 +1,28 @@
+uuid: cd83f2cd-bdd2-4923-be88-24ee83f970ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_media
+    - media.type.image
+    - paragraphs.paragraphs_type.oe_text_feature_media
+id: paragraph.oe_text_feature_media.field_oe_media
+field_name: field_oe_media
+entity_type: paragraph
+bundle: oe_text_feature_media
+label: Media
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

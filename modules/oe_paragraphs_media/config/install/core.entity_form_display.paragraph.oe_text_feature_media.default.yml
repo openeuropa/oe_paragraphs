@@ -2,30 +2,30 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.oe_text_feature_media.field_oe_image
+    - field.field.paragraph.oe_text_feature_media.field_oe_media
     - field.field.paragraph.oe_text_feature_media.field_oe_plain_text_long
     - field.field.paragraph.oe_text_feature_media.field_oe_text_long
     - field.field.paragraph.oe_text_feature_media.field_oe_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.oe_text_feature_media
   module:
-    - image
     - text
 id: paragraph.oe_text_feature_media.default
 targetEntityType: paragraph
 bundle: oe_text_feature_media
 mode: default
 content:
-  field_oe_image:
-    weight: 1
+  field_oe_media:
+    weight: 2
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: image_image
+    type: entity_reference_autocomplete
     region: content
   field_oe_plain_text_long:
-    weight: 2
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -33,7 +33,7 @@ content:
     type: string_textarea
     region: content
   field_oe_text_long:
-    weight: 3
+    weight: 4
     settings:
       rows: 5
       placeholder: ''

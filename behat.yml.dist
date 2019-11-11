@@ -3,6 +3,7 @@ default:
     default:
       paths:
         - %paths.base%/tests/features
+        - %paths.base%/modules/oe_paragraphs_media/tests/features
       contexts:
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\DrupalExtension\Context\MessageContext
@@ -10,9 +11,11 @@ default:
         - Drupal\Tests\oe_paragraphs\Behat\DrupalContext
         - Drupal\Tests\oe_paragraphs\Behat\FieldsContext
         - Drupal\Tests\oe_paragraphs\Behat\ParagraphsContext
+        - Drupal\Tests\oe_paragraphs_media\Behat\CleanupContext
         - OpenEuropa\Behat\TransformationContext:
             pages:
               content management: "/admin/content"
+              image creation: "/media/add/image"
   extensions:
     Drupal\MinkExtension:
       goutte: ~
