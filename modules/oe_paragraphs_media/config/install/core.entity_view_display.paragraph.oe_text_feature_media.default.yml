@@ -1,4 +1,3 @@
-uuid: f76c0fe4-6dca-4f09-b0f0-329bac28a976
 langcode: en
 status: true
 dependencies:
@@ -11,8 +10,6 @@ dependencies:
   module:
     - image
     - text
-_core:
-  default_config_hash: pumkdD7hKF0U3kuMZK8UCtQvd3jt6o4MDWAfA85KpiA
 id: paragraph.oe_text_feature_media.default
 targetEntityType: paragraph
 bundle: oe_text_feature_media

@@ -1,9 +1,10 @@
-@api @cleanup:media
+@api
 Feature: Text with featured media paragraph.
   As a content editor
   I need to be able to use Text with featured media paragraphs
   so that I can add featured media together with explanatory text.
 
+  @cleanup:media
   Scenario: Text with featured media paragraph creation.
     Given I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content, create image media" permission
 
