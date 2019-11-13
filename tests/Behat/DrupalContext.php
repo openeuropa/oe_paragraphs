@@ -63,7 +63,7 @@ class DrupalContext extends RawDrupalContext {
   }
 
   /**
-   * Checks that a given image is present in the page.
+   * Checks that a given image is present on the page.
    *
    * @param string $filename
    *   The image filename.
