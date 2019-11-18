@@ -25,21 +25,3 @@ function oe_paragraphs_media_install() {
   $field_config->set('settings', $settings);
   $field_config->save();
 }
-
-/**
- * Implements hook_uninstall().
- */
-function oe_paragraphs_media_uninstall() {
-  // Remove the Text with featured media paragraph from the list of available
-  // paragraphs on the content row paragraph.
-  $field_config = FieldConfig::load('paragraph.oe_content_row.field_oe_paragraphs');
-  $settings = $field_config->get('settings');
-  if (isset($settings['handler_settings']['target_bundles']['oe_text_feature_media'])) {
-    unset($settings['handler_settings']['target_bundles']['oe_text_feature_media']);
-  }
-  if (isset($settings['handler_settings']['target_bundles_drag_drop']['oe_text_feature_media'])) {
-    unset($settings['handler_settings']['target_bundles_drag_drop']['oe_text_feature_media']);
-  }
-  $field_config->set('settings', $settings);
-  $field_config->save();
-}
