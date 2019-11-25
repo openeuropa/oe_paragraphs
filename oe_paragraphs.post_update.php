@@ -74,3 +74,29 @@ function oe_paragraphs_post_update_10002(array &$sandbox): void {
     $entity->save();
   }
 }
+
+/**
+ * Add Social media follow paragraph to Content row paragraph.
+ */
+function oe_paragraphs_post_update_10003(array &$sandbox): void {
+  $paragraph_weights = [
+    'oe_social_media_follow' => -17,
+    'block_reference' => -18,
+    'oe_quote' => -19,
+    'oe_links_block' => -20,
+    'oe_list_item_block' => -21,
+    'oe_rich_text' => -22,
+  ];
+  $field = FieldConfig::load('paragraph.oe_content_row.field_oe_paragraphs');
+  $handler_settings = $field->getSetting('handler_settings');
+  if (isset($handler_settings['target_bundles'])) {
+    $handler_settings['target_bundles']['oe_social_media_follow'] = 'oe_social_media_follow';
+  }
+  foreach ($paragraph_weights as $paragraph => $weight) {
+    if (isset($handler_settings['target_bundles_drag_drop'])) {
+      $handler_settings['target_bundles_drag_drop'][$paragraph]['weight'] = $weight;
+    }
+  }
+  $field->setSetting('handler_settings', $handler_settings);
+  $field->save();
+}

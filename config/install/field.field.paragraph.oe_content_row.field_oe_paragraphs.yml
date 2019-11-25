@@ -33,32 +33,39 @@ settings:
       oe_list_item_block: oe_list_item_block
       oe_quote: oe_quote
       oe_rich_text: oe_rich_text
+      oe_social_media_follow: oe_social_media_follow
     target_bundles_drag_drop:
-      oe_accordion:
-        enabled: true
-        weight: 9
-      oe_accordion_item:
-        weight: 10
-        enabled: false
-      oe_content_row:
-        weight: 11
-        enabled: false
-      oe_links_block:
-        enabled: true
-        weight: 12
-      oe_contextual_navigation:
-        enabled: true
-        weight: 13
-      oe_list_item:
-        weight: 13
-        enabled: false
-      oe_list_item_block:
-        enabled: true
-        weight: 14
-      oe_quote:
-        enabled: true
-        weight: 15
       oe_rich_text:
         enabled: true
-        weight: 16
+        weight: -22
+      oe_list_item_block:
+        enabled: true
+        weight: -21
+      oe_links_block:
+        enabled: true
+        weight: -20
+      oe_quote:
+        enabled: true
+        weight: -19
+      block_reference:
+        enabled: true
+        weight: -18
+      oe_social_media_follow:
+        enabled: true
+        weight: -17
+      oe_contextual_navigation:
+        enabled: true
+        weight: -16
+      oe_accordion:
+        enabled: true
+        weight: -15
+      oe_accordion_item:
+        weight: -14
+        enabled: false
+      oe_content_row:
+        weight: -13
+        enabled: false
+      oe_list_item:
+        weight: -12
+        enabled: false
 field_type: entity_reference_revisions
