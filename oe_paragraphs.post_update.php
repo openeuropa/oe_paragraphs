@@ -100,3 +100,12 @@ function oe_paragraphs_post_update_10003(array &$sandbox): void {
   $field->setSetting('handler_settings', $handler_settings);
   $field->save();
 }
+
+/**
+ * Set Social media follow Variant field to required.
+ */
+function oe_paragraphs_post_update_10004(array &$sandbox): void {
+  $field = FieldConfig::load('paragraph.oe_social_media_follow.field_oe_social_media_variant');
+  $field->setRequired(TRUE);
+  $field->save();
+}
