@@ -77,6 +77,8 @@ function oe_paragraphs_post_update_10002(array &$sandbox): void {
 
 /**
  * Add Social media follow paragraph to Content row paragraph.
+ *
+ * Set Variant field required.
  */
 function oe_paragraphs_post_update_10003(array &$sandbox): void {
   $paragraph_weights = [
@@ -87,11 +89,13 @@ function oe_paragraphs_post_update_10003(array &$sandbox): void {
     'oe_list_item_block' => -21,
     'oe_rich_text' => -22,
   ];
+  // Add Social media follow paragraph to content row.
   $field = FieldConfig::load('paragraph.oe_content_row.field_oe_paragraphs');
   $handler_settings = $field->getSetting('handler_settings');
   if (isset($handler_settings['target_bundles'])) {
     $handler_settings['target_bundles']['oe_social_media_follow'] = 'oe_social_media_follow';
   }
+  // Reorder paragraphs.
   foreach ($paragraph_weights as $paragraph => $weight) {
     if (isset($handler_settings['target_bundles_drag_drop'])) {
       $handler_settings['target_bundles_drag_drop'][$paragraph]['weight'] = $weight;
@@ -99,13 +103,16 @@ function oe_paragraphs_post_update_10003(array &$sandbox): void {
   }
   $field->setSetting('handler_settings', $handler_settings);
   $field->save();
+
+  // Set Variant field required.
+  $field = FieldConfig::load('paragraph.oe_social_media_follow.field_oe_social_media_variant');
+  $field->setRequired(TRUE);
+  $field->save();
 }
 
 /**
  * Set Social media follow Variant field to required.
  */
 function oe_paragraphs_post_update_10004(array &$sandbox): void {
-  $field = FieldConfig::load('paragraph.oe_social_media_follow.field_oe_social_media_variant');
-  $field->setRequired(TRUE);
-  $field->save();
+
 }
