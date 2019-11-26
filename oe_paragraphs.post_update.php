@@ -76,9 +76,7 @@ function oe_paragraphs_post_update_10002(array &$sandbox): void {
 }
 
 /**
- * Add Social media follow paragraph to Content row paragraph.
- *
- * Set Variant field required.
+ * Set Variant required and add Social media follow to Content row.
  */
 function oe_paragraphs_post_update_10003(array &$sandbox): void {
   $paragraph_weights = [
@@ -96,8 +94,8 @@ function oe_paragraphs_post_update_10003(array &$sandbox): void {
     $handler_settings['target_bundles']['oe_social_media_follow'] = 'oe_social_media_follow';
   }
   // Reorder paragraphs.
-  foreach ($paragraph_weights as $paragraph => $weight) {
-    if (isset($handler_settings['target_bundles_drag_drop'])) {
+  if (isset($handler_settings['target_bundles_drag_drop'])) {
+    foreach ($paragraph_weights as $paragraph => $weight) {
       $handler_settings['target_bundles_drag_drop'][$paragraph]['weight'] = $weight;
     }
   }
