@@ -24,8 +24,12 @@
         "openeuropa/behat-transformation-context" : "~0.1",
         "openeuropa/code-review": "~1.0@beta",
         "openeuropa/drupal-core-require-dev": "^8.7",
+        "openeuropa/oe_media": "~1.1",
         "openeuropa/task-runner": "~1.0-beta5",
         "symfony/dom-crawler": "~3.4"
+    },
+    "suggest": {
+        "openeuropa/oe_media": "Allows usage of paragraphs with different media attached to it."
     },
     "_readme": [
         "We explicitly require consolidation/robo to allow lower 'composer update --prefer-lowest' to complete successfully.",

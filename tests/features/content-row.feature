@@ -14,12 +14,12 @@ Feature: Content row paragraph.
     # Verify the fields displayed in the "default" variant.
     And the following field should not be present "Navigation title"
     And the "Paragraphs" field in the 1st "Content row" paragraph can reference:
-      | Accordion             |
-      | Contextual navigation |
-      | Links block           |
-      | Listing item block    |
-      | Quote                 |
-      | Rich text             |
+      | Accordion                 |
+      | Contextual navigation     |
+      | Links block               |
+      | Listing item block        |
+      | Quote                     |
+      | Rich text                 |
 
     When I select "Inpage navigation" from "Variant" in the 1st "Content row" paragraph
     And I press "Change variant"

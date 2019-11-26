@@ -7,7 +7,7 @@ core: 8.x
 dependencies:
   - drupal:path
   - drupal:menu_ui
-  - oe_paragraphs:oe_paragraphs
+  - oe_paragraphs:oe_paragraphs_media
 
 config_devel:
   install:
