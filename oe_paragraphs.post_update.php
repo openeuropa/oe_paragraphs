@@ -109,10 +109,3 @@ function oe_paragraphs_post_update_10003(array &$sandbox): void {
   $field->setRequired(TRUE);
   $field->save();
 }
-
-/**
- * Set Social media follow Variant field to required.
- */
-function oe_paragraphs_post_update_10004(array &$sandbox): void {
-
-}
