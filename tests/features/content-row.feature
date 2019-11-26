@@ -20,7 +20,6 @@ Feature: Content row paragraph.
       | Listing item block        |
       | Quote                     |
       | Rich text                 |
-      | Text with Featured media  |
 
     When I select "Inpage navigation" from "Variant" in the 1st "Content row" paragraph
     And I press "Change variant"

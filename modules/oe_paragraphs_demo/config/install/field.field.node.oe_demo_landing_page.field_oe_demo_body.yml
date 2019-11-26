@@ -71,4 +71,7 @@ settings:
       oe_social_media_follow:
         enabled: true
         weight: 20
+      oe_text_feature_media:
+        enabled: true
+        weight: 21
 field_type: entity_reference_revisions
