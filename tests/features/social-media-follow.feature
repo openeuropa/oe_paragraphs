@@ -11,6 +11,9 @@ Feature: Social media follow paragraph.
     And I fill in "Title" with "Social media follow paragraph test page"
     And I press "Add Social media follow"
     Then the following fields should be present "Title, URL, Link text, Link type"
+    And the available options in the Variant select should be:
+      | Horizontal |
+      | Vertical   |
     When I press "Save"
     Then I should see the following error messages:
       | error messages          |

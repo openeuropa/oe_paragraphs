@@ -74,3 +74,12 @@ function oe_paragraphs_post_update_10002(array &$sandbox): void {
     $entity->save();
   }
 }
+
+/**
+ * Set Variant field required for Social media follow paragraph.
+ */
+function oe_paragraphs_post_update_10003(array &$sandbox): void {
+  $field = FieldConfig::load('paragraph.oe_social_media_follow.field_oe_social_media_variant');
+  $field->setRequired(TRUE);
+  $field->save();
+}

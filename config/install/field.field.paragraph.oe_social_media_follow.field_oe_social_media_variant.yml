@@ -12,7 +12,7 @@ entity_type: paragraph
 bundle: oe_social_media_follow
 label: Variant
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -
