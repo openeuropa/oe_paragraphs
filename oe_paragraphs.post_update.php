@@ -83,3 +83,27 @@ function oe_paragraphs_post_update_10003(array &$sandbox): void {
   $field->setRequired(TRUE);
   $field->save();
 }
+
+/**
+ * Add optional link field to Social media follow paragraph.
+ */
+function oe_paragraphs_post_update_10004(array &$sandbox): void {
+  \Drupal::service('module_installer')->install(['link']);
+
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10004');
+  $field_config = [
+    'core.entity_form_display.paragraph.oe_social_media_follow.default',
+    'core.entity_view_display.paragraph.oe_social_media_follow.default',
+    'field.field.paragraph.oe_social_media_follow.field_oe_social_media_see_more',
+    'field.storage.paragraph.field_oe_social_media_see_more',
+  ];
+  $config_manager = \Drupal::service('config.manager');
+  $entity_manager = \Drupal::entityTypeManager();
+  foreach ($field_config as $config) {
+    $config_record = $storage->read($config);
+    $entity_type = $config_manager->getEntityTypeIdByName($config);
+    $entity_storage = $entity_manager->getStorage($entity_type);
+    $entity = $entity_storage->createFromStorageRecord($config_record);
+    $entity->save();
+  }
+}
