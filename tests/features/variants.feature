@@ -18,8 +18,8 @@ Feature: Paragraph types show different fields based on variants.
     And I fill in "Title" with "Block title" in the 1st "Listing item block" paragraph
     And I select "Highlight" from "Variant" in the 1st "Listing item"
     And I wait for AJAX to finish
-    And I fill in "Link" with "<front>" in the 1st "Listing item"
-    And I fill in "Title" with "First item" in the 1st "Listing item"
+    And I fill in "Link" with "<front>" in the 1st "Listing item" paragraph
+    And I fill in "Title" with "First item" in the 1st "Listing item" paragraph
     And I press "Save"
     Then I should see the heading "Test page"
     When I click "Edit"
@@ -27,7 +27,7 @@ Feature: Paragraph types show different fields based on variants.
     And I press "Edit" in the 1st "Listing item" paragraph actions
     And I wait for AJAX to finish
     Then the option "Highlight" should be selected in the "Variant" select of the 1st "Listing item" paragraph
-    When I fill in "Title" with "First item v2" in the 1st "Listing item"
+    When I fill in "Title" with "First item v2" in the 1st "Listing item" paragraph
     And I press "Save"
     Then I should see the heading "Test page"
     When I click "Edit"

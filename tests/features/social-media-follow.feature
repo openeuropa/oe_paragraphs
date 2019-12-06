@@ -31,11 +31,14 @@ Feature: Social media follow paragraph.
     And I fill in the 3rd "URL" field with "http://twitter.com"
     And I fill in the 3rd "Link text" with "2nd Twitter"
     And I select "Twitter" from the 3rd "Link type"
+    And I fill in "URL" with "https://europa.eu/european-union/contact/social-networks_en" in the "see more form element"
+    And I fill in "Link text" with "Other social networks" in the "see more form element"
     And I press "Save"
     Then I should see the heading "Social media follow paragraph test page"
     And I should see the text "Facebook"
     And I should see the text "1st Twitter"
     And I should see the text "2nd Twitter"
+    And I should see the text "Other social networks"
 
     Examples:
     | options    |
