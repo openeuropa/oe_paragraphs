@@ -31,7 +31,7 @@ class ParagraphsContext extends RawDrupalContext {
    * @param string $position
    *   The ordinal position of the paragraph amongst its type.
    *
-   * @When I fill in :field with :value in the :position :paragraph_type( paragraph)
+   * @When I fill in :field with :value in the :position :paragraph_type paragraph
    */
   public function fillParagraphField(string $field, string $value, string $paragraph_type, string $position): void {
     $paragraph_type = $this->unescapeStepArgument($paragraph_type);
