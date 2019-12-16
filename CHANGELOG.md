@@ -1,10 +1,18 @@
 # Change Log
 
+## [1.3.0](https://github.com/openeuropa/oe_paragraphs/tree/1.3.0) (2019-12-16)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.2.0...1.3.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-2606: Add optional link field to Social media follow paragraph. [\#82](https://github.com/openeuropa/oe_paragraphs/pull/82) ([22Alexandra](https://github.com/22Alexandra))
+
 ## [1.2.0](https://github.com/openeuropa/oe_paragraphs/tree/1.2.0) (2019-11-27)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.1.0...1.2.0)
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for release 1.2.0. [\#81](https://github.com/openeuropa/oe_paragraphs/pull/81) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-2473: Add Social media follow paragraph to Content row paragraph  [\#80](https://github.com/openeuropa/oe_paragraphs/pull/80) ([22Alexandra](https://github.com/22Alexandra))
 - OPENEUROPA-2485: Add Text with Featured media paragraph. [\#79](https://github.com/openeuropa/oe_paragraphs/pull/79) ([imanoleguskiza](https://github.com/imanoleguskiza))
 - OPENEUROPA-2487: Date field should not be translatable. [\#78](https://github.com/openeuropa/oe_paragraphs/pull/78) ([upchuk](https://github.com/upchuk))
