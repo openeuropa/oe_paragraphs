@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_facts_and_figures
+label: 'Facts and figures'
+icon_uuid: null
+icon_default: null
+description: 'A set of facts and figures items containing the following information: label, icon, statistic and description. Optionally, it can have a title and a link for the block containing the facts.'
+behavior_plugins: {  }

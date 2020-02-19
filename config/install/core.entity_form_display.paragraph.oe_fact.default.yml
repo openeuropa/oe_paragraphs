@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_fact.field_oe_description
+    - field.field.paragraph.oe_fact.field_oe_icon
+    - field.field.paragraph.oe_fact.field_oe_statistic
+    - field.field.paragraph.oe_fact.field_oe_title
+    - paragraphs.paragraphs_type.oe_fact
+id: paragraph.oe_fact.default
+targetEntityType: paragraph
+bundle: oe_fact
+mode: default
+content:
+  field_oe_description:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_oe_icon:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_oe_statistic:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_oe_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

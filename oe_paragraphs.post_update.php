@@ -129,3 +129,51 @@ function oe_paragraphs_post_update_10004(array &$sandbox): void {
     $display->save();
   }
 }
+
+/**
+ * Installs Facts and figures and Fact and figure paragraphs.
+ */
+function oe_paragraphs_post_update_10006(array &$sandbox): void {
+  \Drupal::service('module_installer')->install(['maxlength']);
+
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10006');
+  $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraphs_type');
+
+  // Create the paragraphs.
+  $paragraphs = [
+    'paragraphs.paragraphs_type.oe_fact',
+    'paragraphs.paragraphs_type.oe_facts_and_figures',
+  ];
+  foreach ($paragraphs as $paragraph) {
+    $paragraph_storage->create($storage->read($paragraph))
+      ->save();
+  }
+
+  // Add the fields to paragraphs.
+  $field_config = [
+    'field.storage.paragraph.field_oe_description',
+    'field.storage.paragraph.field_oe_facts',
+    'field.storage.paragraph.field_oe_statistic',
+    'field.field.paragraph.oe_fact.field_oe_description',
+    'field.field.paragraph.oe_fact.field_oe_icon',
+    'field.field.paragraph.oe_fact.field_oe_statistic',
+    'field.field.paragraph.oe_fact.field_oe_title',
+    'field.field.paragraph.oe_facts_and_figures.field_oe_facts',
+    'field.field.paragraph.oe_facts_and_figures.field_oe_link',
+    'field.field.paragraph.oe_facts_and_figures.field_oe_title',
+    'core.entity_form_display.paragraph.oe_fact.default',
+    'core.entity_form_display.paragraph.oe_facts_and_figures.default',
+    'core.entity_view_display.paragraph.oe_fact.default',
+    'core.entity_view_display.paragraph.oe_facts_and_figures.default',
+  ];
+
+  $config_manager = \Drupal::service('config.manager');
+  $entity_manager = \Drupal::entityTypeManager();
+  foreach ($field_config as $config) {
+    $config_record = $storage->read($config);
+    $entity_type = $config_manager->getEntityTypeIdByName($config);
+    $entity_storage = $entity_manager->getStorage($entity_type);
+    $entity = $entity_storage->createFromStorageRecord($config_record);
+    $entity->save();
+  }
+}

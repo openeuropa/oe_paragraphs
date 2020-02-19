@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_description
+    - paragraphs.paragraphs_type.oe_fact
+id: paragraph.oe_fact.field_oe_description
+field_name: field_oe_description
+entity_type: paragraph
+bundle: oe_fact
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_facts_and_figures.field_oe_facts
+    - field.field.paragraph.oe_facts_and_figures.field_oe_link
+    - field.field.paragraph.oe_facts_and_figures.field_oe_title
+    - paragraphs.paragraphs_type.oe_facts_and_figures
+  module:
+    - link
+    - maxlength
+    - paragraphs
+id: paragraph.oe_facts_and_figures.default
+targetEntityType: paragraph
+bundle: oe_facts_and_figures
+mode: default
+content:
+  field_oe_facts:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_oe_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_oe_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 150
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
