@@ -3,7 +3,7 @@ Feature: Banner paragraph.
   As a content editor
   I need to be able to use banner paragraphs
   so that I see snippets of information.
-
+  
   Scenario: Banner paragraph creation.
     Given I am logged in as a user with the "Editor" role
     When I go to "the content management page"
@@ -73,3 +73,13 @@ Feature: Banner paragraph.
       | Banner type field is required      |
       | URL field is required              |
       | Link text field is required        |
+
+    When I select "Page banner, centered" from "Banner type"
+    And I fill in "Title" with "Banner title" in the 1st "Banner" paragraph
+    And I fill in "Description" with "Description"
+    And I fill in "URL" with "https://example.com"
+    And I fill in "Link text" with "Example"
+    And I press "Save"
+    Then I should see the heading "Banner test page"
+    And I should see the text "Description"
+    And I should see the link "Example"
