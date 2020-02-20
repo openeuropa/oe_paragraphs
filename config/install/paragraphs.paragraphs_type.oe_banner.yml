@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_banner
+label: Banner
+icon_uuid: null
+icon_default: null
+description: 'Allows editors to create banner blocks composed of: title, description, call to action and optional image.'
+behavior_plugins: {  }

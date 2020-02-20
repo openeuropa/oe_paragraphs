@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.paragraph.oe_banner_default
+    - field.field.paragraph.oe_banner.field_oe_banner_type
+    - field.field.paragraph.oe_banner.field_oe_image
+    - field.field.paragraph.oe_banner.field_oe_link
+    - field.field.paragraph.oe_banner.field_oe_text
+    - field.field.paragraph.oe_banner.field_oe_title
+    - paragraphs.paragraphs_type.oe_banner
+  module:
+    - link
+    - maxlength
+id: paragraph.oe_banner.oe_banner_default
+targetEntityType: paragraph
+bundle: oe_banner
+mode: oe_banner_default
+content:
+  field_oe_banner_type:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_oe_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_oe_text:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 150
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+    type: string_textfield
+    region: content
+  field_oe_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 50
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_oe_image: true
+  status: true

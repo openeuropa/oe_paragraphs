@@ -5,6 +5,7 @@ dependencies:
     - field.storage.node.field_oe_demo_body
     - node.type.oe_demo_landing_page
     - paragraphs.paragraphs_type.oe_accordion
+    - paragraphs.paragraphs_type.oe_banner
     - paragraphs.paragraphs_type.oe_content_row
     - paragraphs.paragraphs_type.oe_contextual_navigation
     - paragraphs.paragraphs_type.oe_links_block
@@ -13,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.oe_quote
     - paragraphs.paragraphs_type.oe_rich_text
     - paragraphs.paragraphs_type.oe_social_media_follow
+    - paragraphs.paragraphs_type.oe_text_feature_media
   module:
     - entity_reference_revisions
 id: node.oe_demo_landing_page.field_oe_demo_body
@@ -36,11 +38,10 @@ settings:
       oe_quote: oe_quote
       oe_list_item: oe_list_item
       oe_content_row: oe_content_row
-      oe_text_feature_media: oe_text_feature_media
       oe_list_item_block: oe_list_item_block
       oe_contextual_navigation: oe_contextual_navigation
-      oe_facts_figures: oe_facts_figures
       oe_social_media_follow: oe_social_media_follow
+      oe_text_feature_media: oe_text_feature_media
     target_bundles_drag_drop:
       oe_rich_text:
         enabled: true
@@ -69,9 +70,15 @@ settings:
       oe_contextual_navigation:
         enabled: true
         weight: 13
+<<<<<<< HEAD
       oe_facts_figures:
         enabled: true
         weight: 14
+=======
+      oe_banner:
+        enabled: true
+        weight: 15
+>>>>>>> OPENEUROPA-2859: Add Banner paragraph.
       oe_social_media_follow:
         enabled: true
         weight: 20
