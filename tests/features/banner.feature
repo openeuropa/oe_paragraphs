@@ -3,7 +3,7 @@ Feature: Banner paragraph.
   As a content editor
   I need to be able to use banner paragraphs
   so that I see snippets of information.
-  
+
   Scenario: Banner paragraph creation.
     Given I am logged in as a user with the "Editor" role
     When I go to "the content management page"
@@ -18,11 +18,8 @@ Feature: Banner paragraph.
     And the available options in the "Banner type" select should be:
       | - Select a value -         |
       | Page banner, centered      |
-      | Page banner, aligned left  |
-      | Page banner, aligned right |
       | Hero banner, centered      |
-      | Hero banner, aligned left  |
-      | Hero banner, aligned right |
+      | Default, aligned left      |
 
     # Test the fields in the Default variant.
     And the following fields should be present "Banner type, Title, Description, URL, Link text"
