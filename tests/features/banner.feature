@@ -19,7 +19,8 @@ Feature: Banner paragraph.
       | - Select a value -         |
       | Page banner, centered      |
       | Hero banner, centered      |
-      | Default, aligned left      |
+      | Page banner, aligned left  |
+      | Hero banner, aligned left  |
 
     # Test the fields in the Default variant.
     And the following fields should be present "Banner type, Title, Description, URL, Link text"

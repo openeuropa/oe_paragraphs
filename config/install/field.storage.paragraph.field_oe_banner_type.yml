@@ -17,8 +17,11 @@ settings:
       value: hero_center
       label: 'Hero banner, centered'
     -
-      value: no_image_left
-      label: 'No image, aligned left'
+      value: page_left
+      label: 'Page banner, aligned left'
+    -
+      value: hero_left
+      label: 'Hero banner, aligned left'
   allowed_values_function: ''
 module: options
 locked: false
