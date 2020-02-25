@@ -5,5 +5,5 @@ id: oe_banner
 label: Banner
 icon_uuid: null
 icon_default: null
-description: 'Allows editors to create banner blocks composed of: title, description, call to action and optional image.'
+description: 'Allows editors to create Banners that display a prominent message and related action.'
 behavior_plugins: {  }

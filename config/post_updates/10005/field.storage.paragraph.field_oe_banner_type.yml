@@ -14,20 +14,14 @@ settings:
       value: page_center
       label: 'Page banner, centered'
     -
-      value: page_left
-      label: 'Page banner, aligned left'
-    -
-      value: page_right
-      label: 'Page banner, aligned right'
-    -
       value: hero_center
       label: 'Hero banner, centered'
     -
+      value: page_left
+      label: 'Page banner, aligned left'
+    -
       value: hero_left
       label: 'Hero banner, aligned left'
-    -
-      value: hero_right
-      label: 'Hero banner, aligned right'
   allowed_values_function: ''
 module: options
 locked: false
