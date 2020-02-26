@@ -11,27 +11,27 @@ Feature: Banner paragraph.
     And I fill in "Title" with "Banner test page"
     And I press "Add Banner"
     Then the available options in the "Variant" select should be:
-      | Default             |
-      | Image banner        |
-      | Image shade banner  |
-      | Primary banner      |
+      | Default            |
+      | Image banner       |
+      | Image shade banner |
+      | Primary banner     |
     And the available options in the "Banner type" select should be:
-      | - Select a value -         |
-      | Page banner, centered      |
-      | Hero banner, centered      |
-      | Page banner, aligned left  |
-      | Hero banner, aligned left  |
+      | - Select a value -        |
+      | Page banner, centered     |
+      | Hero banner, centered     |
+      | Page banner, aligned left |
+      | Hero banner, aligned left |
 
     # Test the fields in the Default variant.
     And the following fields should be present "Banner type, Title, Description, URL, Link text"
     And the following fields should not be present "Background image"
     When I press "Save"
     Then I should see the following error messages:
-      | error messages                   |
-      | Description field is required    |
-      | Banner type field is required    |
-      | URL field is required            |
-      | Link text field is required      |
+      | error messages                |
+      | Description field is required |
+      | Banner type field is required |
+      | URL field is required         |
+      | Link text field is required   |
 
     # Test the fields in the Primary banner variant.
     When I select "Primary banner" from "Variant"
@@ -40,11 +40,11 @@ Feature: Banner paragraph.
     And the following fields should not be present "Background image"
     When I press "Save"
     Then I should see the following error messages:
-      | error messages                     |
-      | Description field is required      |
-      | Banner type field is required      |
-      | URL field is required              |
-      | Link text field is required        |
+      | error messages                |
+      | Description field is required |
+      | Banner type field is required |
+      | URL field is required         |
+      | Link text field is required   |
 
     # Test the fields in the Image banner variant.
     When I select "Image banner" from "Variant"
