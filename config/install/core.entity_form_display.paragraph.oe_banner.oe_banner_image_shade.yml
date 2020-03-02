@@ -13,7 +13,6 @@ dependencies:
   module:
     - image
     - link
-    - maxlength
 id: paragraph.oe_banner.oe_banner_image_shade
 targetEntityType: paragraph
 bundle: oe_banner
@@ -46,10 +45,7 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings:
-      maxlength:
-        maxlength_js: 150
-        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+    third_party_settings: {  }
     type: string_textfield
     region: content
   field_oe_title:
@@ -57,10 +53,7 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings:
-      maxlength:
-        maxlength_js: 50
-        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+    third_party_settings: {  }
     type: string_textfield
     region: content
 hidden:
