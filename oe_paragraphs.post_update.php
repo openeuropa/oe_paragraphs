@@ -50,6 +50,10 @@ function oe_paragraphs_post_update_10001(array &$sandbox) {
 function oe_paragraphs_post_update_10002(array &$sandbox): void {
   \Drupal::service('module_installer')->install(['typed_link']);
 
+  \Drupal::service('plugin.manager.field.field_type')->clearCachedDefinitions();
+  \Drupal::service('plugin.manager.field.formatter')->clearCachedDefinitions();
+  \Drupal::service('plugin.manager.field.widget')->clearCachedDefinitions();
+
   $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10002');
 
   \Drupal::entityTypeManager()->getStorage('paragraphs_type')
