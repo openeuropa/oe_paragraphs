@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oe_facts
+    - field.storage.paragraph.field_oe_paragraphs
     - paragraphs.paragraphs_type.oe_fact
-    - paragraphs.paragraphs_type.oe_facts_and_figures
+    - paragraphs.paragraphs_type.oe_facts_figures
   module:
     - entity_reference_revisions
-id: paragraph.oe_facts_and_figures.field_oe_facts
-field_name: field_oe_facts
+id: paragraph.oe_facts_figures.field_oe_paragraphs
+field_name: field_oe_paragraphs
 entity_type: paragraph
-bundle: oe_facts_and_figures
-label: 'Facts and figures'
-description: ''
+bundle: oe_facts_figures
+label: Fact
+description: 'Add between 1 to 6 Facts.'
 required: true
 translatable: true
 default_value: {  }
@@ -24,24 +24,24 @@ settings:
     target_bundles:
       oe_fact: oe_fact
     target_bundles_drag_drop:
-      oe_accordion:
+      oe_facts_figures:
         weight: 14
         enabled: false
-      oe_accordion_item:
+      oe_accordion:
         weight: 15
         enabled: false
-      oe_content_row:
+      oe_accordion_item:
         weight: 16
         enabled: false
-      oe_contextual_navigation:
+      oe_content_row:
         weight: 17
+        enabled: false
+      oe_contextual_navigation:
+        weight: 18
         enabled: false
       oe_fact:
         enabled: true
-        weight: 18
-      oe_facts_and_figures:
         weight: 19
-        enabled: false
       oe_links_block:
         weight: 20
         enabled: false

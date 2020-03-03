@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.oe_facts_and_figures
+    - paragraphs.paragraphs_type.oe_facts_figures
   module:
     - content_translation
 third_party_settings:
@@ -10,8 +10,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '1'
-id: paragraph.oe_facts_and_figures
+id: paragraph.oe_facts_figures
 target_entity_type_id: paragraph
-target_bundle: oe_facts_and_figures
+target_bundle: oe_facts_figures
 default_langcode: site_default
 language_alterable: true

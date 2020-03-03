@@ -3,13 +3,13 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_oe_link
-    - paragraphs.paragraphs_type.oe_facts_and_figures
+    - paragraphs.paragraphs_type.oe_facts_figures
   module:
     - link
-id: paragraph.oe_facts_and_figures.field_oe_link
+id: paragraph.oe_facts_figures.field_oe_link
 field_name: field_oe_link
 entity_type: paragraph
-bundle: oe_facts_and_figures
+bundle: oe_facts_figures
 label: Link
 description: ''
 required: false

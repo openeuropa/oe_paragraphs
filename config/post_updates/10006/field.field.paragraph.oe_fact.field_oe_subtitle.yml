@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oe_statistic
+    - field.storage.paragraph.field_oe_subtitle
     - paragraphs.paragraphs_type.oe_fact
-id: paragraph.oe_fact.field_oe_statistic
-field_name: field_oe_statistic
+id: paragraph.oe_fact.field_oe_subtitle
+field_name: field_oe_subtitle
 entity_type: paragraph
 bundle: oe_fact
-label: Statistic
+label: Label
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

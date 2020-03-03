@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.oe_fact.field_oe_description
     - field.field.paragraph.oe_fact.field_oe_icon
-    - field.field.paragraph.oe_fact.field_oe_statistic
+    - field.field.paragraph.oe_fact.field_oe_plain_text_long
+    - field.field.paragraph.oe_fact.field_oe_subtitle
     - field.field.paragraph.oe_fact.field_oe_title
     - paragraphs.paragraphs_type.oe_fact
   module:
@@ -14,24 +14,23 @@ targetEntityType: paragraph
 bundle: oe_fact
 mode: default
 content:
-  field_oe_description:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_oe_icon:
     weight: 1
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_oe_statistic:
+  field_oe_plain_text_long:
     weight: 2
-    label: hidden
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_oe_subtitle:
+    weight: 3
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -39,7 +38,7 @@ content:
     region: content
   field_oe_title:
     weight: 0
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }

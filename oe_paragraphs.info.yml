@@ -14,7 +14,6 @@ dependencies:
   - drupal:text
   - paragraphs:paragraphs
   - typed_link:typed_link
-  - maxlength:maxlength
 
 config_devel:
   install:
