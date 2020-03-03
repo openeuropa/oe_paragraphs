@@ -10,7 +10,7 @@ entity_type: paragraph
 bundle: oe_fact
 label: Label
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
