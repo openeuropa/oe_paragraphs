@@ -133,7 +133,13 @@ function oe_paragraphs_post_update_10004(array &$sandbox): void {
 /**
  * Installs Facts and figures and Fact paragraphs.
  */
-function oe_paragraphs_post_update_10006(array &$sandbox): void {
+function oe_paragraphs_post_update_10006(array &$sandbox) {
+  // If paragraph already exists, we bail out.
+  $paragraph = \Drupal::entityTypeManager()->getStorage('paragraphs_type')->load('oe_facts_figures');
+  if ($paragraph) {
+    return t('Facts and figures paragraph exists, no action required.');
+  }
+
   $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10006');
   $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraphs_type');
 
@@ -172,4 +178,6 @@ function oe_paragraphs_post_update_10006(array &$sandbox): void {
     $entity = $entity_storage->createFromStorageRecord($config_record);
     $entity->save();
   }
+
+  return t('Facts and figures and Fact paragraphs have been installed.');
 }
