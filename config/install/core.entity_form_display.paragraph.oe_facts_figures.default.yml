@@ -8,7 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.oe_facts_figures
   module:
     - link
-    - paragraphs
+    - oe_paragraphs
 id: paragraph.oe_facts_figures.default
 targetEntityType: paragraph
 bundle: oe_facts_figures
@@ -23,7 +23,7 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
   field_oe_paragraphs:
-    type: entity_reference_paragraphs
+    type: oe_paragraphs_variants
     weight: 2
     region: content
     settings:
@@ -33,6 +33,12 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
   field_oe_title:
     type: string_textfield

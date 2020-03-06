@@ -24,10 +24,15 @@ Feature: Facts and figures paragraph.
     When I fill in "Title" with "Facts and figures" in the 1st "Facts and figures" paragraph
     And I fill in "URL" with "https://example.com"
     And I fill in "Link text" with "Example"
-    And I select "Budget" from "Icon"
-    And I fill in "Figure" with "10 millions"
-    And I fill in "Label" with "1st Fact"
-    And I fill in "Description" with "1st Description"
+    And I select "Budget" from "Icon" in the 1st "Fact" paragraph
+    And I fill in "Figure" with "10 millions" in the 1st "Fact" paragraph
+    And I fill in "Label" with "1st Fact" in the 1st "Fact" paragraph
+    And I fill in "Description" with "1st Description" in the 1st "Fact" paragraph
+    And I press "Add Fact"
+    And I select "Book" from "Icon" in the 2nd "Fact" paragraph
+    And I fill in "Figure" with "22 millions" in the 2nd "Fact" paragraph
+    And I fill in "Label" with "2nd Fact" in the 2nd "Fact" paragraph
+    And I fill in "Description" with "2nd Description" in the 2nd "Fact" paragraph
     And I press "Save"
     Then I should see the heading "Facts and figures paragraph test page"
     And I should see the text "Facts and figures"
@@ -36,3 +41,7 @@ Feature: Facts and figures paragraph.
     And I should see the text "1st Description"
     And I should see the text "10 millions"
     And I should see the text "Budget"
+    And I should see the text "2nd Fact"
+    And I should see the text "2nd Description"
+    And I should see the text "22 millions"
+    And I should see the text "Book"

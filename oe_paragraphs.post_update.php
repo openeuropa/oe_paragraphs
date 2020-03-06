@@ -153,7 +153,7 @@ function oe_paragraphs_post_update_10006(array &$sandbox) {
       ->save();
   }
 
-  // Add the fields to paragraphs.
+  // Configure fields and entity form and view displays for both paragraphs.
   $config_ids = [
     'field.storage.paragraph.field_oe_subtitle',
     'field.field.paragraph.oe_fact.field_oe_icon',
