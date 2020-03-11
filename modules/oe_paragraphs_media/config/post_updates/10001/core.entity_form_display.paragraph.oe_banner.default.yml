@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.oe_banner.field_oe_banner_type
-    - field.field.paragraph.oe_banner.field_oe_image
     - field.field.paragraph.oe_banner.field_oe_link
+    - field.field.paragraph.oe_banner.field_oe_media
     - field.field.paragraph.oe_banner.field_oe_text
     - field.field.paragraph.oe_banner.field_oe_title
     - paragraphs.paragraphs_type.oe_banner
@@ -47,5 +47,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_oe_image: true
+  field_oe_media: true
   status: true

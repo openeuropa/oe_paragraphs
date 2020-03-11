@@ -2,21 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.paragraph.oe_banner_image
+    - core.entity_form_mode.paragraph.oe_banner_primary
     - field.field.paragraph.oe_banner.field_oe_banner_type
-    - field.field.paragraph.oe_banner.field_oe_image
     - field.field.paragraph.oe_banner.field_oe_link
     - field.field.paragraph.oe_banner.field_oe_text
     - field.field.paragraph.oe_banner.field_oe_title
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.oe_banner
   module:
-    - image
     - link
-id: paragraph.oe_banner.oe_banner_image
+id: paragraph.oe_banner.oe_banner_primary
 targetEntityType: paragraph
 bundle: oe_banner
-mode: oe_banner_image
+mode: oe_banner_primary
 content:
   field_oe_banner_type:
     type: options_select
@@ -24,14 +21,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_oe_image:
-    weight: 4
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_oe_link:
     weight: 3
     settings:
