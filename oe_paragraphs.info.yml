@@ -166,8 +166,6 @@ config_devel:
     # Social media links (typed link)
     - field.storage.paragraph.field_oe_social_media_links
 
-
-
   optional:
     # Paragraph multilingual configuration
     - language.content_settings.paragraph.oe_accordion
