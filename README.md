@@ -65,6 +65,18 @@ The Quote paragraph allows editors to add a quotation with quote and its attribu
 #### Rich text
 The Rich text paragraph adds an optional title field and a long text field.
 
+#### Facts and figures
+The facts and figures paragraph is used to deliver numerical representations of facts that are easier to portray visually through the use of statistics.
+
+#### Fact
+Single fact item, to be used exclusively in conjunction with the "Facts and figures" paragraph type.
+
+#### Social media follow
+The Social media follow paragraph allows the editor to add a list of social media links.
+
+#### Text with Featured media
+Shows a rich text with a title and a featured media on the right, if any.
+
 ## Development setup
 
 You can build a test site by running the following steps.
