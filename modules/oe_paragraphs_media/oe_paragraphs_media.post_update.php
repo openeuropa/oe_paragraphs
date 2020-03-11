@@ -8,7 +8,7 @@
 declare(strict_types = 1);
 
 use Drupal\Core\Entity\Entity\EntityFormMode;
-use Drupal\file\FileStorage;
+use Drupal\Core\Config\FileStorage;
 
 /**
  * Installs Banner paragraph.
@@ -51,7 +51,7 @@ function oe_paragraphs_media_post_update_10001(array &$sandbox) {
     'field.field.paragraph.oe_banner.field_oe_title',
     'field.field.paragraph.oe_banner.field_oe_text',
     'field.field.paragraph.oe_banner.field_oe_link',
-    'field.field.paragraph.oe_banner.field_oe_image',
+    'field.field.paragraph.oe_banner.field_oe_media',
     'field.field.paragraph.oe_banner.field_oe_banner_type',
     'core.entity_form_display.paragraph.oe_banner.oe_banner_primary',
     'core.entity_form_display.paragraph.oe_banner.oe_banner_image_shade',
