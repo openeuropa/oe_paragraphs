@@ -5,15 +5,19 @@
  * Post update functions for the OE Paragraphs module.
  */
 
+declare(strict_types = 1);
+
 use Drupal\Core\Entity\Entity\EntityFormMode;
 use Drupal\file\FileStorage;
-
-declare(strict_types = 1);
 
 /**
  * Installs Banner paragraph.
  */
-function oe_paragraphs_post_update_10001(array &$sandbox) {
+function oe_paragraphs_media_post_update_10001(array &$sandbox) {
+  \Drupal::service('plugin.manager.field.field_type')->clearCachedDefinitions();
+  \Drupal::service('plugin.manager.field.formatter')->clearCachedDefinitions();
+  \Drupal::service('plugin.manager.field.widget')->clearCachedDefinitions();
+
   // If paragraph already exists, we bail out.
   $paragraph = \Drupal::entityTypeManager()->getStorage('paragraphs_type')->load('oe_banner');
   if ($paragraph) {

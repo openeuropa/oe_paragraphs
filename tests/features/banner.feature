@@ -4,7 +4,7 @@ Feature: Banner paragraph.
   I need to be able to use banner paragraphs
   so I can convey important messages to the audience.
 
-  @ale
+  @cleanup:media
   Scenario: Banner paragraph creation.
     Given I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content, create image media" permission
     # Create an "Image" media.
