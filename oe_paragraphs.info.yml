@@ -103,6 +103,21 @@ config_devel:
     - field.field.paragraph.oe_social_media_follow.field_oe_title
     - paragraphs.paragraphs_type.oe_social_media_follow
 
+    # Facts and figures
+    - core.entity_form_display.paragraph.oe_facts_figures.default
+    - core.entity_view_display.paragraph.oe_facts_figures.default
+    - field.field.paragraph.oe_facts_figures.field_oe_link
+    - field.field.paragraph.oe_facts_figures.field_oe_paragraphs
+    - field.field.paragraph.oe_facts_figures.field_oe_title
+
+    # Fact
+    - core.entity_form_display.paragraph.oe_fact.default
+    - core.entity_view_display.paragraph.oe_fact.default
+    - field.field.paragraph.oe_fact.field_oe_icon
+    - field.field.paragraph.oe_fact.field_oe_plain_text_long
+    - field.field.paragraph.oe_fact.field_oe_subtitle
+    - field.field.paragraph.oe_fact.field_oe_title
+
     # Field types already included
     # -----------------------------
 
@@ -139,6 +154,20 @@ config_devel:
     # List item block layout
     - field.storage.paragraph.field_oe_list_item_block_layout
 
+    # Subtitle field (text)
+    - field.storage.paragraph.field_oe_subtitle
+
+    # Limit field (integer)
+    - field.storage.paragraph.field_oe_limit
+
+    # Plain long text (long text)
+    - field.storage.paragraph.field_oe_plain_text_long
+
+    # Social media links (typed link)
+    - field.storage.paragraph.field_oe_social_media_links
+
+
+
   optional:
     # Paragraph multilingual configuration
     - language.content_settings.paragraph.oe_accordion
@@ -149,3 +178,5 @@ config_devel:
     - language.content_settings.paragraph.oe_list_item_block
     - language.content_settings.paragraph.oe_quote
     - language.content_settings.paragraph.oe_rich_text
+    - language.content_settings.paragraph.oe_fact
+    - language.content_settings.paragraph.oe_facts_figures

@@ -14,7 +14,7 @@ bundle: oe_facts_figures
 label: Fact
 description: 'Add between 1 to 6 Facts.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
