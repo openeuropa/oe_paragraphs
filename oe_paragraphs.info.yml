@@ -21,9 +21,6 @@ config_devel:
     - core.entity_form_mode.paragraph.date
     - core.entity_form_mode.paragraph.highlight
     - core.entity_form_mode.paragraph.inpage_navigation
-    - core.entity_form_mode.paragraph.oe_banner_image
-    - core.entity_form_mode.paragraph.oe_banner_image_shade
-    - core.entity_form_mode.paragraph.oe_banner_primary
 
     # Paragraph types
     # ---------------
