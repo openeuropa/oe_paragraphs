@@ -142,23 +142,6 @@ config_devel:
     # List item block layout
     - field.storage.paragraph.field_oe_list_item_block_layout
 
-<<<<<<< HEAD
-    # Subtitle field (text)
-    - field.storage.paragraph.field_oe_subtitle
-
-    # Limit field (integer)
-    - field.storage.paragraph.field_oe_limit
-
-    # Plain long text (long text)
-    - field.storage.paragraph.field_oe_plain_text_long
-
-    # Social media links (typed link)
-    - field.storage.paragraph.field_oe_social_media_links
-=======
-    # Banner type (select list)
-    - field.storage.paragraph.field_oe_banner_type
->>>>>>> OPENEUROPA-2859: Use field_oe_media for background image.
-
   optional:
     # Paragraph multilingual configuration
     - language.content_settings.paragraph.oe_accordion
@@ -169,9 +152,3 @@ config_devel:
     - language.content_settings.paragraph.oe_list_item_block
     - language.content_settings.paragraph.oe_quote
     - language.content_settings.paragraph.oe_rich_text
-<<<<<<< HEAD
-    - language.content_settings.paragraph.oe_fact
-    - language.content_settings.paragraph.oe_facts_figures
-=======
-    - language.content_settings.paragraph.oe_banner
->>>>>>> OPENEUROPA-2859: Use field_oe_media for background image.
