@@ -14,10 +14,6 @@ use Drupal\Core\Config\FileStorage;
  * Installs Banner paragraph.
  */
 function oe_paragraphs_media_post_update_10001(array &$sandbox) {
-  \Drupal::service('plugin.manager.field.field_type')->clearCachedDefinitions();
-  \Drupal::service('plugin.manager.field.formatter')->clearCachedDefinitions();
-  \Drupal::service('plugin.manager.field.widget')->clearCachedDefinitions();
-
   // If paragraph already exists, we bail out.
   $paragraph = \Drupal::entityTypeManager()->getStorage('paragraphs_type')->load('oe_banner');
   if ($paragraph) {
