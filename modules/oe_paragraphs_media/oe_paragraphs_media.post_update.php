@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Post update functions for the OE Paragraphs module.
+ * Post update functions for the OE Paragraphs Media module.
  */
 
 declare(strict_types = 1);
