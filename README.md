@@ -56,6 +56,9 @@ An optional link can be added to the block.
 This project also ships with optional submodules, providing optional paragraph types. Check the [`./modules`](./modules)
 directory for more information.
 
+#### Banner
+Allows editors to create Banners that display a prominent message and related action.
+
 ## Development setup
 
 You can build a test site by running the following steps.
