@@ -181,3 +181,23 @@ function oe_paragraphs_post_update_10005(array &$sandbox) {
 
   return t('Facts and figures and Fact paragraphs have been installed.');
 }
+
+/**
+ * Marks unsupported ECL icons as deprecated.
+ */
+function oe_paragraphs_post_update_10006(array &$sandbox): void {
+  $field = Drupal::entityTypeManager()->getStorage('field_storage_config')->load('paragraph.field_oe_icon');
+  $settings = $field->get('settings');
+  $icons = [
+    'googleplus',
+    'slides',
+    'brochure',
+  ];
+  foreach ($icons as $icon) {
+    if (array_key_exists($icon, $settings['allowed_values'])) {
+      $settings['allowed_values'][$icon] = $settings['allowed_values'][$icon] . ' (deprecated)';
+    }
+  }
+  $field->set('settings', $settings);
+  $field->save();
+}
