@@ -57,7 +57,8 @@ This project also ships with optional submodules, providing optional paragraph t
 directory for more information.
 
 #### Banner
-Allows editors to create Banners that display a prominent message and related action.
+Allows editors to create Banners that display a prominent message and related action. To get this paragraph type enable
+the OpenEuropa Paragraphs Media submodule.
 
 ## Development setup
 
