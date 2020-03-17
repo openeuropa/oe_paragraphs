@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_timeline_expand
+    - paragraphs.paragraphs_type.oe_timeline
+  module:
+    - options
+id: paragraph.oe_timeline.field_oe_timeline_expand
+field_name: field_oe_timeline_expand
+entity_type: paragraph
+bundle: oe_timeline
+label: 'Expand button'
+description: 'Define how many items will be displayed before the actionable button to display the full list of items in the timeline.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

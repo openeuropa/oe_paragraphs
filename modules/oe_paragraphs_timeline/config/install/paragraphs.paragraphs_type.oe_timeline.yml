@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_timeline
+label: Timeline
+icon_uuid: null
+icon_default: null
+description: 'The timeline paragraph displays concurrent and/or sequential items visually on a time axis.'
+behavior_plugins: {  }

@@ -1,0 +1,33 @@
+name: OpenEuropa Paragraphs Timeline
+type: module
+description: Provides paragraphs that use the timeline field type.
+package: OpenEuropa
+core: 8.x
+
+dependencies:
+  - oe_content:oe_content_timeline_field
+
+config_devel:
+  install:
+    # Paragraph types
+    # ---------------
+
+    # Timeline
+    - core.entity_form_display.paragraph.oe_timeline.default
+    - core.entity_view_display.paragraph.oe_timeline.default
+    - field.field.paragraph.oe_timeline.field_oe_timeline
+    - field.field.paragraph.oe_timeline.field_oe_timeline_expand
+    - paragraphs.paragraphs_type.oe_timeline
+
+    # Field types already included
+    # -----------------------------
+
+    # Timeline field
+    - field.storage.paragraph.field_oe_timeline
+
+    # Expand (list integer field)
+    - field.storage.paragraph.field_oe_timeline_expand
+
+  optional:
+    # Paragraph multilingual configuration
+    - language.content_settings.paragraph.oe_timeline
