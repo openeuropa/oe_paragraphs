@@ -16,3 +16,4 @@ Feature: Create a landing page
       | Contextual navigation      |
       | Social media follow        |
       | Text with Featured media   |
+      | Facts and figures          |

@@ -30,7 +30,7 @@ settings:
       label: Breadcrumb
     -
       value: brochure
-      label: Brochure
+      label: 'Brochure (deprecated)'
     -
       value: budget
       label: Budget
@@ -96,7 +96,7 @@ settings:
       label: Global
     -
       value: googleplus
-      label: 'Google Plus'
+      label: 'Google Plus (deprecated)'
     -
       value: growth
       label: Growth
@@ -156,7 +156,7 @@ settings:
       label: Share
     -
       value: slides
-      label: Slides
+      label: 'Slides (deprecated)'
     -
       value: spinner
       label: Spinner

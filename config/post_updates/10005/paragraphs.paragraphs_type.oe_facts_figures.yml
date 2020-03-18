@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_facts_figures
+label: 'Facts and figures'
+icon_uuid: null
+icon_default: null
+description: 'The facts and figures paragraph is used to deliver numerical representations of facts that are easier to portray visually through the use of statistics.'
+behavior_plugins: {  }

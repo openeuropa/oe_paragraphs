@@ -39,6 +39,7 @@ settings:
       oe_text_feature_media: oe_text_feature_media
       oe_list_item_block: oe_list_item_block
       oe_contextual_navigation: oe_contextual_navigation
+      oe_facts_figures: oe_facts_figures
       oe_social_media_follow: oe_social_media_follow
     target_bundles_drag_drop:
       oe_rich_text:
@@ -68,6 +69,9 @@ settings:
       oe_contextual_navigation:
         enabled: true
         weight: 13
+      oe_facts_figures:
+        enabled: true
+        weight: 14
       oe_social_media_follow:
         enabled: true
         weight: 20

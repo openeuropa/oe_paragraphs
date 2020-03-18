@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_fact
+label: Fact
+icon_uuid: null
+icon_default: null
+description: 'Single fact item, to be used exclusively in conjunction with the "Facts and figures" paragraph type.'
+behavior_plugins: {  }
