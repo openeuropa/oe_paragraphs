@@ -46,7 +46,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Drupal\\Tests\\oe_paragraphs\\": "./tests/"
+            "Drupal\\Tests\\oe_paragraphs\\": "./tests/",
+            "Drupal\\Tests\\oe_media\\": "./build/modules/contrib/oe_media/tests/"
         }
     },
     "extra": {

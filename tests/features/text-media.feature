@@ -11,7 +11,7 @@ Feature: Text with featured media paragraph.
     # Create an "Image" media.
     When I go to "the image creation page"
     And I fill in "Name" with "My Image 1"
-    And I attach the file "media/example_1.jpeg" to "Image"
+    And I attach the file "example_1.jpeg" to "Image"
     And I press "Upload"
     And I fill in "Alternative text" with "Image Alt Text 1"
     And I press "Save"
