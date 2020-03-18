@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: oe_banner
-label: Banner
-icon_uuid: null
-icon_default: null
-description: 'Allows editors to create Banners that display a prominent message and related action.'
-behavior_plugins: {  }
