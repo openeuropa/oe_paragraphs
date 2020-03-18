@@ -33,49 +33,28 @@ In order to enable the module in your project run:
 
 ## Paragraphs
 
-#### Accordion
-The Accordion paragraph is a collection of collapsible items with icon, title and long text required fields.
+The module provides the following paragraph types:
 
-#### Accordion item
-The Accordion item paragraph is a single accordion with icon, title and long text required fields. It is intended to be 
+- **Accordion**: The Accordion paragraph is a collection of collapsible items with icon, title and long text required fields.
+- **Accordion item**: The Accordion item paragraph is a single accordion with icon, title and long text required fields. It is intended to be 
 used exclusively in conjunction with the "Accordion" paragraph.
-
-#### Content row
-The Content row paragraph allows editors to group multiple paragraphs together. An in-page navigation can be shown 
+- **Content row**: The Content row paragraph allows editors to group multiple paragraphs together. An in-page navigation can be shown 
 optionally.
-
-#### Contextual navigation
-The Contextual navigation paragraph allows editors to add a number of links that helps the user navigate the page. The 
+- **Contextual navigation**: The Contextual navigation paragraph allows editors to add a number of links that helps the user navigate the page. The 
 links, their visibility limit and navigation label can be configured using the available fields.
-
-#### Links block
-The Links block paragraph displays a list of links, with an optional title. It is used for instance with the dropdown component.
-
-#### Listing item
-The Listing item paragraph displays content teasers. A list item is available in the following variants: default, date 
+- **Links block**: The Links block paragraph displays a list of links, with an optional title. It is used for instance with the dropdown component.
+- **Listing item**: The Listing item paragraph displays content teasers. A list item is available in the following variants: default, date 
 item, highlighted and thumbnail with primary or secondary image.
-
-#### Listing item block
-The Listing item block paragraph allows editors to group multiple Listing item paragraphs in one, two or three columns.
+- **Listing item block**: The Listing item block paragraph allows editors to group multiple Listing item paragraphs in one, two or three columns.
 An optional link can be added to the block.
+- **Quote**: The Quote paragraph allows editors to add a quotation with quote and its attribution.
+- **Rich text**: The Rich text paragraph adds an optional title field and a long text field.
+- **Facts and figures**: The facts and figures paragraph is used to deliver numerical representations of facts that are easier to portray visually through the use of statistics.
+- **Fact**: Single fact item, to be used exclusively in conjunction with the "Facts and figures" paragraph type.
+- **Social media follow**: The Social media follow paragraph allows the editor to add a list of social media links.
 
-#### Quote
-The Quote paragraph allows editors to add a quotation with quote and its attribution.
-
-#### Rich text
-The Rich text paragraph adds an optional title field and a long text field.
-
-#### Facts and figures
-The facts and figures paragraph is used to deliver numerical representations of facts that are easier to portray visually through the use of statistics.
-
-#### Fact
-Single fact item, to be used exclusively in conjunction with the "Facts and figures" paragraph type.
-
-#### Social media follow
-The Social media follow paragraph allows the editor to add a list of social media links.
-
-#### Text with Featured media
-Shows a rich text with a title and a featured media on the right, if any.
+This project also ships with optional submodules, providing optional paragraph types. Check the [`./modules`](./modules)
+directory for more information.
 
 ## Development setup
 
