@@ -2,7 +2,7 @@
 
 /**
  * @file
- * OE Paragraphs Media Field Storage module.
+ * OE Paragraphs Media Field Storage install.
  */
 
 declare(strict_types = 1);

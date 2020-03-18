@@ -40,6 +40,7 @@ settings:
       oe_content_row: oe_content_row
       oe_list_item_block: oe_list_item_block
       oe_contextual_navigation: oe_contextual_navigation
+      oe_facts_figures: oe_facts_figures
       oe_social_media_follow: oe_social_media_follow
       oe_text_feature_media: oe_text_feature_media
       oe_banner: oe_banner
