@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * OE Paragraphs Media Field Storage module.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Config\FileStorage;
+
+/**
+ * Implements hook_install().
+ */
+function oe_paragraphs_media_field_storage_install() {
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_media_field_storage') . '/config/import');
+  $config_id = 'field.storage.paragraph.field_oe_media';
+  $config_manager = \Drupal::service('config.manager');
+  $entity_manager = \Drupal::entityTypeManager();
+  $config_record = $storage->read($config_id);
+  $config_entity_type = $config_manager->getEntityTypeIdByName($config_id);
+  $entity_storage = $entity_manager->getStorage($config_entity_type);
+  $entity = $entity_storage->load($config_record['id']);
+  if ($entity) {
+    return;
+  }
+  $entity = $entity_storage->createFromStorageRecord($config_record);
+  $entity->save();
+}
