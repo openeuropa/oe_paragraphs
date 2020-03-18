@@ -42,6 +42,7 @@ settings:
       oe_contextual_navigation: oe_contextual_navigation
       oe_social_media_follow: oe_social_media_follow
       oe_text_feature_media: oe_text_feature_media
+      oe_banner: oe_banner
     target_bundles_drag_drop:
       oe_rich_text:
         enabled: true
@@ -70,15 +71,12 @@ settings:
       oe_contextual_navigation:
         enabled: true
         weight: 13
-<<<<<<< HEAD
       oe_facts_figures:
         enabled: true
         weight: 14
-=======
       oe_banner:
         enabled: true
         weight: 15
->>>>>>> OPENEUROPA-2859: Add Banner paragraph.
       oe_social_media_follow:
         enabled: true
         weight: 20
