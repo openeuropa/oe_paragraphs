@@ -191,7 +191,6 @@ function oe_paragraphs_post_update_10006(array &$sandbox): void {
   $icons = [
     'googleplus',
     'slides',
-    'brochure',
   ];
   foreach ($icons as $icon) {
     if (array_key_exists($icon, $settings['allowed_values'])) {

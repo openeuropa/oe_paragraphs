@@ -30,7 +30,7 @@ settings:
       label: Breadcrumb
     -
       value: brochure
-      label: 'Brochure (deprecated)'
+      label: Brochure
     -
       value: budget
       label: Budget
