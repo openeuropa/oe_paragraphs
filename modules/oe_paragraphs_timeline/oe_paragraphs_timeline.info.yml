@@ -1,10 +1,11 @@
 name: OpenEuropa Paragraphs Timeline
 type: module
-description: Provides paragraphs that use the timeline field type.
+description: Provides timeline paragraph that uses the timeline field type.
 package: OpenEuropa
 core: 8.x
 
 dependencies:
+  - oe_paragraphs:oe_paragraphs
   - oe_content:oe_content_timeline_field
 
 config_devel:
