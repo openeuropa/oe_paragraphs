@@ -15,6 +15,7 @@ dependencies:
     - paragraphs.paragraphs_type.oe_rich_text
     - paragraphs.paragraphs_type.oe_social_media_follow
     - paragraphs.paragraphs_type.oe_text_feature_media
+    - paragraphs.paragraphs_type.oe_timeline
   module:
     - entity_reference_revisions
 id: node.oe_demo_landing_page.field_oe_demo_body
@@ -44,6 +45,7 @@ settings:
       oe_social_media_follow: oe_social_media_follow
       oe_text_feature_media: oe_text_feature_media
       oe_banner: oe_banner
+      oe_timeline: oe_timeline
     target_bundles_drag_drop:
       oe_rich_text:
         enabled: true
@@ -84,4 +86,7 @@ settings:
       oe_text_feature_media:
         enabled: true
         weight: 21
+      oe_timeline:
+        enabled: true
+        weight: 24
 field_type: entity_reference_revisions
