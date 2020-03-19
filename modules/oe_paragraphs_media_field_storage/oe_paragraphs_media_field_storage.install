@@ -13,6 +13,13 @@ use Drupal\Core\Config\FileStorage;
  * Implements hook_install().
  */
 function oe_paragraphs_media_field_storage_install() {
+  // The storage of field_oe_media was initially used only in the "Text with
+  // Featured Media" paragraph but we created a new module that installs
+  // "Banner" paragraph where the field_oe_media storage is required as well.
+  // We moved the storage of the field within this module under the
+  // /config/import folder and import it with an install hook in order to avoid
+  // errors when enabling this module on sites where this configuration already
+  // exists.
   $field_storage = Drupal::entityTypeManager()->getStorage('field_storage_config')->load('paragraph.field_oe_media');
   if ($field_storage) {
     return;
