@@ -13,6 +13,7 @@ Feature: Create a landing page
       | Listing item block         |
       | Quote                      |
       | Rich text                  |
+      | Banner                     |
       | Contextual navigation      |
       | Social media follow        |
       | Text with Featured media   |

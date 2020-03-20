@@ -1,15 +1,20 @@
-name: OpenEuropa Paragraphs Media
+name: OpenEuropa Text with featured Media paragraph
 type: module
-description: Provides paragraphs that use media elements.
+description: Provides Text with Featured Media paragraph that uses media elements.
 package: OpenEuropa
 core: 8.x
 
 dependencies:
   - oe_media:oe_media_avportal
   - oe_paragraphs:oe_paragraphs
+  - oe_paragraphs:oe_paragraphs_media_field_storage
 
 config_devel:
   install:
+    # Paragraph types
+    # ---------------
+
+    # Text with Featured media
     - core.entity_form_display.paragraph.oe_text_feature_media.default
     - core.entity_view_display.paragraph.oe_text_feature_media.default
     - field.field.paragraph.oe_text_feature_media.field_oe_image

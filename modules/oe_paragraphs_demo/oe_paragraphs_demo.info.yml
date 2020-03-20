@@ -8,6 +8,7 @@ dependencies:
   - drupal:path
   - drupal:menu_ui
   - oe_paragraphs:oe_paragraphs_media
+  - oe_paragraphs:oe_paragraphs_banner
 
 config_devel:
   install:
