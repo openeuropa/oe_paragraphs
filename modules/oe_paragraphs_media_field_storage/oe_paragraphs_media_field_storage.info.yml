@@ -13,5 +13,5 @@ config_devel:
     # Field types included
     # --------------------
 
-    # Entity reference (target Media) field (select list)
+    # Entity reference (target Media) field storage
     - field.storage.paragraph.field_oe_media
