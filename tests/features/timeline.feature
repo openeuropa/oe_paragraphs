@@ -14,13 +14,9 @@ Feature: Timeline paragraph.
 
     When I press "Save"
     Then I should see the following error messages:
-      | error messages                   |
-      | Expand button field is required. |
-    When I select "3" from "Expand button"
-    And I press "Save"
-    Then I should see the following error message:
-      | error messages                 |
-      | This value should not be null. |
+      | error messages           |
+      | Label field is required. |
+      | Title field is required. |
     When I fill in "Label" with "Label 1" in the "first" "Items" field element
     And I fill in "Title" with "Title 1" in the "first" "Items" field element
     And I fill in "Content" with "Description 1" in the "first" "Items" field element
