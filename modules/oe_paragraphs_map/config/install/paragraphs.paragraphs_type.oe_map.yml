@@ -1,0 +1,10 @@
+uuid: 7b2f9270-a8d4-4d76-a6fa-f52be7fcef86
+langcode: en
+status: true
+dependencies: {  }
+id: oe_map
+label: Map
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

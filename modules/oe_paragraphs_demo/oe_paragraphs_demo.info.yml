@@ -10,6 +10,7 @@ dependencies:
   - oe_paragraphs:oe_paragraphs_media
   - oe_paragraphs:oe_paragraphs_banner
   - oe_paragraphs:oe_paragraphs_timeline
+  - oe_paragraphs:oe_paragraphs_map
 
 config_devel:
   install:
