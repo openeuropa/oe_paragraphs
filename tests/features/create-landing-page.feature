@@ -18,3 +18,4 @@ Feature: Create a landing page
       | Social media follow        |
       | Text with Featured media   |
       | Facts and figures          |
+      | Timeline                   |

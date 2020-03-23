@@ -19,9 +19,11 @@
         "drupal/config_devel": "~1.2",
         "drupal/drupal-extension": "~4.0",
         "drush/drush": "~9.0",
+        "easyrdf/easyrdf": "0.10.0-alpha.1 as 0.9.1",
         "nikic/php-parser": "~3.0",
         "openeuropa/behat-transformation-context" : "~0.1",
         "openeuropa/code-review": "~1.0@beta",
+        "openeuropa/oe_content": "~1.6.1",
         "openeuropa/drupal-core-require-dev": "^8.7",
         "openeuropa/oe_media": "~1.4",
         "openeuropa/task-runner": "~1.0-beta5",
@@ -41,7 +43,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Drupal\\oe_paragraphs\\": "./src/"
+            "Drupal\\oe_paragraphs\\": "./src/",
+            "Drupal\\Tests\\oe_content\\": "./build/modules/contrib/oe_content/tests/"
         }
     },
     "autoload-dev": {

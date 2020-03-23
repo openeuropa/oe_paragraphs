@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - oe_content_timeline_field
+    - paragraphs
+id: paragraph.field_oe_timeline
+field_name: field_oe_timeline
+entity_type: paragraph
+type: timeline_field
+settings: {  }
+module: oe_content_timeline_field
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

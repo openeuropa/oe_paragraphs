@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * OE Paragraph Timeline module.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  // Set label and title fields required for Timeline paragraph.
+  $field_definition = $context['items']->getFieldDefinition();
+  if ($field_definition->getTargetEntityTypeId() !== 'paragraph') {
+    return;
+  }
+
+  if ($field_definition->getTargetBundle() !== 'oe_timeline') {
+    return;
+  }
+
+  $element['label']['#required'] = TRUE;
+  $element['title']['#required'] = TRUE;
+}

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_timeline.field_oe_timeline
+    - field.field.paragraph.oe_timeline.field_oe_timeline_expand
+    - paragraphs.paragraphs_type.oe_timeline
+  module:
+    - oe_content_timeline_field
+    - options
+id: paragraph.oe_timeline.default
+targetEntityType: paragraph
+bundle: oe_timeline
+mode: default
+content:
+  field_oe_timeline:
+    weight: 0
+    label: above
+    settings:
+      limit: '0'
+      show_more: 'Show full timeline'
+    third_party_settings: {  }
+    type: timeline_formatter
+    region: content
+  field_oe_timeline_expand:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }
