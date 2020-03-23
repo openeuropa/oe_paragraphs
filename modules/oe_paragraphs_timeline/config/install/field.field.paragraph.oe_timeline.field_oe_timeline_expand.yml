@@ -14,7 +14,9 @@ label: 'Expand button'
 description: 'Define how many items will be displayed before the actionable button to display the full list of items in the timeline.'
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 3
 default_value_callback: ''
 settings: {  }
 field_type: list_integer
