@@ -5,5 +5,5 @@ id: oe_map
 label: Map
 icon_uuid: null
 icon_default: null
-description: 'Shows a Webtools map media entities.'
+description: 'Shows Webtools map media entities'
 behavior_plugins: {  }
