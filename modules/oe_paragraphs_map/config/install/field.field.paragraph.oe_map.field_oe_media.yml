@@ -1,4 +1,3 @@
-uuid: c26f0eea-5777-4d9c-8711-a4e05f88d3ab
 langcode: en
 status: true
 dependencies:
@@ -12,7 +11,7 @@ entity_type: paragraph
 bundle: oe_map
 label: Map
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
