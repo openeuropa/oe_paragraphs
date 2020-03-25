@@ -1,0 +1,22 @@
+name: OpenEuropa Paragraphs Social feed
+type: module
+description: Provides Social feed paragraph that uses social feed media type.
+package: OpenEuropa
+core: 8.x
+
+dependencies:
+  - oe_paragraphs:oe_paragraphs
+  - oe_paragraphs:oe_paragraphs_media_field_storage
+  - oe_media:oe_media_webtools
+
+config_devel:
+  install:
+    # Paragraph types
+    # ---------------
+
+    # Social feed
+    - core.entity_form_display.paragraph.oe_timeline.default
+    - core.entity_view_display.paragraph.oe_timeline.default
+    - field.field.paragraph.oe_timeline.field_oe_timeline
+    - field.field.paragraph.oe_timeline.field_oe_timeline_expand
+    - paragraphs.paragraphs_type.oe_timeline
