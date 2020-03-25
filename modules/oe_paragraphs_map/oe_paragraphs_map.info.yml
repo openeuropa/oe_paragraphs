@@ -8,7 +8,6 @@ dependencies:
   - oe_paragraphs:oe_paragraphs_media_field_storage
   - oe_media:oe_media_webtools
 
-
 config_devel:
   install:
     - core.entity_form_display.paragraph.oe_map.default
