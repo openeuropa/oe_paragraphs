@@ -19,6 +19,7 @@ default:
               content management: "/admin/content"
               image creation: "/media/add/image"
               Webtools map creation: 'media/add/webtools_map'
+              Webtools social feed creation: 'media/add/webtools_social_feed'
   extensions:
     Drupal\MinkExtension:
       goutte: ~
