@@ -16,7 +16,6 @@ Feature: Social feed paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Social feed paragraph test"
-    And I press "List additional actions"
     And I press "Add Social feed"
     Then the following fields should be present "Use existing media"
     When I press "Save"
