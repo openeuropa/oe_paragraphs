@@ -9,6 +9,7 @@ permissions:
   - 'access content overview'
   - 'access toolbar'
   - 'create oe_demo_landing_page content'
+  - 'create webtools_map media'
   - 'delete all revisions'
   - 'delete any oe_demo_landing_page content'
   - 'delete oe_demo_landing_page revisions'

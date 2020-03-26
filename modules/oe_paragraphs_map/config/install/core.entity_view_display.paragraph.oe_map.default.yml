@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_map.field_oe_media
+    - paragraphs.paragraphs_type.oe_map
+id: paragraph.oe_map.default
+targetEntityType: paragraph
+bundle: oe_map
+mode: default
+content:
+  field_oe_media:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

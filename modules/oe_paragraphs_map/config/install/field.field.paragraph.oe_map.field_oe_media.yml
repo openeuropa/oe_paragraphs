@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_media
+    - media.type.webtools_map
+    - paragraphs.paragraphs_type.oe_map
+id: paragraph.oe_map.field_oe_media
+field_name: field_oe_media
+entity_type: paragraph
+bundle: oe_map
+label: Map
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      webtools_map: webtools_map
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

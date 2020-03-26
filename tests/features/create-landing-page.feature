@@ -19,3 +19,4 @@ Feature: Create a landing page
       | Text with Featured media   |
       | Facts and figures          |
       | Timeline                   |
+      | Map                        |
