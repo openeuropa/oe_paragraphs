@@ -1,7 +1,7 @@
 OpenEuropa Paragraphs Map
 ==============================
 
-This module provides the Map paragraph that depends on the [OpenEuropa Paragraphs Media Field Storage](https://github.com/openeuropa/oe_content/tree/master/modules/oe_paragraphs_media_field_storage) and
+This module provides the Map paragraph that depends on the [OpenEuropa Paragraphs Media Field Storage](https://github.com/openeuropa/oe_paragraphs/tree/master/modules/oe_paragraphs_media_field_storage) and
  [OpenEuropa Media Webtools](https://github.com/openeuropa/oe_media/blob/master/modules/oe_media_webtools) components.
 
 The paragraph displays Webtools map entities.
@@ -16,7 +16,7 @@ After enabling this module make sure you assign the following permissions to app
 - `Webtools map: Edit own media`
 - `Webtools map: Edit any media`
 
-## Installation
+## Required contrib modules
 
 Before enabling this module, make sure that the following modules are present in your codebase by adding them to your
 `composer.json` and by running `composer update`:
