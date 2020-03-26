@@ -2,9 +2,16 @@ OpenEuropa Paragraphs Social feed
 =================================
 
 This module provides the Social feed paragraph that depends on the [OpenEuropa Media Webtools](https://github.com/openeuropa/oe_media/tree/master/modules/oe_media_webtools)
-component.
+and [OpenEuropa Paragraphs Media Field Storage](https://github.com/openeuropa/oe_paragraphs/tree/master/modules/oe_paragraphs_media_field_storage)
+components.
 
-The paragraph displays Webtools social feed entities.
+In order to be able to manage Webtools Social feed media entities, assign the following permissions to appropriate roles:
+
+- `Webtools social feed: Create new media`
+- `Webtools social feed: Edit own media`
+- `Webtools social feed: Delete own media`
+
+The paragraph displays Webtools social feed media entities.
 
 #### Required contrib modules
 The OpenEuropa Paragraphs Social feed requires the following contrib modules:
