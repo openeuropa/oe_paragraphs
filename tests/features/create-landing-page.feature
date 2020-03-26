@@ -20,3 +20,4 @@ Feature: Create a landing page
       | Facts and figures          |
       | Timeline                   |
       | Map                        |
+      | Social feed                |
