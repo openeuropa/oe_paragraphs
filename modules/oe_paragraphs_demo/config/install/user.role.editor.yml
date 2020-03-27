@@ -9,6 +9,7 @@ permissions:
   - 'access content overview'
   - 'access toolbar'
   - 'create oe_demo_landing_page content'
+  - 'create webtools_chart media'
   - 'create webtools_map media'
   - 'create webtools_social_feed media'
   - 'delete all revisions'
