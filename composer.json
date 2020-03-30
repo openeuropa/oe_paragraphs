@@ -78,6 +78,7 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "discard-changes": true
     }
 }
