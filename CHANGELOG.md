@@ -1,10 +1,26 @@
 # Change Log
 
+## [1.4.0](https://github.com/openeuropa/oe_paragraphs/tree/1.4.0) (2020-03-30)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.3.0...1.4.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-2996: Add Social feed paragraph. [\#93](https://github.com/openeuropa/oe_paragraphs/pull/93) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-2974: \[oe\_paragraphs\] Map paragraph. [\#92](https://github.com/openeuropa/oe_paragraphs/pull/92) ([sergepavle](https://github.com/sergepavle))
+- OPENEUROPA-2943: Upgrade to PHP 7.3. [\#91](https://github.com/openeuropa/oe_paragraphs/pull/91) ([sergepavle](https://github.com/sergepavle))
+- OPENEUROPA-2872: Do not deprecate brochure icon as it is available. [\#90](https://github.com/openeuropa/oe_paragraphs/pull/90) ([ademarco](https://github.com/ademarco))
+- OPENEUROPA-3019: Create new OE Paragraphs timeline module for Timeline paragraph. [\#89](https://github.com/openeuropa/oe_paragraphs/pull/89) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-2604: Drupal 8 recommended project. [\#88](https://github.com/openeuropa/oe_paragraphs/pull/88) ([upchuk](https://github.com/upchuk))
+- ISSUE-84: Fix plugin \(field\_item:typed\_link\) does not exist during updb \(post\_update\_10002\). [\#87](https://github.com/openeuropa/oe_paragraphs/pull/87) ([msnassar](https://github.com/msnassar))
+- OPENEUROPA-2859: Add Banner paragraph. [\#86](https://github.com/openeuropa/oe_paragraphs/pull/86) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-2872: Create Facts and figures paragraph. [\#85](https://github.com/openeuropa/oe_paragraphs/pull/85) ([22Alexandra](https://github.com/22Alexandra))
+
 ## [1.3.0](https://github.com/openeuropa/oe_paragraphs/tree/1.3.0) (2019-12-16)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.2.0...1.3.0)
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for release 1.3.0. [\#83](https://github.com/openeuropa/oe_paragraphs/pull/83) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-2606: Add optional link field to Social media follow paragraph. [\#82](https://github.com/openeuropa/oe_paragraphs/pull/82) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.2.0](https://github.com/openeuropa/oe_paragraphs/tree/1.2.0) (2019-11-27)
