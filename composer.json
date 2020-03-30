@@ -6,7 +6,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^7.1",
+        "php": ">=7.2",
         "drupal/allowed_formats": "^1.1",
         "drupal/paragraphs": "^1.8",
         "drupal/typed_link": "~1.0"
@@ -29,7 +29,8 @@
         "openeuropa/oe_media": "~1.4",
         "openeuropa/oe_webtools": "~1.5.0",
         "openeuropa/task-runner": "~1.0-beta5",
-        "symfony/dom-crawler": "~3.4"
+        "symfony/dom-crawler": "~3.4",
+        "guzzlehttp/guzzle": "~6.3"
     },
     "suggest": {
         "openeuropa/oe_media": "Allows usage of paragraphs with different media attached to it."
@@ -77,6 +78,7 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "discard-changes": true
     }
 }
