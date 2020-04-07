@@ -2,13 +2,12 @@
 
 /**
  * @file
- * Post update functions for the OE Paragraphs module.
+ * Post update functions for the OE Paragraphs Banner module.
  */
 
 declare(strict_types = 1);
 
 use Drupal\Core\Config\FileStorage;
-use Drupal\Core\Entity\Entity\EntityFormDisplay;
 
 /**
  * Adds new field "Display as full width" to Banner paragraph.
@@ -29,21 +28,19 @@ function oe_paragraphs_banner_post_update_00001() {
     $entity->save();
   }
 
-  $form_displays = [
-    'core.entity_form_display.paragraph.oe_banner.default',
-    'core.entity_form_display.paragraph.oe_banner.oe_banner_image',
-    'core.entity_form_display.paragraph.oe_banner.oe_banner_image_shade',
-    'core.entity_form_display.paragraph.oe_banner.oe_banner_primary',
+  $properties = [
+    'targetEntityType' => 'paragraph',
+    'bundle' => 'oe_banner',
   ];
-
-  foreach ($form_displays as $form_display) {
-    $values = $storage->read($form_display);
-    $display = EntityFormDisplay::load($values['id']);
-    if ($display) {
-      foreach ($values as $key => $value) {
-        $display->set($key, $value);
-      }
-      $display->save();
+  if ($form_displays = \Drupal::entityTypeManager()->getStorage('entity_form_display')->loadByProperties($properties)) {
+    /** @var \Drupal\Core\Entity\Entity\EntityFormDisplay $form_display */
+    foreach ($form_displays as $form_display) {
+      $form_display->setComponent('field_oe_banner_full_width', [
+        'weight' => count($form_display->getComponents()),
+        'type' => 'options_select',
+        'region' => 'content',
+      ]);
+      $form_display->save();
     }
   }
 }
