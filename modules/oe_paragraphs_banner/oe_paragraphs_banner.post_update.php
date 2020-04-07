@@ -32,11 +32,13 @@ function oe_paragraphs_banner_post_update_00001() {
     'targetEntityType' => 'paragraph',
     'bundle' => 'oe_banner',
   ];
-  if ($form_displays = \Drupal::entityTypeManager()->getStorage('entity_form_display')->loadByProperties($properties)) {
+  if ($form_displays = $entity_manager->getStorage('entity_form_display')->loadByProperties($properties)) {
     /** @var \Drupal\Core\Entity\Entity\EntityFormDisplay $form_display */
     foreach ($form_displays as $form_display) {
+      $components = $form_display->getComponents();
+      $max_weight = max(array_column($components, 'weight'));
       $form_display->setComponent('field_oe_banner_full_width', [
-        'weight' => count($form_display->getComponents()),
+        'weight' => $max_weight + 1,
         'type' => 'options_select',
         'region' => 'content',
       ]);
