@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_banner_full_width
+    - paragraphs.paragraphs_type.oe_banner
+  module:
+    - options
+id: paragraph.oe_banner.field_oe_banner_full_width
+field_name: field_oe_banner_full_width
+entity_type: paragraph
+bundle: oe_banner
+label: 'Display as full width'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'no'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

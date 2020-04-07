@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_banner.field_oe_banner_full_width
     - field.field.paragraph.oe_banner.field_oe_banner_type
-    - field.field.paragraph.oe_banner.field_oe_media
     - field.field.paragraph.oe_banner.field_oe_link
+    - field.field.paragraph.oe_banner.field_oe_media
     - field.field.paragraph.oe_banner.field_oe_text
     - field.field.paragraph.oe_banner.field_oe_title
     - paragraphs.paragraphs_type.oe_banner
   module:
-    - image
     - link
     - options
 id: paragraph.oe_banner.default
@@ -17,21 +17,19 @@ targetEntityType: paragraph
 bundle: oe_banner
 mode: default
 content:
+  field_oe_banner_full_width:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_oe_banner_type:
     weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
-    region: content
-  field_oe_media:
-    type: entity_reference_entity_view
-    weight: 3
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
     region: content
   field_oe_link:
     weight: 2
@@ -44,6 +42,15 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_oe_media:
+    type: entity_reference_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
     region: content
   field_oe_text:
     weight: 1

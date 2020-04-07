@@ -25,6 +25,7 @@ config_devel:
     - core.entity_form_display.paragraph.oe_banner.oe_banner_image_shade
     - core.entity_form_display.paragraph.oe_banner.oe_banner_primary
     - core.entity_view_display.paragraph.oe_banner.default
+    - field.field.paragraph.oe_banner.field_oe_banner_full_width
     - field.field.paragraph.oe_banner.field_oe_banner_type
     - field.field.paragraph.oe_banner.field_oe_image
     - field.field.paragraph.oe_banner.field_oe_link
@@ -37,6 +38,9 @@ config_devel:
 
     # Banner type (select list)
     - field.storage.paragraph.field_oe_banner_type
+
+    # Display as full width (select list)
+    - field.storage.paragraph.field_oe_banner_full_width
 
   optional:
     # Paragraph multilingual configuration
