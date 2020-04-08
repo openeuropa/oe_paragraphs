@@ -27,6 +27,9 @@ Feature: Banner paragraph.
       | Hero banner, centered     |
       | Page banner, aligned left |
       | Hero banner, aligned left |
+    And the available options in the "Display as full width" select should be:
+      | Yes |
+      | No  |
 
     # Test the fields in the Default variant.
     And the following fields should be present "Banner type, Title, Description, URL, Link text, Display as full width"
