@@ -3,8 +3,10 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.paragraph.oe_banner_primary
+    - field.field.paragraph.oe_banner.field_oe_banner_full_width
     - field.field.paragraph.oe_banner.field_oe_banner_type
     - field.field.paragraph.oe_banner.field_oe_link
+    - field.field.paragraph.oe_banner.field_oe_media
     - field.field.paragraph.oe_banner.field_oe_text
     - field.field.paragraph.oe_banner.field_oe_title
     - paragraphs.paragraphs_type.oe_banner
@@ -15,14 +17,20 @@ targetEntityType: paragraph
 bundle: oe_banner
 mode: oe_banner_primary
 content:
-  field_oe_banner_type:
+  field_oe_banner_full_width:
     type: options_select
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_oe_banner_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_oe_link:
-    weight: 3
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -30,7 +38,7 @@ content:
     type: link_default
     region: content
   field_oe_text:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -38,7 +46,7 @@ content:
     type: string_textfield
     region: content
   field_oe_title:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -47,4 +55,5 @@ content:
     region: content
 hidden:
   created: true
+  field_oe_media: true
   status: true
