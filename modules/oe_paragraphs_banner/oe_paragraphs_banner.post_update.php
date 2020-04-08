@@ -36,9 +36,9 @@ function oe_paragraphs_banner_post_update_00001() {
     /** @var \Drupal\Core\Entity\Entity\EntityFormDisplay $form_display */
     foreach ($form_displays as $form_display) {
       $components = $form_display->getComponents();
-      $max_weight = max(array_column($components, 'weight'));
+      $min_weight = min(array_column($components, 'weight'));
       $form_display->setComponent('field_oe_banner_full_width', [
-        'weight' => $max_weight + 1,
+        'weight' => $min_weight - 1,
         'type' => 'options_select',
         'region' => 'content',
       ]);
