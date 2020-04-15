@@ -15,8 +15,9 @@ config_devel:
     # ---------------
 
     # Social feed
-    - core.entity_form_display.paragraph.oe_timeline.default
-    - core.entity_view_display.paragraph.oe_timeline.default
-    - field.field.paragraph.oe_timeline.field_oe_timeline
-    - field.field.paragraph.oe_timeline.field_oe_timeline_expand
-    - paragraphs.paragraphs_type.oe_timeline
+    - core.entity_form_display.paragraph.oe_social_feed.default
+    - core.entity_view_display.paragraph.oe_social_feed.default
+    - field.field.paragraph.oe_social_feed.field_oe_media
+    - paragraphs.paragraphs_type.oe_social_feed
+  optional:
+    - language.content_settings.paragraph.oe_social_feed
