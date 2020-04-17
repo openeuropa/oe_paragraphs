@@ -5,7 +5,7 @@ This module provides the Chart paragraph that depends on the [OpenEuropa Media W
 and [OpenEuropa Paragraphs Media Field Storage](https://github.com/openeuropa/oe_paragraphs/tree/master/modules/oe_paragraphs_media_field_storage)
 components.
 
-The paragraph displays Webtools chart entities.
+The paragraph displays Webtools chart media entities.
 
 ## Installation
 

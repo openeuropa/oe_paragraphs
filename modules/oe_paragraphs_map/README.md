@@ -5,7 +5,7 @@ This module provides the Map paragraph that depends on the [OpenEuropa Media Web
 and [OpenEuropa Paragraphs Media Field Storage](https://github.com/openeuropa/oe_paragraphs/tree/master/modules/oe_paragraphs_media_field_storage)
 components.
 
-The paragraph displays Webtools map entities.
+The paragraph displays Webtools map media entities.
 
 ## Installation
 
