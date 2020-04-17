@@ -2,22 +2,13 @@ langcode: en
 status: true
 dependencies:
   module:
-    - options
     - paragraphs
 id: paragraph.field_oe_banner_full_width
 field_name: field_oe_banner_full_width
 entity_type: paragraph
-type: list_string
-settings:
-  allowed_values:
-    -
-      value: 'yes'
-      label: 'Yes'
-    -
-      value: 'no'
-      label: 'No'
-  allowed_values_function: ''
-module: options
+type: boolean
+settings: {  }
+module: core
 locked: false
 cardinality: 1
 translatable: false

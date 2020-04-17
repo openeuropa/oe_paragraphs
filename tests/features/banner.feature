@@ -27,9 +27,6 @@ Feature: Banner paragraph.
       | Hero banner, centered     |
       | Page banner, aligned left |
       | Hero banner, aligned left |
-    And the available options in the "Display as full width" select should be:
-      | Yes |
-      | No  |
 
     # Test the fields in the Default variant.
     And the following fields should be present "Banner type, Title, Description, URL, Link text, Display as full width"
@@ -83,10 +80,8 @@ Feature: Banner paragraph.
     And I fill in "Description" with "Description"
     And I fill in "Link text" with "Example"
     And I fill in "Use existing media" with "Image"
-    And I select "Yes" from "Display as full width"
     And I press "Save"
     Then I should see the heading "Banner test page"
     And I should see the text "Description"
     And I should see the link "Example"
     And I should see the image "example_1.jpeg"
-    And I should see the text "Yes"
