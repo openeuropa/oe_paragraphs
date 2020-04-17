@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.oe_links_block
     - paragraphs.paragraphs_type.oe_list_item
     - paragraphs.paragraphs_type.oe_list_item_block
+    - paragraphs.paragraphs_type.oe_chart
     - paragraphs.paragraphs_type.oe_map
     - paragraphs.paragraphs_type.oe_quote
     - paragraphs.paragraphs_type.oe_rich_text
@@ -48,6 +49,7 @@ settings:
       oe_social_media_follow: oe_social_media_follow
       oe_text_feature_media: oe_text_feature_media
       oe_timeline: oe_timeline
+      oe_chart: oe_chart
       oe_map: oe_map
       oe_social_feed: oe_social_feed
     target_bundles_drag_drop:
@@ -96,6 +98,9 @@ settings:
       oe_timeline:
         enabled: true
         weight: 24
+      oe_chart:
+        enabled: true
+        weight: 25
       oe_map:
         enabled: true
         weight: 25

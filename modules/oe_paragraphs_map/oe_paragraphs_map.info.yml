@@ -10,7 +10,13 @@ dependencies:
 
 config_devel:
   install:
+    # Paragraph types
+    # ---------------
+
+    # Map
     - core.entity_form_display.paragraph.oe_map.default
     - core.entity_view_display.paragraph.oe_map.default
     - field.field.paragraph.oe_map.field_oe_media
     - paragraphs.paragraphs_type.oe_map
+  optional:
+    - language.content_settings.paragraph.oe_map

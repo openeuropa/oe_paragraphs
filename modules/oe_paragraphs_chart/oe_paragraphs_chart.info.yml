@@ -1,0 +1,22 @@
+name: OpenEuropa Paragraphs Chart
+type: module
+description: Provides a paragraph type that displays Webtools charts.
+package: OpenEuropa
+core: 8.x
+
+dependencies:
+  - oe_paragraphs:oe_paragraphs_media_field_storage
+  - oe_media:oe_media_webtools
+
+config_devel:
+  install:
+    # Paragraph types
+    # ---------------
+
+    # Chart
+    - core.entity_form_display.paragraph.oe_chart.default
+    - core.entity_view_display.paragraph.oe_chart.default
+    - field.field.paragraph.oe_chart.field_oe_media
+    - paragraphs.paragraphs_type.oe_chart
+  optional:
+    - language.content_settings.paragraph.oe_chart

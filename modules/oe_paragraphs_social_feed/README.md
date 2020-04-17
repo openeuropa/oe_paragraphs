@@ -7,6 +7,11 @@ components.
 
 The paragraph displays Webtools social feed media entities.
 
+## Installation
+
+Make sure you you have read the OpenEuropa Webtools [README.md](https://github.com/openeuropa/oe_webtools#openeuropa-webtools-media)
+before enabling this module.
+
 In order to be able to manage Webtools Social feed media entities, assign the following permissions to appropriate roles:
 
 - `Webtools social feed: Create new media`
