@@ -12,7 +12,7 @@ entity_type: paragraph
 bundle: oe_banner
 label: 'Call to action'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
