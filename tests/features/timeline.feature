@@ -11,12 +11,35 @@ Feature: Timeline paragraph.
     And I fill in "Title" with "Timeline paragraph test"
     And I press "Add Timeline"
     Then the following fields should be present "Label, Title, Content, Expand button"
-
-    When I press "Save"
+    When I fill in "Label" with "Label" in the "first" "Items" field element
+    And I press "Save"
     Then I should see the following error messages:
-      | error messages           |
-      | Label field is required. |
-      | Title field is required. |
+      | error messages                                   |
+      | Title field is required if there is Label input. |
+    When I fill in "Label" with "" in the "first" "Items" field element
+    And I fill in "Title" with "Title" in the "first" "Items" field element
+    And I press "Save"
+    Then I should see the following error messages:
+      | error messages                                   |
+      | Label field is required if there is Title input. |
+    When I fill in "Title" with "" in the "first" "Items" field element
+    And I fill in "Content" with "Content"
+    And I press "Save"
+    Then I should see the following error messages:
+      | error messages                                     |
+      | Label field is required if there is Content input. |
+      | Title field is required if there is Content input. |
+    When I fill in "Label" with "Label" in the "first" "Items" field element
+    And I press "Save"
+    Then I should see the following error messages:
+      | error messages                                               |
+      | Title field is required if there is Label and Content input. |
+    When I fill in "Label" with "" in the "first" "Items" field element
+    When I fill in "Title" with "Title" in the "first" "Items" field element
+    And I press "Save"
+    Then I should see the following error messages:
+      | error messages                                               |
+      | Label field is required if there is Title and Content input. |
     When I fill in "Label" with "Label 1" in the "first" "Items" field element
     And I fill in "Title" with "Title 1" in the "first" "Items" field element
     And I fill in "Content" with "Description 1" in the "first" "Items" field element
