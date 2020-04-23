@@ -13,7 +13,8 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_field_widget_WIDGET_TYPE_form_alter().
  */
 function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
-  // Set label and title fields required for Timeline paragraph.
+  // Set Label and Title fields required only for Timeline paragraph.
+  /** @var \Drupal\Core\Field\FieldDefinitionInterface $field_definition */
   $field_definition = $context['items']->getFieldDefinition();
   if ($field_definition->getTargetEntityTypeId() !== 'paragraph') {
     return;
@@ -23,6 +24,64 @@ function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$elemen
     return;
   }
 
-  $element['label']['#required'] = TRUE;
-  $element['title']['#required'] = TRUE;
+  // We can't use the protected isDefaultValueWidget() method.
+  $is_default_value_widget = (bool) $form_state->get('default_value_widget');
+
+  if (!$is_default_value_widget) {
+    $element['#element_validate'][] = '_oe_paragraphs_validate_required_fields';
+
+    // Get the selector to build the paths for each field.
+    $field_name = $field_definition->getName();
+    $delta = $element['#delta'];
+    $parents = $element['#field_parents'];
+    $parents[] = $field_name;
+    $selector = $root = array_shift($parents);
+    if ($parents) {
+      $selector = $root . '[' . implode('][', $parents) . ']';
+    }
+
+    // Set Label required if Title or Content is filled in.
+    if (!$element['label']['#required']) {
+      $element['label']['#states']['required'][] = [
+        'textarea[name="' . $selector . '[' . $delta . '][body][value]"]' => ['filled' => TRUE],
+      ];
+      $element['label']['#states']['required'][] = [
+        ':input[name="' . $selector . '[' . $delta . '][title]"]' => ['filled' => TRUE],
+      ];
+    }
+    // Set Label required if Title or Content is filled in.
+    if (!$element['title']['#required']) {
+      $element['title']['#states']['required'][] = [
+        'textarea[name="' . $selector . '[' . $delta . '][body][value]"]' => ['filled' => TRUE],
+      ];
+      $element['title']['#states']['required'][] = [
+        ':input[name="' . $selector . '[' . $delta . '][label]"]' => ['filled' => TRUE],
+      ];
+    }
+  }
+}
+
+function _oe_paragraphs_validate_required_fields($element, &$form_state, $form) {
+  if ($element['label']['#value'] === '') {
+    if ($element['title']['#value'] !== '' && $element['body']['value']['#value'] !== '') {
+      $form_state->setErrorByName('label_empty', t('@label field is required if there is @title and @body input.', ['@label' => $element['label']['#title'], '@title' => $element['title']['#title'], '@body' => $element['body']['#title']]));
+    }
+    if ($element['body']['value']['#value'] !== '' && $element['title']['#value'] === '') {
+      $form_state->setErrorByName('label_empty_body_input', t('@label field is required if there is @body input.', ['@label' => $element['label']['#title'], '@body' => $element['body']['#title']]));
+    }
+    if ($element['title']['#value'] !== '' && $element['body']['value']['#value'] === '') {
+      $form_state->setErrorByName('label_empty_title_input', t('@label field is required if there is @title input.', ['@label' => $element['label']['#title'], '@title' => $element['title']['#title']]));
+    }
+  }
+  if ($element['title']['#value'] === '') {
+    if ($element['body']['value']['#value'] !== '' && $element['label']['#value'] !== '') {
+      $form_state->setErrorByName("title_empty", t('@title field is required if there is @label and @body input.', ['@title' => $element['title']['#title'], '@label' => $element['label']['#title'], '@body' => $element['body']['#title']]));
+    }
+    if ($element['label']['#value'] !== '' && $element['body']['value']['#value'] === '') {
+      $form_state->setErrorByName("title_empty_label_input", t('@title field is required if there is @label input.', ['@title' => $element['title']['#title'], '@label' => $element['label']['#title']]));
+    }
+    if ($element['body']['value']['#value'] !== '' && $element['label']['#value'] === '') {
+      $form_state->setErrorByName("title_empty_body_input", t('@title field is required if there is @body input.', ['@title' => $element['title']['#title'], '@body' => $element['body']['#title']]));
+    }
+  }
 }
