@@ -61,27 +61,78 @@ function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$elemen
   }
 }
 
+/**
+ * Validate the required fields of Timeline paragraph.
+ */
 function _oe_paragraphs_validate_required_fields($element, &$form_state, $form) {
+  // Set errors for Label field when any or both of the other 2 fields are
+  // filled in.
   if ($element['label']['#value'] === '') {
     if ($element['title']['#value'] !== '' && $element['body']['value']['#value'] !== '') {
-      $form_state->setErrorByName('label_empty', t('@label field is required if there is @title and @body input.', ['@label' => $element['label']['#title'], '@title' => $element['title']['#title'], '@body' => $element['body']['#title']]));
+      $form_state->setErrorByName('label_empty',
+        t('@label field is required if there is @title and @body input.',
+          [
+            '@label' => $element['label']['#title'],
+            '@title' => $element['title']['#title'],
+            '@body' => $element['body']['#title'],
+          ]
+        )
+      );
     }
     if ($element['body']['value']['#value'] !== '' && $element['title']['#value'] === '') {
-      $form_state->setErrorByName('label_empty_body_input', t('@label field is required if there is @body input.', ['@label' => $element['label']['#title'], '@body' => $element['body']['#title']]));
+      $form_state->setErrorByName('label_empty_body_input',
+        t('@label field is required if there is @body input.',
+          [
+            '@label' => $element['label']['#title'],
+            '@body' => $element['body']['#title'],
+          ]
+        )
+      );
     }
     if ($element['title']['#value'] !== '' && $element['body']['value']['#value'] === '') {
-      $form_state->setErrorByName('label_empty_title_input', t('@label field is required if there is @title input.', ['@label' => $element['label']['#title'], '@title' => $element['title']['#title']]));
+      $form_state->setErrorByName('label_empty_title_input',
+        t('@label field is required if there is @title input.',
+          [
+            '@label' => $element['label']['#title'],
+            '@title' => $element['title']['#title'],
+          ]
+        )
+      );
     }
   }
+  // Set errors for Title field when any or both of the other 2 fields are
+  // filled in.
   if ($element['title']['#value'] === '') {
     if ($element['body']['value']['#value'] !== '' && $element['label']['#value'] !== '') {
-      $form_state->setErrorByName("title_empty", t('@title field is required if there is @label and @body input.', ['@title' => $element['title']['#title'], '@label' => $element['label']['#title'], '@body' => $element['body']['#title']]));
+      $form_state->setErrorByName("title_empty",
+        t('@title field is required if there is @label and @body input.',
+          [
+            '@title' => $element['title']['#title'],
+            '@label' => $element['label']['#title'],
+            '@body' => $element['body']['#title'],
+          ]
+        )
+      );
     }
     if ($element['label']['#value'] !== '' && $element['body']['value']['#value'] === '') {
-      $form_state->setErrorByName("title_empty_label_input", t('@title field is required if there is @label input.', ['@title' => $element['title']['#title'], '@label' => $element['label']['#title']]));
+      $form_state->setErrorByName("title_empty_label_input",
+        t('@title field is required if there is @label input.',
+          [
+            '@title' => $element['title']['#title'],
+            '@label' => $element['label']['#title'],
+          ]
+        )
+      );
     }
     if ($element['body']['value']['#value'] !== '' && $element['label']['#value'] === '') {
-      $form_state->setErrorByName("title_empty_body_input", t('@title field is required if there is @body input.', ['@title' => $element['title']['#title'], '@body' => $element['body']['#title']]));
+      $form_state->setErrorByName("title_empty_body_input",
+        t('@title field is required if there is @body input.',
+          [
+            '@title' => $element['title']['#title'],
+            '@body' => $element['body']['#title'],
+          ]
+        )
+      );
     }
   }
 }
