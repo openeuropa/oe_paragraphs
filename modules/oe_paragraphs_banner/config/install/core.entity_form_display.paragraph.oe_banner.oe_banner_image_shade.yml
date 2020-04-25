@@ -18,10 +18,11 @@ bundle: oe_banner
 mode: oe_banner_image_shade
 content:
   field_oe_banner_full_width:
-    type: options_select
+    type: boolean_checkbox
     weight: 0
     region: content
-    settings: {  }
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_oe_banner_type:
     type: options_select

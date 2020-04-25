@@ -39,7 +39,7 @@ config_devel:
     # Banner type (select list)
     - field.storage.paragraph.field_oe_banner_type
 
-    # Display as full width (select list)
+    # Display as full width (boolean)
     - field.storage.paragraph.field_oe_banner_full_width
 
   optional:

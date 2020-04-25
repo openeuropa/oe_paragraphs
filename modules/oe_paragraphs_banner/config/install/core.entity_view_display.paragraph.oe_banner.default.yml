@@ -20,9 +20,12 @@ content:
   field_oe_banner_full_width:
     weight: 5
     label: above
-    settings: {  }
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: list_default
+    type: boolean
     region: content
   field_oe_banner_type:
     weight: 4
