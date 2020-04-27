@@ -25,7 +25,7 @@
         "nikic/php-parser": "~3.0",
         "openeuropa/behat-transformation-context" : "~0.1",
         "openeuropa/code-review": "~1.0@beta",
-        "openeuropa/oe_content": "~1.6.1",
+        "openeuropa/oe_content": "~1.7.0",
         "openeuropa/drupal-core-require-dev": "^8.8",
         "openeuropa/oe_media": "~1.4",
         "openeuropa/oe_webtools": "~1.5.0",

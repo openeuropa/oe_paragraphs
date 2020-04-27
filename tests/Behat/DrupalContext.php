@@ -98,4 +98,28 @@ class DrupalContext extends RawDrupalContext {
     $this->assertSession()->elementExists('css', "iframe[src*='$partial_iframe_url']");
   }
 
+  /**
+   * Checks that the AV Portal video is rendered.
+   *
+   * @param string $title
+   *   The video title.
+   *
+   * @Then I should see the AV Portal video :title
+   * @TODO: To be removed once oe_content 1.8.0 is released.
+   */
+  public function assertAvPortalVideoIframe(string $title): void {
+    $media = \Drupal::entityTypeManager()->getStorage('media')->loadByProperties(['name' => $title]);
+    if (!$media) {
+      throw new \Exception(sprintf('The media named "%s" does not exist', $title));
+    }
+
+    $media = reset($media);
+    $ref = $media->get('oe_media_avportal_video')->value;
+
+    $iframe = $this->getSession()->getPage()->findAll('css', 'iframe[src*="' . $ref . '"]');
+    if (!$iframe) {
+      throw new \Exception(sprintf('The video named "%s" was not found on the page.', $title));
+    }
+  }
+
 }
