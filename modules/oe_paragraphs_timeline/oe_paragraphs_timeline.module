@@ -69,6 +69,13 @@ function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$elemen
 
 /**
  * Validate the required fields of Timeline paragraph.
+ *
+ * @param array $element
+ *   The form element array.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state.
+ * @param array $form
+ *   The full form structure.
  */
 function _oe_paragraphs_validate_required_fields(array $element, FormStateInterface &$form_state, array $form): void {
   $element_values = $form_state->getValue($element['#parents'], []);
