@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraint;
  * filled in.
  *
  * @Constraint(
- *   id = "OETimelineRequiredFields",
+ *   id = "oe_paragraphs_timeline_required_fields",
  *   label = @Translation("Label and title fields of Timeline widget become required if any of the fields are filled in", context = "Validation"),
  *   type = "string"
  * )
@@ -25,20 +25,20 @@ class RequiredFields extends Constraint {
    *
    * @var string
    */
-  public $bodyNotEmpty = 'The %label and %title fields of Timeline paragraph are required when the %body field is specified.';
+  public $bodyNotEmpty = 'The %label and %title fields are required when the %body field is specified.';
 
   /**
    * The error message shown when title is filled in and label is empty.
    *
    * @var string
    */
-  public $labelRequired = 'The %label field of Timeline paragraph is required when the %title field is specified.';
+  public $labelRequired = 'The %label field is required when the %title field is specified.';
 
   /**
    * The error message shown when label is filled in and title is empty.
    *
    * @var string
    */
-  public $titleRequired = 'The %title field of Timeline paragraph is required when the %label field is specified.';
+  public $titleRequired = 'The %title field is required when the %label field is specified.';
 
 }
