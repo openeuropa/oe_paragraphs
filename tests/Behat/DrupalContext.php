@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace Drupal\Tests\oe_paragraphs\Behat;
 
+use Drupal\Core\Url;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Drupal\Tests\oe_paragraphs\Traits\UtilityTrait;
 
@@ -78,6 +79,47 @@ class DrupalContext extends RawDrupalContext {
     $extension = $parts['extension'];
     $filename = $parts['filename'];
     $this->assertSession()->elementExists('css', "img[src*='.$extension'][src*='$filename']");
+  }
+
+  /**
+   * Checks that an OEmbed is present in the page for a certain url.
+   *
+   * @param string $url
+   *   The video url.
+   *
+   * @Then I (should )see the embedded video player for :url
+   */
+  public function assertOembedIframePresent(string $url): void {
+    $partial_iframe_url = Url::fromRoute('media.oembed_iframe', [], [
+      'query' => [
+        'url' => $url,
+      ],
+    ])->toString();
+    $this->assertSession()->elementExists('css', "iframe[src*='$partial_iframe_url']");
+  }
+
+  /**
+   * Checks that the AV Portal video is rendered.
+   *
+   * @param string $title
+   *   The video title.
+   *
+   * @Then I should see the AV Portal video :title
+   * @TODO: To be removed once oe_content 1.8.0 is released.
+   */
+  public function assertAvPortalVideoIframe(string $title): void {
+    $media = \Drupal::entityTypeManager()->getStorage('media')->loadByProperties(['name' => $title]);
+    if (!$media) {
+      throw new \Exception(sprintf('The media named "%s" does not exist', $title));
+    }
+
+    $media = reset($media);
+    $ref = $media->get('oe_media_avportal_video')->value;
+
+    $iframe = $this->getSession()->getPage()->findAll('css', 'iframe[src*="' . $ref . '"]');
+    if (!$iframe) {
+      throw new \Exception(sprintf('The video named "%s" was not found on the page.', $title));
+    }
   }
 
 }
