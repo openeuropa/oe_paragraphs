@@ -40,11 +40,9 @@ function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$elemen
   }
 
   // Get the selector to build the paths for each field.
-  $field_name = $field_definition->getName();
-  $delta = $element['#delta'];
   $parents = $element['#field_parents'];
-  $parents[] = $field_name;
-  $parents[] = $delta;
+  $parents[] = $field_definition->getName();
+  $parents[] = $element['#delta'];
   $selector = array_shift($parents);
   if ($parents) {
     $selector .= '[' . implode('][', $parents) . ']';
