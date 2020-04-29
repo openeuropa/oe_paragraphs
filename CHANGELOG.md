@@ -1,10 +1,24 @@
 # Change Log
 
+## [1.5.0](https://github.com/openeuropa/oe_paragraphs/tree/1.5.0) (2020-04-29)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.4.0...1.5.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-3138: Allow to add video media to Text with featured media paragraphs. [\#102](https://github.com/openeuropa/oe_paragraphs/pull/102) ([imanoleguskiza](https://github.com/imanoleguskiza))
+- OPENEUROPA-3149: Refactor Timeline required fields conditions. [\#101](https://github.com/openeuropa/oe_paragraphs/pull/101) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-3091: Set call to action field of Banner optional. [\#100](https://github.com/openeuropa/oe_paragraphs/pull/100) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-3096: Change Display as full width field to boolean field type. [\#99](https://github.com/openeuropa/oe_paragraphs/pull/99) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-3094: Set full width storage field of Banner paragraph translatable to false. [\#98](https://github.com/openeuropa/oe_paragraphs/pull/98) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-3094: Adds new field "Display as full width" to Banner paragraph. [\#97](https://github.com/openeuropa/oe_paragraphs/pull/97) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-2976: \[oe\_paragraphs\] Chart paragraph. [\#95](https://github.com/openeuropa/oe_paragraphs/pull/95) ([sergepavle](https://github.com/sergepavle))
+
 ## [1.4.0](https://github.com/openeuropa/oe_paragraphs/tree/1.4.0) (2020-03-30)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.3.0...1.4.0)
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for release 1.4.0. [\#96](https://github.com/openeuropa/oe_paragraphs/pull/96) ([22Alexandra](https://github.com/22Alexandra))
 - OPENEUROPA-2996: Add Social feed paragraph. [\#93](https://github.com/openeuropa/oe_paragraphs/pull/93) ([22Alexandra](https://github.com/22Alexandra))
 - OPENEUROPA-2974: \[oe\_paragraphs\] Map paragraph. [\#92](https://github.com/openeuropa/oe_paragraphs/pull/92) ([sergepavle](https://github.com/sergepavle))
 - OPENEUROPA-2943: Upgrade to PHP 7.3. [\#91](https://github.com/openeuropa/oe_paragraphs/pull/91) ([sergepavle](https://github.com/sergepavle))
