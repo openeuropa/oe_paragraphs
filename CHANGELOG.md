@@ -1,10 +1,18 @@
 # Change Log
 
+## [1.5.1](https://github.com/openeuropa/oe_paragraphs/tree/1.5.1) (2020-04-29)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.5.0...1.5.1)
+
+**Merged pull requests:**
+
+- OPENEUROPA-3149: Do not add states on content element as they don't play nicely with editors. [\#104](https://github.com/openeuropa/oe_paragraphs/pull/104) ([brummbar](https://github.com/brummbar))
+
 ## [1.5.0](https://github.com/openeuropa/oe_paragraphs/tree/1.5.0) (2020-04-29)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.4.0...1.5.0)
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for release 1.5.0. [\#103](https://github.com/openeuropa/oe_paragraphs/pull/103) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-3138: Allow to add video media to Text with featured media paragraphs. [\#102](https://github.com/openeuropa/oe_paragraphs/pull/102) ([imanoleguskiza](https://github.com/imanoleguskiza))
 - OPENEUROPA-3149: Refactor Timeline required fields conditions. [\#101](https://github.com/openeuropa/oe_paragraphs/pull/101) ([22Alexandra](https://github.com/22Alexandra))
 - OPENEUROPA-3091: Set call to action field of Banner optional. [\#100](https://github.com/openeuropa/oe_paragraphs/pull/100) ([22Alexandra](https://github.com/22Alexandra))
