@@ -48,17 +48,12 @@ function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$elemen
     $selector .= '[' . implode('][', $parents) . ']';
   }
 
-  // Mark label as required when title or content are filled in.
-  $element['label']['#states']['required'][] = [
-    'textarea[name="' . $selector . '[body][value]"]' => ['filled' => TRUE],
-  ];
+  // Mark label as required when title is filled in and vice-versa.
+  // The content element can have an editor assigned, and states do not play
+  // nicely with it, so we don't show any visual hint and rely only on
+  // server-side validation.
   $element['label']['#states']['required'][] = [
     ':input[name="' . $selector . '[title]"]' => ['filled' => TRUE],
-  ];
-
-  // Mark title as required when label or content are filled in.
-  $element['title']['#states']['required'][] = [
-    'textarea[name="' . $selector . '[body][value]"]' => ['filled' => TRUE],
   ];
   $element['title']['#states']['required'][] = [
     ':input[name="' . $selector . '[label]"]' => ['filled' => TRUE],
