@@ -53,4 +53,28 @@ trait TraversingTrait {
     return $options;
   }
 
+  /**
+   * Retrieves a row of a table element.
+   *
+   * @param \Behat\Mink\Element\NodeElement $table
+   *   The table element.
+   * @param int $index
+   *   The row number. Zero-based index.
+   *
+   * @return \Behat\Mink\Element\NodeElement
+   *   The row element.
+   *
+   * @throws \Exception
+   *   Throw when the specified row is not found.
+   */
+  protected function findTableRow(NodeElement $table, int $index): NodeElement {
+    $row = $table->find('xpath', '/tbody/tr[' . ($index + 1) . ']');
+
+    if (empty($row)) {
+      throw new \Exception('Could not find row %s in table.', $index);
+    }
+
+    return $row;
+  }
+
 }
