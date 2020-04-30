@@ -10,6 +10,7 @@ use Drupal\Tests\oe_paragraphs\Traits\FieldsTrait;
 use Drupal\Tests\oe_paragraphs\Traits\TraversingTrait;
 use Drupal\Tests\oe_paragraphs\Traits\UtilityTrait;
 use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\ExpectationFailedException;
 
 /**
  * Provides extra steps definitions to handle fields.
@@ -79,6 +80,68 @@ class FieldsContext extends RawDrupalContext {
     $position = $this->convertOrdinalToNumber($position) - 1;
 
     $this->getNthField($field, $position)->selectOption($option);
+  }
+
+  /**
+   * Asserts that a field of a multi-value field item is marked as required.
+   *
+   * @param string $multi_value_field
+   *   The multiple cardinality field name.
+   * @param string $field
+   *   The name of the item field to assert.
+   * @param string $item
+   *   The ordinal number of the item. Defaults to the first item.
+   *
+   * @throws \Exception
+   *   Thrown when the element is not found.
+   * @throws \PHPUnit\Framework\ExpectationFailedException
+   *   Thrown when the element is not marked as required.
+   *
+   * @Then the :field field in the :item item of the :multi_value_field field should be marked as required
+   * @Then the :field field in the :multi_value_field field item should be marked as required
+   */
+  public function assertMultipleCardinalityFieldItemFieldMarkedAsRequired(string $multi_value_field, string $field, string $item = '1st'): void {
+    $multi_value_field = $this->unescapeStepArgument($multi_value_field);
+    $field = $this->unescapeStepArgument($field);
+    $item = $this->convertOrdinalToNumber($item) - 1;
+    $field_table = $this->getMultipleCardinalityFieldTable($multi_value_field);
+    $row = $this->findTableRow($field_table, $item);
+
+    $element_node = $row->findField($field);
+    if (!$element_node) {
+      throw new \Exception(sprintf('Cannot find element "%s" inside the %s item of the field table "%s".', $field, $item, $multi_value_field));
+    }
+
+    if (!$element_node->hasAttribute('required')) {
+      throw new ExpectationFailedException(sprintf('The element "%s" is not marked as required.', $field));
+    }
+  }
+
+  /**
+   * Asserts that a field of a multi-value field item is not marked as required.
+   *
+   * @param string $multi_value_field
+   *   The multiple cardinality field name.
+   * @param string $field
+   *   The name of the item field to assert.
+   * @param string $item
+   *   The ordinal number of the item. Defaults to the first item.
+   *
+   * @throws \PHPUnit\Framework\ExpectationFailedException
+   *   Thrown when the field is not marked as required.
+   *
+   * @Then the :field field in the :item item of the :multi_value_field field should not be marked as required
+   * @Then the :field field in the :multi_value_field field item should not be marked as required
+   */
+  public function assertMultipleCardinalityFieldItemFieldNotMarkedAsRequired(string $multi_value_field, string $field, string $item = '1st'): void {
+    try {
+      $this->assertMultipleCardinalityFieldItemFieldMarkedAsRequired($multi_value_field, $field, $item);
+    }
+    catch (ExpectationFailedException $exception) {
+      return;
+    }
+
+    throw new ExpectationFailedException(sprintf('The element "%s" is marked as required.', $field));
   }
 
 }
