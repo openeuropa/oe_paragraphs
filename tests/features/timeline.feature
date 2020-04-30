@@ -83,3 +83,87 @@ Feature: Timeline paragraph.
     But I should not see the text "Item 2 label"
     And I should not see the text "Item 2 title"
     And I should not see the text "Item 2 content"
+
+  @javascript
+  Scenario: Timeline fields are marked visually as required.
+    Given I am logged in as a user with the "Editor" role
+    When I go to "the content management page"
+    And I click "Add content"
+    And I fill in "Title" with "Timeline paragraph fields test"
+    And I press "List additional actions"
+    And I press "Add Timeline"
+    Then the "Label" field in the "Items" field item should be marked as required
+    And the "Title" field in the "Items" field item should be marked as required
+    But the "Content" field in the "Items" field item should not be marked as required
+    # Fill the first item with values, so we can add a new item.
+    And I fill in "Label" with "Item 1 label" in the first "Items" field element
+    And I fill in "Title" with "Item 1 title" in the first "Items" field element
+    And I press "Add another item"
+    # When all the fields are empty, no field is marked as required.
+    Then the "Label" field in the 2nd item of the "Items" field should not be marked as required
+    And the "Title" field in the 2nd item of the "Items" field should not be marked as required
+    And the "Content" field in the 2nd item of the "Items" field should not be marked as required
+    # Filling the Content field doesn't trigger any required state, as the
+    # state form API doesn't behave well with fields that host editors.
+    When I fill in "Content" with "Item 2 content" in the second "Items" field element
+    Then the "Label" field in the 2nd item of the "Items" field should not be marked as required
+    And the "Title" field in the 2nd item of the "Items" field should not be marked as required
+    And the "Content" field in the 2nd item of the "Items" field should not be marked as required
+    # Clear the content value.
+    When I fill in "Content" with "" in the second "Items" field element
+
+    When I fill in "Label" with "Item 2 label" in the second "Items" field element
+    Then the "Label" field in the 2nd item of the "Items" field should be marked as required
+    And the "Title" field in the 2nd item of the "Items" field should be marked as required
+    But the "Content" field in the 2nd item of the "Items" field should not be marked as required
+
+    When I fill in "Label" with "" in the second "Items" field element
+    Then the "Label" field in the 2nd item of the "Items" field should not be marked as required
+    And the "Title" field in the 2nd item of the "Items" field should not be marked as required
+    And the "Content" field in the 2nd item of the "Items" field should not be marked as required
+
+    When I fill in "Title" with "Item 2 title" in the second "Items" field element
+    Then the "Label" field in the 2nd item of the "Items" field should be marked as required
+    And the "Title" field in the 2nd item of the "Items" field should be marked as required
+    But the "Content" field in the 2nd item of the "Items" field should not be marked as required
+
+    When I fill in "Title" with "" in the second "Items" field element
+    Then the "Label" field in the 2nd item of the "Items" field should not be marked as required
+    And the "Title" field in the 2nd item of the "Items" field should not be marked as required
+    And the "Content" field in the 2nd item of the "Items" field should not be marked as required
+
+    # Add another item to verify that the correct items are marked when
+    # multiple field items are available.
+    When I press "Add another item"
+    And I fill in "Label" with "Item 3 label" in the third "Items" field element
+    Then the "Label" field in the 3rd item of the "Items" field should be marked as required
+    And the "Title" field in the 3rd item of the "Items" field should be marked as required
+    But the "Content" field in the 3rd item of the "Items" field should not be marked as required
+    And the "Label" field in the 2nd item of the "Items" field should not be marked as required
+    And the "Title" field in the 2nd item of the "Items" field should not be marked as required
+
+    When I fill in "Label" with "" in the third "Items" field element
+    Then the "Label" field in the 3rd item of the "Items" field should not be marked as required
+    And the "Title" field in the 3rd item of the "Items" field should not be marked as required
+    And the "Label" field in the 2nd item of the "Items" field should not be marked as required
+    And the "Title" field in the 2nd item of the "Items" field should not be marked as required
+
+    # Fill the second item.
+    When I fill in "Label" with "Item 2 label" in the second "Items" field element
+    And I fill in "Title" with "Item 2 title" in the second "Items" field element
+    And I press "Save"
+    Then I should see the success message "Demo landing page Timeline paragraph fields test has been created."
+
+    # Re-edit the page and verify that on load fields are marked are required.
+    When I click "Edit"
+    Then the "Label" field in the 2nd item of the "Items" field should be marked as required
+    And the "Title" field in the 2nd item of the "Items" field should be marked as required
+
+    # Clearing the fields of the second item will unmark them and allow to save.
+    When I fill in "Label" with "" in the second "Items" field element
+    And I fill in "Title" with "" in the second "Items" field element
+    Then the "Label" field in the 2nd item of the "Items" field should not be marked as required
+    And the "Title" field in the 2nd item of the "Items" field should not be marked as required
+
+    When I press "Save"
+    Then I should see the success message "Demo landing page Timeline paragraph fields test has been updated."
