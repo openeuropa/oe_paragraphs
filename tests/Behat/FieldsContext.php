@@ -6,6 +6,7 @@ namespace Drupal\Tests\oe_paragraphs\Behat;
 
 use Behat\Gherkin\Node\TableNode;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
+use Drupal\Tests\oe_paragraphs\Traits\FieldsTrait;
 use Drupal\Tests\oe_paragraphs\Traits\TraversingTrait;
 use Drupal\Tests\oe_paragraphs\Traits\UtilityTrait;
 use PHPUnit\Framework\Assert;
@@ -15,6 +16,7 @@ use PHPUnit\Framework\Assert;
  */
 class FieldsContext extends RawDrupalContext {
 
+  use FieldsTrait;
   use TraversingTrait;
   use UtilityTrait;
 
@@ -28,10 +30,6 @@ class FieldsContext extends RawDrupalContext {
    * @param string $value
    *   The field value.
    *
-   * @throws \Exception
-   *   Thrown when the specified occurrence of the field or the field itself is
-   *   not found.
-   *
    * @Then I fill in the :position :field (field )with :value
    */
   public function fillNthField(string $position, string $field, string $value): void {
@@ -39,14 +37,7 @@ class FieldsContext extends RawDrupalContext {
     $value = $this->unescapeStepArgument($value);
     $position = $this->convertOrdinalToNumber($position) - 1;
 
-    // Find all the fields with the specified name.
-    $fields = $this->getSession()->getPage()->findAll('named', ['field', $field]);
-
-    if (!$fields || !isset($fields[$position])) {
-      throw new \Exception(sprintf('Could not find field "%s" in position "%s".', $field, $position));
-    }
-
-    $fields[$position]->setValue($value);
+    $this->getNthField($field, $position)->setValue($value);
   }
 
   /**
@@ -80,10 +71,6 @@ class FieldsContext extends RawDrupalContext {
    * @param string $select
    *   The select element name.
    *
-   * @throws \Exception
-   *   Thrown when the specified occurrence of the list or the list itself is
-   *   not found.
-   *
    * @Then I select :option from the :position :select
    */
   public function selectNthOption(string $option, string $position, string $select): void {
@@ -91,13 +78,7 @@ class FieldsContext extends RawDrupalContext {
     $option = $this->unescapeStepArgument($option);
     $position = $this->convertOrdinalToNumber($position) - 1;
 
-    // Find all the fields with the specified name.
-    $fields = $this->getSession()->getPage()->findAll('named', ['field', $field]);
-    if (!$fields || !isset($fields[$position])) {
-      throw new \Exception(sprintf('Could not find field "%s" in position "%s".', $field, $position));
-    }
-
-    $fields[$position]->selectOption($option);
+    $this->getNthField($field, $position)->selectOption($option);
   }
 
 }
