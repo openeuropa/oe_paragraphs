@@ -128,7 +128,7 @@ class FieldsContext extends RawDrupalContext {
    *   The ordinal number of the item. Defaults to the first item.
    *
    * @throws \PHPUnit\Framework\ExpectationFailedException
-   *   Thrown when the field is not marked as required.
+   *   Thrown when the field is marked as required.
    *
    * @Then the :field field in the :item item of the :multi_value_field field should not be marked as required
    * @Then the :field field in the :multi_value_field field item should not be marked as required
