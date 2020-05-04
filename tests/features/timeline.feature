@@ -36,7 +36,7 @@ Feature: Timeline paragraph.
 
     # Clear the label field.
     When I fill in "Label" with "" in the second "Items" field element
-    # Verify that the label field are required if a value is entered in the
+    # Verify that the label field is required if a value is entered in the
     # title field.
     When I fill in "Title" with "Item 2 title" in the second "Items" field element
     And I press "Save"
