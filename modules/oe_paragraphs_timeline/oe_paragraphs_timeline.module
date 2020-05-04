@@ -52,12 +52,14 @@ function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$elemen
   // The content element can have an editor assigned, and states do not play
   // nicely with it, so we don't show any visual hint and rely only on
   // server-side validation.
-  $element['label']['#states']['required'][] = [
-    ':input[name="' . $selector . '[title]"]' => ['filled' => TRUE],
-  ];
-  $element['title']['#states']['required'][] = [
-    ':input[name="' . $selector . '[label]"]' => ['filled' => TRUE],
-  ];
+  foreach (['label', 'title'] as $name) {
+    $element[$name]['#states']['required'][] = [
+      ':input[name="' . $selector . '[title]"]' => ['filled' => TRUE],
+    ];
+    $element[$name]['#states']['required'][] = [
+      ':input[name="' . $selector . '[label]"]' => ['filled' => TRUE],
+    ];
+  }
 }
 
 /**

@@ -6,15 +6,18 @@ namespace Drupal\Tests\oe_paragraphs\Behat;
 
 use Behat\Gherkin\Node\TableNode;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
+use Drupal\Tests\oe_paragraphs\Traits\FieldsTrait;
 use Drupal\Tests\oe_paragraphs\Traits\TraversingTrait;
 use Drupal\Tests\oe_paragraphs\Traits\UtilityTrait;
 use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\ExpectationFailedException;
 
 /**
  * Provides extra steps definitions to handle fields.
  */
 class FieldsContext extends RawDrupalContext {
 
+  use FieldsTrait;
   use TraversingTrait;
   use UtilityTrait;
 
@@ -28,10 +31,6 @@ class FieldsContext extends RawDrupalContext {
    * @param string $value
    *   The field value.
    *
-   * @throws \Exception
-   *   Thrown when the specified occurrence of the field or the field itself is
-   *   not found.
-   *
    * @Then I fill in the :position :field (field )with :value
    */
   public function fillNthField(string $position, string $field, string $value): void {
@@ -39,14 +38,7 @@ class FieldsContext extends RawDrupalContext {
     $value = $this->unescapeStepArgument($value);
     $position = $this->convertOrdinalToNumber($position) - 1;
 
-    // Find all the fields with the specified name.
-    $fields = $this->getSession()->getPage()->findAll('named', ['field', $field]);
-
-    if (!$fields || !isset($fields[$position])) {
-      throw new \Exception(sprintf('Could not find field "%s" in position "%s".', $field, $position));
-    }
-
-    $fields[$position]->setValue($value);
+    $this->getNthField($field, $position)->setValue($value);
   }
 
   /**
@@ -73,31 +65,83 @@ class FieldsContext extends RawDrupalContext {
   /**
    * Selects an option at a specific occurrence of a list.
    *
-   * @param string $select
+   * @param string $option
    *   The value to be selected.
    * @param string $position
    *   The ordinal position of the list amongst the ones with same label.
-   * @param string $option
-   *   The list of options.
+   * @param string $select
+   *   The select element name.
    *
-   * @throws \Exception
-   *   Thrown when the specified occurrence of the list or the list itself is
-   *   not found.
-   *
-   * @Then I select :select from the :position :option
+   * @Then I select :option from the :position :select
    */
-  public function selectNthOption(string $select, string $position, string $option): void {
-    $field = $this->unescapeStepArgument($option);
-    $select = $this->unescapeStepArgument($select);
+  public function selectNthOption(string $option, string $position, string $select): void {
+    $field = $this->unescapeStepArgument($select);
+    $option = $this->unescapeStepArgument($option);
     $position = $this->convertOrdinalToNumber($position) - 1;
 
-    // Find all the fields with the specified name.
-    $fields = $this->getSession()->getPage()->findAll('named', ['field', $field]);
-    if (!$fields || !isset($fields[$position])) {
-      throw new \Exception(sprintf('Could not find field "%s" in position "%s".', $field, $position));
+    $this->getNthField($field, $position)->selectOption($option);
+  }
+
+  /**
+   * Asserts that a field of a multi-value field item is marked as required.
+   *
+   * @param string $multi_value_field
+   *   The multiple cardinality field name.
+   * @param string $field
+   *   The name of the item field to assert.
+   * @param string $item
+   *   The ordinal number of the item. Defaults to the first item.
+   *
+   * @throws \Exception
+   *   Thrown when the element is not found.
+   * @throws \PHPUnit\Framework\ExpectationFailedException
+   *   Thrown when the element is not marked as required.
+   *
+   * @Then the :field field in the :item item of the :multi_value_field field should be marked as required
+   * @Then the :field field in the :multi_value_field field item should be marked as required
+   */
+  public function assertMultipleCardinalityFieldItemFieldMarkedAsRequired(string $multi_value_field, string $field, string $item = '1st'): void {
+    $multi_value_field = $this->unescapeStepArgument($multi_value_field);
+    $field = $this->unescapeStepArgument($field);
+    $item = $this->convertOrdinalToNumber($item) - 1;
+    $field_table = $this->getMultipleCardinalityFieldTable($multi_value_field);
+    $row = $this->findTableRow($field_table, $item);
+
+    $element_node = $row->findField($field);
+    if (!$element_node) {
+      throw new \Exception(sprintf('Cannot find element "%s" inside the %s item of the field table "%s".', $field, $item, $multi_value_field));
     }
 
-    $fields[$position]->selectOption($select);
+    if (!$element_node->hasAttribute('required')) {
+      throw new ExpectationFailedException(sprintf('The element "%s" is not marked as required.', $field));
+    }
+  }
+
+  /**
+   * Asserts that a field of a multi-value field item is not marked as required.
+   *
+   * @param string $multi_value_field
+   *   The multiple cardinality field name.
+   * @param string $field
+   *   The name of the item field to assert.
+   * @param string $item
+   *   The ordinal number of the item. Defaults to the first item.
+   *
+   * @throws \PHPUnit\Framework\ExpectationFailedException
+   *   Thrown when the field is marked as required.
+   *
+   * @Then the :field field in the :item item of the :multi_value_field field should not be marked as required
+   * @Then the :field field in the :multi_value_field field item should not be marked as required
+   */
+  public function assertMultipleCardinalityFieldItemFieldNotMarkedAsRequired(string $multi_value_field, string $field, string $item = '1st'): void {
+    try {
+      $this->assertMultipleCardinalityFieldItemFieldMarkedAsRequired($multi_value_field, $field, $item);
+    }
+    catch (ExpectationFailedException $exception) {
+      return;
+    }
+
+    throw new ExpectationFailedException(sprintf('The element "%s" is marked as required.', $field));
   }
 
 }
