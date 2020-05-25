@@ -9,7 +9,7 @@
         "php": ">=7.2",
         "drupal/allowed_formats": "^1.1",
         "drupal/core": "^8.8",
-        "drupal/paragraphs": "^1.11",
+        "drupal/paragraphs": "^1.12",
         "drupal/typed_link": "~1.0"
     },
     "require-dev": {
@@ -73,7 +73,7 @@
                 "https://www.drupal.org/project/typed_link/issues/3085817": "https://www.drupal.org/files/issues/2019-10-07/typed_link-3085817-3.patch"
             },
             "drupal/paragraphs": {
-                "https://www.drupal.org/project/paragraphs/issues/2890086" : "https://www.drupal.org/files/issues/2020-04-29/paragraphs-validation-to-respect-form-display-2890086-42.patch"
+                "https://www.drupal.org/project/paragraphs/issues/2890086" : "https://www.drupal.org/files/issues/2020-05-21/2890086-46.patch"
             }
         }
     },
