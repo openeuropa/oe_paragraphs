@@ -16,7 +16,6 @@
         "composer/installers": "~1.5",
         "consolidation/robo": "~1.4",
         "consolidation/annotated-command": "^2.8.2",
-        "drupal/coder": "8.3.8",
         "drupal-composer/drupal-scaffold": "~2.5.2",
         "drupal/config_devel": "~1.2",
         "drupal/drupal-extension": "~4.0",
@@ -25,7 +24,7 @@
         "easyrdf/easyrdf": "0.10.0-alpha.1 as 0.9.1",
         "nikic/php-parser": "~3.0",
         "openeuropa/behat-transformation-context" : "~0.1",
-        "openeuropa/code-review": "~1.0@beta",
+        "openeuropa/code-review": "~1.3.0",
         "openeuropa/oe_content": "~1.7.0",
         "openeuropa/drupal-core-require-dev": "^8.8",
         "openeuropa/oe_media": "~1.4",
@@ -38,7 +37,6 @@
         "openeuropa/oe_media": "Allows usage of paragraphs with different media attached to it."
     },
     "_readme": [
-        "We explicitly require drupal/coder 8.3.8 or else Drupal coding standards will not be picked up by GrumPHP.",
         "We explicitly require consolidation/robo to allow lower 'composer update --prefer-lowest' to complete successfully.",
         "We explicitly require consolidation/annotated-command to allow lower 'composer update --prefer-lowest' to complete successfully."
     ],
