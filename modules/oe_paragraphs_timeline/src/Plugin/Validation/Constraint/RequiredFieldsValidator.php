@@ -24,8 +24,6 @@ class RequiredFieldsValidator extends ConstraintValidator {
       return;
     }
 
-    // @todo To investigate if this is correct.
-    // see \Drupal\Core\Field\WidgetBaseInterface::flagErrors()
     $parameters = [
       '%label' => $value->getItemDefinition()->getPropertyDefinition('label')->getLabel(),
       '%title' => $value->getItemDefinition()->getPropertyDefinition('title')->getLabel(),

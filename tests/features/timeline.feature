@@ -27,7 +27,7 @@ Feature: Timeline paragraph.
     And I press "Save"
     Then I should see the following error messages:
       | error messages                                     |
-      | The Label and Title fields are required when the Body field is specified. |
+      | The Label and Title fields are required when the Content field is specified. |
     When I fill in "Label" with "Item 1 Label" in the first "Items" field element
     And I fill in "Title" with "Item 1 Title" in the first "Items" field element
     And I fill in "Content" with "Item 1 Description" in the first "Items" field element
