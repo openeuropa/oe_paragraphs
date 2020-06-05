@@ -14,8 +14,9 @@ Feature: Timeline paragraph.
     # The first widget has both fields required.
     When I press "Save"
     Then I should see the following error messages:
-      | error messages                 |
-      | This value should not be null. |
+      | error messages           |
+      | Label field is required. |
+      | Title field is required. |
 
     When I fill in "Label" with "Item 1 label" in the first "Items" field element
     And I fill in "Title" with "Item 1 title" in the first "Items" field element
@@ -91,8 +92,8 @@ Feature: Timeline paragraph.
     And I fill in "Title" with "Timeline paragraph fields test"
     And I press "List additional actions"
     And I press "Add Timeline"
-    Then the "Label" field in the "Items" field item should not be marked as required
-    And the "Title" field in the "Items" field item should not be marked as required
+    Then the "Label" field in the "Items" field item should be marked as required
+    And the "Title" field in the "Items" field item should be marked as required
     But the "Content" field in the "Items" field item should not be marked as required
     # Fill the first item with values, so we can add a new item.
     And I fill in "Label" with "Item 1 label" in the first "Items" field element

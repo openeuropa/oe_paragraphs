@@ -33,6 +33,9 @@ function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$elemen
     return;
   }
 
+  $element['label']['#required'] = $element['#required'];
+  $element['title']['#required'] = $element['#required'];
+
   // Get the selector to build the paths for each field.
   $field_name = $field_definition->getName();
   $delta = $element['#delta'];
