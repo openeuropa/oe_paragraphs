@@ -7,6 +7,7 @@
 
 declare(strict_types = 1);
 
+use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -32,7 +33,6 @@ function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$elemen
 
   $element['label']['#required'] = $element['#required'];
   $element['title']['#required'] = $element['#required'];
-  $element['#element_validate'][] = '_oe_paragraphs_validate_required_fields';
 
   // If the elements were set as required, there is no need to append states.
   if ($element['#required']) {
@@ -44,9 +44,7 @@ function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$elemen
   $parents[] = $field_definition->getName();
   $parents[] = $element['#delta'];
   $selector = array_shift($parents);
-  if ($parents) {
-    $selector .= '[' . implode('][', $parents) . ']';
-  }
+  $selector .= '[' . implode('][', $parents) . ']';
 
   // Mark label as required when title is filled in and vice-versa.
   // The content element can have an editor assigned, and states do not play
@@ -63,51 +61,13 @@ function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$elemen
 }
 
 /**
- * Validate the required fields of Timeline paragraph.
- *
- * @param array $element
- *   The form element array.
- * @param \Drupal\Core\Form\FormStateInterface $form_state
- *   The form state.
- * @param array $form
- *   The full form structure.
+ * Implements hook_entity_bundle_field_info_alter().
  */
-function _oe_paragraphs_validate_required_fields(array $element, FormStateInterface &$form_state, array $form): void {
-  $element_values = $form_state->getValue($element['#parents'], []);
-  $is_title_empty = ($element_values['title'] ?? '') === '';
-  $is_label_empty = ($element_values['label'] ?? '') === '';
-  $is_body_empty = ($element_values['body']['value'] ?? '') === '';
-
-  // If all the fields are empty, or label and title are filled, no violations
-  // are there.
-  if (
-    ($is_title_empty && $is_label_empty && $is_body_empty) ||
-    (!$is_label_empty && !$is_title_empty)
-  ) {
-    return;
-  }
-
-  if (!$is_body_empty && $is_label_empty && $is_title_empty) {
-    $form_state->setError($element, t('The @label and @title fields are required when the @body field is specified.', [
-      '@label' => $element['label']['#title'],
-      '@title' => $element['title']['#title'],
-      '@body' => $element['body']['#title'],
-    ]));
-    return;
-  }
-
-  if ($is_label_empty && !$is_title_empty) {
-    $form_state->setError($element['label'], t('The @label field is required when the @title field is specified.', [
-      '@label' => $element['label']['#title'],
-      '@title' => $element['title']['#title'],
-    ]));
-    return;
-  }
-
-  if ($is_title_empty && !$is_label_empty) {
-    $form_state->setError($element['title'], t('The @title field is required when the @label field is specified.', [
-      '@title' => $element['title']['#title'],
-      '@label' => $element['label']['#title'],
-    ]));
+function oe_paragraphs_timeline_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  // Add constraint to the paragraphs field of the Timeline paragraph.
+  if ($entity_type->id() === 'paragraph' && $bundle === 'oe_timeline') {
+    if (isset($fields['field_oe_timeline'])) {
+      $fields['field_oe_timeline']->addConstraint('oe_paragraphs_timeline_required_fields', []);
+    }
   }
 }
