@@ -74,7 +74,7 @@
                 "https://www.drupal.org/project/paragraphs/issues/2890086": "https://www.drupal.org/files/issues/2020-05-21/2890086-46.patch"
             },
             "openeuropa/oe_content": {
-                "latest-master": "https://github.com/openeuropa/oe_content/compare/1.8.1...OPENEUROPA-3160.diff"
+                "latest-master": "https://github.com/openeuropa/oe_content/compare/1.8.1...master.diff"
             }
         }
     },
