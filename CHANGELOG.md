@@ -1,13 +1,31 @@
-# Change Log
+# Changelog
+
+## [1.6.0](https://github.com/openeuropa/oe_paragraphs/tree/1.6.0) (2020-06-22)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.5.1...1.6.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-0001: Removing typed\_link patches. [\#113](https://github.com/openeuropa/oe_paragraphs/pull/113) ([upchuk](https://github.com/upchuk))
+- OPENEUROPA-3160: Fix oe\_content patch. [\#112](https://github.com/openeuropa/oe_paragraphs/pull/112) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-3160: Add constraint for Timeline paragraph [\#110](https://github.com/openeuropa/oe_paragraphs/pull/110) ([22Alexandra](https://github.com/22Alexandra))
+- OPENEUROPA-3216: Remove drupal-coder version. [\#109](https://github.com/openeuropa/oe_paragraphs/pull/109) ([nagyad](https://github.com/nagyad))
+- OPENEUROPA-3159: Re-rolled paragraphs widget patch. [\#108](https://github.com/openeuropa/oe_paragraphs/pull/108) ([upchuk](https://github.com/upchuk))
+- OPENEUROPA-3159: Use paragraphs patch to solve validation issue. [\#107](https://github.com/openeuropa/oe_paragraphs/pull/107) ([imanoleguskiza](https://github.com/imanoleguskiza))
+- OPENEUROPA-3149: Test coverage for the states of the timeline widget. [\#106](https://github.com/openeuropa/oe_paragraphs/pull/106) ([brummbar](https://github.com/brummbar))
+- OPENEUROPA-2951: Enabling content translation for the paragraphs currently not translatable. [\#94](https://github.com/openeuropa/oe_paragraphs/pull/94) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.5.1](https://github.com/openeuropa/oe_paragraphs/tree/1.5.1) (2020-04-29)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.5.0...1.5.1)
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for release 1.5.1. [\#105](https://github.com/openeuropa/oe_paragraphs/pull/105) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-3149: Do not add states on content element as they don't play nicely with editors. [\#104](https://github.com/openeuropa/oe_paragraphs/pull/104) ([brummbar](https://github.com/brummbar))
 
 ## [1.5.0](https://github.com/openeuropa/oe_paragraphs/tree/1.5.0) (2020-04-29)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.4.0...1.5.0)
 
 **Merged pull requests:**
@@ -22,6 +40,7 @@
 - OPENEUROPA-2976: \[oe\_paragraphs\] Chart paragraph. [\#95](https://github.com/openeuropa/oe_paragraphs/pull/95) ([sergepavle](https://github.com/sergepavle))
 
 ## [1.4.0](https://github.com/openeuropa/oe_paragraphs/tree/1.4.0) (2020-03-30)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.3.0...1.4.0)
 
 **Merged pull requests:**
@@ -38,6 +57,7 @@
 - OPENEUROPA-2872: Create Facts and figures paragraph. [\#85](https://github.com/openeuropa/oe_paragraphs/pull/85) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.3.0](https://github.com/openeuropa/oe_paragraphs/tree/1.3.0) (2019-12-16)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.2.0...1.3.0)
 
 **Merged pull requests:**
@@ -46,6 +66,7 @@
 - OPENEUROPA-2606: Add optional link field to Social media follow paragraph. [\#82](https://github.com/openeuropa/oe_paragraphs/pull/82) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.2.0](https://github.com/openeuropa/oe_paragraphs/tree/1.2.0) (2019-11-27)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.1.0...1.2.0)
 
 **Merged pull requests:**
@@ -57,6 +78,7 @@
 - OPENEUROPA-0000: Update changelog for release 1.1.0. [\#77](https://github.com/openeuropa/oe_paragraphs/pull/77) ([brummbar](https://github.com/brummbar))
 
 ## [1.1.0](https://github.com/openeuropa/oe_paragraphs/tree/1.1.0) (2019-11-07)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.0.0...1.1.0)
 
 **Merged pull requests:**
@@ -68,6 +90,7 @@
 - OPENEUROPA-2258: Use PHP 7.2 [\#70](https://github.com/openeuropa/oe_paragraphs/pull/70) ([dxvargas](https://github.com/dxvargas))
 
 ## [1.0.0](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0) (2019-10-17)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.0.0-beta2...1.0.0)
 
 **Merged pull requests:**
@@ -77,6 +100,7 @@
 - OPENEUROPA-2113: Provide a missing post update. [\#68](https://github.com/openeuropa/oe_paragraphs/pull/68) ([nagyad](https://github.com/nagyad))
 
 ## [1.0.0-beta2](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0-beta2) (2019-06-18)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.0.0-beta1...1.0.0-beta2)
 
 **Merged pull requests:**
@@ -88,6 +112,7 @@
 - OPENEUROPA-1789: Create Behat tests for all the Paragraph types and variants [\#52](https://github.com/openeuropa/oe_paragraphs/pull/52) ([brummbar](https://github.com/brummbar))
 
 ## [1.0.0-beta1](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0-beta1) (2019-05-15)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.6.0...1.0.0-beta1)
 
 **Merged pull requests:**
@@ -98,6 +123,7 @@
 - OPENEUROPA-1848: Remove hard dependency from content\_translation. [\#50](https://github.com/openeuropa/oe_paragraphs/pull/50) ([nagyad](https://github.com/nagyad))
 
 ## [0.6.0](https://github.com/openeuropa/oe_paragraphs/tree/0.6.0) (2019-05-07)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.5.0...0.6.0)
 
 **Closed issues:**
@@ -111,6 +137,7 @@
 - OPENEUROPA-1813: Upgrading to 8.7. [\#49](https://github.com/openeuropa/oe_paragraphs/pull/49) ([upchuk](https://github.com/upchuk))
 
 ## [0.5.0](https://github.com/openeuropa/oe_paragraphs/tree/0.5.0) (2019-04-22)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.4.1...0.5.0)
 
 **Merged pull requests:**
@@ -121,6 +148,7 @@
 - OPENEUROPA-1752: Hiding non-translatable fields on translation forms for all paragraph types. [\#44](https://github.com/openeuropa/oe_paragraphs/pull/44) ([upchuk](https://github.com/upchuk))
 
 ## [0.4.1](https://github.com/openeuropa/oe_paragraphs/tree/0.4.1) (2019-03-26)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.4.0...0.4.1)
 
 **Merged pull requests:**
@@ -129,6 +157,7 @@
 - Maintenance: Add missing use statement. [\#41](https://github.com/openeuropa/oe_paragraphs/pull/41) ([nagyad](https://github.com/nagyad))
 
 ## [0.4.0](https://github.com/openeuropa/oe_paragraphs/tree/0.4.0) (2019-02-28)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.3.0...0.4.0)
 
 **Merged pull requests:**
@@ -143,6 +172,7 @@
 - OPENEUROPA-1322: Use the proper Docker way of overriding docker-composer.yml file. [\#30](https://github.com/openeuropa/oe_paragraphs/pull/30) ([drupol](https://github.com/drupol))
 
 ## [0.3.0](https://github.com/openeuropa/oe_paragraphs/tree/0.3.0) (2018-10-15)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.3...0.3.0)
 
 **Merged pull requests:**
@@ -151,6 +181,7 @@
 - OPENEUROPA-794: Use new plain long text field for quote text. [\#28](https://github.com/openeuropa/oe_paragraphs/pull/28) ([nagyad](https://github.com/nagyad))
 
 ## [0.2.3](https://github.com/openeuropa/oe_paragraphs/tree/0.2.3) (2018-09-27)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.2...0.2.3)
 
 **Merged pull requests:**
@@ -161,6 +192,7 @@
 - OPENEUROPA-1165: Create a docker-compose.yml.dist file [\#23](https://github.com/openeuropa/oe_paragraphs/pull/23) ([netlooker](https://github.com/netlooker))
 
 ## [0.2.2](https://github.com/openeuropa/oe_paragraphs/tree/0.2.2) (2018-08-09)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.1...0.2.2)
 
 **Merged pull requests:**
@@ -170,6 +202,7 @@
 - OPENEUROPA-721: Update code-review and grump.yml.dist file. [\#20](https://github.com/openeuropa/oe_paragraphs/pull/20) ([imanoleguskiza](https://github.com/imanoleguskiza))
 
 ## [0.2.1](https://github.com/openeuropa/oe_paragraphs/tree/0.2.1) (2018-07-19)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.0...0.2.1)
 
 **Merged pull requests:**
@@ -178,6 +211,7 @@
 - OPENEUROPA-582: Update images on docker-compose and drone file. [\#18](https://github.com/openeuropa/oe_paragraphs/pull/18) ([voidtek](https://github.com/voidtek))
 
 ## [0.2.0](https://github.com/openeuropa/oe_paragraphs/tree/0.2.0) (2018-06-22)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.1.1...0.2.0)
 
 **Merged pull requests:**
@@ -186,6 +220,7 @@
 - OPENEUROPA-687: Add the content row paragraph type [\#15](https://github.com/openeuropa/oe_paragraphs/pull/15) ([brummbar](https://github.com/brummbar))
 
 ## [0.1.1](https://github.com/openeuropa/oe_paragraphs/tree/0.1.1) (2018-06-18)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.1.0...0.1.1)
 
 **Merged pull requests:**
@@ -194,6 +229,9 @@
 - OPENEUROPA-662: Make sure new paragraphs are translatable [\#13](https://github.com/openeuropa/oe_paragraphs/pull/13) ([ademarco](https://github.com/ademarco))
 
 ## [0.1.0](https://github.com/openeuropa/oe_paragraphs/tree/0.1.0) (2018-06-14)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/dc12341d64aa2ee01c248380c6291ab7b0be9b83...0.1.0)
+
 **Closed issues:**
 
 - OPENEUROPA-309: Fix project type [\#3](https://github.com/openeuropa/oe_paragraphs/issues/3)
@@ -213,4 +251,4 @@
 
 
 
-\* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
