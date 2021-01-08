@@ -16,11 +16,12 @@
         "composer/installers": "~1.5",
         "consolidation/robo": "~1.4",
         "consolidation/annotated-command": "^2.8.2",
-        "drupal-composer/drupal-scaffold": "~2.5.2",
+        "drupal/core-composer-scaffold": "^8.8",
         "drupal/config_devel": "~1.2",
         "drupal/drupal-extension": "~4.0",
         "drupal/entity_browser": "^2.5",
         "drupal/json_field": "~1.0.0-rc3",
+        "drupaltest/behat-traits": "~0.1",
         "drush/drush": "~9.0",
         "easyrdf/easyrdf": "0.10.0-alpha.1 as 0.9.1",
         "nikic/php-parser": "~3.0",
@@ -69,6 +70,11 @@
         "patches": {
             "drupal/paragraphs": {
                 "https://www.drupal.org/project/paragraphs/issues/2890086": "https://www.drupal.org/files/issues/2020-05-21/2890086-46.patch"
+            }
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./build"
             }
         }
     },
