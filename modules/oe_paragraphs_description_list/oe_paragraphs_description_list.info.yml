@@ -1,0 +1,31 @@
+name: OpenEuropa Paragraphs Description List
+type: module
+description: Provides Description List paragraph that renders items grouped in HTML Description list tag.
+package: OpenEuropa
+core: 8.x
+
+dependencies:
+  - description_list_field:description_list_field
+  - oe_paragraphs:oe_paragraphs
+
+config_devel:
+  install:
+    # Paragraph types
+    # ---------------
+
+    # Description List
+    - core.entity_form_display.paragraph.oe_description_list.default
+    - core.entity_view_display.paragraph.oe_description_list.default
+    - field.field.paragraph.oe_description_list.field_oe_description_list_items
+    - field.field.paragraph.oe_description_list.field_oe_title
+    - paragraphs.paragraphs_type.oe_description_list
+
+    # Field types already included
+    # -----------------------------
+
+    # Items (description list field type)
+    - field.storage.paragraph.field_oe_description_list_items
+
+  optional:
+    # Paragraph multilingual configuration
+    - language.content_settings.paragraph.oe_description_list
