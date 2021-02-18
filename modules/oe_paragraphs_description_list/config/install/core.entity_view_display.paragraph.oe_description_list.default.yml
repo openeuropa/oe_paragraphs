@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.oe_description_list.field_oe_title
     - paragraphs.paragraphs_type.oe_description_list
   module:
-    - oe_content_description_list_field
+    - description_list_field
 id: paragraph.oe_description_list.default
 targetEntityType: paragraph
 bundle: oe_description_list

@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
-    - oe_content_description_list_field
+    - description_list_field
     - paragraphs
 id: paragraph.field_oe_description_list_items
 field_name: field_oe_description_list_items
 entity_type: paragraph
 type: description_list_field
 settings: {  }
-module: oe_content_description_list_field
+module: description_list_field
 locked: false
 cardinality: -1
 translatable: true
