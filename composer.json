@@ -27,7 +27,7 @@
         "nikic/php-parser": "~3.0",
         "openeuropa/behat-transformation-context" : "~0.1",
         "openeuropa/code-review": "~1.5",
-        "openeuropa/description_list_field": "dev-EWPP-768",
+        "drupal/description_list_field": "1.0.x-dev",
         "openeuropa/oe_content": "dev-master",
         "openeuropa/drupal-core-require-dev": "^8.8",
         "openeuropa/oe_media": "~1.4",
@@ -71,6 +71,9 @@
         "patches": {
             "drupal/paragraphs": {
                 "https://www.drupal.org/project/paragraphs/issues/2890086": "https://www.drupal.org/files/issues/2020-05-21/2890086-46.patch"
+            },
+            "drupal/description_list_field": {
+                "latest": "https://github.com/openeuropa/description_list_field/compare/1.0.x..EWPP-768.diff"
             }
         },
         "drupal-scaffold": {
@@ -83,10 +86,6 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        "description_list_field": {
-            "type": "vcs",
-            "url":  "git@github.com:openeuropa/description_list_field.git"
         }
     },
     "config": {
