@@ -2,7 +2,7 @@
 Feature: Description List paragraph.
   As a content editor
   I need to be able to use Description List paragraphs
-  so I can display an Overview.
+  so I can display a list of term/description pairs.
 
   Scenario: Description List paragraph creation.
     Given I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content" permission
