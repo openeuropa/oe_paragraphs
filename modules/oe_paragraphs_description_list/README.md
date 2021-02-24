@@ -1,7 +1,11 @@
 OpenEuropa Paragraphs Description List
 ============================
 
-This module provides Description List paragraph that depends on the [Description List Field](https://github.com/openeuropa/description_list_field)
-module.
+This module provides a paragraph type that integrates the [Description List Field](https://www.drupal.org/project/description_list_field)
+type to provide HTML description lists with a heading.
 
-The paragraph allows editors to create Overviews of terms with description grouped in an HTML Description list tag.
+
+#### Required contrib modules
+The OpenEuropa Paragraphs Description List requires the following contrib module:
+
+* [Description List Field](https://www.drupal.org/project/description_list_field) (~1.0.x-dev)
