@@ -12,7 +12,7 @@ entity_type: paragraph
 bundle: oe_description_list
 label: Items
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
