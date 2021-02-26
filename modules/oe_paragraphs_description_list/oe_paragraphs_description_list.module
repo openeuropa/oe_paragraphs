@@ -60,7 +60,7 @@ function oe_paragraphs_description_list_entity_bundle_field_info_alter(&$fields,
   // Add constraint to the paragraphs field of the Description List paragraph.
   if ($entity_type->id() === 'paragraph' && $bundle === 'oe_description_list') {
     if (isset($fields['field_oe_description_list_items'])) {
-      $fields['field_oe_description_list_items']->addConstraint('oe_paragraphs_description_list_required_fields', []);
+      $fields['field_oe_description_list_items']->addConstraint('DescriptionListRequiredFields', []);
     }
   }
 }

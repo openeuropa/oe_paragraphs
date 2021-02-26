@@ -13,12 +13,12 @@ use Symfony\Component\Validator\Constraint;
  * are filled in.
  *
  * @Constraint(
- *   id = "oe_paragraphs_description_list_required_fields",
+ *   id = "DescriptionListRequiredFields",
  *   label = @Translation("Term and description fields of Description list widget become required if any of the fields are filled in", context = "Validation"),
  *   type = "string"
  * )
  */
-class RequiredFields extends Constraint {
+class DescriptionListRequiredFields extends Constraint {
 
   /**
    * The error message shown when term is filled in.

@@ -10,7 +10,7 @@ use Symfony\Component\Validator\ConstraintValidator;
 /**
  * Validates required fields for Description List paragraph.
  */
-class RequiredFieldsValidator extends ConstraintValidator {
+class DescriptionListRequiredFieldsValidator extends ConstraintValidator {
 
   /**
    * {@inheritdoc}
