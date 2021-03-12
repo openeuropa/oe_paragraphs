@@ -18,10 +18,12 @@ Feature: Timeline paragraph.
       | Label field is required. |
       | Title field is required. |
 
-    When I fill in "Label" with "Item 1 label" in the first "Items" field element
+    When I fill in "Heading" with "Timeline paragraph heading" in the first "Items" field element
+    And I fill in "Label" with "Item 1 label" in the first "Items" field element
     And I fill in "Title" with "Item 1 title" in the first "Items" field element
     And I press "Save"
     Then I should see the success message "Demo landing page Timeline paragraph test has been created."
+    And I should see the text "Timeline paragraph heading"
     And I should see the text "Item 1 label"
     And I should see the text "Item 1 title"
 
@@ -58,6 +60,7 @@ Feature: Timeline paragraph.
     And I fill in "Title" with "Item 2 title" in the second "Items" field element
     And I press "Save"
     Then I should see the success message "Demo landing page Timeline paragraph test has been updated."
+    And I should see the text "Timeline paragraph heading"
     And I should see the text "Item 1 label"
     And I should see the text "Item 1 title"
     And I should see the text "Item 2 label"
@@ -78,6 +81,7 @@ Feature: Timeline paragraph.
     And I fill in "Content" with "" in the second "Items" field element
     And I press "Save"
     Then I should see the success message "Demo landing page Timeline paragraph test has been updated."
+    And I should see the text "Timeline paragraph heading"
     And I should see the text "Item 1 label"
     And I should see the text "Item 1 title"
     But I should not see the text "Item 2 label"
