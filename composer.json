@@ -27,6 +27,7 @@
         "nikic/php-parser": "~3.0",
         "openeuropa/behat-transformation-context" : "~0.1",
         "openeuropa/code-review": "~1.5",
+        "drupal/description_list_field": "~1.0.x-dev",
         "openeuropa/oe_content": "dev-master",
         "openeuropa/drupal-core-require-dev": "^8.8",
         "openeuropa/oe_media": "~1.4",

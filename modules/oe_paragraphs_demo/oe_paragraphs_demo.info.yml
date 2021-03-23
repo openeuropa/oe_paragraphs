@@ -13,6 +13,7 @@ dependencies:
   - oe_paragraphs:oe_paragraphs_chart
   - oe_paragraphs:oe_paragraphs_map
   - oe_paragraphs:oe_paragraphs_social_feed
+  - oe_paragraphs:oe_paragraphs_description_list
 
 config_devel:
   install:

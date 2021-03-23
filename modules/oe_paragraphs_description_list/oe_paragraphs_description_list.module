@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * OE Paragraphs Description List module.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function oe_paragraphs_description_list_field_widget_description_list_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  $field_definition = $context['items']->getFieldDefinition();
+  if ($field_definition->getTargetEntityTypeId() !== 'paragraph') {
+    return;
+  }
+
+  if ($field_definition->getTargetBundle() !== 'oe_description_list') {
+    return;
+  }
+
+  // We can't use the protected isDefaultValueWidget() method.
+  $is_default_value_widget = (bool) $form_state->get('default_value_widget');
+  if ($is_default_value_widget) {
+    return;
+  }
+
+  $element['term']['#required'] = $element['#required'];
+  $element['description']['#required'] = $element['#required'];
+
+  // If the elements were set as required, there is no need to append states.
+  if ($element['#required']) {
+    return;
+  }
+
+  // Get the selector to build the paths for each field.
+  $parents = $element['#field_parents'];
+  $parents[] = $field_definition->getName();
+  $parents[] = $element['#delta'];
+  $selector = array_shift($parents);
+  $selector .= '[' . implode('][', $parents) . ']';
+
+  // Mark term as required when description is filled in and vice-versa.
+  $element['description']['#states']['required'][] = [
+    ':input[name="' . $selector . '[term]"]' => ['filled' => TRUE],
+  ];
+  $element['term']['#states']['required'][] = [
+    ':input[name="' . $selector . '[description][value]"]' => ['filled' => TRUE],
+  ];
+}
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function oe_paragraphs_description_list_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  // Add constraint to the paragraphs field of the Description List paragraph.
+  if ($entity_type->id() === 'paragraph' && $bundle === 'oe_description_list') {
+    if (isset($fields['field_oe_description_list_items'])) {
+      $fields['field_oe_description_list_items']->addConstraint('DescriptionListRequiredFields', []);
+    }
+  }
+}

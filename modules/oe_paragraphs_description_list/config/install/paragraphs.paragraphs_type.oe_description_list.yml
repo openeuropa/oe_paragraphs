@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_description_list
+label: 'Horizontal description list'
+icon_uuid: null
+icon_default: null
+description: 'Description List paragraph displays a list of several items grouped in an HTML Description list tag.'
+behavior_plugins: {  }
