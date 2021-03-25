@@ -18,6 +18,7 @@ config_devel:
     - core.entity_view_display.paragraph.oe_timeline.default
     - field.field.paragraph.oe_timeline.field_oe_timeline
     - field.field.paragraph.oe_timeline.field_oe_timeline_expand
+    - field.field.paragraph.oe_timeline.field_oe_title
     - paragraphs.paragraphs_type.oe_timeline
 
     # Field types already included

@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.oe_timeline.field_oe_timeline
     - field.field.paragraph.oe_timeline.field_oe_timeline_expand
+    - field.field.paragraph.oe_timeline.field_oe_title
     - paragraphs.paragraphs_type.oe_timeline
   module:
     - oe_content_timeline_field
@@ -13,16 +14,24 @@ bundle: oe_timeline
 mode: default
 content:
   field_oe_timeline:
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: timeline_widget
     region: content
   field_oe_timeline_expand:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_oe_title:
+    weight: 0
+    settings:
+      size: 170
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true
