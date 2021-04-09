@@ -34,7 +34,8 @@
         "openeuropa/oe_webtools": "~1.5.0",
         "openeuropa/task-runner": "~1.0-beta5",
         "symfony/dom-crawler": "~3.4",
-        "guzzlehttp/guzzle": "~6.3"
+        "guzzlehttp/guzzle": "~6.3",
+        "instaclick/php-webdriver": "^1.4.7"
     },
     "suggest": {
         "openeuropa/oe_media": "Allows usage of paragraphs with different media attached to it."
