@@ -21,7 +21,7 @@ Feature: Map paragraph.
     Then I should see the following error messages:
       | error messages                        |
       | Use existing media field is required. |
-    When I fill in "Use existing media" with "World map" in the "first" "Items" field element
+    When I fill in "Use existing media" with "World map"
     And I press "Save"
     Then I should see the heading "Map paragraph test"
     And I should see the Webtools map "World map" on the page

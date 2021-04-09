@@ -22,7 +22,7 @@ Feature: Social feed paragraph.
     Then I should see the following error messages:
       | error messages                        |
       | Use existing media field is required. |
-    When I fill in "Use existing media" with "My social feed" in the "first" "Items" field element
+    When I fill in "Use existing media" with "My social feed"
     And I press "Save"
     Then I should see the heading "Social feed paragraph test"
     And I should see the Webtools social feed "My social feed" on the page

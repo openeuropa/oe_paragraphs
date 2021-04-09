@@ -21,7 +21,7 @@ Feature: Chart paragraph.
     Then I should see the following error messages:
       | error messages                        |
       | Use existing media field is required. |
-    When I fill in "Use existing media" with "Basic chart" in the "first" "Items" field element
+    When I fill in "Use existing media" with "Basic chart"
     And I press "Save"
     Then I should see the heading "Chart paragraph test"
     And I should see the Webtools chart "Basic chart" on the page
