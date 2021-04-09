@@ -1,11 +1,24 @@
 # Changelog
 
+## [1.7.0](https://github.com/openeuropa/oe_paragraphs/tree/1.7.0) (2021-04-09)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.6.0...1.7.0)
+
+**Merged pull requests:**
+
+- EWPP-858: Quickfix behat tests. [\#129](https://github.com/openeuropa/oe_paragraphs/pull/129) ([imanoleguskiza](https://github.com/imanoleguskiza))
+- EWPP-811: Add optional heading field to Timeline paragraph. [\#125](https://github.com/openeuropa/oe_paragraphs/pull/125) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-750: Description List paragraph. [\#124](https://github.com/openeuropa/oe_paragraphs/pull/124) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-529: Replace scaffold library. [\#121](https://github.com/openeuropa/oe_paragraphs/pull/121) ([sergepavle](https://github.com/sergepavle))
+- EWPP-516: Update docker images. [\#120](https://github.com/openeuropa/oe_paragraphs/pull/120) ([22Alexandra](https://github.com/22Alexandra))
+
 ## [1.6.0](https://github.com/openeuropa/oe_paragraphs/tree/1.6.0) (2020-06-22)
 
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.5.1...1.6.0)
 
 **Merged pull requests:**
 
+- Prepare release 1.6.0. [\#115](https://github.com/openeuropa/oe_paragraphs/pull/115) ([imanoleguskiza](https://github.com/imanoleguskiza))
 - OPENEUROPA-0001: Removing typed\_link patches. [\#113](https://github.com/openeuropa/oe_paragraphs/pull/113) ([upchuk](https://github.com/upchuk))
 - OPENEUROPA-3160: Fix oe\_content patch. [\#112](https://github.com/openeuropa/oe_paragraphs/pull/112) ([22Alexandra](https://github.com/22Alexandra))
 - OPENEUROPA-3160: Add constraint for Timeline paragraph [\#110](https://github.com/openeuropa/oe_paragraphs/pull/110) ([22Alexandra](https://github.com/22Alexandra))
