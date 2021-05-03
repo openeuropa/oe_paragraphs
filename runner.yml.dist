@@ -33,7 +33,7 @@ selenium:
 
 commands:
   drupal:site-setup:
-    - { task: "symlink", from: "../../..", to: "${drupal.root}/modules/custom/oe_paragraphs" }
+    - { task: "run", command: "drupal:symlink-project" }
     - { task: "run", command: "drupal:drush-setup" }
     - { task: "run", command: "drupal:settings-setup" }
     - { task: "run", command: "setup:behat" }
