@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_iframe_media.field_oe_iframe_media_full_width
+    - field.field.paragraph.oe_iframe_media.field_oe_media
+    - field.field.paragraph.oe_iframe_media.field_oe_title
+    - paragraphs.paragraphs_type.oe_iframe_media
+id: paragraph.oe_iframe_media.default
+targetEntityType: paragraph
+bundle: oe_iframe_media
+mode: default
+content:
+  field_oe_iframe_media_full_width:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_oe_media:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_oe_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
