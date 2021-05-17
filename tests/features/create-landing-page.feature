@@ -9,6 +9,7 @@ Feature: Create a landing page
       | Accordion                   |
       | Chart                       |
       | Content row                 |
+      | Iframe                      |
       | Links block                 |
       | Listing item                |
       | Listing item block          |
