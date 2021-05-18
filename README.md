@@ -36,14 +36,15 @@ In order to enable the module in your project run:
 The module provides the following paragraph types:
 
 - **Accordion**: The Accordion paragraph is a collection of collapsible items with icon, title and long text required fields.
-- **Accordion item**: The Accordion item paragraph is a single accordion with icon, title and long text required fields. It is intended to be 
+- **Accordion item**: The Accordion item paragraph is a single accordion with icon, title and long text required fields. It is intended to be
 used exclusively in conjunction with the "Accordion" paragraph.
-- **Content row**: The Content row paragraph allows editors to group multiple paragraphs together. An in-page navigation can be shown 
+- **Content row**: The Content row paragraph allows editors to group multiple paragraphs together. An in-page navigation can be shown
 optionally.
-- **Contextual navigation**: The Contextual navigation paragraph allows editors to add a number of links that helps the user navigate the page. The 
+- **Contextual navigation**: The Contextual navigation paragraph allows editors to add a number of links that helps the user navigate the page. The
 links, their visibility limit and navigation label can be configured using the available fields.
+- **Iframe**: The Iframe paragraph allows editors to add iframes using media Iframe.
 - **Links block**: The Links block paragraph displays a list of links, with an optional title. It is used for instance with the dropdown component.
-- **Listing item**: The Listing item paragraph displays content teasers. A list item is available in the following variants: default, date 
+- **Listing item**: The Listing item paragraph displays content teasers. A list item is available in the following variants: default, date
 item, highlighted and thumbnail with primary or secondary image.
 - **Listing item block**: The Listing item block paragraph allows editors to group multiple Listing item paragraphs in one, two or three columns.
 An optional link can be added to the block.
@@ -95,10 +96,10 @@ $ ./vendor/bin/run drupal:symlink-project
 
 ### Using Docker Compose
 
-Alternatively, you can build a development site using [Docker](https://www.docker.com/get-docker) and 
+Alternatively, you can build a development site using [Docker](https://www.docker.com/get-docker) and
 [Docker Compose](https://docs.docker.com/compose/) with the provided configuration.
 
-Docker provides the necessary services and tools such as a web server and a database server to get the site running, 
+Docker provides the necessary services and tools such as a web server and a database server to get the site running,
 regardless of your local host configuration.
 
 #### Requirements:
@@ -110,7 +111,7 @@ regardless of your local host configuration.
 
 By default, Docker Compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file.
 By convention, the `docker-compose.yml` contains your base configuration and it's provided by default.
-The override file, as its name implies, can contain configuration overrides for existing services or entirely new 
+The override file, as its name implies, can contain configuration overrides for existing services or entirely new
 services.
 If a service is defined in both files, Docker Compose merges the configurations.
 
