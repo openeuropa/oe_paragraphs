@@ -1,6 +1,6 @@
 name: 'OpenEuropa Paragraphs Iframe'
 type: module
-description: 'Provides Iframe paragraph that displays Iframe.'
+description: 'Provides an Iframe paragraph that displays an Iframe.'
 package: OpenEuropa
 core: 8.x
 

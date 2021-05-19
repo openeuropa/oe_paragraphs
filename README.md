@@ -42,7 +42,6 @@ used exclusively in conjunction with the "Accordion" paragraph.
 optionally.
 - **Contextual navigation**: The Contextual navigation paragraph allows editors to add a number of links that helps the user navigate the page. The
 links, their visibility limit and navigation label can be configured using the available fields.
-- **Iframe**: The Iframe paragraph allows editors to add iframes using media Iframe.
 - **Links block**: The Links block paragraph displays a list of links, with an optional title. It is used for instance with the dropdown component.
 - **Listing item**: The Listing item paragraph displays content teasers. A list item is available in the following variants: default, date
 item, highlighted and thumbnail with primary or secondary image.
@@ -60,6 +59,34 @@ directory for more information.
 #### Banner
 Allows editors to create Banners that display a prominent message and related action. To get this paragraph type enable
 the OpenEuropa Paragraphs Media submodule.
+
+#### Chart
+Allows editors to create paragraphs that display Webtools chart media entities. To get this paragraph type enable
+the OpenEuropa Paragraphs Chart submodule.
+
+#### Description list
+Allows editors to create paragraphs that provide HTML description lists with a heading.
+To get this paragraph type enable the OpenEuropa Paragraphs Horizontal description list submodule.
+
+#### Iframe
+Allows editors to create paragraphs that display Iframe media entities.
+To get this paragraph type enable the OpenEuropa Paragraphs Iframe submodule.
+
+#### Map
+Allows editors to create paragraphs that display Webtools map media entities. To get this paragraph type enable
+the OpenEuropa Paragraphs Map submodule.
+
+#### Text with feature media
+Allows editors to create paragraphs that show a rich text with a title and a featured media on the right, if any.
+To get this paragraph type enable the OpenEuropa Text with featured Media paragraph submodule.
+
+#### Social feed
+Allows editors to create paragraphs that display Webtools social feed media entities. To get this paragraph type enable
+the OpenEuropa Paragraphs Social feed submodule.
+
+#### Timeline
+Allows editors to create paragraphs that display displays concurrent and/or sequential items visually on a time axis.
+To get this paragraph type enable the OpenEuropa Paragraphs Timeline submodule.
 
 ## Development setup
 
