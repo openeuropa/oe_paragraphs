@@ -14,6 +14,7 @@ dependencies:
   - oe_paragraphs:oe_paragraphs_map
   - oe_paragraphs:oe_paragraphs_social_feed
   - oe_paragraphs:oe_paragraphs_description_list
+  - oe_paragraphs:oe_paragraphs_iframe_media
 
 config_devel:
   install:

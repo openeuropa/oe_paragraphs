@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_iframe_media
+label: Iframe
+icon_uuid: null
+icon_default: null
+description: 'Shows Iframe media entities'
+behavior_plugins: {  }

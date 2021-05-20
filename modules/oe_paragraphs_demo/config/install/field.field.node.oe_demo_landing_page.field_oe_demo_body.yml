@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.oe_contextual_navigation
     - paragraphs.paragraphs_type.oe_description_list
     - paragraphs.paragraphs_type.oe_facts_figures
+    - paragraphs.paragraphs_type.oe_iframe_media
     - paragraphs.paragraphs_type.oe_links_block
     - paragraphs.paragraphs_type.oe_list_item
     - paragraphs.paragraphs_type.oe_list_item_block
@@ -48,13 +49,14 @@ settings:
       oe_contextual_navigation: oe_contextual_navigation
       oe_facts_figures: oe_facts_figures
       oe_banner: oe_banner
-      oe_social_media_follow: oe_social_media_follow
       oe_description_list: oe_description_list
+      oe_social_media_follow: oe_social_media_follow
       oe_text_feature_media: oe_text_feature_media
       oe_timeline: oe_timeline
       oe_map: oe_map
       oe_chart: oe_chart
       oe_social_feed: oe_social_feed
+      oe_iframe_media: oe_iframe_media
     target_bundles_drag_drop:
       oe_accordion:
         enabled: true
@@ -83,6 +85,9 @@ settings:
       oe_facts_figures:
         enabled: true
         weight: 14
+      oe_iframe_media:
+        enabled: true
+        weight: 30
       oe_links_block:
         enabled: true
         weight: 3

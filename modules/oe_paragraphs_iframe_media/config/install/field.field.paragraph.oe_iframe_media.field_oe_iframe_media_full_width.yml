@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_iframe_media_full_width
+    - paragraphs.paragraphs_type.oe_iframe_media
+id: paragraph.oe_iframe_media.field_oe_iframe_media_full_width
+field_name: field_oe_iframe_media_full_width
+entity_type: paragraph
+bundle: oe_iframe_media
+label: 'Full width'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
