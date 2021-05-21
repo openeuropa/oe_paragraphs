@@ -30,7 +30,7 @@
         "drupal/description_list_field": "~1.0.x-dev",
         "openeuropa/oe_content": "2.x-dev",
         "openeuropa/drupal-core-require-dev": "^8.9.14",
-        "openeuropa/oe_media": "~1.4",
+        "openeuropa/oe_media": "dev-master",
         "openeuropa/oe_webtools": "~1.5.0",
         "openeuropa/task-runner-drupal-project-symlink": "^1.0",
         "symfony/dom-crawler": "~3.4",
