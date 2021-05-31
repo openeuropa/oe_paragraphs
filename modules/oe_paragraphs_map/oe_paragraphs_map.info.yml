@@ -2,7 +2,7 @@ name: OpenEuropa Paragraphs Map
 type: module
 description: Provides Map paragraph type that uses map media.
 package: OpenEuropa
-core: 8.x
+core_version_requirement: ^8 || ^9
 
 dependencies:
   - oe_paragraphs:oe_paragraphs_media_field_storage
