@@ -10,9 +10,7 @@
         "drupal/allowed_formats": "^1.1",
         "drupal/core": "^8.9 || ^9",
         "drupal/paragraphs": "^1.12",
-        "drupal/typed_link": "1.x-dev",
-        "drupal/upgrade_status": "^3.4",
-        "mglaman/drupal-check": "^1.1.8"
+        "drupal/typed_link": "1.x-dev"
     },
     "require-dev": {
         "behat/behat": "^3.4.2",
