@@ -11,7 +11,6 @@ Feature: Paragraph types show different fields based on variants.
     And I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Test page"
-    And I press "List additional actions"
     And I press "Add Listing item block"
     And I wait for AJAX to finish
     And I select "One column" from "Layout" in the 1st "Listing item block" paragraph
