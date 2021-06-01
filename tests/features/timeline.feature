@@ -94,6 +94,7 @@ Feature: Timeline paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Timeline paragraph fields test"
+    And I press "List additional actions"
     And I press "Add Timeline"
     Then the "Label" field in the "Items" field item should be marked as required
     And the "Title" field in the "Items" field item should be marked as required
