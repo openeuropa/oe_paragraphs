@@ -2,19 +2,32 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_text_feature_media.field_oe_link
     - field.field.paragraph.oe_text_feature_media.field_oe_media
     - field.field.paragraph.oe_text_feature_media.field_oe_plain_text_long
     - field.field.paragraph.oe_text_feature_media.field_oe_text_long
     - field.field.paragraph.oe_text_feature_media.field_oe_title
     - paragraphs.paragraphs_type.oe_text_feature_media
   module:
-    - image
+    - link
     - text
 id: paragraph.oe_text_feature_media.default
 targetEntityType: paragraph
 bundle: oe_text_feature_media
 mode: default
 content:
+  field_oe_link:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_oe_media:
     type: entity_reference_entity_view
     weight: 2

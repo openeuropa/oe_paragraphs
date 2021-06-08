@@ -37,12 +37,16 @@ Feature: Text with featured media paragraph.
     And I fill in "Use existing media" with "My Image 1"
     And I fill in "Caption" with "Caption text" in the 1st "Text with Featured media" paragraph
     And I fill in "Full text" with "Featured text" in the 1st "Text with Featured media" paragraph
+    And I fill in "URL" with "http://example.com/link"
+    And I fill in "Link text" with "Link title"
     And I press "Save"
     Then I should see the heading "Text with Featured media paragraph test page"
     And I should see the text "Title text"
     And I should see the image "example_1.jpeg"
     And I should see the text "Caption text"
     And I should see the text "Featured text"
+    And the response should contain "http://example.com/link"
+    And I should see the link "Link title"
 
     # Use a remote video on the Text with featured media paragraph.
     When I click "Edit"

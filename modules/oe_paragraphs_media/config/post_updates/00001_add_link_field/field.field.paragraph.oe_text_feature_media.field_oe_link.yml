@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_link
+    - paragraphs.paragraphs_type.oe_text_feature_media
+  module:
+    - link
+id: paragraph.oe_text_feature_media.field_oe_link
+field_name: field_oe_link
+entity_type: paragraph
+bundle: oe_text_feature_media
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link
