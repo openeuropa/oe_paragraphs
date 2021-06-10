@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_contact
+label: Contact
+icon_uuid: null
+icon_default: null
+description: 'Allows editors to reference General and Press Contact entities.'
+behavior_plugins: {  }
