@@ -9,8 +9,9 @@ Feature: Social media follow paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Social media follow paragraph test page"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Social media follow"
-    Then the following fields should be present "Title, URL, Link text, Link type"
+    Then the following fields should be present "Title, URL, Link text, Link type" in the "demo paragraphs element" region
     And the available options in the Variant select should be:
       | Horizontal |
       | Vertical   |

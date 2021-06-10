@@ -9,8 +9,9 @@ Feature: Timeline paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Timeline paragraph test"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Timeline"
-    Then the following fields should be present "Label, Title, Content, Expand button"
+    Then the following fields should be present "Label, Title, Content, Expand button" in the "demo paragraphs element" region
     # The first widget has both fields required.
     When I press "Save"
     Then I should see the following error messages:
@@ -69,7 +70,7 @@ Feature: Timeline paragraph.
 
     When I click "Edit"
     # Check that the paragraph is not collpased by searching for a field.
-    Then the following field should be present "Expand button"
+    Then the following field should be present "Expand button" in the "demo paragraphs element" region
     # Verify that we can edit the page and save it without adding any item.
     When I press "Save"
     Then I should see the success message "Demo landing page Timeline paragraph test has been updated."
@@ -94,6 +95,7 @@ Feature: Timeline paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Timeline paragraph fields test"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "List additional actions"
     And I press "Add Timeline"
     Then the "Label" field in the "Items" field item should be marked as required
@@ -102,7 +104,7 @@ Feature: Timeline paragraph.
     # Fill the first item with values, so we can add a new item.
     And I fill in "Label" with "Item 1 label" in the first "Items" field element
     And I fill in "Title" with "Item 1 title" in the first "Items" field element
-    And I press "Add another item"
+    And I press the "Add another item" button in the "demo paragraphs element" region
     # When all the fields are empty, no field is marked as required.
     Then the "Label" field in the 2nd item of the "Items" field should not be marked as required
     And the "Title" field in the 2nd item of the "Items" field should not be marked as required
@@ -138,7 +140,7 @@ Feature: Timeline paragraph.
 
     # Add another item to verify that the correct items are marked when
     # multiple field items are available.
-    When I press "Add another item"
+    When I press the "Add another item" button in the "demo paragraphs element" region
     And I fill in "Label" with "Item 3 label" in the third "Items" field element
     Then the "Label" field in the 3rd item of the "Items" field should be marked as required
     And the "Title" field in the 3rd item of the "Items" field should be marked as required

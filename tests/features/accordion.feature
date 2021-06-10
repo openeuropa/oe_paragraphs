@@ -9,9 +9,10 @@ Feature: Accordion paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Required fields accordion"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Accordion"
     # Neither accordion nor accordion item paragraphs have variants.
-    Then the following fields should not be present "Variant"
+    Then the following fields should not be present "Variant" in the "demo paragraphs element" region
     # Remove the accordion item that is shown by default in the page so we are
     # able to test the required fields of the accordion itself.
     When I press "Remove" in the 1st "Accordion item" paragraph actions
@@ -40,6 +41,7 @@ Feature: Accordion paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Accordion page"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Accordion"
     And I fill in "Title" with "Accordion item 1 title" in the 1st "Accordion item" paragraph
     And I fill in "Body" with "Accordion item 1 body" in the 1st "Accordion item" paragraph

@@ -4,7 +4,6 @@ Feature: Contact paragraph.
   I need to be able to use Contact paragraphs
   so that I can reference General and Press Contact entities.
 
-  @ale
   Scenario: Contact creation.
     Given I am logged in as a user with the "Editor" role
     When I go to "the content management page"
@@ -13,7 +12,7 @@ Feature: Contact paragraph.
     And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Contact"
     # Check Contact paragraph fields.
-    Then the following field should be present "Heading"
+    Then the following field should be present "Heading" in the "demo paragraphs element" region
     And I should see the text "Contacts"
     # Check the required field validation.
     When I press "Save"
