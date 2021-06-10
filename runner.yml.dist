@@ -9,6 +9,9 @@ drupal:
     name: "oe_paragraphs"
     user: "root"
     password: ""
+  sparql:
+    host: "sparql"
+    port: "8890"
   post_install:
     - "./vendor/bin/drush en oe_paragraphs_demo -y"
     - "./vendor/bin/drush en config_devel -y"
@@ -27,6 +30,14 @@ drupal:
         - "bower_components"
         - "vendor"
         - "${drupal.root}"
+    databases:
+      sparql_default:
+        default:
+          prefix: ""
+          host: ${drupal.sparql.host}
+          port: ${drupal.sparql.port}
+          namespace: 'Drupal\sparql_entity_storage\Driver\Database\sparql'
+          driver: 'sparql'
 selenium:
   host: "http://selenium"
   port: "4444"
