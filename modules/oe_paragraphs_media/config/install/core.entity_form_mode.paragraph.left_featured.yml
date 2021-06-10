@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.left_featured
+label: 'Text on the left, featured call to action'
+targetEntityType: paragraph
+cache: true

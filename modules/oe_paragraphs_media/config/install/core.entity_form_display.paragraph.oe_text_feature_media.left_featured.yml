@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.paragraph.left_featured
+    - field.field.paragraph.oe_text_feature_media.field_oe_link
+    - field.field.paragraph.oe_text_feature_media.field_oe_media
+    - field.field.paragraph.oe_text_feature_media.field_oe_plain_text_long
+    - field.field.paragraph.oe_text_feature_media.field_oe_text_long
+    - field.field.paragraph.oe_text_feature_media.field_oe_title
+    - paragraphs.paragraphs_type.oe_text_feature_media
+  module:
+    - link
+    - text
+id: paragraph.oe_text_feature_media.left_featured
+targetEntityType: paragraph
+bundle: oe_text_feature_media
+mode: left_featured
+content:
+  field_oe_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_oe_media:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_oe_plain_text_long:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_oe_text_long:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_oe_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

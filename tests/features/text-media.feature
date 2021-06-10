@@ -30,7 +30,13 @@ Feature: Text with featured media paragraph.
     And I click "Add content"
     And I fill in "Title" with "Text with Featured media paragraph test page"
     And I press "Add Text with Featured media"
-    Then the following fields should be present "Title, Use existing media, Caption, Full text"
+    Then the following fields should be present "Title, Use existing media, Caption, Full text, URL, Link text"
+    And the available options in the "Variant" select should be:
+      | Default                                    |
+      | Text on the left, featured call to action  |
+      | Text on the left, simple call to action    |
+      | Text on the right, featured call to action |
+      | Text on the right, simple call to action   |
 
     # Create a Text with featured media paragraph with an image.
     When I fill in "Title" with "Title text" in the 1st "Text with Featured media" paragraph
@@ -59,4 +65,15 @@ Feature: Text with featured media paragraph.
     And I fill in "Use existing media" with "Midday press briefing from 25/10/2018"
     And I press "Save"
     Then I should see the AV Portal video "Midday press briefing from 25/10/2018"
+
+    # Change of the variant.
+    When I click "Edit"
+    And I select "Text on the right, simple call to action" from "Variant"
+    And I press "Change variant"
+    Then the following fields should be present "Title, Use existing media, Caption, Full text, URL, Link text"
+
+    # Verify that the variant has been kept.
+    When I press "Save"
+    And I click "Edit"
+    Then the option "Text on the right, simple call to action" should be selected in the "Variant" select of the 1st "Text with Featured media" paragraph
 
