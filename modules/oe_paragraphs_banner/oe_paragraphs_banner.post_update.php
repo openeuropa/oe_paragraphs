@@ -18,8 +18,8 @@ function oe_paragraphs_banner_post_update_00001() {
     'field.storage.paragraph.field_oe_banner_full_width',
     'field.field.paragraph.oe_banner.field_oe_banner_full_width',
   ];
-  $config_manager = \Drupal::service('config.manager');
-  $entity_manager = \Drupal::entityTypeManager();
+  $config_manager = Drupal::service('config.manager');
+  $entity_manager = Drupal::entityTypeManager();
   foreach ($field_configs as $field_config) {
     $config_record = $storage->read($field_config);
     $entity_type = $config_manager->getEntityTypeIdByName($field_config);
