@@ -6,6 +6,7 @@ namespace Drupal\oe_paragraphs\Traits;
 
 use Drupal;
 use RuntimeException;
+
 /**
  * Helper methods for dealing with entity types in Behat contexts.
  *

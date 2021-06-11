@@ -5,6 +5,7 @@ declare(strict_types = 1);
 namespace Drupal\oe_paragraphs\Traits;
 
 use Drupal;
+
 /**
  * Helper methods for dealing with entity fields in Behat contexts.
  *

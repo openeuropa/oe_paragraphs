@@ -5,6 +5,7 @@ declare(strict_types = 1);
 namespace Drupal\Tests\oe_paragraphs\Traits;
 
 use Exception;
+
 /**
  * Contains utility methods.
  */
