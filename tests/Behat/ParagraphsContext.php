@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace Drupal\Tests\oe_paragraphs\Behat;
 
+use Exception;
 use Behat\Gherkin\Node\TableNode;
 use Behat\Mink\Element\NodeElement;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
@@ -90,7 +91,7 @@ class ParagraphsContext extends RawDrupalContext {
     $actions = $paragraph->find('css', 'div.paragraph-top div.paragraphs-actions');
 
     if (!$actions) {
-      throw new \Exception(sprintf('Could not find actions for "%s" in position "%s".', $paragraph_type, $position));
+      throw new Exception(sprintf('Could not find actions for "%s" in position "%s".', $paragraph_type, $position));
     }
 
     $actions->pressButton($this->unescapeStepArgument($button));
@@ -155,16 +156,16 @@ class ParagraphsContext extends RawDrupalContext {
     ]);
 
     if (empty($element)) {
-      throw new \Exception(sprintf('Could not find select "%s".', $select));
+      throw new Exception(sprintf('Could not find select "%s".', $select));
     }
 
     $option_element = $element->find('xpath', '//option[@selected="selected"]');
     if (!$option_element) {
-      throw new \Exception(sprintf('No option is selected for the "%s" select.', $select));
+      throw new Exception(sprintf('No option is selected for the "%s" select.', $select));
     }
 
     if ($option_element->getText() !== $option) {
-      throw new \Exception(sprintf('The option "%s" was not selected, "%s" was selected.', $option, $option_element->getHtml()));
+      throw new Exception(sprintf('The option "%s" was not selected, "%s" was selected.', $option, $option_element->getHtml()));
     }
   }
 
@@ -232,7 +233,7 @@ class ParagraphsContext extends RawDrupalContext {
     $paragraphs_of_type = $this->getSession()->getPage()->findAll('xpath', $xpath);
 
     if (!isset($paragraphs_of_type[$position])) {
-      throw new \Exception(sprintf('Cannot find "%s" in position "%s".', $paragraph_type, $position));
+      throw new Exception(sprintf('Cannot find "%s" in position "%s".', $paragraph_type, $position));
     }
 
     return $paragraphs_of_type[$position];
@@ -299,7 +300,7 @@ class ParagraphsContext extends RawDrupalContext {
     $field = $paragraph->find('xpath', $xpath);
 
     if (!$field) {
-      throw new \Exception(sprintf('Could not find field %s in the specified paragraph.', $label));
+      throw new Exception(sprintf('Could not find field %s in the specified paragraph.', $label));
     }
 
     return $field;

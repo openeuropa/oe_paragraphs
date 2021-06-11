@@ -30,13 +30,13 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
 
     foreach ($sandbox['variant_fields'] as $bundle => $field) {
       // Make sure we have the old fields in the database.
-      $all_bundle_fields = \Drupal::service('entity_field.manager')->getFieldDefinitions('paragraph', $bundle);
+      $all_bundle_fields = Drupal::service('entity_field.manager')->getFieldDefinitions('paragraph', $bundle);
       if (!isset($all_bundle_fields[$field])) {
         continue;
       }
 
       // Take all entities that has a value in one of the old fields.
-      $query = \Drupal::entityQuery('paragraph');
+      $query = Drupal::entityQuery('paragraph');
       $query->exists($field);
       $result = $query->execute();
       if (!empty($result)) {
@@ -57,7 +57,7 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
       ->setDisplayConfigurable('form', FALSE)
       ->setDisplayConfigurable('view', FALSE);
 
-    \Drupal::entityDefinitionUpdateManager()
+    Drupal::entityDefinitionUpdateManager()
       ->installFieldStorageDefinition('oe_paragraphs_variant', 'paragraph', 'oe_paragraphs', $storage_definition);
 
     // Start the sync for new configurations.
@@ -87,10 +87,10 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
     ];
 
     // Clear the field widget cache.
-    \Drupal::service('plugin.manager.field.widget')->clearCachedDefinitions();
+    Drupal::service('plugin.manager.field.widget')->clearCachedDefinitions();
 
-    $config_manager = \Drupal::service('config.manager');
-    $entity_manager = \Drupal::entityTypeManager();
+    $config_manager = Drupal::service('config.manager');
+    $entity_manager = Drupal::entityTypeManager();
     foreach ($new_field_config as $config_name) {
       $config_record = $storage->read($config_name);
       $entity_type = $config_manager->getEntityTypeIdByName($config_name);
@@ -140,7 +140,7 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
 
   // Get the current slice of paragraph ids.
   $pids = array_slice($paragraph_ids, $sandbox['current'], $sandbox['paragraphs_per_batch']);
-  $entity_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
+  $entity_storage = Drupal::entityTypeManager()->getStorage('paragraph');
 
   foreach ($pids as $pid) {
     $paragraph = $entity_storage->load($pid);
@@ -204,7 +204,7 @@ function oe_paragraphs_update_8002(&$sandbox) {
   ];
 
   /** @var \Drupal\language\ContentLanguageSettingsInterface[] $content_settings */
-  $content_settings = \Drupal::entityTypeManager()->getStorage('language_content_settings')->loadMultiple($ids);
+  $content_settings = Drupal::entityTypeManager()->getStorage('language_content_settings')->loadMultiple($ids);
   foreach ($content_settings as $settings) {
     $bundle_settings = $settings->getThirdPartySetting('content_translation', 'bundle_settings');
     if (!$bundle_settings) {

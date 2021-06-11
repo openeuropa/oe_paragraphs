@@ -17,7 +17,7 @@ use Drupal\Core\Entity\Entity\EntityViewDisplay;
  */
 function oe_paragraphs_post_update_contextual_navigation_fix_description(array &$sandbox) {
   /** @var \Drupal\field\Entity\FieldConfig $field */
-  $field = \Drupal::entityTypeManager()
+  $field = Drupal::entityTypeManager()
     ->getStorage('field_config')
     ->load('paragraph.oe_contextual_navigation.field_oe_limit');
 
@@ -48,15 +48,15 @@ function oe_paragraphs_post_update_10001(array &$sandbox) {
  * Installs Social media follow paragraph.
  */
 function oe_paragraphs_post_update_10002(array &$sandbox): void {
-  \Drupal::service('module_installer')->install(['typed_link']);
+  Drupal::service('module_installer')->install(['typed_link']);
 
-  \Drupal::service('plugin.manager.field.field_type')->clearCachedDefinitions();
-  \Drupal::service('plugin.manager.field.formatter')->clearCachedDefinitions();
-  \Drupal::service('plugin.manager.field.widget')->clearCachedDefinitions();
+  Drupal::service('plugin.manager.field.field_type')->clearCachedDefinitions();
+  Drupal::service('plugin.manager.field.formatter')->clearCachedDefinitions();
+  Drupal::service('plugin.manager.field.widget')->clearCachedDefinitions();
 
   $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10002');
 
-  \Drupal::entityTypeManager()->getStorage('paragraphs_type')
+  Drupal::entityTypeManager()->getStorage('paragraphs_type')
     ->create($storage->read('paragraphs.paragraphs_type.oe_social_media_follow'))
     ->save();
 
@@ -70,8 +70,8 @@ function oe_paragraphs_post_update_10002(array &$sandbox): void {
     'core.entity_view_display.paragraph.oe_social_media_follow.default',
   ];
 
-  $config_manager = \Drupal::service('config.manager');
-  $entity_manager = \Drupal::entityTypeManager();
+  $config_manager = Drupal::service('config.manager');
+  $entity_manager = Drupal::entityTypeManager();
   foreach ($field_config as $config) {
     $config_record = $storage->read($config);
     $entity_type = $config_manager->getEntityTypeIdByName($config);
@@ -94,15 +94,15 @@ function oe_paragraphs_post_update_10003(array &$sandbox): void {
  * Add optional link field to Social media follow paragraph.
  */
 function oe_paragraphs_post_update_10004(array &$sandbox): void {
-  \Drupal::service('module_installer')->install(['link']);
+  Drupal::service('module_installer')->install(['link']);
 
   $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10004');
   $field_configs = [
     'field.storage.paragraph.field_oe_social_media_see_more',
     'field.field.paragraph.oe_social_media_follow.field_oe_social_media_see_more',
   ];
-  $config_manager = \Drupal::service('config.manager');
-  $entity_manager = \Drupal::entityTypeManager();
+  $config_manager = Drupal::service('config.manager');
+  $entity_manager = Drupal::entityTypeManager();
   foreach ($field_configs as $field_config) {
     $config_record = $storage->read($field_config);
     $entity_type = $config_manager->getEntityTypeIdByName($field_config);
@@ -135,13 +135,13 @@ function oe_paragraphs_post_update_10004(array &$sandbox): void {
  */
 function oe_paragraphs_post_update_10005(array &$sandbox) {
   // If paragraph already exists, we bail out.
-  $paragraph = \Drupal::entityTypeManager()->getStorage('paragraphs_type')->load('oe_facts_figures');
+  $paragraph = Drupal::entityTypeManager()->getStorage('paragraphs_type')->load('oe_facts_figures');
   if ($paragraph) {
     return t('Facts and figures paragraph exists, no action required.');
   }
 
   $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10005');
-  $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraphs_type');
+  $paragraph_storage = Drupal::entityTypeManager()->getStorage('paragraphs_type');
 
   // Create the paragraphs.
   $paragraphs = [
@@ -169,8 +169,8 @@ function oe_paragraphs_post_update_10005(array &$sandbox) {
     'core.entity_view_display.paragraph.oe_facts_figures.default',
   ];
 
-  $config_manager = \Drupal::service('config.manager');
-  $entity_manager = \Drupal::entityTypeManager();
+  $config_manager = Drupal::service('config.manager');
+  $entity_manager = Drupal::entityTypeManager();
   foreach ($config_ids as $config_id) {
     $config_record = $storage->read($config_id);
     $entity_type = $config_manager->getEntityTypeIdByName($config_id);

@@ -23,7 +23,7 @@ function oe_paragraphs_timeline_post_update_00001(array &$sandbox) {
     // Bail out if the field already exists.
     return t('The field_oe_title already exists.');
   }
-  $field_config_storage = \Drupal::entityTypeManager()->getStorage('field_config');
+  $field_config_storage = Drupal::entityTypeManager()->getStorage('field_config');
   $field = $field_config_storage->createFromStorageRecord($config_record);
   $field->save();
 
