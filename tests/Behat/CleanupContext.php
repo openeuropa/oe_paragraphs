@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace Drupal\Tests\oe_paragraphs\Behat;
 
+use Drupal;
 use Behat\Behat\Hook\Scope\AfterScenarioScope;
 use Behat\Behat\Hook\Scope\BeforeScenarioScope;
 use Behat\Gherkin\Node\ScenarioInterface;
@@ -56,7 +57,7 @@ class CleanupContext extends RawDrupalContext {
       $test_entity_ids = array_diff($current_ids, $ids);
 
       if ($test_entity_ids) {
-        $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
+        $storage = Drupal::entityTypeManager()->getStorage($entity_type);
         $storage->delete($storage->loadMultiple($test_entity_ids));
       }
     }
@@ -93,7 +94,7 @@ class CleanupContext extends RawDrupalContext {
    *   An array of entity IDs.
    */
   protected function getAllEntityIdsOfType(string $entity_type): array {
-    return \Drupal::entityTypeManager()->getStorage($entity_type)->getQuery()->execute();
+    return Drupal::entityTypeManager()->getStorage($entity_type)->getQuery()->execute();
   }
 
 }

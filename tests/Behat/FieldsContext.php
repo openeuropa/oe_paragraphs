@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace Drupal\Tests\oe_paragraphs\Behat;
 
+use Exception;
 use Behat\Gherkin\Node\TableNode;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Drupal\Tests\oe_paragraphs\Traits\FieldsTrait;
@@ -109,7 +110,7 @@ class FieldsContext extends RawDrupalContext {
 
     $element_node = $row->findField($field);
     if (!$element_node) {
-      throw new \Exception(sprintf('Cannot find element "%s" inside the %s item of the field table "%s".', $field, $item, $multi_value_field));
+      throw new Exception(sprintf('Cannot find element "%s" inside the %s item of the field table "%s".', $field, $item, $multi_value_field));
     }
 
     if (!$element_node->hasAttribute('required')) {
