@@ -4,8 +4,6 @@ declare(strict_types = 1);
 
 namespace Drupal\oe_paragraphs\Traits;
 
-use Drupal;
-
 /**
  * Helper methods for dealing with entity fields in Behat contexts.
  *
@@ -30,7 +28,7 @@ trait EntityFieldTrait {
    */
   protected static function getFieldNamesByFieldType(string $entity_type_id, string $bundle, string $field_type): array {
     /** @var \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager */
-    $entity_field_manager = Drupal::service('entity_field.manager');
+    $entity_field_manager = \Drupal::service('entity_field.manager');
     $field_map = $entity_field_manager->getFieldMapByFieldType($field_type);
     $fields = [];
 
