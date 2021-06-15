@@ -42,6 +42,7 @@ Feature: Listing item block paragraph.
     And I should see the text "Sample link"
 
     When I click "Edit"
+    And I press "Edit" in the 1st "Listing item block" paragraph actions
     And I fill in "URL" with "http://example.org/see-more" in the 1st "Listing item block" paragraph
     And I fill in "Link text" with "See more" in the 1st "Listing item block" paragraph
     And I press "Save"

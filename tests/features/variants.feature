@@ -23,6 +23,7 @@ Feature: Paragraph types show different fields based on variants.
     And I press "Save"
     Then I should see the heading "Test page"
     When I click "Edit"
+    And I press "Edit" in the 1st "Listing item block" paragraph actions
     # Open the listing item form and verify that the variant is the correct one.
     And I press "Edit" in the 1st "Listing item" paragraph actions
     And I wait for AJAX to finish
@@ -31,6 +32,7 @@ Feature: Paragraph types show different fields based on variants.
     And I press "Save"
     Then I should see the heading "Test page"
     When I click "Edit"
+    And I press "Edit" in the 1st "Listing item block" paragraph actions
     # Check again that the variant field has the correct value after editing.
     And I press "Edit" in the 1st "Listing item" paragraph actions
     And I wait for AJAX to finish
@@ -41,6 +43,7 @@ Feature: Paragraph types show different fields based on variants.
     And I press "Save"
     Then I should see the heading "Test page"
     When I click "Edit"
+    And I press "Edit" in the 1st "Listing item block" paragraph actions
     And I press "Edit" in the 1st "Listing item" paragraph actions
     And I wait for AJAX to finish
     # Verify that the variant has been kept.

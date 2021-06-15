@@ -19,6 +19,7 @@ Feature: Links block paragraph.
     Then I should see the heading "Links block test page"
 
     When I click "Edit"
+    And I press "Edit" in the 1st "Links block" paragraph actions
     And I fill in "Title" with "List of links" in the 1st "Links block" paragraph
     And I fill in "URL" with "http://example.com/1" in the 1st "Links block" paragraph
     And I fill in "Link text" with "First link" in the 1st "Links block" paragraph
@@ -28,6 +29,7 @@ Feature: Links block paragraph.
     And I should see the link "First link"
 
     When I click "Edit"
+    And I press "Edit" in the 1st "Links block" paragraph actions
     # Add another link.
     And I fill in the 2nd "URL" field with "http://example.com/1"
     And I fill in the 2nd "Link text" field with "Second link"

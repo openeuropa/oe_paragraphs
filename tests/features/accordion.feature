@@ -58,6 +58,7 @@ Feature: Accordion paragraph.
 
     # Edit one accordion item.
     When I click "Edit"
+    And I press "Edit" in the 1st "Accordion" paragraph actions
     And I press "Edit" in the 1st "Accordion item" paragraph actions
     And I fill in "Title" with "Accordion item 1 title updated" in the 1st "Accordion item" paragraph
     And I fill in "Body" with "Accordion item 1 body updated" in the 1st "Accordion item" paragraph
@@ -75,6 +76,7 @@ Feature: Accordion paragraph.
 
     # Delete an accordion item.
     When I click "Edit"
+    And I press "Edit" in the 1st "Accordion" paragraph actions
     And I press "Remove" in the 1st "Accordion item" paragraph actions
     And I press "Save"
     Then I should see the text "Feedback"

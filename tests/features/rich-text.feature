@@ -24,6 +24,7 @@ Feature: Rich text paragraph.
     And I should see the text "A sample text for the page."
 
     When I click "Edit"
+    And I press "Edit" in the 1st "Rich text" paragraph actions
     And I fill in "Title" with "Paragraph title" in the 1st "Rich text" paragraph
     And I press "Save"
     Then I should see the heading "Rich text paragraph test"
