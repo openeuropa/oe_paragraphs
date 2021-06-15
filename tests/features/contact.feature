@@ -4,7 +4,7 @@ Feature: Contact paragraph.
   I need to be able to use Contact paragraphs
   so that I can reference General and Press Contact entities.
 
-  Scenario: Contact creation.
+  Scenario: Editors can create contacts through paragraphs.
     Given I am logged in as a user with the "Editor" role
     When I go to "the content management page"
     And I click "Add content"
