@@ -34,7 +34,7 @@
         "openeuropa/code-review": "~1.5",
         "openeuropa/drupal-core-require-dev": "^8.9.14",
         "openeuropa/oe_content": "2.x-dev",
-        "openeuropa/oe_media": "~1.4",
+        "openeuropa/oe_media": "~1.12",
         "openeuropa/oe_webtools": "~1.5.0",
         "openeuropa/task-runner-drupal-project-symlink": "^1.0",
         "symfony/dom-crawler": "~3.4"
@@ -60,7 +60,7 @@
     "autoload-dev": {
         "psr-4": {
             "Drupal\\Tests\\oe_paragraphs\\": "./tests/",
-            "Drupal\\Tests\\oe_media\\": "./build/modules/contrib/oe_media/tests/"
+            "Drupal\\Tests\\oe_media\\": "./build/modules/contrib/oe_media/tests/src"
         }
     },
     "extra": {
