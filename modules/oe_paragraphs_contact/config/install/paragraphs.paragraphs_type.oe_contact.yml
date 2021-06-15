@@ -5,5 +5,5 @@ id: oe_contact
 label: Contact
 icon_uuid: null
 icon_default: null
-description: 'Allows editors to reference General and Press Contact entities.'
+description: 'Allows editors to reference Contact entities.'
 behavior_plugins: {  }

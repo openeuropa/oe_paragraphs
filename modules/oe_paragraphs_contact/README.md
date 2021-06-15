@@ -1,9 +1,7 @@
 OpenEuropa Paragraphs Contact
 ==============================
 
-This module provides the Contact paragraph that depends on the [OpenEuropa Content Entity Contact](https://github.com/openeuropa/oe_content/tree/2.x/modules/oe_content_entity/modules/oe_content_entity_contact)
-component and [Inline Entity Form](https://www.drupal.org/project/inline_entity_form) and
-[Composite Reference](https://www.drupal.org/project/composite_reference) contrib modules.
+This module provides the Contact paragraph type.
 
 The paragraph displays General and Press Contact entities.
 
@@ -23,9 +21,9 @@ In order to be able to manage General and Press Contact entities, assign the fol
 Grant the `Contact: View any published entity` permission to the anonymous user role in order to allow your site's
 visitors to view contact entities.
 
-#### Required contrib modules
-The OpenEuropa Paragraphs Contact requires the following contrib modules:
+#### Dependencies
+The OpenEuropa Paragraphs Contact module requires the following dependencies:
 
-* [OpenEuropa Content](https://github.com/openeuropa/oe_content) (~2.1.1)
-* [Inline Entity Form](https://www.drupal.org/project/inline_entity_form) (^1.0@RC)
-* [Composite Reference](https://www.drupal.org/project/composite_reference) (^1.0@alpha)
+* [OpenEuropa Content](https://github.com/openeuropa/oe_content)
+* [Inline Entity Form](https://www.drupal.org/project/inline_entity_form)
+* [Composite Reference](https://www.drupal.org/project/composite_reference)
