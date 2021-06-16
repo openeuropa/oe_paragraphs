@@ -5,6 +5,7 @@ package: OpenEuropa
 core_version_requirement: ^8.9 || ^9
 
 dependencies:
+  - oe_paragraphs:oe_paragraphs
   - composite_reference:composite_reference
   - inline_entity_form:inline_entity_form
   - oe_content:oe_content_entity_contact
