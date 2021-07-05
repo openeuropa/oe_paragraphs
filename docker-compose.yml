@@ -22,6 +22,13 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
 #    ports:
 #      - 3306:3306
+  sparql:
+    image: openeuropa/triple-store-dev
+    environment:
+      - SPARQL_UPDATE=true
+      - DBA_PASSWORD=dba
+    ports:
+      - "8890:8890"
   # Spawn a Selenium server which also includes a VNC server on localhost:5900 (the password is "secret")
   selenium:
     image: selenium/standalone-chrome-debug:3.11

@@ -17,8 +17,9 @@ Feature: Iframe paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Iframe paragraph test page"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Iframe"
-    Then the following fields should be present "Use existing media, Full width, Title"
+    Then the following fields should be present "Use existing media, Full width, Title" in the "demo paragraphs element" region
 
     # Create an Iframe paragraph.
     When I fill in "Use existing media" with "My Iframe"

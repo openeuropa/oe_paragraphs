@@ -1,0 +1,22 @@
+name: OpenEuropa Paragraphs Contact
+type: module
+description: Provides a paragraph type that references Contact entities.
+package: OpenEuropa
+core_version_requirement: ^8.9 || ^9
+
+dependencies:
+  - oe_paragraphs:oe_paragraphs
+  - composite_reference:composite_reference
+  - inline_entity_form:inline_entity_form
+  - oe_content:oe_content_entity_contact
+
+config_devel:
+  install:
+    - core.entity_form_display.paragraph.oe_contact.default
+    - core.entity_view_display.paragraph.oe_contact.default
+    - field.field.paragraph.oe_contact.field_oe_contacts
+    - field.field.paragraph.oe_contact.field_oe_title
+    - field.storage.paragraph.field_oe_contacts
+    - paragraphs.paragraphs_type.oe_contact
+  optional:
+    - language.content_settings.paragraph.oe_contact

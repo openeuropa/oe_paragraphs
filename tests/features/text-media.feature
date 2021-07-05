@@ -29,8 +29,9 @@ Feature: Text with featured media paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Text with Featured media paragraph test page"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Text with Featured media"
-    Then the following fields should be present "Title, Use existing media, Caption, Full text"
+    Then the following fields should be present "Title, Use existing media, Caption, Full text" in the "demo paragraphs element" region
 
     # Create a Text with featured media paragraph with an image.
     When I fill in "Title" with "Title text" in the 1st "Text with Featured media" paragraph

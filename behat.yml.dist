@@ -46,5 +46,6 @@ default:
       region_map:
         social media links form element: ".field--name-field-oe-social-media-links"
         see more form element: ".field--name-field-oe-social-media-see-more"
+        demo paragraphs element: ".field--name-field-oe-demo-body"
   formatters:
     progress: ~

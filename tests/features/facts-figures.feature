@@ -9,11 +9,12 @@ Feature: Facts and figures paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Facts and figures paragraph test page"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Facts and figures"
     # Check Facts and figures paragraph fields.
-    Then the following fields should be present "Title, URL, Link text"
+    Then the following fields should be present "Title, URL, Link text" in the "demo paragraphs element" region
     # Check the fields of the referenced Fact paragraph.
-    And the following fields should be present "Figure, Icon, Description, Label"
+    And the following fields should be present "Figure, Icon, Description, Label" in the "demo paragraphs element" region
 
     When I press "Save"
     Then I should see the following error messages:

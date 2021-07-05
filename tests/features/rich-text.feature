@@ -9,10 +9,11 @@ Feature: Rich text paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Rich text paragraph test"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Rich text"
-    Then the following fields should be present "Title, Text"
+    Then the following fields should be present "Title, Text" in the "demo paragraphs element" region
     # Rich text paragraph has no variants.
-    And the following fields should not be present "Variant"
+    And the following fields should not be present "Variant" in the "demo paragraphs element" region
 
     When I press "Save"
     Then I should see the following error messages:
