@@ -13,6 +13,7 @@
         "drupal/typed_link": "1.x-dev"
     },
     "require-dev": {
+        "behat/behat": "^3.4.2",
         "composer/installers": "^1.11",
         "consolidation/annotated-command": "^2.8.2",
         "consolidation/robo": "~1.4",
