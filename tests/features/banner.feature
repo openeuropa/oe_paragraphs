@@ -15,6 +15,7 @@ Feature: Banner paragraph.
     And I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Banner test page"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Banner"
     Then the available options in the "Variant" select should be:
       | Default            |
@@ -29,8 +30,8 @@ Feature: Banner paragraph.
       | Hero banner, aligned left |
 
     # Test the fields in the Default variant.
-    And the following fields should be present "Banner type, Title, Description, URL, Link text, Display as full width"
-    And the following fields should not be present "Use existing media"
+    And the following fields should be present "Banner type, Title, Description, URL, Link text, Display as full width" in the "demo paragraphs element" region
+    And the following fields should not be present "Use existing media" in the "demo paragraphs element" region
     And I fill in "URL" with "https://example.com"
     When I press "Save"
     Then I should see the following error messages:
@@ -42,8 +43,8 @@ Feature: Banner paragraph.
     # Test the fields in the Primary banner variant.
     When I select "Primary banner" from "Variant"
     And I press "Change variant"
-    Then the following fields should be present "Banner type, Title, Description, URL, Link text, Display as full width"
-    And the following fields should not be present "Use existing media"
+    Then the following fields should be present "Banner type, Title, Description, URL, Link text, Display as full width" in the "demo paragraphs element" region
+    And the following fields should not be present "Use existing media" in the "demo paragraphs element" region
     When I press "Save"
     Then I should see the following error messages:
       | error messages                                     |
@@ -54,7 +55,7 @@ Feature: Banner paragraph.
     # Test the fields in the Image banner variant.
     When I select "Image banner" from "Variant"
     And I press "Change variant"
-    Then the following fields should be present "Banner type, Title, Description, URL, Link text, Use existing media, Display as full width"
+    Then the following fields should be present "Banner type, Title, Description, URL, Link text, Use existing media, Display as full width" in the "demo paragraphs element" region
     When I press "Save"
     Then I should see the following error messages:
       | error messages                                     |
@@ -66,7 +67,7 @@ Feature: Banner paragraph.
     # Test the fields in the Image shade banner variant.
     When I select "Image shade banner" from "Variant"
     And I press "Change variant"
-    Then the following fields should be present "Banner type, Title, Description, URL, Link text, Use existing media, Display as full width"
+    Then the following fields should be present "Banner type, Title, Description, URL, Link text, Use existing media, Display as full width" in the "demo paragraphs element" region
     When I press "Save"
     Then I should see the following error messages:
       | error messages                                     |

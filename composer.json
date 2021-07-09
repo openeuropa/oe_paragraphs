@@ -14,27 +14,30 @@
     },
     "require-dev": {
         "composer/installers": "~1.5",
-        "consolidation/robo": "~1.4",
         "consolidation/annotated-command": "^2.8.2",
-        "drupal/core-composer-scaffold": "^8.8",
+        "consolidation/robo": "~1.4",
+        "drupal/address": "^1.9",
+        "drupal/composite_reference": "^1.0@alpha",
         "drupal/config_devel": "~1.2",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/description_list_field": "~1.0.x-dev",
         "drupal/drupal-extension": "~4.0",
         "drupal/entity_browser": "^2.5",
+        "drupal/inline_entity_form": "^1.0@RC",
         "drupal/json_field": "~1.0.0-rc3",
         "drupaltest/behat-traits": "~0.1",
         "drush/drush": "~9.0",
         "easyrdf/easyrdf": "1.0.0 as 0.9.2",
+        "guzzlehttp/guzzle": "~6.3",
         "nikic/php-parser": "~3.0",
-        "openeuropa/behat-transformation-context" : "~0.1",
+        "openeuropa/behat-transformation-context": "~0.1",
         "openeuropa/code-review": "~1.5",
-        "drupal/description_list_field": "~1.0.x-dev",
-        "openeuropa/oe_content": "2.x-dev",
         "openeuropa/drupal-core-require-dev": "^8.9.14",
-        "openeuropa/oe_media": "~1.4",
+        "openeuropa/oe_content": "2.x-dev",
+        "openeuropa/oe_media": "~1.12",
         "openeuropa/oe_webtools": "~1.5.0",
         "openeuropa/task-runner-drupal-project-symlink": "^1.0",
-        "symfony/dom-crawler": "~3.4",
-        "guzzlehttp/guzzle": "~6.3"
+        "symfony/dom-crawler": "~3.4"
     },
     "suggest": {
         "openeuropa/oe_media": "Allows usage of paragraphs with different media attached to it."
@@ -57,7 +60,7 @@
     "autoload-dev": {
         "psr-4": {
             "Drupal\\Tests\\oe_paragraphs\\": "./tests/",
-            "Drupal\\Tests\\oe_media\\": "./build/modules/contrib/oe_media/tests/"
+            "Drupal\\Tests\\oe_media\\": "./build/modules/contrib/oe_media/tests/src"
         }
     },
     "extra": {

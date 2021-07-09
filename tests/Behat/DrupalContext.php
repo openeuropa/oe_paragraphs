@@ -16,22 +16,24 @@ class DrupalContext extends RawDrupalContext {
   use UtilityTrait;
 
   /**
-   * Assert that certain fields are present on the page.
+   * Assert that certain fields are present in the given region.
    *
    * @param string $fields
    *   Fields.
+   * @param string $region
+   *   The region where to search.
    *
    * @throws \Exception
    *   Thrown when an expected field is not present.
    *
-   * @Then (the following )field(s) should be present :fields
+   * @Then (the following )field(s) should be present :fields in the :region region
    */
-  public function assertFieldsPresent($fields): void {
+  public function assertFieldsPresent(string $fields, string $region): void {
     $fields = $this->explodeCommaSeparatedStepArgument($fields);
-    $page = $this->getSession()->getPage();
+    $region = $this->getSession()->getPage()->find('region', $region);
     $not_found = [];
     foreach ($fields as $field) {
-      $is_found = $page->findField($field);
+      $is_found = $region->findField($field);
       if (!$is_found) {
         $not_found[] = $field;
       }
@@ -42,21 +44,23 @@ class DrupalContext extends RawDrupalContext {
   }
 
   /**
-   * Assert that certain fields are not present on the page.
+   * Assert that certain fields are not present in the given region.
    *
    * @param string $fields
    *   Fields.
+   * @param string $region
+   *   The region where to search.
    *
    * @throws \Exception
    *   Thrown when a column name is incorrect.
    *
-   * @Then (the following )field(s) should not be present :fields
+   * @Then (the following )field(s) should not be present :fields in the :region region
    */
-  public function assertFieldsNotPresent($fields): void {
+  public function assertFieldsNotPresent(string $fields, string $region): void {
     $fields = $this->explodeCommaSeparatedStepArgument($fields);
-    $page = $this->getSession()->getPage();
+    $region = $this->getSession()->getPage()->find('region', $region);
     foreach ($fields as $field) {
-      $is_found = $page->findField($field);
+      $is_found = $region->findField($field);
       if ($is_found) {
         throw new \Exception("Field should not be found, but is present: " . $field);
       }
@@ -120,6 +124,23 @@ class DrupalContext extends RawDrupalContext {
     if (!$iframe) {
       throw new \Exception(sprintf('The video named "%s" was not found on the page.', $title));
     }
+  }
+
+  /**
+   * Presses button with specified id|name|title|alt|value on a given region.
+   *
+   * @param string $button
+   *   The button identifier.
+   * @param string $region
+   *   The name of the region.
+   *
+   * @When I press the :button button in the :region region
+   *
+   * @throws \Exception
+   *   If region or button within it cannot be found.
+   */
+  public function pressRegionButton(string $button, string $region): void {
+    $this->getSession()->getPage()->find('region', $region)->pressButton($button);
   }
 
 }

@@ -9,10 +9,11 @@ Feature: Links block paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Links block test page"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Links block"
-    Then the following fields should be present "Title, URL, Link text"
+    Then the following fields should be present "Title, URL, Link text" in the "demo paragraphs element" region
     # Rich text paragraph has no variants.
-    And the following fields should not be present "Variant"
+    And the following fields should not be present "Variant" in the "demo paragraphs element" region
 
     When I press "Save"
     # No fields are required.

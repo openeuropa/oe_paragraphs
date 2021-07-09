@@ -9,10 +9,11 @@ Feature: Content row paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Content row test page"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Content row"
-    Then the following fields should be present "Variant"
+    Then the following fields should be present "Variant" in the "demo paragraphs element" region
     # Verify the fields displayed in the "default" variant.
-    And the following field should not be present "Navigation title"
+    And the following field should not be present "Navigation title" in the "demo paragraphs element" region
     And the "Paragraphs" field in the 1st "Content row" paragraph can reference:
       | Accordion             |
       | Contextual navigation |
@@ -24,7 +25,7 @@ Feature: Content row paragraph.
 
     When I select "Inpage navigation" from "Variant" in the 1st "Content row" paragraph
     And I press "Change variant"
-    Then the following field should be present "Navigation title"
+    Then the following field should be present "Navigation title" in the "demo paragraphs element" region
     # No fields are required.
     When I press "Save"
     Then I should see the heading "Content row test page"

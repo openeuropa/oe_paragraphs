@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.8.0](https://github.com/openeuropa/oe_paragraphs/tree/1.8.0) (2021-06-15)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.7.0...1.8.0)
+
+**Merged pull requests:**
+
+- EWPP-1111: Create the iframe paragraph. [\#131](https://github.com/openeuropa/oe_paragraphs/pull/131) ([yenyasinn](https://github.com/yenyasinn))
+- EWPP-974: Revert quickfix. [\#130](https://github.com/openeuropa/oe_paragraphs/pull/130) ([imanoleguskiza](https://github.com/imanoleguskiza))
+- EWPP-721: Update xdebug configuration. [\#123](https://github.com/openeuropa/oe_paragraphs/pull/123) ([22Alexandra](https://github.com/22Alexandra))
+
 ## [1.7.0](https://github.com/openeuropa/oe_paragraphs/tree/1.7.0) (2021-04-09)
 
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.6.0...1.7.0)
@@ -7,6 +17,7 @@
 **Merged pull requests:**
 
 - EWPP-858: Quickfix behat tests. [\#129](https://github.com/openeuropa/oe_paragraphs/pull/129) ([imanoleguskiza](https://github.com/imanoleguskiza))
+- Prepare release 1.7.0. [\#127](https://github.com/openeuropa/oe_paragraphs/pull/127) ([imanoleguskiza](https://github.com/imanoleguskiza))
 - EWPP-811: Add optional heading field to Timeline paragraph. [\#125](https://github.com/openeuropa/oe_paragraphs/pull/125) ([22Alexandra](https://github.com/22Alexandra))
 - EWPP-750: Description List paragraph. [\#124](https://github.com/openeuropa/oe_paragraphs/pull/124) ([22Alexandra](https://github.com/22Alexandra))
 - EWPP-529: Replace scaffold library. [\#121](https://github.com/openeuropa/oe_paragraphs/pull/121) ([sergepavle](https://github.com/sergepavle))
