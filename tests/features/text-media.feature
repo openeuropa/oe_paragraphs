@@ -71,7 +71,7 @@ Feature: Text with featured media paragraph.
     When I click "Edit"
     And I select "Text on the right, simple call to action" from "Variant"
     And I press "Change variant"
-    Then the following fields should be present "Title, Use existing media, Caption, Full text, URL, Link text"
+    Then the following fields should be present "Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
 
     # Verify that the variant has been kept.
     When I press "Save"
