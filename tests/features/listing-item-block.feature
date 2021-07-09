@@ -9,18 +9,19 @@ Feature: Listing item block paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Listing item block test page"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Listing item block"
     # Remove the listing item that is shown by default in the page so we are
     # able to test the required fields of the listing item block itself.
     When I press "Remove" in the 1st "Listing item" paragraph actions
-    Then the following fields should be present "Layout, Title, URL, Link text"
+    Then the following fields should be present "Layout, Title, URL, Link text" in the "demo paragraphs element" region
     And the available options in the "Layout" select should be:
       | - Select a value - |
       | One column         |
       | Two columns        |
       | Three columns      |
     # This paragraph has no variants.
-    And the following field should not be present "Variant"
+    And the following field should not be present "Variant" in the "demo paragraphs element" region
     # Only listing item paragraphs can be added to this paragraph.
     And the "Items" field in the 1st "Listing item block" paragraph can reference:
       | Listing item |

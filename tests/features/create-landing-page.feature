@@ -24,3 +24,4 @@ Feature: Create a landing page
       | Timeline                    |
       | Map                         |
       | Social feed                 |
+      | Contact                     |

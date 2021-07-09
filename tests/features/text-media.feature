@@ -29,8 +29,9 @@ Feature: Text with featured media paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Text with Featured media paragraph test page"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Text with Featured media"
-    Then the following fields should be present "Title, Use existing media, Caption, Full text, URL, Link text"
+    Then the following fields should be present "Title, Use existing media, Caption, Full text" in the "demo paragraphs element" region
     And the available options in the "Variant" select should be:
       | Default                                    |
       | Text on the left, featured call to action  |
@@ -43,8 +44,8 @@ Feature: Text with featured media paragraph.
     And I fill in "Use existing media" with "My Image 1"
     And I fill in "Caption" with "Caption text" in the 1st "Text with Featured media" paragraph
     And I fill in "Full text" with "Featured text" in the 1st "Text with Featured media" paragraph
-    And I fill in "URL" with "http://example.com/link"
-    And I fill in "Link text" with "Link title"
+    And I fill in "URL" with "http://example.com/link" in the 1st "Text with Featured media" paragraph
+    And I fill in "Link text" with "Link title" in the 1st "Text with Featured media" paragraph
     And I press "Save"
     Then I should see the heading "Text with Featured media paragraph test page"
     And I should see the text "Title text"

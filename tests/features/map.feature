@@ -15,8 +15,9 @@ Feature: Map paragraph.
     When I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Map paragraph test"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Map"
-    Then the following fields should be present "Use existing media"
+    Then the following fields should be present "Use existing media" in the "demo paragraphs element" region
     When I press "Save"
     Then I should see the following error messages:
       | error messages                        |

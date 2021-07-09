@@ -10,10 +10,11 @@ Feature: Description List paragraph.
     And I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Description List test page"
+    And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Horizontal description list"
 
     # Assert the fields are visible.
-    And the following fields should be present "Heading, Term, Description"
+    And the following fields should be present "Heading, Term, Description" in the "demo paragraphs element" region
     When I press "Save"
     # Assert all the fields are required for the first item.
     Then I should see the following error messages:
@@ -25,7 +26,7 @@ Feature: Description List paragraph.
     When I fill in "Heading" with "Overview"
     And I fill in the 1st "Term" field with "Term 1"
     And I fill in the 1st "Description" field with "Description 1"
-    And I press the "Add another item" button
+    And I press the "Add another item" button in the "demo paragraphs element" region
     # Assert Description field is required if Term field is filled in.
     And I fill in the 2nd "Term" field with "Term 2"
     And I press "Save"
