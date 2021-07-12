@@ -2,20 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.paragraph.left_simple
+    - core.entity_form_mode.paragraph.right_featured
     - field.field.paragraph.oe_text_feature_media.field_oe_link
     - field.field.paragraph.oe_text_feature_media.field_oe_media
     - field.field.paragraph.oe_text_feature_media.field_oe_plain_text_long
     - field.field.paragraph.oe_text_feature_media.field_oe_text_long
+    - field.field.paragraph.oe_text_feature_media.field_oe_text_title
     - field.field.paragraph.oe_text_feature_media.field_oe_title
     - paragraphs.paragraphs_type.oe_text_feature_media
   module:
     - link
     - text
-id: paragraph.oe_text_feature_media.left_simple
+id: paragraph.oe_text_feature_media.right_featured
 targetEntityType: paragraph
 bundle: oe_text_feature_media
-mode: left_simple
+mode: right_featured
 content:
   field_oe_link:
     weight: 5
@@ -51,6 +52,14 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_oe_text_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_oe_title:
     weight: 0
     settings:

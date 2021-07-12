@@ -31,10 +31,31 @@ function oe_paragraphs_media_post_update_00001(array &$sandbox) {
 }
 
 /**
- * Create new form modes for Text with featured Media paragraph.
+ * Rename "Title" field to "Heading".
  */
 function oe_paragraphs_media_post_update_00002(): void {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_media') . '/config/post_updates/00002_create_form_modes');
+  $field_config = FieldConfig::load('paragraph.oe_text_feature_media.field_oe_title');
+  $field_config->setLabel('Heading');
+  $field_config->save();
+}
+
+/**
+ * Add "Title" field to the Text with featured Media paragraph.
+ */
+function oe_paragraphs_media_post_update_00003(): void {
+  // Create "Title" field storage first.
+  module_load_include('php', 'oe_paragraphs', 'oe_paragraphs.post_update');
+  oe_paragraphs_post_update_10007();
+
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_media') . '/config/post_updates/00003_add_title_field');
+  \Drupal::service('config.installer')->installOptionalConfig($storage);
+}
+
+/**
+ * Create new form modes for Text with featured Media paragraph.
+ */
+function oe_paragraphs_media_post_update_00004(): void {
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_media') . '/config/post_updates/00004_create_form_modes');
   $config_manager = \Drupal::service('config.manager');
   $entity_type_manager = \Drupal::entityTypeManager();
 
