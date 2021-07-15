@@ -126,7 +126,6 @@ config_devel:
 
     # Text field
     - field.storage.paragraph.field_oe_text
-    - field.storage.paragraph.field_oe_text_title
 
     # Links
     - field.storage.paragraph.field_oe_links

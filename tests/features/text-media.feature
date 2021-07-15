@@ -31,7 +31,7 @@ Feature: Text with featured media paragraph.
     And I fill in "Title" with "Text with Featured media paragraph test page"
     And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Text with Featured media"
-    Then the following fields should be present "Title, Use existing media, Caption, Full text" in the "demo paragraphs element" region
+    Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text" in the "demo paragraphs element" region
     And the available options in the "Variant" select should be:
       | Default                                    |
       | Text on the left, featured call to action  |
@@ -69,8 +69,20 @@ Feature: Text with featured media paragraph.
     And I press "Save"
     Then I should see the AV Portal video "Midday press briefing from 25/10/2018"
 
-    # Change of the variant.
+    # Change of variants to ensure presence of the fields.
     When I click "Edit"
+    And I select "Text on the left, featured call to action" from "Variant"
+    And I press "Change variant"
+    Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
+
+    And I select "Text on the left, simple call to action" from "Variant"
+    And I press "Change variant"
+    Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
+
+    And I select "Text on the right, featured call to action" from "Variant"
+    And I press "Change variant"
+    Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
+
     And I select "Text on the right, simple call to action" from "Variant"
     And I press "Change variant"
     Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region

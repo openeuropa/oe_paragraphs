@@ -200,11 +200,3 @@ function oe_paragraphs_post_update_10006(array &$sandbox): void {
   $field->set('settings', $settings);
   $field->save();
 }
-
-/**
- * Create oe_text_title field.
- */
-function oe_paragraphs_post_update_10007(): void {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10007');
-  \Drupal::service('config.installer')->installOptionalConfig($storage);
-}

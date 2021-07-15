@@ -30,7 +30,8 @@ config_devel:
     - field.field.paragraph.oe_text_feature_media.field_oe_image
     - field.field.paragraph.oe_text_feature_media.field_oe_link
     - field.field.paragraph.oe_text_feature_media.field_oe_text_long
-    - field.field.paragraph.oe_text_feature_media.field_oe_text_title
+    - field.field.paragraph.oe_text_feature_media.field_oe_feature_media_title
     - field.field.paragraph.oe_text_feature_media.field_oe_plain_text_long
     - field.field.paragraph.oe_text_feature_media.field_oe_title
+    - field.storage.paragraph.field_oe_feature_media_title
     - paragraphs.paragraphs_type.oe_text_feature_media
