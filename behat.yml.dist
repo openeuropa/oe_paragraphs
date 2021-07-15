@@ -31,11 +31,18 @@ default:
       javascript_session: selenium2
       ajax_timeout: 10
       selenium2:
-        wd_host: '${selenium.host}:${selenium.port}/wd/hub'
-        capabilities: { "browser": "chrome", "version": "*" }
-      base_url: "${drupal.base_url}"
+        wd_host: 'http://selenium:4444/wd/hub'
+        # capabilities: { "browser": "chrome", "version": "*" }
+        capabilities:
+          browser: chrome
+          extra_capabilities:
+            chromeOptions:
+              args: ['--headless', '--disable-gpu']
+              w3c: false
+      base_url: "http://web:8080/build"
       files_path: "%paths.base%/tests/fixtures/"
     Drupal\DrupalExtension:
+      blackbox: ~
       api_driver: "drupal"
       drupal:
         drupal_root: "build"
@@ -47,5 +54,6 @@ default:
         social media links form element: ".field--name-field-oe-social-media-links"
         see more form element: ".field--name-field-oe-social-media-see-more"
         demo paragraphs element: ".field--name-field-oe-demo-body"
+        main content: '.region-content'
   formatters:
     progress: ~
