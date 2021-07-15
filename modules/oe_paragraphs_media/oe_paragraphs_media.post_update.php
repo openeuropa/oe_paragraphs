@@ -11,23 +11,18 @@ use Drupal\Core\Config\FileStorage;
 use Drupal\field\Entity\FieldConfig;
 
 /**
- * Add Link field to Text with featured Media paragraph.
+ * Update fields in the Text with featured Media paragraph.
+ *
+ * Add "Title" and "Link" fields and rename existing "Title" field to "Heading".
  */
-function oe_paragraphs_media_post_update_00001(array &$sandbox) {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_media') . '/config/post_updates/00001_add_link_field');
+function oe_paragraphs_media_post_update_00001(): void {
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_media') . '/config/post_updates/00001_add_link_title_fields');
+  \Drupal::service('config.installer')->installOptionalConfig($storage);
 
-  $field_config = 'field.field.paragraph.oe_text_feature_media.field_oe_link';
-  $config_record = $storage->read($field_config);
-  $field = FieldConfig::load($config_record['id']);
-  if ($field) {
-    // Bail out if the field already exists.
-    return t('The field_oe_link already exists.');
-  }
-  $field_config_storage = \Drupal::entityTypeManager()->getStorage('field_config');
-  $field = $field_config_storage->createFromStorageRecord($config_record);
-  $field->save();
-
-  return t('The Link field has been created for Text with featured Media paragraph.');
+  // Rename "Title" field to "Heading".
+  $field_config = FieldConfig::load('paragraph.oe_text_feature_media.field_oe_title');
+  $field_config->setLabel('Heading');
+  $field_config->save();
 }
 
 /**

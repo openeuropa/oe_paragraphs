@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.paragraph.right_simple
+    - field.field.paragraph.oe_text_feature_media.field_oe_feature_media_title
     - field.field.paragraph.oe_text_feature_media.field_oe_link
     - field.field.paragraph.oe_text_feature_media.field_oe_media
     - field.field.paragraph.oe_text_feature_media.field_oe_plain_text_long
@@ -17,6 +18,14 @@ targetEntityType: paragraph
 bundle: oe_text_feature_media
 mode: right_simple
 content:
+  field_oe_feature_media_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_oe_link:
     weight: 5
     settings:

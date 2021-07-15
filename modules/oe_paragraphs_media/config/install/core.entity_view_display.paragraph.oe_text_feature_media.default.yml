@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_text_feature_media.field_oe_feature_media_title
     - field.field.paragraph.oe_text_feature_media.field_oe_link
     - field.field.paragraph.oe_text_feature_media.field_oe_media
     - field.field.paragraph.oe_text_feature_media.field_oe_plain_text_long
@@ -16,8 +17,18 @@ targetEntityType: paragraph
 bundle: oe_text_feature_media
 mode: default
 content:
+  field_oe_feature_media_title:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_oe_link:
+    type: link
     weight: 5
+    region: content
     label: above
     settings:
       trim_length: 80
@@ -26,8 +37,6 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
-    region: content
   field_oe_media:
     type: entity_reference_entity_view
     weight: 2

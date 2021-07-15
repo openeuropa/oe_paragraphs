@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oe_title
+    - field.storage.paragraph.field_oe_feature_media_title
     - paragraphs.paragraphs_type.oe_text_feature_media
-id: paragraph.oe_text_feature_media.field_oe_title
-field_name: field_oe_title
+id: paragraph.oe_text_feature_media.field_oe_feature_media_title
+field_name: field_oe_feature_media_title
 entity_type: paragraph
 bundle: oe_text_feature_media
-label: Heading
+label: Title
 description: ''
 required: false
 translatable: true
