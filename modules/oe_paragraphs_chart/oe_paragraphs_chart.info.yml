@@ -2,7 +2,7 @@ name: OpenEuropa Paragraphs Chart
 type: module
 description: Provides a paragraph type that displays Webtools charts.
 package: OpenEuropa
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8.9 || ^9.1
 
 dependencies:
   - oe_paragraphs:oe_paragraphs_media_field_storage
