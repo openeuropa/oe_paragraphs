@@ -29,7 +29,6 @@
         "drupaltest/behat-traits": "dev-GH-6",
         "drush/drush": "~10.3",
         "easyrdf/easyrdf": "1.0.0 as 0.9.2",
-        "instaclick/php-webdriver": "^1.4.9",
         "nikic/php-parser": "~3.0",
         "openeuropa/behat-transformation-context": "~0.1",
         "openeuropa/code-review": "~1.6",
@@ -38,8 +37,7 @@
         "openeuropa/oe_content": "dev-EWPP-911",
         "openeuropa/oe_media": "~1.12",
         "openeuropa/oe_webtools": "~1.12",
-        "openeuropa/task-runner-drupal-project-symlink": "^1.0",
-        "phpspec/prophecy-phpunit": "^1 || ^2"
+        "openeuropa/task-runner-drupal-project-symlink": "^1.0"
     },
     "suggest": {
         "openeuropa/oe_media": "Allows usage of paragraphs with different media attached to it."
@@ -75,9 +73,6 @@
         "patches": {
             "drupal/paragraphs": {
                 "https://www.drupal.org/project/paragraphs/issues/2890086": "https://www.drupal.org/files/issues/2020-05-21/2890086-46.patch"
-            },
-            "drupal/core": {
-                "https://www.drupal.org/project/drupal/issues/2943172": "https://www.drupal.org/files/issues/2021-01-27/2943172-kernel-test-base-60.patch"
             }
         },
         "drupal-scaffold": {
