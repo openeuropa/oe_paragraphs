@@ -4,7 +4,6 @@ declare(strict_types = 1);
 
 namespace Drupal\Tests\oe_paragraphs\Traits;
 
-use Exception;
 use Behat\Mink\Element\NodeElement;
 
 /**
@@ -32,7 +31,7 @@ trait FieldsTrait {
     $fields = $this->getSession()->getPage()->findAll('named', ['field', $field]);
 
     if (!$fields || !isset($fields[$position])) {
-      throw new Exception(sprintf('Could not find field "%s" in position "%s".', $field, $position));
+      throw new \Exception(sprintf('Could not find field "%s" in position "%s".', $field, $position));
     }
 
     return $fields[$position];
@@ -63,7 +62,7 @@ trait FieldsTrait {
     $tables = $this->getSession()->getPage()->findAll('xpath', $xpath);
 
     if (empty($tables) || !isset($tables[$position])) {
-      throw new Exception(sprintf('Could not find field table "%s" in position "%s".', $field, $position));
+      throw new \Exception(sprintf('Could not find field table "%s" in position "%s".', $field, $position));
     }
 
     return $tables[$position];

@@ -4,8 +4,6 @@ declare(strict_types = 1);
 
 namespace Drupal\Tests\oe_paragraphs\Behat;
 
-use Exception;
-use Drupal;
 use Drupal\Core\Url;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Drupal\Tests\oe_paragraphs\Traits\UtilityTrait;
@@ -41,7 +39,7 @@ class DrupalContext extends RawDrupalContext {
       }
     }
     if ($not_found) {
-      throw new Exception("Field(s) expected, but not found: " . implode(', ', $not_found));
+      throw new \Exception("Field(s) expected, but not found: " . implode(', ', $not_found));
     }
   }
 
@@ -64,7 +62,7 @@ class DrupalContext extends RawDrupalContext {
     foreach ($fields as $field) {
       $is_found = $region->findField($field);
       if ($is_found) {
-        throw new Exception("Field should not be found, but is present: " . $field);
+        throw new \Exception("Field should not be found, but is present: " . $field);
       }
     }
   }
@@ -114,9 +112,9 @@ class DrupalContext extends RawDrupalContext {
    * @todo To be removed once oe_content 1.8.0 is released.
    */
   public function assertAvPortalVideoIframe(string $title): void {
-    $media = Drupal::entityTypeManager()->getStorage('media')->loadByProperties(['name' => $title]);
+    $media = \Drupal::entityTypeManager()->getStorage('media')->loadByProperties(['name' => $title]);
     if (!$media) {
-      throw new Exception(sprintf('The media named "%s" does not exist', $title));
+      throw new \Exception(sprintf('The media named "%s" does not exist', $title));
     }
 
     $media = reset($media);
@@ -124,7 +122,7 @@ class DrupalContext extends RawDrupalContext {
 
     $iframe = $this->getSession()->getPage()->findAll('css', 'iframe[src*="' . $ref . '"]');
     if (!$iframe) {
-      throw new Exception(sprintf('The video named "%s" was not found on the page.', $title));
+      throw new \Exception(sprintf('The video named "%s" was not found on the page.', $title));
     }
   }
 

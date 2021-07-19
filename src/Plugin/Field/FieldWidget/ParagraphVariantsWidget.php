@@ -4,7 +4,6 @@ declare(strict_types = 1);
 
 namespace Drupal\oe_paragraphs\Plugin\Field\FieldWidget;
 
-use Drupal;
 use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Entity\Entity\EntityFormDisplay;
@@ -48,7 +47,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
     $host = $items->getEntity();
     $widget_state = static::getWidgetState($parents, $field_name, $form_state);
 
-    $entity_type_manager = Drupal::entityTypeManager();
+    $entity_type_manager = \Drupal::entityTypeManager();
     $target_type = $this->getFieldSetting('target_type');
 
     $item_mode = isset($widget_state['paragraphs'][$delta]['mode']) ? $widget_state['paragraphs'][$delta]['mode'] : 'edit';
@@ -146,7 +145,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
             // Initialise the translation with source language values.
             $paragraphs_entity->addTranslation($langcode, $paragraphs_entity->toArray());
             $translation = $paragraphs_entity->getTranslation($langcode);
-            $manager = Drupal::service('content_translation.manager');
+            $manager = \Drupal::service('content_translation.manager');
             $manager->getTranslationMetadata($translation)->setSource($paragraphs_entity->language()->getId());
           }
         }
@@ -161,8 +160,8 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
       // translating the parent and the Paragraph is open, then close the
       // Paragraph if it does not have translatable fields.
       $translating_force_close = FALSE;
-      if (Drupal::moduleHandler()->moduleExists('content_translation')) {
-        $manager = Drupal::service('content_translation.manager');
+      if (\Drupal::moduleHandler()->moduleExists('content_translation')) {
+        $manager = \Drupal::service('content_translation.manager');
         $settings = $manager->getBundleTranslationSettings('paragraph', $paragraphs_entity->getParagraphType()->id());
         if (!empty($settings['untranslatable_fields_hide']) && $this->isTranslating) {
           $translating_force_close = TRUE;
@@ -241,7 +240,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
       // Holds information items.
       $info = [];
 
-      $item_bundles = Drupal::service('entity_type.bundle.info')->getBundleInfo($target_type);
+      $item_bundles = \Drupal::service('entity_type.bundle.info')->getBundleInfo($target_type);
       if (isset($item_bundles[$paragraphs_entity->bundle()])) {
         $bundle_info = $item_bundles[$paragraphs_entity->bundle()];
 
@@ -425,7 +424,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
         ];
 
         // Allow modules to alter widget actions.
-        Drupal::moduleHandler()->alter('paragraphs_widget_actions', $widget_actions, $context);
+        \Drupal::moduleHandler()->alter('paragraphs_widget_actions', $widget_actions, $context);
 
         if (count($widget_actions['actions'])) {
           // Expand all actions to proper submit elements and add it to top
@@ -460,7 +459,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
       }
 
       // @todo Remove as part of https://www.drupal.org/node/2640056
-      if (Drupal::moduleHandler()->moduleExists('field_group')) {
+      if (\Drupal::moduleHandler()->moduleExists('field_group')) {
         $context = [
           'entity_type' => $paragraphs_entity->getEntityTypeId(),
           'bundle' => $paragraphs_entity->bundle(),
@@ -536,7 +535,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
         // Build the behavior plugins fields, do not display behaviors when
         // translating and untranslatable fields are hidden.
         $paragraphs_type = $paragraphs_entity->getParagraphType();
-        if ($paragraphs_type && Drupal::currentUser()->hasPermission('edit behavior plugin settings') && (!$this->isTranslating || !$hide_untranslatable_fields)) {
+        if ($paragraphs_type && \Drupal::currentUser()->hasPermission('edit behavior plugin settings') && (!$this->isTranslating || !$hide_untranslatable_fields)) {
           $element['behavior_plugins']['#weight'] = -99;
           foreach ($paragraphs_type->getEnabledBehaviorPlugins() as $plugin_id => $plugin) {
             $element['behavior_plugins'][$plugin_id] = [
@@ -611,7 +610,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
       static::setWidgetState($parents, $field_name, $form_state, $widget_state);
 
       if ($item_mode === 'edit') {
-        $view_modes = Drupal::service('entity_display.repository')->getFormModeOptionsByBundle($paragraphs_entity->getEntityTypeId(), $paragraphs_entity->bundle());
+        $view_modes = \Drupal::service('entity_display.repository')->getFormModeOptionsByBundle($paragraphs_entity->getEntityTypeId(), $paragraphs_entity->bundle());
         if (count($view_modes) > 1) {
           $element['variant'] = [
             '#type' => 'select',

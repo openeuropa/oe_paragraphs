@@ -4,7 +4,6 @@ declare(strict_types = 1);
 
 namespace Drupal\Tests\oe_paragraphs\Traits;
 
-use Exception;
 use Behat\Mink\Element\NodeElement;
 
 /**
@@ -29,7 +28,7 @@ trait TraversingTrait {
     $element = $this->getSession()->getPage()->find('named', ['select', $select]);
 
     if (empty($element)) {
-      throw new Exception("Select field '{$select}' not found.");
+      throw new \Exception("Select field '{$select}' not found.");
     }
 
     return $element;
@@ -72,7 +71,7 @@ trait TraversingTrait {
     $row = $table->find('xpath', '/tbody/tr[' . ($index + 1) . ']');
 
     if (empty($row)) {
-      throw new Exception('Could not find row %s in table.', $index);
+      throw new \Exception('Could not find row %s in table.', $index);
     }
 
     return $row;

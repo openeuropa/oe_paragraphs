@@ -4,8 +4,6 @@ declare(strict_types = 1);
 
 namespace Drupal\Tests\oe_paragraphs\Traits;
 
-use Exception;
-
 /**
  * Contains utility methods.
  */
@@ -76,7 +74,7 @@ trait UtilityTrait {
     preg_match('/^(\d+)(st|nd|rd|th)$/i', $ordinal, $matches);
 
     if (!isset($matches[1])) {
-      throw new Exception("Could not extract a number from '$ordinal'.");
+      throw new \Exception("Could not extract a number from '$ordinal'.");
     }
 
     return (int) $matches[1];
