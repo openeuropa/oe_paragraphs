@@ -31,7 +31,7 @@ Feature: Text with featured media paragraph.
     And I fill in "Title" with "Text with Featured media paragraph test page"
     And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Text with Featured media"
-    Then the following fields should be present "Title, Use existing media, Caption, Full text" in the "demo paragraphs element" region
+    Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text" in the "demo paragraphs element" region
     And the available options in the "Variant" select should be:
       | Default                                    |
       | Text on the left, featured call to action  |
@@ -40,7 +40,8 @@ Feature: Text with featured media paragraph.
       | Text on the right, simple call to action   |
 
     # Create a Text with featured media paragraph with an image.
-    When I fill in "Title" with "Title text" in the 1st "Text with Featured media" paragraph
+    When I fill in "Heading" with "Heading text" in the 1st "Text with Featured media" paragraph
+    And I fill in "Title" with "Title text" in the 1st "Text with Featured media" paragraph
     And I fill in "Use existing media" with "My Image 1"
     And I fill in "Caption" with "Caption text" in the 1st "Text with Featured media" paragraph
     And I fill in "Full text" with "Featured text" in the 1st "Text with Featured media" paragraph
@@ -48,6 +49,7 @@ Feature: Text with featured media paragraph.
     And I fill in "Link text" with "Link title" in the 1st "Text with Featured media" paragraph
     And I press "Save"
     Then I should see the heading "Text with Featured media paragraph test page"
+    And I should see the text "Heading text"
     And I should see the text "Title text"
     And I should see the image "example_1.jpeg"
     And I should see the text "Caption text"
@@ -67,11 +69,23 @@ Feature: Text with featured media paragraph.
     And I press "Save"
     Then I should see the AV Portal video "Midday press briefing from 25/10/2018"
 
-    # Change of the variant.
+    # Change of variants to ensure presence of the fields.
     When I click "Edit"
+    And I select "Text on the left, featured call to action" from "Variant"
+    And I press "Change variant"
+    Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
+
+    And I select "Text on the left, simple call to action" from "Variant"
+    And I press "Change variant"
+    Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
+
+    And I select "Text on the right, featured call to action" from "Variant"
+    And I press "Change variant"
+    Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
+
     And I select "Text on the right, simple call to action" from "Variant"
     And I press "Change variant"
-    Then the following fields should be present "Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
+    Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
 
     # Verify that the variant has been kept.
     When I press "Save"
