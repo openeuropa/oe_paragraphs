@@ -36,11 +36,9 @@ function oe_paragraphs_media_post_update_00002(): void {
   // Create new form modes and form displays.
   $field_config = [
     'core.entity_form_mode.paragraph.left_featured',
-    'core.entity_form_mode.paragraph.left_simple',
     'core.entity_form_mode.paragraph.right_featured',
     'core.entity_form_mode.paragraph.right_simple',
     'core.entity_form_display.paragraph.oe_text_feature_media.left_featured',
-    'core.entity_form_display.paragraph.oe_text_feature_media.left_simple',
     'core.entity_form_display.paragraph.oe_text_feature_media.right_featured',
     'core.entity_form_display.paragraph.oe_text_feature_media.right_simple',
   ];
