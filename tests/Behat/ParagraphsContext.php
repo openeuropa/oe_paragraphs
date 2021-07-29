@@ -149,7 +149,10 @@ class ParagraphsContext extends RawDrupalContext {
     $paragraph = $this->findParagraph($paragraph_type, $position);
     $collection = $this->getParagraphFormFieldCollection($paragraph);
 
-    $element = $collection->find('named', ['select', $this->unescapeStepArgument($select)]);
+    $element = $collection->find('named', [
+      'select',
+      $this->unescapeStepArgument($select),
+    ]);
 
     if (empty($element)) {
       throw new \Exception(sprintf('Could not find select "%s".', $select));

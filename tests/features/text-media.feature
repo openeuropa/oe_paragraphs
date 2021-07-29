@@ -1,4 +1,4 @@
-@api @test
+@api
 Feature: Text with featured media paragraph.
   As a content editor
   I need to be able to use Text with featured media paragraphs

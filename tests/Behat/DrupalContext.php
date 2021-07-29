@@ -109,7 +109,7 @@ class DrupalContext extends RawDrupalContext {
    *   The video title.
    *
    * @Then I should see the AV Portal video :title
-   * @TODO: To be removed once oe_content 1.8.0 is released.
+   * @todo To be removed once oe_content 1.8.0 is released.
    */
   public function assertAvPortalVideoIframe(string $title): void {
     $media = \Drupal::entityTypeManager()->getStorage('media')->loadByProperties(['name' => $title]);
