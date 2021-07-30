@@ -12,7 +12,6 @@ dependencies:
 config_devel:
   install:
     # Form modes.
-    - core.entity_form_mode.paragraph.left_simple
     - core.entity_form_mode.paragraph.right_simple
     - core.entity_form_mode.paragraph.left_featured
     - core.entity_form_mode.paragraph.right_featured
@@ -22,7 +21,6 @@ config_devel:
 
     # Text with Featured media
     - core.entity_form_display.paragraph.oe_text_feature_media.default
-    - core.entity_form_display.paragraph.oe_text_feature_media.left_simple
     - core.entity_form_display.paragraph.oe_text_feature_media.right_simple
     - core.entity_form_display.paragraph.oe_text_feature_media.left_featured
     - core.entity_form_display.paragraph.oe_text_feature_media.right_featured
