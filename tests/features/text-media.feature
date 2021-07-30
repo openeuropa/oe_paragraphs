@@ -33,9 +33,8 @@ Feature: Text with featured media paragraph.
     And I press "Add Text with Featured media"
     Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text" in the "demo paragraphs element" region
     And the available options in the "Variant" select should be:
-      | Default                                    |
-      | Text on the left, featured call to action  |
       | Text on the left, simple call to action    |
+      | Text on the left, featured call to action  |
       | Text on the right, featured call to action |
       | Text on the right, simple call to action   |
 

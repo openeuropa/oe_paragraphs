@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - paragraphs
-id: paragraph.left_simple
-label: 'Text on the left, simple call to action'
-targetEntityType: paragraph
-cache: true
