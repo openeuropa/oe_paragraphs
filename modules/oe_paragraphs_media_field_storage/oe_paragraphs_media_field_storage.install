@@ -20,7 +20,7 @@ function oe_paragraphs_media_field_storage_install() {
   // /config/import folder and import it with an install hook in order to avoid
   // errors when enabling this module on sites where this configuration already
   // exists.
-  $field_config_storage = Drupal::entityTypeManager()->getStorage('field_storage_config');
+  $field_config_storage = \Drupal::entityTypeManager()->getStorage('field_storage_config');
   $field = $field_config_storage->load('paragraph.field_oe_media');
   if ($field) {
     return;
