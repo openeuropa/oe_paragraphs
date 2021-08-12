@@ -1,11 +1,21 @@
-# Changelog
+# Change Log
+
+## [1.9.0](https://github.com/openeuropa/oe_paragraphs/tree/1.9.0) (2021-08-12)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.8.0...1.9.0)
+
+**Merged pull requests:**
+
+- \[EWPP-873\] EWPP-1356: Name the "Default" variant "Left, simple call action". [\#141](https://github.com/openeuropa/oe_paragraphs/pull/141) ([sergepavle](https://github.com/sergepavle))
+- \[EWPP-873\] EWPP-1326: Rename title field and add new title field [\#139](https://github.com/openeuropa/oe_paragraphs/pull/139) ([yenyasinn](https://github.com/yenyasinn))
+- Merge master into EPIC-EWPP-873-Text-media-2 [\#138](https://github.com/openeuropa/oe_paragraphs/pull/138) ([yenyasinn](https://github.com/yenyasinn))
+- \[EWPP-1194\] EWPP-1195: Adds Contact paragraph. [\#135](https://github.com/openeuropa/oe_paragraphs/pull/135) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.8.0](https://github.com/openeuropa/oe_paragraphs/tree/1.8.0) (2021-06-15)
-
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.7.0...1.8.0)
 
 **Merged pull requests:**
 
+- Prepare release 1.8.0. [\#136](https://github.com/openeuropa/oe_paragraphs/pull/136) ([imanoleguskiza](https://github.com/imanoleguskiza))
 - EWPP-1111: Create the iframe paragraph. [\#131](https://github.com/openeuropa/oe_paragraphs/pull/131) ([yenyasinn](https://github.com/yenyasinn))
 - EWPP-974: Revert quickfix. [\#130](https://github.com/openeuropa/oe_paragraphs/pull/130) ([imanoleguskiza](https://github.com/imanoleguskiza))
 - EWPP-721: Update xdebug configuration. [\#123](https://github.com/openeuropa/oe_paragraphs/pull/123) ([22Alexandra](https://github.com/22Alexandra))
