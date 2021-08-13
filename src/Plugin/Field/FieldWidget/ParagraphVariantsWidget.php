@@ -15,7 +15,7 @@ use Drupal\Core\TypedData\TranslationStatusInterface;
 use Drupal\paragraphs\Plugin\Field\FieldWidget\ParagraphsWidget;
 
 /**
- * Class ParagraphVariantsWidget.
+ * Allows selection of form modes as paragraph variants.
  *
  * @FieldWidget(
  *   id = "oe_paragraphs_variants",
@@ -334,7 +334,10 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
               '#paragraphs_mode' => 'closed',
               '#paragraphs_show_warning' => TRUE,
               '#attributes' => [
-                'class' => ['paragraphs-icon-button', 'paragraphs-icon-button-collapse'],
+                'class' => [
+                  'paragraphs-icon-button',
+                  'paragraphs-icon-button-collapse',
+                ],
                 'title' => $this->t('Collapse'),
               ],
             ];
@@ -358,7 +361,10 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
             '#access' => $paragraphs_entity->access('update') && !$translating_force_close,
             '#paragraphs_mode' => 'edit',
             '#attributes' => [
-              'class' => ['paragraphs-icon-button', 'paragraphs-icon-button-edit'],
+              'class' => [
+                'paragraphs-icon-button',
+                'paragraphs-icon-button-edit',
+              ],
               'title' => $this->t('Edit'),
             ],
           ]);
@@ -423,13 +429,19 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
         if (count($widget_actions['actions'])) {
           // Expand all actions to proper submit elements and add it to top
           // actions sub component.
-          $element['top']['actions']['actions'] = array_map([$this, 'expandButton'], $widget_actions['actions']);
+          $element['top']['actions']['actions'] = array_map([
+            $this,
+            'expandButton',
+          ], $widget_actions['actions']);
         }
 
         if (count($widget_actions['dropdown_actions'])) {
           // Expand all dropdown actions to proper submit elements and add
           // them to top dropdown actions sub component.
-          $element['top']['actions']['dropdown_actions'] = array_map([$this, 'expandButton'], $widget_actions['dropdown_actions']);
+          $element['top']['actions']['dropdown_actions'] = array_map([
+            $this,
+            'expandButton',
+          ], $widget_actions['dropdown_actions']);
         }
       }
 
