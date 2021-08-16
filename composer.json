@@ -17,10 +17,11 @@
         "consolidation/annotated-command": "^2.8.2",
         "consolidation/robo": "~1.4",
         "drupal/address": "^1.9",
-        "drupal/composite_reference": "^1.0@alpha",
+        "drupal/composite_reference": "^1.0-alpha2",
         "drupal/config_devel": "~1.2",
         "drupal/core-composer-scaffold": "^8.9 || ^9.1",
-        "drupal/drupal-extension": "~4.1",
+        "drupal/drupal-extension": "^4.0",
+        "drupal/description_list_field": "^1.0",
         "drupal/entity_browser": "^2.5",
         "drupal/json_field": "~1.0.0-rc4",
         "drupaltest/behat-traits": "dev-GH-6",
@@ -30,7 +31,6 @@
         "nikic/php-parser": "~3.0",
         "openeuropa/behat-transformation-context": "~0.1",
         "openeuropa/code-review": "~1.6",
-        "drupal/description_list_field": "^1.0",
         "openeuropa/drupal-core-require-dev": "^8.9 || ^9.1",
         "openeuropa/oe_content": "dev-EWPP-911",
         "openeuropa/oe_media": "~1.12",
@@ -83,10 +83,6 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/openeuropa/description_list_field"
         }
     ],
     "config": {
