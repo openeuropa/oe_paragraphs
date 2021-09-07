@@ -15,7 +15,7 @@ use Drupal\Core\TypedData\TranslationStatusInterface;
 use Drupal\paragraphs\Plugin\Field\FieldWidget\ParagraphsWidget;
 
 /**
- * Plugin implementation of the 'paragraph variants' widget.
+ * Allows selection of form modes as paragraph variants.
  *
  * @FieldWidget(
  *   id = "oe_paragraphs_variants",
