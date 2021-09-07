@@ -64,3 +64,17 @@ function oe_paragraphs_media_post_update_00002(): void {
     $form_display->save();
   }
 }
+
+/**
+ * Update default view display of Text with featured Media paragraph.
+ */
+function oe_paragraphs_media_post_update_00003(): void {
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_media') . '/config/post_updates/00003_update_view_display');
+  $display_values = $storage->read('core.entity_view_display.paragraph.oe_text_feature_media.default');
+  $display_storage = \Drupal::entityTypeManager()->getStorage('entity_view_display');
+  $display = $display_storage->load($display_values['id']);
+  if ($display) {
+    $display = $display_storage->updateFromStorageRecord($display, $display_values);
+    $display->save();
+  }
+}
