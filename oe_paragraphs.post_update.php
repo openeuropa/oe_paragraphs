@@ -186,7 +186,7 @@ function oe_paragraphs_post_update_10005(array &$sandbox) {
  * Marks unsupported ECL icons as deprecated.
  */
 function oe_paragraphs_post_update_10006(array &$sandbox): void {
-  $field = Drupal::entityTypeManager()->getStorage('field_storage_config')->load('paragraph.field_oe_icon');
+  $field = \Drupal::entityTypeManager()->getStorage('field_storage_config')->load('paragraph.field_oe_icon');
   $settings = $field->get('settings');
   $icons = [
     'googleplus',
