@@ -8,6 +8,7 @@
 declare(strict_types = 1);
 
 use Drupal\Core\Config\FileStorage;
+use Drupal\Component\Utility\Crypt;
 use Drupal\field\Entity\FieldConfig;
 
 /**
@@ -51,6 +52,7 @@ function oe_paragraphs_media_post_update_00002(): void {
       // Skip if configuration exists.
       continue;
     }
+    $config_record['_core']['default_config_hash'] = Crypt::hashBase64(serialize($config_record));
     $entity = $entity_storage->createFromStorageRecord($config_record);
     $entity->save();
   }
