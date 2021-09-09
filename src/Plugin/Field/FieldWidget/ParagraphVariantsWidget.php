@@ -12,6 +12,7 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\SubformState;
 use Drupal\Core\Render\Element;
 use Drupal\Core\TypedData\TranslationStatusInterface;
+use Drupal\field_group\FormatterHelper;
 use Drupal\paragraphs\Plugin\Field\FieldWidget\ParagraphsWidget;
 
 /**
@@ -470,7 +471,10 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
         ];
 
         field_group_attach_groups($element['subform'], $context);
-        $element['subform']['#pre_render'][] = 'field_group_form_pre_render';
+        $element['subform']['#pre_render'][] = [
+          FormatterHelper::class,
+          'formProcess',
+        ];
       }
 
       if ($item_mode == 'edit') {
