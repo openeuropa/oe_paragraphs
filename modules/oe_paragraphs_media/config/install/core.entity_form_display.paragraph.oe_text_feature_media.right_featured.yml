@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.paragraph.right_featured
     - field.field.paragraph.oe_text_feature_media.field_oe_feature_media_title
     - field.field.paragraph.oe_text_feature_media.field_oe_link
     - field.field.paragraph.oe_text_feature_media.field_oe_media
@@ -12,60 +13,61 @@ dependencies:
   module:
     - link
     - text
-id: paragraph.oe_text_feature_media.default
+id: paragraph.oe_text_feature_media.right_featured
 targetEntityType: paragraph
 bundle: oe_text_feature_media
-mode: default
+mode: right_featured
 content:
   field_oe_feature_media_title:
-    type: string
+    type: string_textfield
     weight: 1
     region: content
-    label: above
     settings:
-      link_to_entity: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_oe_link:
-    type: link
     weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
   field_oe_media:
-    type: entity_reference_entity_view
     weight: 2
-    label: above
     settings:
-      view_mode: default
-      link: false
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_oe_plain_text_long:
     weight: 3
-    label: above
-    settings: {  }
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
-    type: basic_string
+    type: string_textarea
     region: content
   field_oe_text_long:
     weight: 4
-    label: above
-    settings: {  }
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
-    type: text_default
+    type: text_textarea
     region: content
   field_oe_title:
     weight: 0
-    label: above
     settings:
-      link_to_entity: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: string
+    type: string_textfield
     region: content
-hidden: {  }
+hidden:
+  created: true
+  status: true
