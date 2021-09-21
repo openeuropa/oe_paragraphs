@@ -17,4 +17,7 @@ content:
     region: content
 hidden:
   field_oe_demo_body: true
-  langcode: true
+  oe_content_content_owner: true
+  oe_content_legacy_link: true
+  oe_content_navigation_title: true
+  oe_content_short_title: true
