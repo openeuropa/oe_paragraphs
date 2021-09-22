@@ -27,6 +27,7 @@ Feature: Contextual navigation paragraph.
     Then I should see the heading "Contextual navigation test page"
 
     When I click "Edit"
+    And I press "Edit" in the 1st "Contextual navigation" paragraph actions
     And I fill in "Navigation label" with "Quick links" in the 1st "Contextual navigation" paragraph
     And I fill in "Limit" with "97" in the 1st "Contextual navigation" paragraph
     And I fill in "More label" with "See more" in the 1st "Contextual navigation" paragraph
@@ -38,6 +39,7 @@ Feature: Contextual navigation paragraph.
     And I should see the text "See more"
 
     When I click "Edit"
+    And I press "Edit" in the 1st "Contextual navigation" paragraph actions
     # Add another link.
     And I fill in the 2nd "URL" field with "/admin/content"
     And I fill in the 2nd "Link text" field with "Content listing"
