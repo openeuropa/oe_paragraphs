@@ -5,10 +5,8 @@ dependencies:
     - field.field.node.oe_demo_landing_page.field_oe_demo_body
     - node.type.oe_demo_landing_page
   module:
-    - link
     - oe_paragraphs
     - path
-    - rdf_skos
 id: node.oe_demo_landing_page.default
 targetEntityType: node
 bundle: oe_demo_landing_page
@@ -38,39 +36,12 @@ content:
         collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
-  oe_content_content_owner:
-    type: skos_concept_entity_reference_autocomplete
-    weight: 0
+  langcode:
+    type: language_select
+    weight: 2
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  oe_content_legacy_link:
-    type: link_default
-    weight: 0
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-  oe_content_navigation_title:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  oe_content_short_title:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -119,7 +90,6 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      match_limit: 10
     region: content
     third_party_settings: {  }
 hidden: {  }

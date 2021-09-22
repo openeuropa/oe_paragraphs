@@ -7,13 +7,10 @@ core_version_requirement: ^8.9 || ^9.1
 dependencies:
   - oe_paragraphs:oe_paragraphs
   - oe_paragraphs:oe_paragraphs_media
+  - drupal:composite_reference
 
 config_devel:
   install:
-    # Paragraph types
-    # ---------------
-
-    # Document
     - core.entity_view_display.paragraph.oe_document.default
     - core.entity_form_display.paragraph.oe_document.default
     - field.field.paragraph.oe_document.field_oe_media
