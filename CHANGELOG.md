@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.10.0](https://github.com/openeuropa/oe_paragraphs/tree/1.10.0) (2021-09-23)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.9.0...1.10.0)
+
+**Merged pull requests:**
+
+- EWPP-873: Text with featured media paragraph type V2 [\#145](https://github.com/openeuropa/oe_paragraphs/pull/145) ([yenyasinn](https://github.com/yenyasinn))
+- OEL-67: Drupal 9 Update [\#140](https://github.com/openeuropa/oe_paragraphs/pull/140) ([GilNovacomm](https://github.com/GilNovacomm))
+
 ## [1.9.0](https://github.com/openeuropa/oe_paragraphs/tree/1.9.0) (2021-08-12)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.8.0...1.9.0)
 
