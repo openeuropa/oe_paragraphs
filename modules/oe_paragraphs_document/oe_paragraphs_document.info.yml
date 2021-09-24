@@ -15,3 +15,5 @@ config_devel:
     - core.entity_form_display.paragraph.oe_document.default
     - field.field.paragraph.oe_document.field_oe_media
     - paragraphs.paragraphs_type.oe_document
+  optional:
+    - language.content_settings.paragraph.oe_document
