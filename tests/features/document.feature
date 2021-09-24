@@ -12,7 +12,7 @@ Feature: Document media paragraph.
     When I go to "the document creation page"
     And I fill in "Name" with "My example local document 1"
     And I select "Local" from "File Type"
-    And I attach the file "example.pdf" to "File"
+    And I attach the file "example_1.pdf" to "File"
     And I press "Save"
     Then I should see "Document My example local document 1 has been created."
     
@@ -35,7 +35,7 @@ Feature: Document media paragraph.
     And I press "Save"
     Then I should see the heading "Local document paragraph test page"
     And I should see the text "Document"
-    And I should see the link "My example local document 1"
+    And I should see the link "example_1.pdf"
     
     # Add Remote document to content.
     When I go to "the content management page"
