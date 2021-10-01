@@ -5,19 +5,15 @@ dependencies:
     - field.storage.paragraph.field_oe_media
     - media.type.document
     - paragraphs.paragraphs_type.oe_document
-  module:
-    - composite_reference
 third_party_settings:
-  composite_reference:
-    composite: false
 id: paragraph.oe_document.field_oe_media
 field_name: field_oe_media
 entity_type: paragraph
 bundle: oe_document
 label: Document
-description: 'Provides Document paragraph that renders media documents.'
+description: 'Allows editors to reference document media entities.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

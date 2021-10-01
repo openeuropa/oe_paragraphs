@@ -20,7 +20,7 @@ Feature: Document media paragraph.
     When I go to "the document creation page"
     And I fill in "Name" with "My example remote document 1"
     And I select "Remote" from "File Type"
-    And I fill in "URL" with "http://www.africau.edu/images/default/sample.pdf"
+    And I fill in "URL" with "http://web:8080/tests/fixtures/example_1.pdf"
     And I fill in "Link text" with "My example remote document 1"
     And I press "Save"
     Then I should see "Document My example remote document 1 has been created."

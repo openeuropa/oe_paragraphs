@@ -1,13 +1,11 @@
 name: OpenEuropa Paragraphs Document
 type: module
-description: Provides Document paragraph that renders media documents.
+description: Provides a paragraph type that references document media entities.
 package: OpenEuropa
 core_version_requirement: ^8.9 || ^9.1
 
 dependencies:
   - oe_paragraphs:oe_paragraphs
-  - oe_paragraphs:oe_paragraphs_media
-  - composite_reference:composite_reference
 
 config_devel:
   install:
