@@ -53,6 +53,12 @@ config_devel:
     - field.field.paragraph.oe_accordion.field_oe_paragraphs
     - paragraphs.paragraphs_type.oe_accordion
 
+    # Document
+    - core.entity_view_display.paragraph.oe_document.default
+    - core.entity_form_display.paragraph.oe_document.default
+    - field.field.paragraph.oe_document.field_oe_media
+    - paragraphs.paragraphs_type.oe_document
+
     # Quotes block
     - core.entity_form_display.paragraph.oe_quote.default
     - core.entity_view_display.paragraph.oe_quote.default

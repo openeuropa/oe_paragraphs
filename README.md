@@ -42,6 +42,7 @@ used exclusively in conjunction with the "Accordion" paragraph.
 optionally.
 - **Contextual navigation**: The Contextual navigation paragraph allows editors to add a number of links that helps the user navigate the page. The
 links, their visibility limit and navigation label can be configured using the available fields.
+- **Document**: The Document paragraph allows editors to render documents.
 - **Links block**: The Links block paragraph displays a list of links, with an optional title. It is used for instance with the dropdown component.
 - **Listing item**: The Listing item paragraph displays content teasers. A list item is available in the following variants: default, date
 item, highlighted and thumbnail with primary or secondary image.

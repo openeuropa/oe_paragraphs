@@ -23,6 +23,7 @@ dependencies:
     - paragraphs.paragraphs_type.oe_social_media_follow
     - paragraphs.paragraphs_type.oe_text_feature_media
     - paragraphs.paragraphs_type.oe_timeline
+    - paragraphs.paragraphs_type.oe_document
   module:
     - entity_reference_revisions
 id: node.oe_demo_landing_page.field_oe_demo_body
@@ -59,6 +60,7 @@ settings:
       oe_social_feed: oe_social_feed
       oe_iframe_media: oe_iframe_media
       oe_contact: oe_contact
+      oe_document: oe_document
     target_bundles_drag_drop:
       oe_accordion:
         enabled: true
@@ -123,4 +125,7 @@ settings:
       oe_timeline:
         enabled: true
         weight: 24
+      oe_document:
+        enabled: true
+        weight: 37
 field_type: entity_reference_revisions

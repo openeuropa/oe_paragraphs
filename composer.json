@@ -70,6 +70,9 @@
         "patches": {
             "drupal/paragraphs": {
                 "https://www.drupal.org/project/paragraphs/issues/2890086": "https://www.drupal.org/files/issues/2020-05-21/2890086-46.patch"
+            },
+            "drupal/file_link": {
+                "https://www.drupal.org/project/file_link/issues/3239397": "https://git.drupalcode.org/project/file_link/-/merge_requests/3.patch"
             }
         },
         "drupal-scaffold": {

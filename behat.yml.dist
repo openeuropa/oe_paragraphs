@@ -19,6 +19,7 @@ default:
               content management: "/admin/content"
               iframe creation: "/media/add/iframe"
               image creation: "/media/add/image"
+              document creation: "/media/add/document"
               remote video creation: "/media/add/remote_video"
               avportal video creation: "/media/add/av_portal_video"
               Webtools chart creation: 'media/add/webtools_chart'
