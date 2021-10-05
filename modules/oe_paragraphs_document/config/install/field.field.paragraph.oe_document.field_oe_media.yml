@@ -5,7 +5,6 @@ dependencies:
     - field.storage.paragraph.field_oe_media
     - media.type.document
     - paragraphs.paragraphs_type.oe_document
-third_party_settings:
 id: paragraph.oe_document.field_oe_media
 field_name: field_oe_media
 entity_type: paragraph
