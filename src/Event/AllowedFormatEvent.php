@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Drupal\oe_paragraphs\Event;
 
-use Drupal\Component\EventDispatcher\Event;
+use Symfony\Component\EventDispatcher\Event;
 
 /**
  * Event that is fired when an allowed values list is checked.
