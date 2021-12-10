@@ -34,7 +34,8 @@
         "openeuropa/oe_content": "2.x-dev",
         "openeuropa/oe_media": "^1.12",
         "openeuropa/oe_webtools": "^1.12",
-        "openeuropa/task-runner-drupal-project-symlink": "^1.0"
+        "openeuropa/task-runner-drupal-project-symlink": "^1.0",
+        "phpspec/prophecy-phpunit": "^1 || ^2"
     },
     "suggest": {
         "openeuropa/oe_media": "Allows usage of paragraphs with different media attached to it."
