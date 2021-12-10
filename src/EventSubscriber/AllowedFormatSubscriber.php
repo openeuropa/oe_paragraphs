@@ -87,6 +87,7 @@ class AllowedFormatSubscriber implements EventSubscriberInterface {
       'video' => 'Video',
       'warning' => 'Warning',
     ]);
+    $event->stopPropagation();
   }
 
 }
