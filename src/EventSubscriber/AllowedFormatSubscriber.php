@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Allowed format subscriber.
- */
-
 declare(strict_types = 1);
 
 namespace Drupal\oe_paragraphs\EventSubscriber;
@@ -13,7 +8,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\oe_paragraphs\Event\AllowedFormatEvent;
 
 /**
- * Class AllowedFormatSubscriber.
+ * Creates an Allowed format subscriber.
  */
 class AllowedFormatSubscriber implements EventSubscriberInterface {
 
@@ -31,9 +26,6 @@ class AllowedFormatSubscriber implements EventSubscriberInterface {
    *
    * @param \Drupal\custom_events\Event\AllowedFormatEvent $event
    *   Allowed format event object.
-   *
-   * @return array
-   *   Array with allowed values for field icon.
    */
   public function onCheckAllowedValues(AllowedFormatEvent $event): void {
     $event->setAllowedValues([

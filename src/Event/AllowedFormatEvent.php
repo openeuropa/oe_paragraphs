@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Allowed format event.
- */
-
 declare(strict_types = 1);
 
 namespace Drupal\oe_paragraphs\Event;
@@ -23,7 +18,7 @@ class AllowedFormatEvent extends Event {
    *
    * @var array
    */
-  protected $allowed_values = [];
+  protected $allowedvalues = [];
 
   /**
    * Sets the allowed values list.
@@ -32,7 +27,7 @@ class AllowedFormatEvent extends Event {
    *   Array containing the set of allowed values.
    */
   public function setAllowedValues(array $allowed_values = []): void {
-    $this->allowed_values = $allowed_values;
+    $this->allowedvalues = $allowed_values;
   }
 
   /**
@@ -42,6 +37,7 @@ class AllowedFormatEvent extends Event {
    *   Array containing the set of allowed values.
    */
   public function getAllowedValues(): array {
-    return $this->allowed_values;
+    return $this->allowedvalues;
   }
+
 }
