@@ -31,6 +31,11 @@ class ParagraphsTest extends BrowserTestBase {
   protected $adminTheme = 'stark';
 
   /**
+   * {@inheritdoc}
+   */
+  protected $defaultTheme = 'stark';
+
+  /**
    * A user with administration permissions.
    *
    * @var \Drupal\user\UserInterface
@@ -43,20 +48,20 @@ class ParagraphsTest extends BrowserTestBase {
   protected function setUp(): void {
     parent::setUp();
 
-    $this->adminUser = $this->drupalCreateUser([
-      'access content',
-      'access administration pages',
-      'administer site configuration',
-      'administer users',
-      'administer permissions',
-      'administer content types',
-      'administer node fields',
-      'administer node display',
-      'administer nodes',
-      'bypass node access',
-    ]);
-    $this->drupalGet(Url::fromRoute('user.login'));
-    $this->drupalLogin($this->adminUser);
+//    $this->adminUser = $this->drupalCreateUser([
+//      'access content',
+//      'access administration pages',
+//      'administer site configuration',
+//      'administer users',
+//      'administer permissions',
+//      'administer content types',
+//      'administer node fields',
+//      'administer node display',
+//      'administer nodes',
+//      'bypass node access',
+//    ]);
+//    $this->drupalGet(Url::fromRoute('user.login'));
+//    $this->drupalLogin($this->adminUser);
     $this->drupalCreateContentType([
       'type' => 'paragraphs_test',
       'name' => 'Paragraphs Test',
@@ -192,6 +197,10 @@ class ParagraphsTest extends BrowserTestBase {
     $form_display = \Drupal::service('entity_display.repository')->getFormDisplay('node', 'paragraphs_test');
     $form_display = $form_display->setComponent('oe_paragraphs', ['type' => 'paragraphs']);
     $form_display->save();
+
+    $view_display = \Drupal::service('entity_display.repository')->getViewDisplay('node', 'paragraphs_test');
+    $view_display->setComponent('oe_paragraphs', ['type' => 'entity_reference_revisions_entity_view']);
+    $view_display->save();
   }
 
 }
