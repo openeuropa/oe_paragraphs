@@ -24,11 +24,6 @@ class ParagraphsTest extends BrowserTestBase {
   ];
 
   /**
-   * {@inheritdoc}
-   */
-  protected $defaultTheme = 'stark';
-
-  /**
    * The administration theme name.
    *
    * @var string
@@ -197,10 +192,6 @@ class ParagraphsTest extends BrowserTestBase {
     $form_display = \Drupal::service('entity_display.repository')->getFormDisplay('node', 'paragraphs_test');
     $form_display = $form_display->setComponent('oe_paragraphs', ['type' => 'paragraphs']);
     $form_display->save();
-
-    $view_display = \Drupal::service('entity_display.repository')->getViewDisplay('node', 'paragraphs_test');
-    $view_display->setComponent('oe_paragraphs', ['type' => 'entity_reference_revisions_entity_view']);
-    $view_display->save();
   }
 
 }

@@ -1,6 +1,5 @@
-# Subscriber to the event dispatched at _oe_paragraphs_allowed_values_icons.
 services:
-  oe_paragraphs.allowed_formats_check:
-    class: 'Drupal\oe_paragraphs\EventSubscriber\AllowedFormatSubscriber'
+  oe_paragraphs.icon_options_subscriber:
+    class: 'Drupal\oe_paragraphs\EventSubscriber\IconOptionsSubscriber'
     tags:
       - { name: 'event_subscriber' }

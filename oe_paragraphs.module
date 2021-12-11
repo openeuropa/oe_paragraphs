@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\oe_paragraphs\Event\AllowedFormatEvent;
+use Drupal\oe_paragraphs\Event\IconOptionsEvent;
 use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 
@@ -51,11 +51,11 @@ function oe_paragraphs_entity_base_field_info(EntityTypeInterface $entity_type):
  * @see options_allowed_values()
  */
 function _oe_paragraphs_allowed_values_icons(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE) {
-  $event = new AllowedFormatEvent();
+  $event = new IconOptionsEvent();
 
   // Get the event_dispatcher service and dispatch the event.
   $event_dispatcher = \Drupal::service('event_dispatcher');
-  $event_dispatcher->dispatch(AllowedFormatEvent::EVENT_CHECK, $event);
+  $event_dispatcher->dispatch(IconOptionsEvent::EVENT_CHECK, $event);
 
-  return $event->getAllowedValues();
+  return $event->getIconOptions();
 }

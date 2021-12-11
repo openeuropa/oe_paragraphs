@@ -5,30 +5,30 @@ declare(strict_types = 1);
 namespace Drupal\oe_paragraphs\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Drupal\oe_paragraphs\Event\AllowedFormatEvent;
+use Drupal\oe_paragraphs\Event\IconOptionsEvent;
 
 /**
- * Creates an Allowed format subscriber.
+ * Provides options for the icon field.
  */
-class AllowedFormatSubscriber implements EventSubscriberInterface {
+class IconOptionsSubscriber implements EventSubscriberInterface {
 
   /**
    * {@inheritdoc}
    */
   public static function getSubscribedEvents(): array {
     return [
-      AllowedFormatEvent::EVENT_CHECK => ['onCheckAllowedValues'],
+      IconOptionsEvent::class => 'getIconOptions',
     ];
   }
 
   /**
-   * Subscribe to the Allowed format event dispatched.
+   * Gets the icon options.
    *
-   * @param \Drupal\custom_events\Event\AllowedFormatEvent $event
+   * @param \Drupal\custom_events\Event\IconOptionsEvent $event
    *   Allowed format event object.
    */
-  public function onCheckAllowedValues(AllowedFormatEvent $event): void {
-    $event->setAllowedValues([
+  public function getIconOptions(IconOptionsEvent $event): void {
+    $event->setIconOptions([
       'arrow-down' => 'Arrow down',
       'external' => 'External',
       'arrow-up' => 'Arrow up',
@@ -87,7 +87,6 @@ class AllowedFormatSubscriber implements EventSubscriberInterface {
       'video' => 'Video',
       'warning' => 'Warning',
     ]);
-    $event->stopPropagation();
   }
 
 }
