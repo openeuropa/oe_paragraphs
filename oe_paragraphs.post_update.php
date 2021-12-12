@@ -200,3 +200,36 @@ function oe_paragraphs_post_update_10006(array &$sandbox): void {
   $field->set('settings', $settings);
   $field->save();
 }
+
+/**
+ * Updates the allowed_values management of field_oe_icon.
+ */
+function oe_paragraphs_post_update_10007(&$sandbox) {
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/updates/8005');
+  $config_manager = \Drupal::service('config.manager');
+  $entity_type_manager = \Drupal::entityTypeManager();
+
+  $field_config = [
+    'field.storage.paragraph.field_oe_icon',
+  ];
+
+  foreach ($field_config as $name) {
+    $configuration = $storage->read($name);
+    if (!$configuration) {
+      throw new \LogicException(sprintf('The configuration value named %s was not found in the storage.', $name));
+    }
+
+    $entity_type = $config_manager->getEntityTypeIdByName($name);
+    /** @var \Drupal\Core\Config\Entity\ConfigEntityStorageInterface $entity_storage */
+    $entity_storage = $entity_type_manager->getStorage($entity_type);
+    $id_key = $entity_storage->getEntityType()->getKey('id');
+    $entity = $entity_storage->load($configuration[$id_key]);
+    // When we create a new config, it usually means that we are also shipping
+    // it in the config/install folder, so we must ensure it gets the hash
+    // so Drupal treats it as a shipped conf. This means that it gets exposed
+    // to be translated via the locale system as well.
+    $configuration['_core']['default_config_hash'] = Crypt::hashBase64(serialize($configuration));
+    $entity = $entity_storage->updateFromStorageRecord($entity, $configuration);
+    $entity->save();
+  }
+}

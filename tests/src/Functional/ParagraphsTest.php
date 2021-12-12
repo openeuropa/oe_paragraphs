@@ -48,20 +48,20 @@ class ParagraphsTest extends BrowserTestBase {
   protected function setUp(): void {
     parent::setUp();
 
-//    $this->adminUser = $this->drupalCreateUser([
-//      'access content',
-//      'access administration pages',
-//      'administer site configuration',
-//      'administer users',
-//      'administer permissions',
-//      'administer content types',
-//      'administer node fields',
-//      'administer node display',
-//      'administer nodes',
-//      'bypass node access',
-//    ]);
-//    $this->drupalGet(Url::fromRoute('user.login'));
-//    $this->drupalLogin($this->adminUser);
+    $this->adminUser = $this->drupalCreateUser([
+      'access content',
+      'access administration pages',
+      'administer site configuration',
+      'administer users',
+      'administer permissions',
+      'administer content types',
+      'administer node fields',
+      'administer node display',
+      'administer nodes',
+      'bypass node access',
+    ]);
+    $this->drupalGet(Url::fromRoute('user.login'));
+    $this->drupalLogin($this->adminUser);
     $this->drupalCreateContentType([
       'type' => 'paragraphs_test',
       'name' => 'Paragraphs Test',
