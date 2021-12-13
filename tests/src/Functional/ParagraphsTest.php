@@ -73,21 +73,12 @@ class ParagraphsTest extends BrowserTestBase {
   /**
    * Test Facts and figures paragraphs form.
    */
-  public function testFactsAndFiguresParagraph(): void {
+  public function testIconOptionsEventsubscriber(): void {
     $this->drupalGet('/node/add/paragraphs_test');
     $page = $this->getSession()->getPage();
     $page->pressButton('Add Fact');
-    ini_set('xdebug.var_display_max_depth', '10');
-    ini_set('xdebug.var_display_max_children', '256');
-    ini_set('xdebug.var_display_max_data', '100024');
-    var_dump($this->getSession()->getPage()->getHtml());
-    // Assert the Facts and figures fields appear.
-    $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_link][0][uri]');
-    $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_link][0][title]');
-    $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_title][0][value]');
-    $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_paragraphs][0][subform][field_oe_title][0][value]');
-    $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_paragraphs][0][subform][field_oe_subtitle][0][value]');
 
+    $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_icon]');
     $allowed_values = [
       '_none',
       'item-test-1',
