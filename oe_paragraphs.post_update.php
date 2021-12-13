@@ -206,7 +206,7 @@ function oe_paragraphs_post_update_10006(array &$sandbox): void {
  * Updates the allowed_values management of field_oe_icon.
  */
 function oe_paragraphs_post_update_10007(&$sandbox) {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/updates/8005');
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10007');
   $config_manager = \Drupal::service('config.manager');
   $entity_type_manager = \Drupal::entityTypeManager();
 
