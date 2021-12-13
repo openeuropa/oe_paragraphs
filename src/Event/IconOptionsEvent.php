@@ -11,6 +11,8 @@ use Symfony\Component\EventDispatcher\Event;
  */
 class IconOptionsEvent extends Event {
 
+  const EVENT_CHECK = 'oe_paragraphs.icon_options_subscriber';
+
   /**
    * The array containing the allowed values.
    *

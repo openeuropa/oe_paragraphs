@@ -21,6 +21,7 @@ class ParagraphsTest extends BrowserTestBase {
     'node',
     'field_ui',
     'oe_paragraphs',
+    'oe_paragraphs_icon_options_event_test',
   ];
 
   /**
@@ -75,98 +76,30 @@ class ParagraphsTest extends BrowserTestBase {
   public function testFactsAndFiguresParagraph(): void {
     $this->drupalGet('/node/add/paragraphs_test');
     $page = $this->getSession()->getPage();
-    $page->pressButton('Add Facts and figures');
+    $page->pressButton('Add Fact');
+    ini_set('xdebug.var_display_max_depth', '10');
+    ini_set('xdebug.var_display_max_children', '256');
+    ini_set('xdebug.var_display_max_data', '100024');
+    var_dump($this->getSession()->getPage()->getHtml());
     // Assert the Facts and figures fields appear.
     $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_link][0][uri]');
     $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_link][0][title]');
     $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_title][0][value]');
     $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_paragraphs][0][subform][field_oe_title][0][value]');
     $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_paragraphs][0][subform][field_oe_subtitle][0][value]');
-    $this->assertSession()->fieldExists('oe_paragraphs[0][subform][field_oe_paragraphs][0][subform][field_oe_plain_text_long][0][value]');
 
     $allowed_values = [
       '_none',
-      'arrow-down',
-      'external',
-      'arrow-up',
-      'audio',
-      'book',
-      'breadcrumb',
-      'brochure',
-      'budget',
-      'calendar',
-      'camera',
-      'check',
-      'close',
-      'close-dark',
-      'copy',
-      'data',
-      'digital',
-      'down',
-      'download',
-      'edit',
-      'energy',
-      'error',
-      'euro',
-      'facebook',
-      'faq',
-      'feedback',
-      'file',
-      'generic-lang',
-      'global',
-      'googleplus',
-      'growth',
-      'image',
-      'in',
-      'info',
-      'infographic',
-      'language',
-      'left',
-      'linkedin',
-      'livestreaming',
-      'location',
-      'multiple-files',
-      'organigram',
-      'package',
-      'presentation',
-      'regulation',
-      'right',
-      'rss',
-      'search',
-      'share',
-      'slides',
-      'spinner',
-      'spreadsheet',
-      'success',
-      'tag-close',
-      'twitter',
-      'up',
-      'video',
-      'warning',
+      'item-test-1',
+      'item-test-2',
+      'item-test-3',
+      'item-test-4',
+      'item-test-5',
     ];
     foreach ($allowed_values as $allowed_value) {
       $this->assertSession()->elementsCount('css', 'option[value="' . $allowed_value . '"]', 1);
     }
 
-    $values = [
-      'title[0][value]' => 'Test Fact and figures node title',
-      'oe_paragraphs[0][subform][field_oe_title][0][value]' => 'Fact and figures block',
-      'oe_paragraphs[0][subform][field_oe_link][0][uri]' => 'https://www.google.com',
-      'oe_paragraphs[0][subform][field_oe_link][0][title]' => 'Read more',
-      'oe_paragraphs[0][subform][field_oe_paragraphs][0][subform][field_oe_title][0][value]' => "Fact title",
-      'oe_paragraphs[0][subform][field_oe_paragraphs][0][subform][field_oe_subtitle][0][value]' => "Fact subtitle",
-      'oe_paragraphs[0][subform][field_oe_paragraphs][0][subform][field_oe_plain_text_long][0][value]' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisl lacus, ultrices vel interdum ultrices, tempus in justo. Duis semper rhoncus ex, accumsan pharetra lacus feugiat et.",
-    ];
-
-    $this->submitForm($values, 'Save');
-    $this->drupalGet('/node/1');
-
-    // Assert paragraph values are displayed correctly.
-    $this->assertSession()->pageTextContains('Fact and figures block');
-    $this->assertSession()->pageTextContains('Read more');
-    $this->assertSession()->pageTextContains('Fact title');
-    $this->assertSession()->pageTextContains('Fact subtitle');
-    $this->assertSession()->pageTextContains('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisl lacus, ultrices vel interdum ultrices, tempus in justo. Duis semper rhoncus ex, accumsan pharetra lacus feugiat et.');
   }
 
   /**
