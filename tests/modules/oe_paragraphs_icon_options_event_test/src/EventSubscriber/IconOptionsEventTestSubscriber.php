@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Drupal\oe_paragraphs_icon_options_event_test;
+namespace Drupal\oe_paragraphs_icon_options_event_test\EventSubscriber;
 
 use Drupal\oe_paragraphs\Event\IconOptionsEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -16,23 +16,22 @@ class IconOptionsEventTestSubscriber implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   public static function getSubscribedEvents(): array {
-    $events[IconOptionsEvent::class][] = ['getIconOptions', 0];
-    return $events;
+    return [
+      IconOptionsEvent::class => 'getIconOptions',
+    ];
   }
 
   /**
-   * Change the username of the user being registered.
+   * Gets the icon options.
    *
    * @param \Drupal\custom_events\Event\IconOptionsEvent $event
-   *   Allowed format event object.
+   *   The event object.
    */
   public function getIconOptions(IconOptionsEvent $event): void {
     $event->setIconOptions([
       'item-test-1' => 'Item test 1',
-      'item-test-2' => 'Item test 1',
-      'item-test-3' => 'Item test 1',
-      'item-test-4' => 'Item test 1',
-      'item-test-5' => 'Item test 1',
+      'item-test-2' => 'Item test 2',
+      'item-test-3' => 'Item test 3',
     ]);
   }
 

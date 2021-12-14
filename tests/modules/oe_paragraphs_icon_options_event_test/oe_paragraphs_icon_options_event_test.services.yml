@@ -1,5 +1,5 @@
 services:
   oe_paragraphs_test.icon_options_event_subscriber:
-    class: Drupal\oe_paragraphs_icon_options_event_test\IconOptionsEventTestSubscriber
+    class: Drupal\oe_paragraphs_icon_options_event_test\EventSubscriber\IconOptionsEventTestSubscriber
     tags:
       - { name: 'event_subscriber' }
