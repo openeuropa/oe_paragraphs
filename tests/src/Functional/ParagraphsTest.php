@@ -4,7 +4,6 @@ declare(strict_types = 1);
 
 namespace Drupal\Tests\oe_paragraphs\Functional;
 
-use Drupal\Core\Url;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\Tests\BrowserTestBase;
@@ -50,18 +49,8 @@ class ParagraphsTest extends BrowserTestBase {
     parent::setUp();
 
     $this->adminUser = $this->drupalCreateUser([
-      'access content',
-      'access administration pages',
-      'administer site configuration',
-      'administer users',
-      'administer permissions',
       'administer content types',
-      'administer node fields',
-      'administer node display',
-      'administer nodes',
-      'bypass node access',
     ]);
-    $this->drupalGet(Url::fromRoute('user.login'));
     $this->drupalLogin($this->adminUser);
     $this->drupalCreateContentType([
       'type' => 'paragraphs_test',
@@ -84,20 +73,18 @@ class ParagraphsTest extends BrowserTestBase {
       'item-test-1',
       'item-test-2',
       'item-test-3',
-      'item-test-4',
-      'item-test-5',
     ];
     foreach ($allowed_values as $allowed_value) {
       $this->assertSession()->elementsCount('css', 'option[value="' . $allowed_value . '"]', 1);
     }
+    $this->assertSession()->elementsCount('css', 'select#edit-oe-paragraphs-0-subform-field-oe-icon option', 4);
 
   }
 
   /**
-   * Create content type with paragraphs field.
+   * Creates content type with paragraphs field.
    */
-  protected function addParagraphsField() {
-    // Add a paragraphs field.
+  protected function addParagraphsField(): void {
     $field_storage = FieldStorageConfig::create([
       'field_name' => 'oe_paragraphs',
       'entity_type' => 'node',
@@ -118,13 +105,9 @@ class ParagraphsTest extends BrowserTestBase {
     ]);
     $field->save();
 
-    $form_display = \Drupal::service('entity_display.repository')->getFormDisplay('node', 'paragraphs_test');
+    $form_display = $this->container->get('entity_display.repository')->getFormDisplay('node', 'paragraphs_test');
     $form_display = $form_display->setComponent('oe_paragraphs', ['type' => 'paragraphs']);
     $form_display->save();
-
-    $view_display = \Drupal::service('entity_display.repository')->getViewDisplay('node', 'paragraphs_test');
-    $view_display->setComponent('oe_paragraphs', ['type' => 'entity_reference_revisions_entity_view']);
-    $view_display->save();
   }
 
 }
