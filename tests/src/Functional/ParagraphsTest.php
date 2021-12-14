@@ -36,22 +36,14 @@ class ParagraphsTest extends BrowserTestBase {
   protected $defaultTheme = 'stark';
 
   /**
-   * A user with administration permissions.
-   *
-   * @var \Drupal\user\UserInterface
-   */
-  protected $adminUser;
-
-  /**
    * {@inheritdoc}
    */
   protected function setUp(): void {
     parent::setUp();
 
-    $this->adminUser = $this->drupalCreateUser([
+    $this->drupalLogin($this->drupalCreateUser([
       'administer content types',
-    ]);
-    $this->drupalLogin($this->adminUser);
+    ]));
     $this->drupalCreateContentType([
       'type' => 'paragraphs_test',
       'name' => 'Paragraphs Test',
@@ -82,7 +74,7 @@ class ParagraphsTest extends BrowserTestBase {
   }
 
   /**
-   * Creates content type with paragraphs field.
+   * Creates a paragraph reference field.
    */
   protected function addParagraphsField(): void {
     $field_storage = FieldStorageConfig::create([
