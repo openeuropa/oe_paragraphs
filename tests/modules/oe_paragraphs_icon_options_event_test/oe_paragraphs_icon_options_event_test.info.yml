@@ -2,5 +2,5 @@ name: 'OE Paragraphs - Icon options event test'
 type: module
 description: 'Used by the automated tests for the OE Paragraphs "Icon options event" tests.'
 package: Testing
-dependencies:
-  - openeuropa:oe_paragraphs
+hidden: true
+core_version_requirement: ^8.9 || ^9.1
