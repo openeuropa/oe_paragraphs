@@ -8,7 +8,7 @@ use Drupal\oe_paragraphs\Event\IconOptionsEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * Subscribe to Icon options event for testing.
+ * Subscriber to provide test values for the icon options event.
  */
 class IconOptionsEventTestSubscriber implements EventSubscriberInterface {
 
