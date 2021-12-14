@@ -1,17 +1,17 @@
 @api
 Feature: Description List paragraph.
   As a content editor
-  I need to be able to use Horizontal description list paragraphs
+  I need to be able to use Description list paragraphs
   so I can display a list of term/description pairs.
 
-  Scenario: Horizontal description list paragraph creation.
+  Scenario: Description list paragraph creation.
     Given I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content" permission
     # Add Description List paragraph
     And I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Description List test page"
     And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
-    And I press "Add Horizontal description list"
+    And I press "Add Description list"
 
     # Assert the fields are visible.
     And the following fields should be present "Heading, Term, Description" in the "demo paragraphs element" region

@@ -19,7 +19,7 @@ Feature: Create a landing page
       | Contextual navigation         |
       | Social media follow           |
       | Text with Featured media      |
-      | Horizontal description list   |
+      | Description list |
       | Facts and figures             |
       | Timeline                      |
       | Map                           |

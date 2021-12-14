@@ -234,3 +234,13 @@ function oe_paragraphs_post_update_10008(array &$sandbox) {
   $entity = $entity_storage->createFromStorageRecord($config_record);
   $entity->save();
 }
+
+/**
+ * Change the description of oe_paragraphs_description_list paragraph.
+ */
+function oe_paragraphs_post_update_10009(array &$sandbox) {
+  $config_manager = \Drupal::service('config.manager');
+  $entity_type = $config_manager->getEntityTypeIdByName('oe_description_list');
+  $entity_type->set('label', 'Description list');
+  $entity_type->save();
+}
