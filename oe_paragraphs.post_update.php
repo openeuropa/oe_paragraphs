@@ -11,6 +11,7 @@ use Drupal\field\Entity\FieldConfig;
 use Drupal\Core\Config\FileStorage;
 use Drupal\Core\Entity\Entity\EntityFormDisplay;
 use Drupal\Core\Entity\Entity\EntityViewDisplay;
+use Drupal\paragraphs\Entity\ParagraphsType;
 
 /**
  * Fix description for limit field on contextual navigation paragraph.
@@ -243,4 +244,13 @@ function oe_paragraphs_post_update_10009(array &$sandbox) {
   $entity_type = $config_manager->getEntityTypeIdByName('oe_description_list');
   $entity_type->set('label', 'Description list');
   $entity_type->save();
+}
+
+/**
+ * Change the description of oe_paragraphs_description_list paragraph.
+ */
+function oe_paragraphs_post_update_10010(array &$sandbox) {
+  $paragraph = ParagraphsType::load('oe_description_list');
+  $paragraph->set('label', 'Description list');
+  $paragraph->save();
 }
