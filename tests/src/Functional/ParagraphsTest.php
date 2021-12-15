@@ -52,7 +52,7 @@ class ParagraphsTest extends BrowserTestBase {
   }
 
   /**
-   * Test Facts and figures paragraphs form.
+   * Test icon options event subscriber.
    */
   public function testIconOptionsEventsubscriber(): void {
     $this->drupalGet('/node/add/paragraphs_test');
