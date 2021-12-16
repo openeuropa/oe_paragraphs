@@ -17,7 +17,7 @@ class IconOptionsEventTestSubscriber implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents(): array {
     return [
-      IconOptionsEvent::class => 'getIconOptions',
+      IconOptionsEvent::class => ['getIconOptions', -1],
     ];
   }
 
