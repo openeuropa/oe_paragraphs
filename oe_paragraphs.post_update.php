@@ -206,6 +206,23 @@ function oe_paragraphs_post_update_10006(array &$sandbox): void {
  * Updates the allowed_values management of field_oe_icon.
  */
 function oe_paragraphs_post_update_10007(array &$sandbox): void {
+  $database = \Drupal::database();
+  $entity_type = 'paragraph';
+  $field = 'field_oe_icon';
+  $tables = [
+    "{$entity_type}__$field",
+    "{$entity_type}_revision__$field",
+  ];
+  $existing_data = [];
+  foreach ($tables as $table) {
+    $existing_data[$table] = $database->select($table)
+      ->fields($table)
+      ->execute()
+      ->fetchAll(PDO::FETCH_ASSOC);
+
+    $database->truncate($table)->execute();
+  }
+
   $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10007');
   $config_manager = \Drupal::service('config.manager');
   $entity_type_manager = \Drupal::entityTypeManager();
@@ -229,5 +246,15 @@ function oe_paragraphs_post_update_10007(array &$sandbox): void {
     $configuration['_core']['default_config_hash'] = Crypt::hashBase64(serialize($configuration));
     $entity = $entity_storage->updateFromStorageRecord($entity, $configuration);
     $entity->save();
+  }
+
+  foreach ($tables as $table) {
+    $insert_query = $database
+      ->insert($table)
+      ->fields(array_keys(end($existing_data[$table])));
+    foreach ($existing_data[$table] as $row) {
+      $insert_query->values(array_values($row));
+    }
+    $insert_query->execute();
   }
 }
