@@ -237,7 +237,7 @@ function oe_paragraphs_post_update_10008(array &$sandbox) {
 }
 
 /**
- * Change the description of oe_paragraphs_description_list paragraph.
+ * Drop "horizontal" from description list paragraph labels.
  */
 function oe_paragraphs_post_update_10009(array &$sandbox): void {
   $paragraph = ParagraphsType::load('oe_description_list');
