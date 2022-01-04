@@ -241,6 +241,9 @@ function oe_paragraphs_post_update_10008(array &$sandbox) {
  */
 function oe_paragraphs_post_update_10009(array &$sandbox): void {
   $paragraph = ParagraphsType::load('oe_description_list');
-  $paragraph->set('label', 'Description list');
-  $paragraph->save();
+
+  if ($paragraph !== NULL) {
+    $paragraph->set('label', 'Description list');
+    $paragraph->save();
+  }
 }
