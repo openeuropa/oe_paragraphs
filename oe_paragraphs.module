@@ -40,7 +40,7 @@ function oe_paragraphs_entity_base_field_info(EntityTypeInterface $entity_type):
  *
  * @param \Drupal\Core\Field\FieldStorageDefinitionInterface $definition
  *   The field definition.
- * @param \Drupal\Core\Entity\FieldableEntityInterface $entity
+ * @param \Drupal\Core\Entity\FieldableEntityInterface|null $entity
  *   The entity being created if applicable.
  * @param bool $cacheable
  *   Boolean indicating if the results are cacheable.

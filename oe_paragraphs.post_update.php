@@ -11,7 +11,6 @@ use Drupal\field\Entity\FieldConfig;
 use Drupal\Core\Config\FileStorage;
 use Drupal\Core\Entity\Entity\EntityFormDisplay;
 use Drupal\Core\Entity\Entity\EntityViewDisplay;
-use Drupal\Component\Utility\Crypt;
 
 /**
  * Fix description for limit field on contextual navigation paragraph.
@@ -203,58 +202,17 @@ function oe_paragraphs_post_update_10006(array &$sandbox): void {
 }
 
 /**
- * Updates the allowed_values management of field_oe_icon.
+ * Update field_oe_icon field to retrieve allowed values from an event.
  */
-function oe_paragraphs_post_update_10007(array &$sandbox): void {
-  $database = \Drupal::database();
-  $entity_type = 'paragraph';
-  $field = 'field_oe_icon';
-  $tables = [
-    "{$entity_type}__$field",
-    "{$entity_type}_revision__$field",
-  ];
-  $existing_data = [];
-  foreach ($tables as $table) {
-    $existing_data[$table] = $database->select($table)
-      ->fields($table)
-      ->execute()
-      ->fetchAll(PDO::FETCH_ASSOC);
+function oe_paragraphs_post_update_10007(array &$sandbox) {
+  $entity_storage = \Drupal::entityTypeManager()->getStorage('field_storage_config');
+  $entity = $entity_storage->load('paragraph.field_oe_icon');
 
-    $database->truncate($table)->execute();
+  if (!$entity) {
+    return 'Field storage "paragraph.field_oe_icon" not found.';
   }
 
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10007');
-  $config_manager = \Drupal::service('config.manager');
-  $entity_type_manager = \Drupal::entityTypeManager();
-
-  $field_config = [
-    'field.storage.paragraph.field_oe_icon',
-  ];
-
-  foreach ($field_config as $name) {
-    $configuration = $storage->read($name);
-    if (!$configuration) {
-      throw new \LogicException(sprintf('The configuration value named %s was not found in the storage.', $name));
-    }
-
-    $entity_type = $config_manager->getEntityTypeIdByName($name);
-    /** @var \Drupal\Core\Config\Entity\ConfigEntityStorageInterface $entity_storage */
-    $entity_storage = $entity_type_manager->getStorage($entity_type);
-    $id_key = $entity_storage->getEntityType()->getKey('id');
-    $entity = $entity_storage->load($configuration[$id_key]);
-
-    $configuration['_core']['default_config_hash'] = Crypt::hashBase64(serialize($configuration));
-    $entity = $entity_storage->updateFromStorageRecord($entity, $configuration);
-    $entity->save();
-  }
-
-  foreach ($tables as $table) {
-    $insert_query = $database
-      ->insert($table)
-      ->fields(array_keys(end($existing_data[$table])));
-    foreach ($existing_data[$table] as $row) {
-      $insert_query->values(array_values($row));
-    }
-    $insert_query->execute();
-  }
+  /** @var \Drupal\field\FieldStorageConfigInterface $entity */
+  $entity->setSetting('allowed_values_function', '_oe_paragraphs_allowed_values_icons');
+  $entity->save();
 }
