@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_illustration_alternate
+    - paragraphs.paragraphs_type.oe_illustration_list_icons
+id: paragraph.oe_illustration_list_icons.field_oe_illustration_alternate
+field_name: field_oe_illustration_alternate
+entity_type: paragraph
+bundle: oe_illustration_list_icons
+label: 'Alternating background'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_illustration_columns
+    - paragraphs.paragraphs_type.oe_illustration_list_icons
+  module:
+    - options
+id: paragraph.oe_illustration_list_icons.field_oe_illustration_columns
+field_name: field_oe_illustration_columns
+entity_type: paragraph
+bundle: oe_illustration_list_icons
+label: Columns
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

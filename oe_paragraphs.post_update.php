@@ -216,3 +216,21 @@ function oe_paragraphs_post_update_10007(array &$sandbox) {
   $entity->setSetting('allowed_values_function', '_oe_paragraphs_allowed_values_icons');
   $entity->save();
 }
+
+/**
+ * Create field_oe_flag field storage.
+ */
+function oe_paragraphs_post_update_10008(array &$sandbox) {
+  $entity_storage = \Drupal::entityTypeManager()->getStorage('field_storage_config');
+  $entity = $entity_storage->load('paragraph.field_oe_flag');
+
+  if ($entity) {
+    return 'Field storage "paragraph.field_oe_flag" already exists.';
+  }
+
+  // Create field storage if it doesn't exist.
+  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10008');
+  $config_record = $storage->read('field.storage.paragraph.field_oe_flag');
+  $entity = $entity_storage->createFromStorageRecord($config_record);
+  $entity->save();
+}

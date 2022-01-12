@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_illustration_list_flags
+label: 'Illustration list with flags'
+icon_uuid: null
+icon_default: null
+description: 'Illustration list with flags paragraph to show list of flags with description.'
+behavior_plugins: {  }

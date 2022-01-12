@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_flag
+    - paragraphs.paragraphs_type.oe_illustration_item_flag
+  module:
+    - options
+id: paragraph.oe_illustration_item_flag.field_oe_flag
+field_name: field_oe_flag
+entity_type: paragraph
+bundle: oe_illustration_item_flag
+label: Flag
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

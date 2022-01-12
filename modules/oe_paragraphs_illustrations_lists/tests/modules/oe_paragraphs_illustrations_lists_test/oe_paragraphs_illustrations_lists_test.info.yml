@@ -1,0 +1,6 @@
+name: 'OE Paragraphs - Illustration lists test'
+type: module
+description: 'Used by the automated tests for the OE Paragraphs Illustration Lists.'
+package: Testing
+hidden: true
+core_version_requirement: ^8.9 || ^9.1

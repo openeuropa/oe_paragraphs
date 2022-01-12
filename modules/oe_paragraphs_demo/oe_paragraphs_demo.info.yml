@@ -17,6 +17,7 @@ dependencies:
   - oe_paragraphs:oe_paragraphs_description_list
   - oe_paragraphs:oe_paragraphs_iframe_media
   - oe_paragraphs:oe_paragraphs_document
+  - oe_paragraphs:oe_paragraphs_illustrations_lists
 
 config_devel:
   install:

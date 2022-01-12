@@ -1,0 +1,9 @@
+services:
+  oe_paragraphs_test.icon_options_event_subscriber:
+    class: Drupal\oe_paragraphs_options_event_test\EventSubscriber\IconOptionsEventTestSubscriber
+    tags:
+      - { name: 'event_subscriber' }
+  oe_paragraphs_test.flag_options_event_subscriber:
+    class: Drupal\oe_paragraphs_options_event_test\EventSubscriber\FlagOptionsEventTestSubscriber
+    tags:
+      - { name: 'event_subscriber' }

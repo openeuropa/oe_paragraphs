@@ -1,0 +1,113 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_paragraphs
+    - paragraphs.paragraphs_type.oe_illustration_item_icon
+    - paragraphs.paragraphs_type.oe_illustration_list_icons
+  module:
+    - composite_reference
+    - entity_reference_revisions
+third_party_settings:
+  composite_reference:
+    composite: false
+    composite_revisions: false
+id: paragraph.oe_illustration_list_icons.field_oe_paragraphs
+field_name: field_oe_paragraphs
+entity_type: paragraph
+bundle: oe_illustration_list_icons
+label: 'Item with icon'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      oe_illustration_item_icon: oe_illustration_item_icon
+    target_bundles_drag_drop:
+      oe_accordion:
+        weight: 28
+        enabled: false
+      oe_accordion_item:
+        weight: 29
+        enabled: false
+      oe_banner:
+        weight: 30
+        enabled: false
+      oe_chart:
+        weight: 31
+        enabled: false
+      oe_contact:
+        weight: 32
+        enabled: false
+      oe_content_row:
+        weight: 33
+        enabled: false
+      oe_contextual_navigation:
+        weight: 34
+        enabled: false
+      oe_description_list:
+        weight: 35
+        enabled: false
+      oe_document:
+        weight: 36
+        enabled: false
+      oe_fact:
+        weight: 37
+        enabled: false
+      oe_facts_figures:
+        weight: 38
+        enabled: false
+      oe_iframe_media:
+        weight: 39
+        enabled: false
+      oe_illustration_item_flag:
+        weight: 40
+        enabled: false
+      oe_illustration_item_icon:
+        enabled: true
+        weight: 41
+      oe_illustration_item_image:
+        weight: 42
+        enabled: false
+      oe_illustration_list_icons:
+        weight: 43
+        enabled: false
+      oe_illustration_list_images:
+        weight: 44
+        enabled: false
+      oe_links_block:
+        weight: 45
+        enabled: false
+      oe_list_item:
+        weight: 46
+        enabled: false
+      oe_list_item_block:
+        weight: 47
+        enabled: false
+      oe_map:
+        weight: 48
+        enabled: false
+      oe_quote:
+        weight: 49
+        enabled: false
+      oe_rich_text:
+        weight: 50
+        enabled: false
+      oe_social_feed:
+        weight: 51
+        enabled: false
+      oe_social_media_follow:
+        weight: 52
+        enabled: false
+      oe_text_feature_media:
+        weight: 53
+        enabled: false
+      oe_timeline:
+        weight: 54
+        enabled: false
+field_type: entity_reference_revisions

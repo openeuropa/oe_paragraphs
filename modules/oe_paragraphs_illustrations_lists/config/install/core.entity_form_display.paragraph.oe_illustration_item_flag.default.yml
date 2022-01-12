@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_illustration_item_flag.field_oe_flag
+    - field.field.paragraph.oe_illustration_item_flag.field_oe_illustration_text
+    - paragraphs.paragraphs_type.oe_illustration_item_flag
+  module:
+    - description_list_field
+id: paragraph.oe_illustration_item_flag.default
+targetEntityType: paragraph
+bundle: oe_illustration_item_flag
+mode: default
+content:
+  field_oe_flag:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_oe_illustration_text:
+    type: description_list_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

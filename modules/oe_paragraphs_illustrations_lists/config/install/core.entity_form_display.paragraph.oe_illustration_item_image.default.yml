@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_illustration_item_image.field_oe_illustration_text
+    - field.field.paragraph.oe_illustration_item_image.field_oe_media
+    - paragraphs.paragraphs_type.oe_illustration_item_image
+  module:
+    - description_list_field
+id: paragraph.oe_illustration_item_image.default
+targetEntityType: paragraph
+bundle: oe_illustration_item_image
+mode: default
+content:
+  field_oe_illustration_text:
+    type: description_list_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_oe_media:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

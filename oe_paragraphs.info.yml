@@ -139,6 +139,9 @@ config_devel:
     # Icons (select field)
     - field.storage.paragraph.field_oe_icon
 
+    # Flags (select field)
+    - field.storage.paragraph.field_oe_flag
+
     # Paragraph field (entity reference type)
     - field.storage.paragraph.field_oe_paragraphs
 

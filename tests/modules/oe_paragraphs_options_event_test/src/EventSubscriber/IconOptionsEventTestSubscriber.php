@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Drupal\oe_paragraphs_icon_options_event_test\EventSubscriber;
+namespace Drupal\oe_paragraphs_options_event_test\EventSubscriber;
 
 use Drupal\oe_paragraphs\Event\IconOptionsEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;

@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ * OE Paragraphs Illustrations Lists module.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\oe_paragraphs_illustrations_lists\Event\RatioOptionsEvent;
+use Drupal\oe_paragraphs_illustrations_lists\Event\ColumnOptionsEvent;
+
+/**
+ * Sets allowed values for the "Image ratio" field.
+ *
+ * @param \Drupal\Core\Field\FieldStorageDefinitionInterface $definition
+ *   The field definition.
+ * @param \Drupal\Core\Entity\FieldableEntityInterface|null $entity
+ *   The entity being created if applicable.
+ * @param bool $cacheable
+ *   Boolean indicating if the results are cacheable.
+ *
+ * @return array
+ *   An array of possible key and value of "Image ratio" field options.
+ *
+ * @see options_allowed_values()
+ */
+function _oe_paragraphs_illustrations_lists_allowed_values_ratios(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE) {
+  $event = new RatioOptionsEvent();
+
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+  $event_dispatcher->dispatch(RatioOptionsEvent::class, $event);
+
+  return $event->getRatioOptions();
+}
+
+/**
+ * Sets allowed values for the "Columns" field.
+ *
+ * @param \Drupal\Core\Field\FieldStorageDefinitionInterface $definition
+ *   The field definition.
+ * @param \Drupal\Core\Entity\FieldableEntityInterface|null $entity
+ *   The entity being created if applicable.
+ * @param bool $cacheable
+ *   Boolean indicating if the results are cacheable.
+ *
+ * @return array
+ *   An array of possible key and value columns options.
+ *
+ * @see options_allowed_values()
+ */
+function _oe_paragraphs_illustrations_lists_allowed_values_columns(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE) {
+  $event = new ColumnOptionsEvent();
+
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+  $event_dispatcher->dispatch(ColumnOptionsEvent::class, $event);
+
+  return $event->getColumnOptions();
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function oe_paragraphs_illustrations_lists_field_widget_oe_paragraphs_variants_form_alter(&$element, FormStateInterface $form_state, $context) {
+  if (in_array($element['#paragraph_type'], [
+    'oe_illustration_list_flags',
+    'oe_illustration_list_icons',
+    'oe_illustration_list_images',
+  ])) {
+    // Rename the 'Default' variant to 'Horizontal'.
+    $element['variant']['#options']['default'] = t('Horizontal');
+  }
+}
