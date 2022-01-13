@@ -29,7 +29,7 @@ class ColumnOptionsEvent extends Event {
   }
 
   /**
-   * Gets the icon option list values.
+   * Gets the column option list values.
    *
    * @return array
    *   Array containing the set of allowed values for column options.

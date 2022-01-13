@@ -28,11 +28,10 @@ use Drupal\oe_paragraphs_illustrations_lists\Event\ColumnOptionsEvent;
  *
  * @see options_allowed_values()
  */
-function _oe_paragraphs_illustrations_lists_allowed_values_ratios(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE) {
+function _oe_paragraphs_illustrations_lists_allowed_values_ratios(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE): array {
   $event = new RatioOptionsEvent();
 
-  $event_dispatcher = \Drupal::service('event_dispatcher');
-  $event_dispatcher->dispatch(RatioOptionsEvent::class, $event);
+  \Drupal::service('event_dispatcher')->dispatch(RatioOptionsEvent::class, $event);
 
   return $event->getRatioOptions();
 }
@@ -52,11 +51,10 @@ function _oe_paragraphs_illustrations_lists_allowed_values_ratios(FieldStorageDe
  *
  * @see options_allowed_values()
  */
-function _oe_paragraphs_illustrations_lists_allowed_values_columns(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE) {
+function _oe_paragraphs_illustrations_lists_allowed_values_columns(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE): array {
   $event = new ColumnOptionsEvent();
 
-  $event_dispatcher = \Drupal::service('event_dispatcher');
-  $event_dispatcher->dispatch(ColumnOptionsEvent::class, $event);
+  \Drupal::service('event_dispatcher')->dispatch(ColumnOptionsEvent::class, $event);
 
   return $event->getColumnOptions();
 }

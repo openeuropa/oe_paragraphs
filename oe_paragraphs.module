@@ -75,11 +75,10 @@ function _oe_paragraphs_allowed_values_icons(FieldStorageDefinitionInterface $de
  *
  * @see options_allowed_values()
  */
-function _oe_paragraphs_allowed_values_flags(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE) {
+function _oe_paragraphs_allowed_values_flags(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE): array {
   $event = new FlagOptionsEvent();
 
-  $event_dispatcher = \Drupal::service('event_dispatcher');
-  $event_dispatcher->dispatch(FlagOptionsEvent::class, $event);
+  \Drupal::service('event_dispatcher')->dispatch(FlagOptionsEvent::class, $event);
 
   return $event->getFlagOptions();
 }

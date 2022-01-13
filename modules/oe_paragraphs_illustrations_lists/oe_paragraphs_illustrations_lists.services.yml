@@ -1,9 +1,5 @@
 services:
-  oe_paragraphs_illustrations_lists.column_options_subscriber:
-    class: 'Drupal\oe_paragraphs_illustrations_lists\EventSubscriber\ColumnOptionsSubscriber'
-    tags:
-      - { name: 'event_subscriber' }
-  oe_paragraphs_illustrations_lists.ratio_options_subscriber:
-    class: 'Drupal\oe_paragraphs_illustrations_lists\EventSubscriber\RatioOptionsSubscriber'
+  oe_paragraphs_illustrations_lists.options_subscriber:
+    class: 'Drupal\oe_paragraphs_illustrations_lists\EventSubscriber\OptionsEventSubscriber'
     tags:
       - { name: 'event_subscriber' }

@@ -1,9 +1,5 @@
 services:
-  oe_paragraphs.flag_options_subscriber:
-    class: 'Drupal\oe_paragraphs\EventSubscriber\FlagOptionsSubscriber'
-    tags:
-      - { name: 'event_subscriber' }
-  oe_paragraphs.icon_options_subscriber:
-    class: 'Drupal\oe_paragraphs\EventSubscriber\IconOptionsSubscriber'
+  oe_paragraphs.options_subscriber:
+    class: 'Drupal\oe_paragraphs\EventSubscriber\OptionsSubscriber'
     tags:
       - { name: 'event_subscriber' }

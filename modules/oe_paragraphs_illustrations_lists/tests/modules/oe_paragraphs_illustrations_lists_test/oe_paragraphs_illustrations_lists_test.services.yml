@@ -1,9 +1,5 @@
 services:
-  oe_paragraphs_illustrations_lists_test.column_options_event_subscriber:
-    class: Drupal\oe_paragraphs_illustrations_lists_test\EventSubscriber\ColumnOptionsEventTestSubscriber
-    tags:
-      - { name: 'event_subscriber' }
-  oe_paragraphs_illustrations_lists_test.ratio_options_event_subscriber:
-    class: Drupal\oe_paragraphs_illustrations_lists_test\EventSubscriber\RatioOptionsEventTestSubscriber
+  oe_paragraphs_illustrations_lists_test.options_event_subscriber:
+    class: Drupal\oe_paragraphs_illustrations_lists_test\EventSubscriber\OptionsEventTestSubscriber
     tags:
       - { name: 'event_subscriber' }
