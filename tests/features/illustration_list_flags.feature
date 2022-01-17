@@ -12,12 +12,16 @@ Feature: Illustration list with flags and Illustration item with flag paragraphs
     And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Illustration list with flags"
     # Check Illustration list with flags paragraph fields.
-    Then the following fields should be present "Variant, Title, Columns" in the "demo paragraphs element" region
+    Then the following fields should be present "Variant, Title, Columns, Flag ratio" in the "demo paragraphs element" region
     And the available options in the "Columns" select should be:
       | - Select a value - |
       | Two columns        |
       | Three columns      |
       | Four columns       |
+    And the available options in the "Flag ratio" select should be:
+      | - Select a value - |
+      | Landscape |
+      | Square    |
     # Check Illustration item with flag paragraphs fields.
     And the following fields should be present "Flag, Term, Description" in the "demo paragraphs element" region
 
@@ -29,6 +33,7 @@ Feature: Illustration list with flags and Illustration item with flag paragraphs
 
     When I fill in "Title" with "Illustration list with flags title" in the 1st "Illustration list with flags" paragraph
     And I select "Two columns" from "Columns" in the 1st "Illustration list with flags" paragraph
+    And I select "Square" from "Flag ratio" in the 1st "Illustration list with flags" paragraph
     And I select "Austria" from "Flag" in the 1st "Illustration item with flag" paragraph
     And I fill in "Term" with "Illustration item with flag term 1" in the 1st "Illustration item with flag" paragraph
     And I fill in "Description" with "Illustration item with flag description 1" in the 1st "Illustration item with flag" paragraph
@@ -46,6 +51,7 @@ Feature: Illustration list with flags and Illustration item with flag paragraphs
     And I should see the text "Illustration item with flag term 2"
     And I should see the text "Illustration item with flag description 2"
     And I should see the text "Two columns"
+    And I should see the text "Square"
     And I should see the text "Off"
 
     # Re-edit the page and verify the Vertical variant.

@@ -5,5 +5,5 @@ id: oe_illustration_item_flag
 label: 'Illustration item with flag'
 icon_uuid: null
 icon_default: null
-description: "Single illustration item with flag, to be used exclusively in conjunction with the \"Illustration list with flags\" paragraph type."
+description: 'Single illustration item with flag, to be used exclusively in conjunction with the "Illustration list with flags" paragraph type.'
 behavior_plugins: {  }

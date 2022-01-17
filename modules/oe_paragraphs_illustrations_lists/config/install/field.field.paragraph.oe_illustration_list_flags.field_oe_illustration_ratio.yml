@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_illustration_ratio
+    - paragraphs.paragraphs_type.oe_illustration_list_flags
+  module:
+    - options
+id: paragraph.oe_illustration_list_flags.field_oe_illustration_ratio
+field_name: field_oe_illustration_ratio
+entity_type: paragraph
+bundle: oe_illustration_list_flags
+label: 'Flag ratio'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

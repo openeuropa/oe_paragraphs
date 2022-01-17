@@ -35,6 +35,7 @@ config_devel:
     - field.field.paragraph.oe_illustration_item_image.field_oe_media
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_alternate
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_columns
+    - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_ratio
     - field.field.paragraph.oe_illustration_list_flags.field_oe_paragraphs
     - field.field.paragraph.oe_illustration_list_flags.field_oe_title
     - field.field.paragraph.oe_illustration_list_icons.field_oe_illustration_alternate
