@@ -29,7 +29,7 @@ Feature: Illustration list with images and Illustration item with image paragrap
       | Landscape          |
       | Square             |
     # Check Illustration item with image paragraphs fields.
-    And the following fields should be present "Image, Term, Description" in the "demo paragraphs element" region
+    And the following fields should be present "Image, Title, Body" in the "demo paragraphs element" region
 
     When I press "Save"
     Then I should see the following error messages:
@@ -42,12 +42,12 @@ Feature: Illustration list with images and Illustration item with image paragrap
     And I select "Three columns" from "Columns" in the 1st "Illustration list with images" paragraph
     And I select "Landscape" from "Image ratio" in the 1st "Illustration list with images" paragraph
     And I fill in "Use existing media" with "Image 1" in the 1st "Illustration item with image" paragraph
-    And I fill in "Term" with "Illustration item with image term 1" in the 1st "Illustration item with image" paragraph
-    And I fill in "Description" with "Illustration item with image description 1" in the 1st "Illustration item with image" paragraph
+    And I fill in "Title" with "Illustration item with image term 1" in the 1st "Illustration item with image" paragraph
+    And I fill in "Body" with "Illustration item with image description 1" in the 1st "Illustration item with image" paragraph
     And I press "Illustration item with image"
     And I fill in "Use existing media" with "Image 2" in the 2nd "Illustration item with image" paragraph
-    And I fill in "Term" with "Illustration item with image term 2" in the 2nd "Illustration item with image" paragraph
-    And I fill in "Description" with "Illustration item with image description 2" in the 2nd "Illustration item with image" paragraph
+    And I fill in "Title" with "Illustration item with image term 2" in the 2nd "Illustration item with image" paragraph
+    And I fill in "Body" with "Illustration item with image description 2" in the 2nd "Illustration item with image" paragraph
     And I press "Save"
     Then I should see the heading "Illustration list with images paragraph test page"
     And I should see the text "Illustration list with images title"

@@ -23,7 +23,7 @@ Feature: Illustration list with flags and Illustration item with flag paragraphs
       | Landscape |
       | Square    |
     # Check Illustration item with flag paragraphs fields.
-    And the following fields should be present "Flag, Term, Description" in the "demo paragraphs element" region
+    And the following fields should be present "Flag, Title, Body" in the "demo paragraphs element" region
 
     When I press "Save"
     Then I should see the following error messages:
@@ -35,12 +35,12 @@ Feature: Illustration list with flags and Illustration item with flag paragraphs
     And I select "Two columns" from "Columns" in the 1st "Illustration list with flags" paragraph
     And I select "Square" from "Flag ratio" in the 1st "Illustration list with flags" paragraph
     And I select "Austria" from "Flag" in the 1st "Illustration item with flag" paragraph
-    And I fill in "Term" with "Illustration item with flag term 1" in the 1st "Illustration item with flag" paragraph
-    And I fill in "Description" with "Illustration item with flag description 1" in the 1st "Illustration item with flag" paragraph
+    And I fill in "Title" with "Illustration item with flag term 1" in the 1st "Illustration item with flag" paragraph
+    And I fill in "Body" with "Illustration item with flag description 1" in the 1st "Illustration item with flag" paragraph
     And I press "Illustration item with flag"
     And I select "Belgium" from "Flag" in the 2nd "Illustration item with flag" paragraph
-    And I fill in "Term" with "Illustration item with flag term 2" in the 2nd "Illustration item with flag" paragraph
-    And I fill in "Description" with "Illustration item with flag description 2" in the 2nd "Illustration item with flag" paragraph
+    And I fill in "Title" with "Illustration item with flag term 2" in the 2nd "Illustration item with flag" paragraph
+    And I fill in "Body" with "Illustration item with flag description 2" in the 2nd "Illustration item with flag" paragraph
     And I press "Save"
     Then I should see the heading "Illustration list with flags paragraph test page"
     And I should see the text "Illustration list with flags title"

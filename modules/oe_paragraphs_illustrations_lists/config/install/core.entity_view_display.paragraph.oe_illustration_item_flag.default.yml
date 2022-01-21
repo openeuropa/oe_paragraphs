@@ -3,11 +3,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.oe_illustration_item_flag.field_oe_flag
-    - field.field.paragraph.oe_illustration_item_flag.field_oe_illustration_text
+    - field.field.paragraph.oe_illustration_item_flag.field_oe_text_long
+    - field.field.paragraph.oe_illustration_item_flag.field_oe_title
     - paragraphs.paragraphs_type.oe_illustration_item_flag
   module:
-    - description_list_field
     - options
+    - text
 id: paragraph.oe_illustration_item_flag.default
 targetEntityType: paragraph
 bundle: oe_illustration_item_flag
@@ -20,11 +21,19 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-  field_oe_illustration_text:
-    type: description_list_formatter
-    weight: 1
+  field_oe_text_long:
+    type: text_default
+    weight: 2
     region: content
     label: above
     settings: {  }
+    third_party_settings: {  }
+  field_oe_title:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
 hidden: {  }

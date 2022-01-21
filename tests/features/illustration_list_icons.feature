@@ -19,7 +19,7 @@ Feature: Illustration list with icons and Illustration item with icon paragraphs
       | Three columns      |
       | Four columns       |
     # Check Illustration item with icon paragraphs fields.
-    And the following fields should be present "Icon, Term, Description" in the "demo paragraphs element" region
+    And the following fields should be present "Icon, Title, Body" in the "demo paragraphs element" region
 
     When I press "Save"
     Then I should see the following error messages:
@@ -30,12 +30,12 @@ Feature: Illustration list with icons and Illustration item with icon paragraphs
     When I fill in "Title" with "Illustration list with icons title" in the 1st "Illustration list with icons" paragraph
     And I select "Two columns" from "Columns" in the 1st "Illustration list with icons" paragraph
     And I select "Budget" from "Icon" in the 1st "Illustration item with icon" paragraph
-    And I fill in "Term" with "Illustration item with icon term 1" in the 1st "Illustration item with icon" paragraph
-    And I fill in "Description" with "Illustration item with icon description 1" in the 1st "Illustration item with icon" paragraph
+    And I fill in "Title" with "Illustration item with icon term 1" in the 1st "Illustration item with icon" paragraph
+    And I fill in "Body" with "Illustration item with icon description 1" in the 1st "Illustration item with icon" paragraph
     And I press "Illustration item with icon"
     And I select "Digital" from "Icon" in the 2nd "Illustration item with icon" paragraph
-    And I fill in "Term" with "Illustration item with icon term 2" in the 2nd "Illustration item with icon" paragraph
-    And I fill in "Description" with "Illustration item with icon description 2" in the 2nd "Illustration item with icon" paragraph
+    And I fill in "Title" with "Illustration item with icon term 2" in the 2nd "Illustration item with icon" paragraph
+    And I fill in "Body" with "Illustration item with icon description 2" in the 2nd "Illustration item with icon" paragraph
     And I press "Save"
     Then I should see the heading "Illustration list with icons paragraph test page"
     And I should see the text "Illustration list with icons title"

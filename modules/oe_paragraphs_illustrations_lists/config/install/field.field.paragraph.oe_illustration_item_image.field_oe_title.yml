@@ -2,19 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oe_illustration_text
+    - field.storage.paragraph.field_oe_title
     - paragraphs.paragraphs_type.oe_illustration_item_image
-  module:
-    - description_list_field
-id: paragraph.oe_illustration_item_image.field_oe_illustration_text
-field_name: field_oe_illustration_text
+id: paragraph.oe_illustration_item_image.field_oe_title
+field_name: field_oe_title
 entity_type: paragraph
 bundle: oe_illustration_item_image
-label: Description
+label: Title
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: description_list_field
+field_type: string
