@@ -9,6 +9,9 @@ declare(strict_types = 1);
 
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\oe_paragraphs\Event\IconOptionsEvent;
+use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
 
 /**
  * Implements hook_entity_base_field_info().
@@ -30,4 +33,28 @@ function oe_paragraphs_entity_base_field_info(EntityTypeInterface $entity_type):
     ->setDisplayConfigurable('view', FALSE);
 
   return $fields;
+}
+
+/**
+ * Sets dynamic allowed values for the icon field.
+ *
+ * @param \Drupal\Core\Field\FieldStorageDefinitionInterface $definition
+ *   The field definition.
+ * @param \Drupal\Core\Entity\FieldableEntityInterface|null $entity
+ *   The entity being created if applicable.
+ * @param bool $cacheable
+ *   Boolean indicating if the results are cacheable.
+ *
+ * @return array
+ *   An array of possible key and value icon options.
+ *
+ * @see options_allowed_values()
+ */
+function _oe_paragraphs_allowed_values_icons(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE) {
+  $event = new IconOptionsEvent();
+
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+  $event_dispatcher->dispatch(IconOptionsEvent::class, $event);
+
+  return $event->getIconOptions();
 }

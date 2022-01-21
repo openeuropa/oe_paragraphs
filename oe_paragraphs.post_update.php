@@ -200,3 +200,19 @@ function oe_paragraphs_post_update_10006(array &$sandbox): void {
   $field->set('settings', $settings);
   $field->save();
 }
+
+/**
+ * Update field_oe_icon field to retrieve allowed values from an event.
+ */
+function oe_paragraphs_post_update_10007(array &$sandbox) {
+  $entity_storage = \Drupal::entityTypeManager()->getStorage('field_storage_config');
+  $entity = $entity_storage->load('paragraph.field_oe_icon');
+
+  if (!$entity) {
+    return 'Field storage "paragraph.field_oe_icon" not found.';
+  }
+
+  /** @var \Drupal\field\FieldStorageConfigInterface $entity */
+  $entity->setSetting('allowed_values_function', '_oe_paragraphs_allowed_values_icons');
+  $entity->save();
+}

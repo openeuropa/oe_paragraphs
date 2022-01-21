@@ -8,3 +8,4 @@ vendor
 .DS_Store
 docker-compose.*.yml
 /.gitattributes
+phpunit.xml
