@@ -24,7 +24,7 @@ class IconOptionsEventTestSubscriber implements EventSubscriberInterface {
   /**
    * Gets the icon options.
    *
-   * @param \Drupal\custom_events\Event\IconOptionsEvent $event
+   * @param \Drupal\oe_paragraphs\Event\IconOptionsEvent $event
    *   The event object.
    */
   public function getIconOptions(IconOptionsEvent $event): void {
