@@ -1,17 +1,17 @@
 OpenEuropa Paragraphs Illustration Lists
 ============================
 
-This module provides Illustration paragraphs that depends on the [OpenEuropa Media](https://github.com/openeuropa/oe_media)
+This module provides Illustration list paragraphs that depend on the [OpenEuropa Media](https://github.com/openeuropa/oe_media)
 component and the [Description List Field](https://www.drupal.org/project/description_list_field) module.
 
-List of available paragraphs type in this module:
+List of available paragraph types in this module:
 
-- "Illustration list with flags" in conjunction with "Illustration item with flag" is used to show list of flags with
-description
-- "Illustration list with icons" in in conjunction with "Illustration item with icon" is used to show list of icons with
-description
-- "Illustration list with images" in conjunction with "Illustration item with image" is used to show list of images with
-different ratio and description.
+- "Illustration list with flags", in conjunction with "Illustration item with flag", is used to show lists of flags with
+a title and description. It also allows to choose the ratio of the flag.
+- "Illustration list with icons", in conjunction with "Illustration item with icon", is used to show lists of icons with
+a title and description.
+- "Illustration list with images", in conjunction with "Illustration item with image", is used to show list of images with
+  a title and description. It also allows to choose the ratio of the image.
 
-Illustration lists paragraphs are supplied with Horizontal and Vertical variants. In Horizontal variant number of
-columns can be chosen. Vertical variant provides an option to choose alternating style of rows.
+The Illustration lists paragraphs are supplied with both Horizontal and Vertical variants. The Horizontal variant allows to
+choose the number of columns for each row. The Vertical variant provides an option to choose alternating style of rows.

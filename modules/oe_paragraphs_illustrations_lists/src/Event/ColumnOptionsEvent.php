@@ -7,7 +7,7 @@ namespace Drupal\oe_paragraphs_illustrations_lists\Event;
 use Symfony\Component\EventDispatcher\Event;
 
 /**
- * Event triggered when a column's options need to be provided.
+ * Event triggered when options for column numbers need to be provided.
  */
 class ColumnOptionsEvent extends Event {
 
