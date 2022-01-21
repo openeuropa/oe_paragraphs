@@ -2,7 +2,7 @@ OpenEuropa Paragraphs Illustration Lists
 ============================
 
 This module provides Illustration list paragraphs that depend on the [OpenEuropa Media](https://github.com/openeuropa/oe_media)
-component and the [Description List Field](https://www.drupal.org/project/description_list_field) module.
+component.
 
 List of available paragraph types in this module:
 
