@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.oe_illustration_vertical
+label: Vertical
+targetEntityType: paragraph
+cache: true

@@ -9,6 +9,7 @@ declare(strict_types = 1);
 
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\oe_paragraphs\Event\FlagOptionsEvent;
 use Drupal\oe_paragraphs\Event\IconOptionsEvent;
 use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
@@ -57,4 +58,27 @@ function _oe_paragraphs_allowed_values_icons(FieldStorageDefinitionInterface $de
   $event_dispatcher->dispatch(IconOptionsEvent::class, $event);
 
   return $event->getIconOptions();
+}
+
+/**
+ * Sets allowed values for the "Flag" field.
+ *
+ * @param \Drupal\Core\Field\FieldStorageDefinitionInterface $definition
+ *   The field definition.
+ * @param \Drupal\Core\Entity\FieldableEntityInterface|null $entity
+ *   The entity being created if applicable.
+ * @param bool $cacheable
+ *   Boolean indicating if the results are cacheable.
+ *
+ * @return array
+ *   An array of possible key and value flag options.
+ *
+ * @see options_allowed_values()
+ */
+function _oe_paragraphs_allowed_values_flags(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE): array {
+  $event = new FlagOptionsEvent();
+
+  \Drupal::service('event_dispatcher')->dispatch(FlagOptionsEvent::class, $event);
+
+  return $event->getFlagOptions();
 }

@@ -1,0 +1,5 @@
+services:
+  oe_paragraphs_test.options_event_subscriber:
+    class: Drupal\oe_paragraphs_options_event_test\EventSubscriber\OptionsEventTestSubscriber
+    tags:
+      - { name: 'event_subscriber' }

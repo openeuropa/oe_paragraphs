@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_text_long
+    - paragraphs.paragraphs_type.oe_illustration_item_icon
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    plain_text: '0'
+    oe_media_iframe: '0'
+id: paragraph.oe_illustration_item_icon.field_oe_text_long
+field_name: field_oe_text_long
+entity_type: paragraph
+bundle: oe_illustration_item_icon
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

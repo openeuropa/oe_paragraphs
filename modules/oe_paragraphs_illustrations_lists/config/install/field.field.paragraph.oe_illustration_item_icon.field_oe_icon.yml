@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_icon
+    - paragraphs.paragraphs_type.oe_illustration_item_icon
+  module:
+    - options
+id: paragraph.oe_illustration_item_icon.field_oe_icon
+field_name: field_oe_icon
+entity_type: paragraph
+bundle: oe_illustration_item_icon
+label: Icon
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_illustration_item_image.field_oe_media
+    - field.field.paragraph.oe_illustration_item_image.field_oe_text_long
+    - field.field.paragraph.oe_illustration_item_image.field_oe_title
+    - paragraphs.paragraphs_type.oe_illustration_item_image
+  module:
+    - text
+id: paragraph.oe_illustration_item_image.default
+targetEntityType: paragraph
+bundle: oe_illustration_item_image
+mode: default
+content:
+  field_oe_media:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_oe_text_long:
+    type: text_default
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_oe_title:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

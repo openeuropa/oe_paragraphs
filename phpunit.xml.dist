@@ -9,6 +9,7 @@
   </php>
   <testsuites>
     <testsuite name="OpenEuropa Paragraphs">
+      <directory>./modules/**/tests/</directory>
       <directory>./tests/</directory>
     </testsuite>
   </testsuites>

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_illustration_list_icons
+label: 'Illustration list with icons'
+icon_uuid: null
+icon_default: null
+description: 'Illustration list with icons paragraph to show list of icons with description.'
+behavior_plugins: {  }

@@ -4,14 +4,15 @@ declare(strict_types = 1);
 
 namespace Drupal\oe_paragraphs\EventSubscriber;
 
-use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\oe_paragraphs\Event\IconOptionsEvent;
+use Drupal\oe_paragraphs\Event\FlagOptionsEvent;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
- * Provides options for the icon field.
+ * Provides options for the icon and flag fields.
  */
-class IconOptionsSubscriber implements EventSubscriberInterface {
+class OptionsSubscriber implements EventSubscriberInterface {
 
   use StringTranslationTrait;
 
@@ -21,6 +22,7 @@ class IconOptionsSubscriber implements EventSubscriberInterface {
   public static function getSubscribedEvents(): array {
     return [
       IconOptionsEvent::class => 'getIconOptions',
+      FlagOptionsEvent::class => 'getFlagOptions',
     ];
   }
 
@@ -89,6 +91,45 @@ class IconOptionsSubscriber implements EventSubscriberInterface {
       'up' => $this->t('Up'),
       'video' => $this->t('Video'),
       'warning' => $this->t('Warning'),
+    ]);
+  }
+
+  /**
+   * Gets the flag options.
+   *
+   * @param \Drupal\oe_paragraphs\Event\FlagOptionsEvent $event
+   *   Allowed format event object.
+   */
+  public function getFlagOptions(FlagOptionsEvent $event): void {
+    $event->setFlagOptions([
+      'austria' => $this->t('Austria'),
+      'belgium' => $this->t('Belgium'),
+      'bulgaria' => $this->t('Bulgaria'),
+      'croatia' => $this->t('Croatia'),
+      'cyprus' => $this->t('Cyprus'),
+      'czech-republic' => $this->t('Czech republic'),
+      'denmark' => $this->t('Denmark'),
+      'estonia' => $this->t('Estonia'),
+      'EU' => $this->t('EU'),
+      'finland' => $this->t('Finland'),
+      'france' => $this->t('France'),
+      'germany' => $this->t('Germany'),
+      'greece' => $this->t('Greece'),
+      'hungary' => $this->t('Hungary'),
+      'ireland' => $this->t('Ireland'),
+      'italy' => $this->t('Italy'),
+      'latvia' => $this->t('Latvia'),
+      'lithuania' => $this->t('Lithuania'),
+      'luxembourg' => $this->t('Luxembourg'),
+      'malta' => $this->t('Malta'),
+      'netherlands' => $this->t('Netherlands'),
+      'poland' => $this->t('Poland'),
+      'portugal' => $this->t('Portugal'),
+      'romania' => $this->t('Romania'),
+      'slovakia' => $this->t('Slovakia'),
+      'slovenia' => $this->t('Slovenia'),
+      'spain' => $this->t('Spain'),
+      'sweden' => $this->t('Sweden'),
     ]);
   }
 
