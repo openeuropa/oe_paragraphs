@@ -2,25 +2,35 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_timeline.field_oe_text_long
     - field.field.paragraph.oe_timeline.field_oe_timeline
     - field.field.paragraph.oe_timeline.field_oe_timeline_expand
     - field.field.paragraph.oe_timeline.field_oe_title
     - paragraphs.paragraphs_type.oe_timeline
   module:
     - oe_content_timeline_field
+    - text
 id: paragraph.oe_timeline.default
 targetEntityType: paragraph
 bundle: oe_timeline
 mode: default
 content:
-  field_oe_timeline:
+  field_oe_text_long:
     weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_oe_timeline:
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: timeline_widget
     region: content
   field_oe_timeline_expand:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
