@@ -34,8 +34,6 @@ Feature: Text with featured media paragraph.
     Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text" in the "demo paragraphs element" region
     And the available options in the "Variant" select should be:
       | Text on the left, simple call to action    |
-      | Text on the left, featured call to action  |
-      | Text on the right, featured call to action |
       | Text on the right, simple call to action   |
 
     # Create a Text with featured media paragraph with an image.
@@ -70,15 +68,7 @@ Feature: Text with featured media paragraph.
 
     # Change of variants to ensure presence of the fields.
     When I click "Edit"
-    And I select "Text on the left, featured call to action" from "Variant"
-    And I press "Change variant"
-    Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
-
     And I select "Text on the left, simple call to action" from "Variant"
-    And I press "Change variant"
-    Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
-
-    And I select "Text on the right, featured call to action" from "Variant"
     And I press "Change variant"
     Then the following fields should be present "Heading, Title, Use existing media, Caption, Full text, URL, Link text" in the "demo paragraphs element" region
 
