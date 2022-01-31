@@ -51,11 +51,11 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
     $entity_type_manager = \Drupal::entityTypeManager();
     $target_type = $this->getFieldSetting('target_type');
 
-    $item_mode = isset($widget_state['paragraphs'][$delta]['mode']) ? $widget_state['paragraphs'][$delta]['mode'] : 'edit';
+    $item_mode = $widget_state['paragraphs'][$delta]['mode'] ?? 'edit';
     $default_edit_mode = $this->getSetting('edit_mode');
 
-    $closed_mode_setting = isset($widget_state['closed_mode']) ? $widget_state['closed_mode'] : $this->getSetting('closed_mode');
-    $autocollapse_setting = isset($widget_state['autocollapse']) ? $widget_state['autocollapse'] : $this->getSetting('autocollapse');
+    $closed_mode_setting = $widget_state['closed_mode'] ?? $this->getSetting('closed_mode');
+    $autocollapse_setting = $widget_state['autocollapse'] ?? $this->getSetting('autocollapse');
 
     $show_must_be_saved_warning = !empty($widget_state['paragraphs'][$delta]['show_warning']);
 
@@ -670,8 +670,8 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
     $select = $form_state->getTriggeringElement();
     $element = NestedArray::getValue($form, array_slice($select['#array_parents'], 0, -2));
 
-    $element['#prefix'] = '<div class="ajax-new-content">' . (isset($element['#prefix']) ? $element['#prefix'] : '');
-    $element['#suffix'] = (isset($element['#suffix']) ? $element['#suffix'] : '') . '</div>';
+    $element['#prefix'] = '<div class="ajax-new-content">' . ($element['#prefix'] ?? '');
+    $element['#suffix'] = ($element['#suffix'] ?? '') . '</div>';
 
     return $element;
   }
