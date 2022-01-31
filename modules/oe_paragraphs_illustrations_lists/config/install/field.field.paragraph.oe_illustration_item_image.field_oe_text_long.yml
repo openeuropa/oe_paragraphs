@@ -7,10 +7,7 @@ dependencies:
   module:
     - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    plain_text: '0'
-    oe_media_iframe: '0'
+third_party_settings: { }
 id: paragraph.oe_illustration_item_image.field_oe_text_long
 field_name: field_oe_text_long
 entity_type: paragraph
