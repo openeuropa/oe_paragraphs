@@ -6,11 +6,16 @@ Feature: Illustration list with images and Illustration item with image paragrap
 
   @cleanup:media
   Scenario: Illustration list with images paragraph creation.
-    Given I am logged in as a user with the "Editor" role
+    Given I am logged in as a user with the "access content, create oe_demo_landing_page content, edit any oe_demo_landing_page content, create av_portal_photo media" permission
     And the following images:
       | name    | file           |
       | Image 1 | example_1.jpeg |
-      | Image 2 | example_1.jpeg |
+
+    # Create an "AV Portal photo" media
+    When I go to "the avportal photo creation page"
+    And I fill in "Media AV Portal Photo" with "https://audiovisual.ec.europa.eu/en/photo/P-038924~2F00-15"
+    And I press "Save"
+    Then I should see the text "AV Portal Photo Euro with miniature figurines has been created."
 
     When I go to "the content management page"
     And I click "Add content"
@@ -45,7 +50,7 @@ Feature: Illustration list with images and Illustration item with image paragrap
     And I fill in "Title" with "Illustration item with image term 1" in the 1st "Illustration item with image" paragraph
     And I fill in "Body" with "Illustration item with image description 1" in the 1st "Illustration item with image" paragraph
     And I press "Illustration item with image"
-    And I fill in "Use existing media" with "Image 2" in the 2nd "Illustration item with image" paragraph
+    And I fill in "Use existing media" with "Euro with miniature figurines" in the 2nd "Illustration item with image" paragraph
     And I fill in "Title" with "Illustration item with image term 2" in the 2nd "Illustration item with image" paragraph
     And I fill in "Body" with "Illustration item with image description 2" in the 2nd "Illustration item with image" paragraph
     And I press "Save"
@@ -54,7 +59,6 @@ Feature: Illustration list with images and Illustration item with image paragrap
     And I should see the image "example_1.jpeg"
     And I should see the text "Illustration item with image term 1"
     And I should see the text "Illustration item with image description 1"
-    And I should see the image "example_1_0.jpeg"
     And I should see the text "Illustration item with image term 2"
     And I should see the text "Illustration item with image description 2"
     And I should see the text "Three columns"

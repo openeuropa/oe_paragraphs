@@ -22,6 +22,7 @@ default:
               document creation: "/media/add/document"
               remote video creation: "/media/add/remote_video"
               avportal video creation: "/media/add/av_portal_video"
+              avportal photo creation: "/media/add/av_portal_photo"
               Webtools chart creation: 'media/add/webtools_chart'
               Webtools map creation: 'media/add/webtools_map'
               Webtools social feed creation: 'media/add/webtools_social_feed'
