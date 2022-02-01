@@ -12,7 +12,7 @@ use Drupal\paragraphs\Entity\ParagraphsType;
 /**
  * Drop "horizontal" from description list paragraph labels.
  */
-function oe_paragraphs_description_list_post_update_10001(array &$sandbox): void {
+function oe_paragraphs_description_list_post_update_00001(array &$sandbox): void {
   $paragraph = ParagraphsType::load('oe_description_list');
 
   if ($paragraph !== NULL) {
