@@ -2,7 +2,7 @@ name: 'OpenEuropa Paragraphs Illustration Lists'
 type: module
 description: 'Provides group of Illustration lists paragraphs.'
 package: OpenEuropa
-core_version_requirement: ^8.9 || ^9.1
+core_version_requirement: ^9.2
 
 dependencies:
   - composite_reference:composite_reference

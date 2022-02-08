@@ -40,9 +40,7 @@ abstract class ParagraphsTestBase extends BrowserTestBase {
   protected function setUp(): void {
     parent::setUp();
 
-    $this->drupalLogin($this->drupalCreateUser([
-      'administer content types',
-    ]));
+    $this->drupalLogin($this->drupalCreateUser([], '', TRUE));
     $this->drupalCreateContentType([
       'type' => 'paragraphs_test',
       'name' => 'Paragraphs Test',
