@@ -16,6 +16,7 @@ services:
   web:
     image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
     environment:
+      - COMPOSERVER=--2
       - DOCUMENT_ROOT=/test/oe_paragraphs
       - DRUPAL_SPARQL_HOSTNAME=sparql
       - DRUPAL_SPARQL_PORT=8890
@@ -42,23 +43,25 @@ services:
       - DBA_PASSWORD=dba
 
 pipeline:
-  composer-install:
+  composer-install-highest:
     group: prepare
     image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
     volumes:
       - /cache/${DRONE_REPO_NAME}:/cache
     commands:
-      - composer install --ansi --no-suggest --no-progress
+      - composer self-update --2
+      - composer install --ansi --no-progress
+    when:
+      matrix:
+        COMPOSER_BOUNDARY: highest
 
   composer-update-lowest:
-    group: post-prepare
+    group: prepare
     image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
     volumes:
       - /cache/${DRONE_REPO_NAME}:/cache
     commands:
-      # @todo remove "composer install" step once the following issue is fixed.
-      # @link https://webgate.ec.europa.eu/CITnet/jira/browse/OPENEUROPA-1234
-      - composer update --prefer-lowest --prefer-stable --ansi --no-suggest --no-progress  --no-interaction
+      - composer update --prefer-lowest --prefer-stable --ansi --no-progress  --no-interaction
     when:
       matrix:
         COMPOSER_BOUNDARY: lowest
@@ -66,6 +69,7 @@ pipeline:
   site-install:
     image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
     commands:
+      - while ! mysqladmin ping -h mysql --silent; do sleep 1; done
       - ./vendor/bin/run drupal:site-install
 
   grumphp:
@@ -98,4 +102,5 @@ matrix:
     - lowest
     - highest
   PHP_VERSION:
-    - 7.3
+    - 7.4
+    - 8.0
