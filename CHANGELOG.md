@@ -1,5 +1,18 @@
 # Change Log
 
+## [1.11.0](https://github.com/openeuropa/oe_paragraphs/tree/1.11.0) (2022-02-17)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.10.0...1.11.0)
+
+**Merged pull requests:**
+
+- EWPP-1918: Upgrade to PHP8 and Composer v2. [\#162](https://github.com/openeuropa/oe_paragraphs/pull/162) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-1905: Fixing allowed\_formats storage format. [\#159](https://github.com/openeuropa/oe_paragraphs/pull/159) ([upchuk](https://github.com/upchuk))
+- EWPP-1862: Create the list with illustrations paragraphs [\#156](https://github.com/openeuropa/oe_paragraphs/pull/156) ([yenyasinn](https://github.com/yenyasinn))
+- OEL-759: Change icon field to use allowed values callback [\#154](https://github.com/openeuropa/oe_paragraphs/pull/154) ([abel-santos-corral](https://github.com/abel-santos-corral))
+- OEL-452:  Document paragraph module throws warning during install. [\#152](https://github.com/openeuropa/oe_paragraphs/pull/152) ([abel-santos-corral](https://github.com/abel-santos-corral))
+- OEL-267: New paragraph type `Document` [\#150](https://github.com/openeuropa/oe_paragraphs/pull/150) ([GilNovacomm](https://github.com/GilNovacomm))
+
 ## [1.10.0](https://github.com/openeuropa/oe_paragraphs/tree/1.10.0) (2021-09-23)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.9.0...1.10.0)
 
