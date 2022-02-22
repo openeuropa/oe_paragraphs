@@ -67,7 +67,7 @@ the OpenEuropa Paragraphs Chart submodule.
 
 #### Description list
 Allows editors to create paragraphs that provide HTML description lists with a heading.
-To get this paragraph type enable the OpenEuropa Paragraphs Horizontal description list submodule.
+To get this paragraph type enable the OpenEuropa Paragraphs Description list submodule.
 
 #### Iframe
 Allows editors to create paragraphs that display Iframe media entities.

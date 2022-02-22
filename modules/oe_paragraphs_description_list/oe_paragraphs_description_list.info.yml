@@ -1,6 +1,6 @@
-name: 'OpenEuropa Paragraphs Horizontal description list'
+name: 'OpenEuropa Paragraphs Description list'
 type: module
-description: 'Provides Horizontal description list paragraph that renders items grouped in HTML Description list tag.'
+description: 'Provides Description list paragraph that renders items grouped in HTML Description list tag.'
 package: OpenEuropa
 core_version_requirement: ^9.2
 
