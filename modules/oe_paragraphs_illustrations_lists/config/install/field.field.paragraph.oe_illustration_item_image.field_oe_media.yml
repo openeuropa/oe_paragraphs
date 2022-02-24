@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_oe_media
+    - media.type.av_portal_photo
     - media.type.image
     - paragraphs.paragraphs_type.oe_illustration_item_image
   module:
@@ -25,6 +26,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
+      av_portal_photo: av_portal_photo
       image: image
     sort:
       field: _none
