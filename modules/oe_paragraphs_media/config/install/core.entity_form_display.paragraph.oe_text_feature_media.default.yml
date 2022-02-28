@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.oe_text_feature_media.field_oe_feature_media_title
+    - field.field.paragraph.oe_text_feature_media.field_oe_highlighted
     - field.field.paragraph.oe_text_feature_media.field_oe_link
     - field.field.paragraph.oe_text_feature_media.field_oe_media
     - field.field.paragraph.oe_text_feature_media.field_oe_plain_text_long
@@ -25,6 +26,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_oe_highlighted:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_oe_link:
     type: link_default
     weight: 5
@@ -34,39 +42,39 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
   field_oe_media:
+    type: entity_reference_autocomplete
     weight: 2
+    region: content
     settings:
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
       match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_oe_plain_text_long:
-    weight: 3
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
     type: string_textarea
+    weight: 3
     region: content
-  field_oe_text_long:
-    weight: 4
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_oe_text_long:
     type: text_textarea
+    weight: 4
     region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_oe_title:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   created: true
   status: true

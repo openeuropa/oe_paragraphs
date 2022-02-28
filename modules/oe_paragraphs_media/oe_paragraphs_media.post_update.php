@@ -80,3 +80,29 @@ function oe_paragraphs_media_post_update_00003(): void {
     $display->save();
   }
 }
+
+/**
+ * Add Highlighted field to Text with Featured media paragraph.
+ */
+function oe_paragraphs_media_post_update_00004() {
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs_media') . '/config/post_updates/00004_highlighted_field');
+  $config_manager = \Drupal::service('config.manager');
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $configs = [
+    'field.storage.paragraph.field_oe_highlighted',
+    'field.field.paragraph.oe_text_feature_media.field_oe_highlighted',
+  ];
+  foreach ($configs as $config_id) {
+    $config_record = $storage->read($config_id);
+    $entity_type = $config_manager->getEntityTypeIdByName($config_id);
+    $entity_storage = $entity_type_manager->getStorage($entity_type);
+    $entity = $entity_storage->load($config_record['id']);
+    if ($entity) {
+      // Skip if configuration exists.
+      continue;
+    }
+    $config_record['_core']['default_config_hash'] = Crypt::hashBase64(serialize($config_record));
+    $entity = $entity_storage->createFromStorageRecord($config_record);
+    $entity->save();
+  }
+}
