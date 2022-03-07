@@ -1,4 +1,14 @@
-# Change Log
+# Changelog
+
+## [1.12.0](https://github.com/openeuropa/oe_paragraphs/tree/1.12.0) (2022-03-07)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.11.0...1.12.0)
+
+**Merged pull requests:**
+
+- EWPP-0000: Fix paragraphs patch. [\#165](https://github.com/openeuropa/oe_paragraphs/pull/165) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-1865: Add Av Portal photo to illustration item image. [\#160](https://github.com/openeuropa/oe_paragraphs/pull/160) ([yenyasinn](https://github.com/yenyasinn))
+-  OEL-775: Remove "Horizontal" from description list label [\#155](https://github.com/openeuropa/oe_paragraphs/pull/155) ([abel-santos-corral](https://github.com/abel-santos-corral))
 
 ## [1.11.0](https://github.com/openeuropa/oe_paragraphs/tree/1.11.0) (2022-02-17)
 
@@ -6,6 +16,7 @@
 
 **Merged pull requests:**
 
+- EWPP-0000: Prepare for 1.11.0 release. [\#163](https://github.com/openeuropa/oe_paragraphs/pull/163) ([hernani](https://github.com/hernani))
 - EWPP-1918: Upgrade to PHP8 and Composer v2. [\#162](https://github.com/openeuropa/oe_paragraphs/pull/162) ([22Alexandra](https://github.com/22Alexandra))
 - EWPP-1905: Fixing allowed\_formats storage format. [\#159](https://github.com/openeuropa/oe_paragraphs/pull/159) ([upchuk](https://github.com/upchuk))
 - EWPP-1862: Create the list with illustrations paragraphs [\#156](https://github.com/openeuropa/oe_paragraphs/pull/156) ([yenyasinn](https://github.com/yenyasinn))
