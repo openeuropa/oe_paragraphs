@@ -11,7 +11,7 @@ Feature: Timeline paragraph.
     And I fill in "Title" with "Timeline paragraph test"
     And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Timeline"
-    Then the following fields should be present "Label, Title, Content, Expand button" in the "demo paragraphs element" region
+    Then the following fields should be present "Heading, Introduction, Label, Title, Content, Expand button" in the "demo paragraphs element" region
     # The first widget has both fields required.
     When I press "Save"
     Then I should see the following error messages:
@@ -20,11 +20,13 @@ Feature: Timeline paragraph.
       | Title field is required. |
 
     When I fill in "Heading" with "Timeline paragraph heading"
+    And I fill in "Introduction" with "Timeline paragraph introduction"
     And I fill in "Label" with "Item 1 label" in the first "Items" field element
     And I fill in "Title" with "Item 1 title" in the first "Items" field element
     And I press "Save"
     Then I should see the success message "Demo landing page Timeline paragraph test has been created."
     And I should see the text "Timeline paragraph heading"
+    And I should see the text "Timeline paragraph introduction"
     And I should see the text "Item 1 label"
     And I should see the text "Item 1 title"
 
@@ -62,6 +64,7 @@ Feature: Timeline paragraph.
     And I press "Save"
     Then I should see the success message "Demo landing page Timeline paragraph test has been updated."
     And I should see the text "Timeline paragraph heading"
+    And I should see the text "Timeline paragraph introduction"
     And I should see the text "Item 1 label"
     And I should see the text "Item 1 title"
     And I should see the text "Item 2 label"
