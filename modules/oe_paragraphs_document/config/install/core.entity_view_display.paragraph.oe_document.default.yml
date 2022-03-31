@@ -10,12 +10,12 @@ bundle: oe_document
 mode: default
 content:
   field_oe_media:
-    weight: 0
+    type: entity_reference_entity_view
     label: above
     settings:
+      view_mode: default
       link: false
-      view_mode: full
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 0
     region: content
 hidden: {  }
