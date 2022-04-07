@@ -1,11 +1,21 @@
 # Changelog
 
+## [1.13.0](https://github.com/openeuropa/oe_paragraphs/tree/1.13.0) (2022-04-07)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.12.0...1.13.0)
+
+**Merged pull requests:**
+
+- OEL-494: Use the default view mode to render referenced documents. [\#167](https://github.com/openeuropa/oe_paragraphs/pull/167) ([brummbar](https://github.com/brummbar))
+- EWPP-2018: Add Highlighted field for Text with featured Media paragraph. [\#164](https://github.com/openeuropa/oe_paragraphs/pull/164) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-1563: Adds optional Introduction field to Timeline paragraph. [\#157](https://github.com/openeuropa/oe_paragraphs/pull/157) ([22Alexandra](https://github.com/22Alexandra))
+
 ## [1.12.0](https://github.com/openeuropa/oe_paragraphs/tree/1.12.0) (2022-03-07)
 
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.11.0...1.12.0)
 
 **Merged pull requests:**
 
+- Prepare release 1.12.0. [\#166](https://github.com/openeuropa/oe_paragraphs/pull/166) ([imanoleguskiza](https://github.com/imanoleguskiza))
 - EWPP-0000: Fix paragraphs patch. [\#165](https://github.com/openeuropa/oe_paragraphs/pull/165) ([22Alexandra](https://github.com/22Alexandra))
 - EWPP-1865: Add Av Portal photo to illustration item image. [\#160](https://github.com/openeuropa/oe_paragraphs/pull/160) ([yenyasinn](https://github.com/yenyasinn))
 -  OEL-775: Remove "Horizontal" from description list label [\#155](https://github.com/openeuropa/oe_paragraphs/pull/155) ([abel-santos-corral](https://github.com/abel-santos-corral))
