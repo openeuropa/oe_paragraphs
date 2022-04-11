@@ -59,7 +59,11 @@ directory for more information.
 
 #### Banner
 Allows editors to create Banners that display a prominent message and related action. To get this paragraph type enable
-the OpenEuropa Paragraphs Media submodule.
+the OpenEuropa Paragraphs Banner submodule.
+
+#### Carousel
+The paragraph allows editors to create Carousel items similar to a Banner with multiple slides. To get this paragraph
+type enable the OpenEuropa Paragraphs Carousel submodule.
 
 #### Chart
 Allows editors to create paragraphs that display Webtools chart media entities. To get this paragraph type enable

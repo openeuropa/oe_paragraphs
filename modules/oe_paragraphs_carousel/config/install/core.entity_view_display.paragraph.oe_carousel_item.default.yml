@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_carousel_item.field_oe_link
+    - field.field.paragraph.oe_carousel_item.field_oe_media
+    - field.field.paragraph.oe_carousel_item.field_oe_text_long
+    - field.field.paragraph.oe_carousel_item.field_oe_title
+    - paragraphs.paragraphs_type.oe_carousel_item
+  module:
+    - link
+    - text
+id: paragraph.oe_carousel_item.default
+targetEntityType: paragraph
+bundle: oe_carousel_item
+mode: default
+content:
+  field_oe_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_oe_media:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_oe_text_long:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_oe_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
