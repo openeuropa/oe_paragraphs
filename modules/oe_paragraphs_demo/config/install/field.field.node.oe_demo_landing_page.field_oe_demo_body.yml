@@ -6,6 +6,7 @@ dependencies:
     - node.type.oe_demo_landing_page
     - paragraphs.paragraphs_type.oe_accordion
     - paragraphs.paragraphs_type.oe_banner
+    - paragraphs.paragraphs_type.oe_carousel
     - paragraphs.paragraphs_type.oe_chart
     - paragraphs.paragraphs_type.oe_contact
     - paragraphs.paragraphs_type.oe_content_row
@@ -47,7 +48,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       oe_rich_text: oe_rich_text
       oe_links_block: oe_links_block
@@ -72,43 +72,51 @@ settings:
       oe_illustration_list_icons: oe_illustration_list_icons
       oe_illustration_list_flags: oe_illustration_list_flags
       oe_illustration_list_images: oe_illustration_list_images
+      oe_carousel: oe_carousel
+    negate: 0
     target_bundles_drag_drop:
       oe_accordion:
-        enabled: true
         weight: -55
+        enabled: true
       oe_accordion_item:
         weight: -54
         enabled: false
       oe_banner:
-        enabled: true
         weight: -47
+        enabled: true
+      oe_carousel:
+        weight: 34
+        enabled: true
+      oe_carousel_item:
+        weight: 35
+        enabled: false
       oe_chart:
-        enabled: true
         weight: -41
+        enabled: true
       oe_contact:
-        enabled: true
         weight: -37
+        enabled: true
       oe_content_row:
-        enabled: true
         weight: -51
+        enabled: true
       oe_contextual_navigation:
-        enabled: true
         weight: -49
+        enabled: true
       oe_description_list:
-        enabled: true
         weight: -45
-      oe_document:
         enabled: true
+      oe_document:
         weight: -36
+        enabled: true
       oe_fact:
         weight: -43
         enabled: false
       oe_facts_figures:
-        enabled: true
         weight: -48
-      oe_iframe_media:
         enabled: true
+      oe_iframe_media:
         weight: -38
+        enabled: true
       oe_illustration_item_flag:
         weight: -33
         enabled: false
@@ -119,42 +127,42 @@ settings:
         weight: -31
         enabled: false
       oe_illustration_list_flags:
-        enabled: true
         weight: -32
+        enabled: true
       oe_illustration_list_icons:
-        enabled: true
         weight: -34
+        enabled: true
       oe_illustration_list_images:
-        enabled: true
         weight: -30
+        enabled: true
       oe_links_block:
-        enabled: true
         weight: -56
+        enabled: true
       oe_list_item:
-        enabled: true
         weight: -52
+        enabled: true
       oe_list_item_block:
-        enabled: true
         weight: -50
+        enabled: true
       oe_map:
-        enabled: true
         weight: -40
+        enabled: true
       oe_quote:
-        enabled: true
         weight: -53
+        enabled: true
       oe_rich_text:
-        enabled: true
         weight: -57
+        enabled: true
       oe_social_feed:
-        enabled: true
         weight: -39
+        enabled: true
       oe_social_media_follow:
-        enabled: true
         weight: -46
+        enabled: true
       oe_text_feature_media:
-        enabled: true
         weight: -44
-      oe_timeline:
         enabled: true
+      oe_timeline:
         weight: -42
+        enabled: true
 field_type: entity_reference_revisions

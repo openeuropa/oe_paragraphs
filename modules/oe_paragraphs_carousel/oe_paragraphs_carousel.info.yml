@@ -1,0 +1,28 @@
+name: OpenEuropa Paragraphs Carousel
+type: module
+description: Provides the Carousel paragraph that allows users to create carousel items similar to a banner with multiple slides.
+package: OpenEuropa
+core_version_requirement: ^9.2
+
+dependencies:
+  - oe_media:oe_media_avportal
+  - oe_paragraphs:oe_paragraphs
+  - oe_paragraphs:oe_paragraphs_media_field_storage
+
+config_devel:
+  install:
+    - core.entity_form_display.paragraph.oe_carousel.default
+    - core.entity_form_display.paragraph.oe_carousel_item.default
+    - core.entity_view_display.paragraph.oe_carousel.default
+    - core.entity_view_display.paragraph.oe_carousel_item.default
+    - field.field.paragraph.oe_carousel.field_oe_carousel_items
+    - field.field.paragraph.oe_carousel_item.field_oe_link
+    - field.field.paragraph.oe_carousel_item.field_oe_media
+    - field.field.paragraph.oe_carousel_item.field_oe_text_long
+    - field.field.paragraph.oe_carousel_item.field_oe_title
+    - field.storage.paragraph.field_oe_carousel_items
+    - paragraphs.paragraphs_type.oe_carousel
+    - paragraphs.paragraphs_type.oe_carousel_item
+
+  optional:
+    - language.content_settings.paragraph.oe_carousel_item

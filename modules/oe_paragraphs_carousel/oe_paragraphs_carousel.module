@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * OE Paragraphs Carousel module.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function oe_paragraphs_carousel_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  // Add constraint to the 'items' field of the Carousel paragraph.
+  if ($entity_type->id() === 'paragraph' && $bundle === 'oe_carousel') {
+    if (isset($fields['field_oe_carousel_items'])) {
+      $fields['field_oe_carousel_items']->addConstraint('CarouselItemsCardinality', []);
+    }
+  }
+}

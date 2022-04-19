@@ -18,6 +18,7 @@ dependencies:
   - oe_paragraphs:oe_paragraphs_iframe_media
   - oe_paragraphs:oe_paragraphs_document
   - oe_paragraphs:oe_paragraphs_illustrations_lists
+  - oe_paragraphs:oe_paragraphs_carousel
 
 config_devel:
   install:

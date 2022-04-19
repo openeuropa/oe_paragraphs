@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_media
+    - media.type.av_portal_photo
+    - media.type.image
+    - paragraphs.paragraphs_type.oe_carousel_item
+  module:
+    - composite_reference
+third_party_settings:
+  composite_reference:
+    composite: false
+    composite_revisions: false
+id: paragraph.oe_carousel_item.field_oe_media
+field_name: field_oe_media
+entity_type: paragraph
+bundle: oe_carousel_item
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      av_portal_photo: av_portal_photo
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: av_portal_photo
+field_type: entity_reference

@@ -8,6 +8,7 @@ Feature: Create a landing page
     Then the following paragraph types are available for "demo landing page" content:
       | Accordion                     |
       | Chart                         |
+      | Carousel                      |
       | Content row                   |
       | Iframe                        |
       | Links block                   |
