@@ -18,7 +18,7 @@ config_devel:
     - field.field.paragraph.oe_carousel.field_oe_carousel_items
     - field.field.paragraph.oe_carousel_item.field_oe_link
     - field.field.paragraph.oe_carousel_item.field_oe_media
-    - field.field.paragraph.oe_carousel_item.field_oe_text_long
+    - field.field.paragraph.oe_carousel_item.field_oe_text
     - field.field.paragraph.oe_carousel_item.field_oe_title
     - field.storage.paragraph.field_oe_carousel_items
     - paragraphs.paragraphs_type.oe_carousel
