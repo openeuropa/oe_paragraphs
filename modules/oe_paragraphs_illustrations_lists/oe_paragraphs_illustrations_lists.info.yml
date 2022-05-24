@@ -6,6 +6,7 @@ core_version_requirement: ^9.2
 
 dependencies:
   - composite_reference:composite_reference
+  - oe_media:oe_media_avportal
   - oe_paragraphs:oe_paragraphs_media_field_storage
 
 config_devel:
