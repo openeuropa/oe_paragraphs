@@ -4,12 +4,11 @@ dependencies:
   config:
     - field.field.paragraph.oe_carousel_item.field_oe_link
     - field.field.paragraph.oe_carousel_item.field_oe_media
-    - field.field.paragraph.oe_carousel_item.field_oe_text_long
+    - field.field.paragraph.oe_carousel_item.field_oe_text
     - field.field.paragraph.oe_carousel_item.field_oe_title
     - paragraphs.paragraphs_type.oe_carousel_item
   module:
     - link
-    - text
 id: paragraph.oe_carousel_item.default
 targetEntityType: paragraph
 bundle: oe_carousel_item
@@ -33,12 +32,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_oe_text_long:
-    type: text_textarea
+  field_oe_text:
+    type: string_textfield
     weight: 1
     region: content
     settings:
-      rows: 5
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_oe_title:

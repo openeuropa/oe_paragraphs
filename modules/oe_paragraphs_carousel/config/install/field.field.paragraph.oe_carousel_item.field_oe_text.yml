@@ -2,16 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oe_text_long
+    - field.storage.paragraph.field_oe_text
     - paragraphs.paragraphs_type.oe_carousel_item
-  module:
-    - allowed_formats
-    - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats: {  }
-id: paragraph.oe_carousel_item.field_oe_text_long
-field_name: field_oe_text_long
+id: paragraph.oe_carousel_item.field_oe_text
+field_name: field_oe_text
 entity_type: paragraph
 bundle: oe_carousel_item
 label: Description
@@ -21,4 +15,4 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: string
