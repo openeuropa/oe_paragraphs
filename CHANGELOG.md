@@ -1,10 +1,22 @@
 # Changelog
 
+## [1.13.1](https://github.com/openeuropa/oe_paragraphs/tree/1.13.1) (2022-06-21)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.13.0...1.13.1)
+
+**Merged pull requests:**
+
+- OEL-1373: Lighten the dependencies of oe\_paragraphs\_media\_field\_storage. [\#172](https://github.com/openeuropa/oe_paragraphs/pull/172) ([donquixote](https://github.com/donquixote))
+- EWPP-1777: Enable 'Include past revisions' option in composite fields. [\#171](https://github.com/openeuropa/oe_paragraphs/pull/171) ([yenyasinn](https://github.com/yenyasinn))
+- EWPP-2183: Fix dependency from composer patches. [\#170](https://github.com/openeuropa/oe_paragraphs/pull/170) ([yenyasinn](https://github.com/yenyasinn))
+
 ## [1.13.0](https://github.com/openeuropa/oe_paragraphs/tree/1.13.0) (2022-04-07)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.12.0...1.13.0)
 
 **Merged pull requests:**
 
+- Prepare release 1.13.0 [\#168](https://github.com/openeuropa/oe_paragraphs/pull/168) ([abel-santos-corral](https://github.com/abel-santos-corral))
 - OEL-494: Use the default view mode to render referenced documents. [\#167](https://github.com/openeuropa/oe_paragraphs/pull/167) ([brummbar](https://github.com/brummbar))
 - EWPP-2018: Add Highlighted field for Text with featured Media paragraph. [\#164](https://github.com/openeuropa/oe_paragraphs/pull/164) ([22Alexandra](https://github.com/22Alexandra))
 - EWPP-1563: Adds optional Introduction field to Timeline paragraph. [\#157](https://github.com/openeuropa/oe_paragraphs/pull/157) ([22Alexandra](https://github.com/22Alexandra))
