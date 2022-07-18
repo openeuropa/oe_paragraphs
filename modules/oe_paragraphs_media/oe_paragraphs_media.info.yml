@@ -2,7 +2,7 @@ name: OpenEuropa Text with featured Media paragraph
 type: module
 description: Provides Text with Featured Media paragraph that uses media elements.
 package: OpenEuropa
-core_version_requirement: ^9.2
+core_version_requirement: ^9.3
 
 dependencies:
   - oe_media:oe_media_avportal
