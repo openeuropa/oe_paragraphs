@@ -471,7 +471,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
         ];
 
         field_group_attach_groups($element['subform'], $context);
-        $element['subform']['#pre_render'][] = [
+        $element['subform']['#process'][] = [
           FormatterHelper::class,
           'formProcess',
         ];
