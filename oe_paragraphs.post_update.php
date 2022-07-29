@@ -234,3 +234,15 @@ function oe_paragraphs_post_update_10008(array &$sandbox) {
   $entity = $entity_storage->createFromStorageRecord($config_record);
   $entity->save();
 }
+
+/**
+ * Add Telegram and Mastodon options to social media follow paragraph field.
+ */
+function oe_paragraphs_post_update_10009(): void {
+  $field_storage = \Drupal::entityTypeManager()->getStorage('field_storage_config')->load('paragraph.field_oe_social_media_links');
+  $settings = $field_storage->get('settings');
+  $settings['allowed_values']['telegram'] = 'Telegram';
+  $settings['allowed_values']['mastodon'] = 'Mastodon';
+  $field_storage->set('settings', $settings);
+  $field_storage->save();
+}
