@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_carousel
+label: Carousel
+icon_uuid: null
+icon_default: null
+description: 'Allows editors to create a carousel similar to a banner with multiple slides.'
+behavior_plugins: {  }
