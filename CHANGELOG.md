@@ -1,11 +1,39 @@
 # Changelog
 
-## [1.13.1](https://github.com/openeuropa/oe_paragraphs/tree/1.13.1) (2022-06-21)
+## [1.14.0](https://github.com/openeuropa/oe_paragraphs/tree/1.14.0) (2022-08-01)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.13.1...1.14.0)
+
+**Closed issues:**
+
+- Cannot show additional fields on accordion paragraphs [\#137](https://github.com/openeuropa/oe_paragraphs/issues/137)
+- Paragraphed content demo -\> add from library end-up in an infinitive loop \(js code\) [\#126](https://github.com/openeuropa/oe_paragraphs/issues/126)
+- Listing item description is never shown for Highlight type [\#119](https://github.com/openeuropa/oe_paragraphs/issues/119)
+- Listing item title overflows [\#118](https://github.com/openeuropa/oe_paragraphs/issues/118)
+- banner  [\#117](https://github.com/openeuropa/oe_paragraphs/issues/117)
+- contextual nav gave me an error to display the page  [\#116](https://github.com/openeuropa/oe_paragraphs/issues/116)
+- The "field\_item:typed\_link" plugin does not exist. Valid plugin IDs for Drupal\Core\TypedData\TypedDataManager are: entity\_revision\_reference,........ [\#84](https://github.com/openeuropa/oe_paragraphs/issues/84)
+- Documentation missing. [\#61](https://github.com/openeuropa/oe_paragraphs/issues/61)
+
+**Merged pull requests:**
+
+- EWPP-2106: Update branch for Carousel epic. [\#185](https://github.com/openeuropa/oe_paragraphs/pull/185) ([sergepavle](https://github.com/sergepavle))
+- OEL-1890: Use version 3.x of oe\_content. [\#182](https://github.com/openeuropa/oe_paragraphs/pull/182) ([drishu](https://github.com/drishu))
+- EWPP-2106: Update Carousel epic branch. [\#180](https://github.com/openeuropa/oe_paragraphs/pull/180) ([sergepavle](https://github.com/sergepavle))
+- EWPP-2327: Add Telegram and Mastodon options to social media follow paragraph field. [\#178](https://github.com/openeuropa/oe_paragraphs/pull/178) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-2358: Drupal 9.4 support. [\#176](https://github.com/openeuropa/oe_paragraphs/pull/176) ([yenyasinn](https://github.com/yenyasinn))
+- EWPP-2278: Replace type of Description field to field\_oe\_text. [\#175](https://github.com/openeuropa/oe_paragraphs/pull/175) ([sergepavle](https://github.com/sergepavle))
+- EWPP-2106: Update Carousel epic branch. [\#174](https://github.com/openeuropa/oe_paragraphs/pull/174) ([sergepavle](https://github.com/sergepavle))
+- Epic ewpp 2106 carousel [\#173](https://github.com/openeuropa/oe_paragraphs/pull/173) ([sergepavle](https://github.com/sergepavle))
+- \[EWPP-2106\] EWPP-2108: Add Carousel paragraph. [\#169](https://github.com/openeuropa/oe_paragraphs/pull/169) ([22Alexandra](https://github.com/22Alexandra))
+
+## [1.13.1](https://github.com/openeuropa/oe_paragraphs/tree/1.13.1) (2022-06-22)
 
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.13.0...1.13.1)
 
 **Merged pull requests:**
 
+- Prepare release 1.13.1. [\#177](https://github.com/openeuropa/oe_paragraphs/pull/177) ([imanoleguskiza](https://github.com/imanoleguskiza))
 - OEL-1373: Lighten the dependencies of oe\_paragraphs\_media\_field\_storage. [\#172](https://github.com/openeuropa/oe_paragraphs/pull/172) ([donquixote](https://github.com/donquixote))
 - EWPP-1777: Enable 'Include past revisions' option in composite fields. [\#171](https://github.com/openeuropa/oe_paragraphs/pull/171) ([yenyasinn](https://github.com/yenyasinn))
 - EWPP-2183: Fix dependency from composer patches. [\#170](https://github.com/openeuropa/oe_paragraphs/pull/170) ([yenyasinn](https://github.com/yenyasinn))
