@@ -246,17 +246,3 @@ function oe_paragraphs_post_update_10009(): void {
   $field_storage->set('settings', $settings);
   $field_storage->save();
 }
-
-/**
- * Remove field description in Facts and figures paragraph type.
- */
-function oe_paragraphs_post_update_10010() {
-  $field_config_id = 'paragraph.oe_facts_figures.field_oe_paragraphs';
-  $field_config = FieldConfig::load($field_config_id);
-  if ($field_config === NULL) {
-    // Field not found, perhaps removed by a site builder. Nothing to update.
-    return "The field '$field_config_id' was not found.";
-  }
-  $field_config->setDescription('');
-  $field_config->save();
-}
