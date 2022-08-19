@@ -12,7 +12,7 @@ field_name: field_oe_paragraphs
 entity_type: paragraph
 bundle: oe_facts_figures
 label: Fact
-description: 'Add between 1 to 6 Facts.'
+description: ''
 required: true
 translatable: false
 default_value: {  }
