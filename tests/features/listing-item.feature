@@ -55,8 +55,8 @@ Feature: Listing item paragraph.
     # Test the fields in the "thumbnail primary" variant.
     When I select "Thumbnail primary" from "Variant" in the 1st "Listing item" paragraph
     And I press "Change variant"
-    Then the following fields should be present "Link, Title, Image, Meta" in the "demo paragraphs element" region
-    And the following fields should not be present "Day, Month, Year, Description" in the "demo paragraphs element" region
+    Then the following fields should be present "Link, Title, Description, Image, Meta" in the "demo paragraphs element" region
+    And the following fields should not be present "Day, Month, Year" in the "demo paragraphs element" region
     When I press "Save"
     Then I should see the following error messages:
       | error messages          |
