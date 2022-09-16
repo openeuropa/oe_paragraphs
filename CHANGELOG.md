@@ -1,6 +1,16 @@
 # Changelog
 
-## [1.14.0](https://github.com/openeuropa/oe_paragraphs/tree/1.14.0) (2022-08-01)
+## [1.15.0](https://github.com/openeuropa/oe_paragraphs/tree/1.15.0) (2022-09-16)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.14.0...1.15.0)
+
+**Merged pull requests:**
+
+- EWPP-2426: Enable 'Description' field for 'Listing item' thumbnail primary variant. [\#183](https://github.com/openeuropa/oe_paragraphs/pull/183) ([22Alexandra](https://github.com/22Alexandra))
+- OEL-1455: Fix FormatterHelper::formProcess must be called by reference. [\#181](https://github.com/openeuropa/oe_paragraphs/pull/181) ([drishu](https://github.com/drishu))
+- OEL-1747: Remove misleading text in edit form. [\#179](https://github.com/openeuropa/oe_paragraphs/pull/179) ([donquixote](https://github.com/donquixote))
+
+## [1.14.0](https://github.com/openeuropa/oe_paragraphs/tree/1.14.0) (2022-08-02)
 
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.13.1...1.14.0)
 
@@ -18,6 +28,7 @@
 **Merged pull requests:**
 
 - EWPP-2106: Update branch for Carousel epic. [\#185](https://github.com/openeuropa/oe_paragraphs/pull/185) ([sergepavle](https://github.com/sergepavle))
+- Prepare release 1.14.0. [\#184](https://github.com/openeuropa/oe_paragraphs/pull/184) ([imanoleguskiza](https://github.com/imanoleguskiza))
 - OEL-1890: Use version 3.x of oe\_content. [\#182](https://github.com/openeuropa/oe_paragraphs/pull/182) ([drishu](https://github.com/drishu))
 - EWPP-2106: Update Carousel epic branch. [\#180](https://github.com/openeuropa/oe_paragraphs/pull/180) ([sergepavle](https://github.com/sergepavle))
 - EWPP-2327: Add Telegram and Mastodon options to social media follow paragraph field. [\#178](https://github.com/openeuropa/oe_paragraphs/pull/178) ([22Alexandra](https://github.com/22Alexandra))
@@ -75,24 +86,35 @@
 - OEL-267: New paragraph type `Document` [\#150](https://github.com/openeuropa/oe_paragraphs/pull/150) ([GilNovacomm](https://github.com/GilNovacomm))
 
 ## [1.10.0](https://github.com/openeuropa/oe_paragraphs/tree/1.10.0) (2021-09-23)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.9.0...1.10.0)
 
 **Merged pull requests:**
 
+- Prepare changelog for release 1.10.0. [\#151](https://github.com/openeuropa/oe_paragraphs/pull/151) ([yenyasinn](https://github.com/yenyasinn))
+- Update epic ewpp 873 text media 2 20210909 [\#147](https://github.com/openeuropa/oe_paragraphs/pull/147) ([yenyasinn](https://github.com/yenyasinn))
+- EWPP-873: Move update from oe\_theme to oe\_paragraphs [\#146](https://github.com/openeuropa/oe_paragraphs/pull/146) ([yenyasinn](https://github.com/yenyasinn))
 - EWPP-873: Text with featured media paragraph type V2 [\#145](https://github.com/openeuropa/oe_paragraphs/pull/145) ([yenyasinn](https://github.com/yenyasinn))
+- Update epic ewpp 873 text media 2 20210907 [\#144](https://github.com/openeuropa/oe_paragraphs/pull/144) ([yenyasinn](https://github.com/yenyasinn))
+- \[EWPP-873\] EWPP-1356: Name the "Default" variant "Left, simple call action". [\#141](https://github.com/openeuropa/oe_paragraphs/pull/141) ([sergepavle](https://github.com/sergepavle))
 - OEL-67: Drupal 9 Update [\#140](https://github.com/openeuropa/oe_paragraphs/pull/140) ([GilNovacomm](https://github.com/GilNovacomm))
+- \[EWPP-873\] EWPP-1326: Rename title field and add new title field [\#139](https://github.com/openeuropa/oe_paragraphs/pull/139) ([yenyasinn](https://github.com/yenyasinn))
+- Merge master into EPIC-EWPP-873-Text-media-2 [\#138](https://github.com/openeuropa/oe_paragraphs/pull/138) ([yenyasinn](https://github.com/yenyasinn))
+- EWPP-875: Add text with feature media variants. [\#134](https://github.com/openeuropa/oe_paragraphs/pull/134) ([yenyasinn](https://github.com/yenyasinn))
+- EWPP-874: Add Link field to the Text with featured media paragraph. [\#133](https://github.com/openeuropa/oe_paragraphs/pull/133) ([yenyasinn](https://github.com/yenyasinn))
 
-## [1.9.0](https://github.com/openeuropa/oe_paragraphs/tree/1.9.0) (2021-08-12)
+## [1.9.0](https://github.com/openeuropa/oe_paragraphs/tree/1.9.0) (2021-08-16)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.8.0...1.9.0)
 
 **Merged pull requests:**
 
-- \[EWPP-873\] EWPP-1356: Name the "Default" variant "Left, simple call action". [\#141](https://github.com/openeuropa/oe_paragraphs/pull/141) ([sergepavle](https://github.com/sergepavle))
-- \[EWPP-873\] EWPP-1326: Rename title field and add new title field [\#139](https://github.com/openeuropa/oe_paragraphs/pull/139) ([yenyasinn](https://github.com/yenyasinn))
-- Merge master into EPIC-EWPP-873-Text-media-2 [\#138](https://github.com/openeuropa/oe_paragraphs/pull/138) ([yenyasinn](https://github.com/yenyasinn))
+- EWPP-0000: Fix grumphp errors. [\#143](https://github.com/openeuropa/oe_paragraphs/pull/143) ([22Alexandra](https://github.com/22Alexandra))
+- Prepare changelog for release 1.9.0. [\#142](https://github.com/openeuropa/oe_paragraphs/pull/142) ([brummbar](https://github.com/brummbar))
 - \[EWPP-1194\] EWPP-1195: Adds Contact paragraph. [\#135](https://github.com/openeuropa/oe_paragraphs/pull/135) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.8.0](https://github.com/openeuropa/oe_paragraphs/tree/1.8.0) (2021-06-15)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.7.0...1.8.0)
 
 **Merged pull requests:**
