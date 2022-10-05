@@ -1,0 +1,21 @@
+name: OpenEuropa Paragraphs Gallery
+type: module
+description: Provides a paragraph type that displays a gallery of media entities.
+package: OpenEuropa
+core_version_requirement: ^9.3
+
+dependencies:
+  - drupal:media
+  - oe_paragraphs:oe_paragraphs
+
+config_devel:
+  install:
+    - paragraphs.paragraphs_type.oe_gallery
+    - field.storage.paragraph.field_oe_medias
+    - field.field.paragraph.oe_gallery.field_oe_title
+    - field.field.paragraph.oe_gallery.field_oe_plain_text_long
+    - field.field.paragraph.oe_gallery.field_oe_medias
+    - core.entity_form_display.paragraph.oe_gallery.default
+    - core.entity_view_display.paragraph.oe_gallery.default
+  optional:
+    - language.content_settings.paragraph.oe_gallery
