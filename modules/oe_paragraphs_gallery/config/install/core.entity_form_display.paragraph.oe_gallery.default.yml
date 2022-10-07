@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.oe_gallery.field_oe_medias
+    - field.field.paragraph.oe_gallery.field_oe_gallery_items
     - field.field.paragraph.oe_gallery.field_oe_plain_text_long
     - field.field.paragraph.oe_gallery.field_oe_title
     - paragraphs.paragraphs_type.oe_gallery
@@ -11,7 +11,7 @@ targetEntityType: paragraph
 bundle: oe_gallery
 mode: default
 content:
-  field_oe_medias:
+  field_oe_gallery_items:
     type: entity_reference_autocomplete
     weight: 2
     region: content

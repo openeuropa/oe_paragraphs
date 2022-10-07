@@ -4,8 +4,8 @@ dependencies:
   module:
     - media
     - paragraphs
-id: paragraph.field_oe_medias
-field_name: field_oe_medias
+id: paragraph.field_oe_gallery_items
+field_name: field_oe_gallery_items
 entity_type: paragraph
 type: entity_reference
 settings:

@@ -11,10 +11,10 @@ dependencies:
 config_devel:
   install:
     - paragraphs.paragraphs_type.oe_gallery
-    - field.storage.paragraph.field_oe_medias
+    - field.storage.paragraph.field_oe_gallery_items
     - field.field.paragraph.oe_gallery.field_oe_title
     - field.field.paragraph.oe_gallery.field_oe_plain_text_long
-    - field.field.paragraph.oe_gallery.field_oe_medias
+    - field.field.paragraph.oe_gallery.field_oe_gallery_items
     - core.entity_form_display.paragraph.oe_gallery.default
     - core.entity_view_display.paragraph.oe_gallery.default
   optional:

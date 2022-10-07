@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_oe_medias
+    - field.storage.paragraph.field_oe_gallery_items
     - media.type.av_portal_photo
     - media.type.av_portal_video
     - media.type.image
     - media.type.remote_video
     - paragraphs.paragraphs_type.oe_gallery
-id: paragraph.oe_gallery.field_oe_medias
-field_name: field_oe_medias
+id: paragraph.oe_gallery.field_oe_gallery_items
+field_name: field_oe_gallery_items
 entity_type: paragraph
 bundle: oe_gallery
 label: Medias
