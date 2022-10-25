@@ -5,7 +5,7 @@ package: OpenEuropa
 core_version_requirement: ^9.3
 
 dependencies:
-  - drupal:media
+  - oe_media:oe_media_avportal
   - oe_paragraphs:oe_paragraphs
 
 config_devel:
