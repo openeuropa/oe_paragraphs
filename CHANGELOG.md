@@ -1,11 +1,21 @@
 # Changelog
 
+## [1.16.0](https://github.com/openeuropa/oe_paragraphs/tree/1.16.0) (2022-11-04)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.15.0...1.16.0)
+
+**Merged pull requests:**
+
+- OEL-2101: Bump json\_field dependency as 1.0 release was marked as broken. [\#191](https://github.com/openeuropa/oe_paragraphs/pull/191) ([brummbar](https://github.com/brummbar))
+- EWPP-2651: Change oe\_subtitle maxlength to 255. [\#189](https://github.com/openeuropa/oe_paragraphs/pull/189) ([nagyad](https://github.com/nagyad))
+
 ## [1.15.0](https://github.com/openeuropa/oe_paragraphs/tree/1.15.0) (2022-09-16)
 
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.14.0...1.15.0)
 
 **Merged pull requests:**
 
+- Prepare release 1.15.0. [\#186](https://github.com/openeuropa/oe_paragraphs/pull/186) ([imanoleguskiza](https://github.com/imanoleguskiza))
 - EWPP-2426: Enable 'Description' field for 'Listing item' thumbnail primary variant. [\#183](https://github.com/openeuropa/oe_paragraphs/pull/183) ([22Alexandra](https://github.com/22Alexandra))
 - OEL-1455: Fix FormatterHelper::formProcess must be called by reference. [\#181](https://github.com/openeuropa/oe_paragraphs/pull/181) ([drishu](https://github.com/drishu))
 - OEL-1747: Remove misleading text in edit form. [\#179](https://github.com/openeuropa/oe_paragraphs/pull/179) ([donquixote](https://github.com/donquixote))
