@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.oe_description_list
     - paragraphs.paragraphs_type.oe_document
     - paragraphs.paragraphs_type.oe_facts_figures
+    - paragraphs.paragraphs_type.oe_gallery
     - paragraphs.paragraphs_type.oe_iframe_media
     - paragraphs.paragraphs_type.oe_illustration_list_flags
     - paragraphs.paragraphs_type.oe_illustration_list_icons
@@ -73,6 +74,7 @@ settings:
       oe_illustration_list_flags: oe_illustration_list_flags
       oe_illustration_list_images: oe_illustration_list_images
       oe_carousel: oe_carousel
+      oe_gallery: oe_gallery
     negate: 0
     target_bundles_drag_drop:
       oe_accordion:
@@ -113,6 +115,9 @@ settings:
         enabled: false
       oe_facts_figures:
         weight: -48
+        enabled: true
+      oe_gallery:
+        weight: 45
         enabled: true
       oe_iframe_media:
         weight: -38

@@ -127,6 +127,28 @@ class DrupalContext extends RawDrupalContext {
   }
 
   /**
+   * Checks that the AV Portal photo is rendered.
+   *
+   * @param string $title
+   *   The photo title.
+   * @param string $src
+   *   The final photo source.
+   *
+   * @Then I should see the AV Portal photo :title with source :src
+   */
+  public function assertAvPortalPhoto(string $title, string $src): void {
+    $media = \Drupal::entityTypeManager()->getStorage('media')->loadByProperties(['name' => $title]);
+    if (!$media) {
+      throw new \Exception(sprintf('The media named "%s" does not exist', $title));
+    }
+
+    $image = $this->getSession()->getPage()->findAll('css', 'img.avportal-photo[src*="' . $src . '"]');
+    if (!$image) {
+      throw new \Exception(sprintf('The imaged named "%s" was not found on the page.', $title));
+    }
+  }
+
+  /**
    * Presses button with specified id|name|title|alt|value on a given region.
    *
    * @param string $button

@@ -10,6 +10,7 @@ Feature: Create a landing page
       | Chart                         |
       | Carousel                      |
       | Content row                   |
+      | Gallery                       |
       | Iframe                        |
       | Links block                   |
       | Listing item                  |
