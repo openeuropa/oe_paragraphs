@@ -2,7 +2,7 @@ name: OpenEuropa Paragraphs Social feed
 type: module
 description: Provides Social feed paragraph that uses social feed media type.
 package: OpenEuropa
-core_version_requirement: ^9.3
+core_version_requirement: ^9.4
 
 dependencies:
   - oe_paragraphs:oe_paragraphs

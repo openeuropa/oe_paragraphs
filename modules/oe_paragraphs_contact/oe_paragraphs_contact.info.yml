@@ -2,7 +2,7 @@ name: OpenEuropa Paragraphs Contact
 type: module
 description: Provides a paragraph type that references Contact entities.
 package: OpenEuropa
-core_version_requirement: ^9.3
+core_version_requirement: ^9.4
 
 dependencies:
   - oe_paragraphs:oe_paragraphs
