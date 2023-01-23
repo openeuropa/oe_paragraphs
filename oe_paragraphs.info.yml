@@ -1,7 +1,7 @@
 name: OpenEuropa Paragraphs
 type: module
 description: A collection of Paragraph types based on ECL components.
-core_version_requirement: ^9.3
+core_version_requirement: ^9.4
 package: OpenEuropa
 
 dependencies:

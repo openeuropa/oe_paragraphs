@@ -28,7 +28,7 @@ default:
               Webtools social feed creation: 'media/add/webtools_social_feed'
   extensions:
     Drupal\MinkExtension:
-      goutte: ~
+      browserkit_http: ~
       browser_name: 'chrome'
       javascript_session: selenium2
       ajax_timeout: 10
