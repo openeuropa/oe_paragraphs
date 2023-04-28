@@ -19,7 +19,11 @@ Feature: Carousel paragraph.
     And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Carousel"
     # Assert all the fields are present.
-    Then the following fields should be present "Title, Description, URL, Link text, Use existing media" in the "demo paragraphs element" region
+    Then the following fields should be present "Title, Size, Description, URL, Link text, Use existing media" in the "demo paragraphs element" region
+    And the available options in the "Size" select should be:
+      | Small (5:1)  |
+      | Medium (4:1) |
+      | Large (3:1)  |
     When I press "Save"
     # Assert required fields.
     Then I should see the following error messages:
@@ -45,6 +49,7 @@ Feature: Carousel paragraph.
     And I fill in the 2nd "Use existing media" field with "Image 2"
     And I press "Save"
     Then I should see the success message "Demo landing page Carousel test page has been created."
+    And I should see the text "Medium (4:1)"
     And I should see the text "First item"
     And I should see the text "First item - description"
     And I should see the link "CTA 1"
