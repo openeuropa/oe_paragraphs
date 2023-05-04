@@ -6,7 +6,7 @@ Feature: Iframe paragraph.
 
   @cleanup:media
   Scenario: Iframe paragraph creation.
-    Given I am logged in as a user with the "create oe_demo_landing_page content, edit any oe_demo_landing_page content, access content, create iframe media, use text format oe_media_iframe" permission
+    Given I am logged in as a user with the "create oe_demo_landing_page content, edit any oe_demo_landing_page content, access content, create iframe media, use text format oe_media_iframe, access content overview" permission
 
     # Create an "Iframe" media.
     When I go to "the iframe creation page"

@@ -5,7 +5,7 @@ Feature: Description List paragraph.
   so I can display a list of term/description pairs.
 
   Scenario: Description list paragraph creation.
-    Given I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content" permission
+    Given I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content, access content overview" permission
     # Add Description List paragraph
     And I go to "the content management page"
     And I click "Add content"

@@ -10,7 +10,7 @@ Feature: Banner paragraph.
       | name  | file           |
       | Image | example_1.jpeg |
 
-    When I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content, create image media" permission
+    When I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content, create image media, access content overview" permission
     # Add Banner paragraph
     And I go to "the content management page"
     And I click "Add content"
