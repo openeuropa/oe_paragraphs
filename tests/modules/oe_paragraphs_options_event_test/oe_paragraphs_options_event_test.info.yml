@@ -3,4 +3,4 @@ type: module
 description: 'Used by the automated tests for the OE Paragraphs allowed values option events tests.'
 package: Testing
 hidden: true
-core_version_requirement: ^9.4
+core_version_requirement: ^9.4 || ^10
