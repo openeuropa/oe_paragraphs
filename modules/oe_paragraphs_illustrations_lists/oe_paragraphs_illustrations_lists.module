@@ -31,7 +31,7 @@ use Drupal\oe_paragraphs_illustrations_lists\Event\ColumnOptionsEvent;
 function _oe_paragraphs_illustrations_lists_allowed_values_ratios(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE): array {
   $event = new RatioOptionsEvent();
 
-  \Drupal::service('event_dispatcher')->dispatch(RatioOptionsEvent::class, $event);
+  \Drupal::service('event_dispatcher')->dispatch($event, RatioOptionsEvent::class);
 
   return $event->getRatioOptions();
 }
@@ -54,7 +54,7 @@ function _oe_paragraphs_illustrations_lists_allowed_values_ratios(FieldStorageDe
 function _oe_paragraphs_illustrations_lists_allowed_values_columns(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE): array {
   $event = new ColumnOptionsEvent();
 
-  \Drupal::service('event_dispatcher')->dispatch(ColumnOptionsEvent::class, $event);
+  \Drupal::service('event_dispatcher')->dispatch($event, ColumnOptionsEvent::class);
 
   return $event->getColumnOptions();
 }

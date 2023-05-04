@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Drupal\oe_paragraphs_illustrations_lists\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * Event triggered when a ratio's options need to be provided.

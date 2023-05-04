@@ -29,7 +29,7 @@ function oe_paragraphs_media_field_storage_install($is_syncing) {
     return;
   }
 
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_media_field_storage') . '/config/import');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs_media_field_storage') . '/config/import');
   $config_record = $storage->read('field.storage.paragraph.field_oe_media');
   $field = $field_config_storage->createFromStorageRecord($config_record);
   $field->save();

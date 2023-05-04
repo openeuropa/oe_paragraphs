@@ -55,7 +55,7 @@ function _oe_paragraphs_allowed_values_icons(FieldStorageDefinitionInterface $de
   $event = new IconOptionsEvent();
 
   $event_dispatcher = \Drupal::service('event_dispatcher');
-  $event_dispatcher->dispatch(IconOptionsEvent::class, $event);
+  $event_dispatcher->dispatch($event, IconOptionsEvent::class);
 
   return $event->getIconOptions();
 }
@@ -78,7 +78,7 @@ function _oe_paragraphs_allowed_values_icons(FieldStorageDefinitionInterface $de
 function _oe_paragraphs_allowed_values_flags(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = TRUE): array {
   $event = new FlagOptionsEvent();
 
-  \Drupal::service('event_dispatcher')->dispatch(FlagOptionsEvent::class, $event);
+  \Drupal::service('event_dispatcher')->dispatch($event, FlagOptionsEvent::class);
 
   return $event->getFlagOptions();
 }

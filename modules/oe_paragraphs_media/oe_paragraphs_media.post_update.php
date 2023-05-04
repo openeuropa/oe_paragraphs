@@ -17,7 +17,7 @@ use Drupal\field\Entity\FieldConfig;
  * Add "Title" and "Link" fields and rename existing "Title" field to "Heading".
  */
 function oe_paragraphs_media_post_update_00001(): void {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_media') . '/config/post_updates/00001_add_link_title_fields');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs_media') . '/config/post_updates/00001_add_link_title_fields');
   \Drupal::service('config.installer')->installOptionalConfig($storage);
 
   // Rename "Title" field to "Heading".
@@ -30,7 +30,7 @@ function oe_paragraphs_media_post_update_00001(): void {
  * Create new form modes for Text with featured Media paragraph.
  */
 function oe_paragraphs_media_post_update_00002(): void {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_media') . '/config/post_updates/00002_create_form_modes');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs_media') . '/config/post_updates/00002_create_form_modes');
   $config_manager = \Drupal::service('config.manager');
   $entity_type_manager = \Drupal::entityTypeManager();
 
@@ -71,7 +71,7 @@ function oe_paragraphs_media_post_update_00002(): void {
  * Update default view display of Text with featured Media paragraph.
  */
 function oe_paragraphs_media_post_update_00003(): void {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_media') . '/config/post_updates/00003_update_view_display');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs_media') . '/config/post_updates/00003_update_view_display');
   $display_values = $storage->read('core.entity_view_display.paragraph.oe_text_feature_media.default');
   $display_storage = \Drupal::entityTypeManager()->getStorage('entity_view_display');
   $display = $display_storage->load($display_values['id']);

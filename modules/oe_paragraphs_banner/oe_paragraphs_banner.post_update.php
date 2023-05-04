@@ -13,7 +13,7 @@ use Drupal\Core\Config\FileStorage;
  * Adds new field "Display as full width" to Banner paragraph.
  */
 function oe_paragraphs_banner_post_update_00001() {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_banner') . '/config/post_updates/00001_add_full_width_field');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs_banner') . '/config/post_updates/00001_add_full_width_field');
   $field_configs = [
     'field.storage.paragraph.field_oe_banner_full_width',
     'field.field.paragraph.oe_banner.field_oe_banner_full_width',

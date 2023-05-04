@@ -15,7 +15,7 @@ use Drupal\field\Entity\FieldConfig;
  * Add optional heading field to Timeline paragraph.
  */
 function oe_paragraphs_timeline_post_update_00001(array &$sandbox) {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_timeline') . '/config/post_updates/00001_heading_field');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs_timeline') . '/config/post_updates/00001_heading_field');
 
   $field_config = 'field.field.paragraph.oe_timeline.field_oe_title';
   $config_record = $storage->read($field_config);
@@ -35,7 +35,7 @@ function oe_paragraphs_timeline_post_update_00001(array &$sandbox) {
  * Add optional introduction field to Timeline paragraph.
  */
 function oe_paragraphs_timeline_post_update_00002(): TranslatableMarkup {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs_timeline') . '/config/post_updates/00002_introduction_field');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs_timeline') . '/config/post_updates/00002_introduction_field');
 
   $field = FieldConfig::load('paragraph.oe_timeline.field_oe_text_long');
   if ($field) {
