@@ -27,7 +27,6 @@
         "drupal/entity_browser": "^2.5",
         "drupal/inline_entity_form": "^1.0-rc12",
         "drupal/json_field": "^1.1",
-        "drupaltest/behat-traits": "^0.3",
         "drush/drush": "^11.1",
         "guzzlehttp/guzzle": "^7.0",
         "masterminds/html5": "^2.7.6",
