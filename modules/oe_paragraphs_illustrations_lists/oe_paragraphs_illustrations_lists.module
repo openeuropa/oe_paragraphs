@@ -60,9 +60,9 @@ function _oe_paragraphs_illustrations_lists_allowed_values_columns(FieldStorageD
 }
 
 /**
- * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ * Implements hook_field_widget_single_element_WIDGET_TYPE_form_alter().
  */
-function oe_paragraphs_illustrations_lists_field_widget_oe_paragraphs_variants_form_alter(&$element, FormStateInterface $form_state, $context) {
+function oe_paragraphs_illustrations_lists_field_widget_single_element_oe_paragraphs_variants_form_alter(&$element, FormStateInterface $form_state, $context) {
   if (in_array($element['#paragraph_type'], [
     'oe_illustration_list_flags',
     'oe_illustration_list_icons',

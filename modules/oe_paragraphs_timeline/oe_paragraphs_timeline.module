@@ -11,9 +11,9 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ * Implements hook_field_widget_single_element_WIDGET_TYPE_form_alter().
  */
-function oe_paragraphs_timeline_field_widget_timeline_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+function oe_paragraphs_timeline_field_widget_single_element_timeline_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
   // Set Label and Title fields required only for Timeline paragraph.
   /** @var \Drupal\Core\Field\FieldDefinitionInterface $field_definition */
   $field_definition = $context['items']->getFieldDefinition();

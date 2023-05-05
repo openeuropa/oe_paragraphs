@@ -10,9 +10,9 @@ declare(strict_types = 1);
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ * Implements hook_field_widget_single_element_WIDGET_TYPE_form_alter().
  */
-function oe_paragraphs_media_field_widget_oe_paragraphs_variants_form_alter(&$element, FormStateInterface $form_state, $context) {
+function oe_paragraphs_media_field_widget_single_element_oe_paragraphs_variants_form_alter(&$element, FormStateInterface $form_state, $context) {
   if ($element['#paragraph_type'] === 'oe_text_feature_media') {
     // Rename the 'Default' variant to 'Left, simple call action'.
     $element['variant']['#options']['default'] = t('Text on the left, simple call to action');
