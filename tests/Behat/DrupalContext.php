@@ -6,6 +6,7 @@ namespace Drupal\Tests\oe_paragraphs\Behat;
 
 use Drupal\Core\Url;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
+use Drupal\Tests\oe_paragraphs\Traits\FieldsTrait;
 use Drupal\Tests\oe_paragraphs\Traits\UtilityTrait;
 
 /**
@@ -13,6 +14,7 @@ use Drupal\Tests\oe_paragraphs\Traits\UtilityTrait;
  */
 class DrupalContext extends RawDrupalContext {
 
+  use FieldsTrait;
   use UtilityTrait;
 
   /**
@@ -33,7 +35,7 @@ class DrupalContext extends RawDrupalContext {
     $region = $this->getSession()->getPage()->find('region', $region);
     $not_found = [];
     foreach ($fields as $field) {
-      $is_found = $region->findField($field);
+      $is_found = $this->findField($field, $region);
       if (!$is_found) {
         $not_found[] = $field;
       }
@@ -60,7 +62,7 @@ class DrupalContext extends RawDrupalContext {
     $fields = $this->explodeCommaSeparatedStepArgument($fields);
     $region = $this->getSession()->getPage()->find('region', $region);
     foreach ($fields as $field) {
-      $is_found = $region->findField($field);
+      $is_found = $this->findField($field, $region);
       if ($is_found) {
         throw new \Exception("Field should not be found, but is present: " . $field);
       }
