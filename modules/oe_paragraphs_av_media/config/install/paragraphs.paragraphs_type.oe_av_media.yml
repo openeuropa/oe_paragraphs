@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oe_av_media
+label: Media
+icon_uuid: null
+icon_default: null
+description: 'Shows an image or a video item.'
+behavior_plugins: {  }

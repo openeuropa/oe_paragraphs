@@ -26,6 +26,7 @@ default:
               Webtools chart creation: 'media/add/webtools_chart'
               Webtools map creation: 'media/add/webtools_map'
               Webtools social feed creation: 'media/add/webtools_social_feed'
+              Video iframe creation: 'media/add/video_iframe'
   extensions:
     Drupal\MinkExtension:
       browserkit_http: ~
