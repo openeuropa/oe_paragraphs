@@ -1,15 +1,21 @@
-# Changelog
+# Change Log
+
+## [1.18.0](https://github.com/openeuropa/oe_paragraphs/tree/1.18.0) (2023-05-12)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.18.0...1.18.0)
+
+**Merged pull requests:**
+
+- EWPP-3017: Drupal 10 compatibility. [\#199](https://github.com/openeuropa/oe_paragraphs/pull/199) ([brummbar](https://github.com/brummbar))
 
 ## [1.18.0](https://github.com/openeuropa/oe_paragraphs/tree/1.18.0) (2023-03-21)
-
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.17.0...1.18.0)
 
 **Merged pull requests:**
 
+- Release-1.18.0: Update changelog. [\#196](https://github.com/openeuropa/oe_paragraphs/pull/196) ([nagyad](https://github.com/nagyad))
 - EWPP-2904: Update to PHP8.1 and D9.4. [\#195](https://github.com/openeuropa/oe_paragraphs/pull/195) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.17.0](https://github.com/openeuropa/oe_paragraphs/tree/1.17.0) (2022-11-21)
-
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.16.0...1.17.0)
 
 **Merged pull requests:**
