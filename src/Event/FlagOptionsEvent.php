@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Drupal\oe_paragraphs\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * Event triggered when a flag's options need to be provided.

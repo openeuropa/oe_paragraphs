@@ -54,7 +54,7 @@ function oe_paragraphs_post_update_10002(array &$sandbox): void {
   \Drupal::service('plugin.manager.field.formatter')->clearCachedDefinitions();
   \Drupal::service('plugin.manager.field.widget')->clearCachedDefinitions();
 
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10002');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs') . '/config/post_updates/10002');
 
   \Drupal::entityTypeManager()->getStorage('paragraphs_type')
     ->create($storage->read('paragraphs.paragraphs_type.oe_social_media_follow'))
@@ -96,7 +96,7 @@ function oe_paragraphs_post_update_10003(array &$sandbox): void {
 function oe_paragraphs_post_update_10004(array &$sandbox): void {
   \Drupal::service('module_installer')->install(['link']);
 
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10004');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs') . '/config/post_updates/10004');
   $field_configs = [
     'field.storage.paragraph.field_oe_social_media_see_more',
     'field.field.paragraph.oe_social_media_follow.field_oe_social_media_see_more',
@@ -140,7 +140,7 @@ function oe_paragraphs_post_update_10005(array &$sandbox) {
     return t('Facts and figures paragraph exists, no action required.');
   }
 
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10005');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs') . '/config/post_updates/10005');
   $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraphs_type');
 
   // Create the paragraphs.
@@ -229,7 +229,7 @@ function oe_paragraphs_post_update_10008(array &$sandbox) {
   }
 
   // Create field storage if it doesn't exist.
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/post_updates/10008');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs') . '/config/post_updates/10008');
   $config_record = $storage->read('field.storage.paragraph.field_oe_flag');
   $entity = $entity_storage->createFromStorageRecord($config_record);
   $entity->save();

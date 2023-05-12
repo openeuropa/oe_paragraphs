@@ -6,7 +6,7 @@ Feature: Illustration list with images and Illustration item with image paragrap
 
   @cleanup:media
   Scenario: Illustration list with images paragraph creation.
-    Given I am logged in as a user with the "access content, create oe_demo_landing_page content, edit any oe_demo_landing_page content, create av_portal_photo media" permission
+    Given I am logged in as a user with the "access content, create oe_demo_landing_page content, edit any oe_demo_landing_page content, create av_portal_photo media, access content overview" permission
     And the following images:
       | name    | file           |
       | Image 1 | example_1.jpeg |

@@ -2,11 +2,12 @@ name: OpenEuropa Paragraphs demo
 type: module
 description: Provides a content type using OE Paragraphs for demonstration purposes.
 package: OpenEuropa
-core_version_requirement: ^9.4
+core_version_requirement: ^9.4 || ^10
 
 dependencies:
   - drupal:path
   - drupal:menu_ui
+  - drupal:toolbar
   - oe_paragraphs:oe_paragraphs_media
   - oe_paragraphs:oe_paragraphs_banner
   - oe_paragraphs:oe_paragraphs_timeline

@@ -22,7 +22,7 @@ Feature: Gallery paragraph.
       | name       | file          |
       | Document 1 | example_1.pdf |
 
-    When I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content" permission
+    When I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content, access content overview" permission
     And I go to "the content management page"
     And I click "Add content"
     And I fill in "Title" with "Gallery test page"

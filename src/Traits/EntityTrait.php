@@ -69,6 +69,7 @@ trait EntityTrait {
     $label_key = $this->getEntityTypeLabelKey($entity_type_id);
     $query = \Drupal::entityQuery($entity_type_id)
       ->condition($label_key, $label)
+      ->accessCheck(FALSE)
       ->range(0, 1);
 
     if (!empty($bundle)) {

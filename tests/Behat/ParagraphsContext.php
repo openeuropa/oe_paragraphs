@@ -190,7 +190,7 @@ class ParagraphsContext extends RawDrupalContext {
     $element = $this->getParagraphReferenceField($paragraph, $field);
 
     // After the multi-value field table, a div is wrapping all the buttons.
-    $xpath = '/table/following-sibling::div' . $this->xpathHasClassSelector('clearfix') .
+    $xpath = '/table/following-sibling::div' . $this->xpathHasClassSelector('form-actions') .
       '//input' . $this->xpathHasClassSelector('field-add-more-submit');
     $buttons = $element->findAll('xpath', $xpath);
 

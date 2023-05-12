@@ -68,4 +68,45 @@ trait FieldsTrait {
     return $tables[$position];
   }
 
+  /**
+   * Finds a field in a container.
+   *
+   * Extends the TraversableElement::findField to cover extra scenarios, such as
+   * managed fields styled by the Claro admin theme.
+   *
+   * @param string $label
+   *   The field label.
+   * @param \Behat\Mink\Element\NodeElement|null $container
+   *   The container element. If left empty, the page will be used.
+   *
+   * @return \Behat\Mink\Element\NodeElement|null
+   *   The field if found, NULL otherwise.
+   */
+  protected function findField(string $label, NodeElement $container = NULL): ?NodeElement {
+    $container = $container ?? $this->getSession()->getPage();
+
+    // Try to find the field with the standard method.
+    $field = $container->findField($label);
+    if ($field) {
+      return $field;
+    }
+
+    // Claro theme wraps all managed files, even with single cardinality, in a
+    // <details> element.
+    // Find a details element with the given label.
+    $details = $container->find('xpath', sprintf('//details[./summary[.="%s"]]', $label));
+    if (!$details) {
+      return NULL;
+    }
+
+    // Make sure that the details element contains a managed file.
+    $form_item = $details->find('css', '.form-type--managed-file');
+    if (!$form_item) {
+      return NULL;
+    }
+
+    // Finally, the image field is present if the upload field is found.
+    return $form_item->findField('Add a new file');
+  }
+
 }

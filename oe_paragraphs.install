@@ -61,7 +61,7 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
       ->installFieldStorageDefinition('oe_paragraphs_variant', 'paragraph', 'oe_paragraphs', $storage_definition);
 
     // Start the sync for new configurations.
-    $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/updates/8001');
+    $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs') . '/config/updates/8001');
 
     // Change field descriptions.
     $fields_description = [
@@ -223,7 +223,7 @@ function oe_paragraphs_update_8002(&$sandbox) {
  * Update list of paragraphs that can be referenced inside content rows.
  */
 function oe_paragraphs_update_8003(&$sandbox) {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/updates/8003');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs') . '/config/updates/8003');
   $values = $storage->read('field.field.paragraph.oe_content_row.field_oe_paragraphs');
   $field = FieldConfig::load($values['id']);
 
@@ -241,7 +241,7 @@ function oe_paragraphs_update_8003(&$sandbox) {
  * Updates the form display for the accordion paragraph.
  */
 function oe_paragraphs_update_8004(&$sandbox) {
-  $storage = new FileStorage(drupal_get_path('module', 'oe_paragraphs') . '/config/updates/8004');
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs') . '/config/updates/8004');
   $values = $storage->read('core.entity_form_display.paragraph.oe_accordion.default');
   $form_display = EntityFormDisplay::load($values['id']);
 
