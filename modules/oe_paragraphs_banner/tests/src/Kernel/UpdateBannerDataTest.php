@@ -81,6 +81,7 @@ class UpdateBannerDataTest extends ParagraphsTestBase {
     // Assert we have 8 total paragraph revisions.
     $revision_ids = $paragraph_storage->getQuery()
       ->allRevisions()
+      ->accessCheck(FALSE)
       ->execute();
     $this->assertEquals(8, count($revision_ids));
 
@@ -88,6 +89,7 @@ class UpdateBannerDataTest extends ParagraphsTestBase {
     $this->drush('oe-paragraphs-update-banner-data:run');
     $revision_ids = $paragraph_storage->getQuery()
       ->allRevisions()
+      ->accessCheck(FALSE)
       ->execute();
     $this->assertEquals(8, count($revision_ids));
 
