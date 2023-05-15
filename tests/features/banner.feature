@@ -22,61 +22,71 @@ Feature: Banner paragraph.
       | Image banner       |
       | Image shade banner |
       | Primary banner     |
-    And the available options in the "Banner type" select should be:
-      | - Select a value -        |
-      | Page banner, centered     |
-      | Hero banner, centered     |
-      | Page banner, aligned left |
-      | Hero banner, aligned left |
+    And the available options in the "Alignment" select should be:
+      | - Select a value - |
+      | Left               |
+      | Centered           |
+    And the available options in the "Size" select should be:
+      | - Select a value - |
+      | Small (5:1)        |
+      | Medium (4:1)       |
+      | Large (3:1)        |
 
     # Test the fields in the Default variant.
-    And the following fields should be present "Banner type, Title, Description, URL, Link text, Display as full width" in the "demo paragraphs element" region
-    And the following fields should not be present "Use existing media" in the "demo paragraphs element" region
+    And the following fields should be present "Alignment, Size, Title, Description, URL, Link text, Display as full width" in the "demo paragraphs element" region
+    And the following fields should not be present "Banner type, Use existing media" in the "demo paragraphs element" region
     And I fill in "URL" with "https://example.com"
     When I press "Save"
     Then I should see the following error messages:
       | error messages                                     |
       | Description field is required                      |
-      | Banner type field is required                      |
+      | Alignment field is required                        |
+      | Size field is required                             |
       | Link text field is required if there is URL input. |
 
     # Test the fields in the Primary banner variant.
     When I select "Primary banner" from "Variant"
     And I press "Change variant"
-    Then the following fields should be present "Banner type, Title, Description, URL, Link text, Display as full width" in the "demo paragraphs element" region
-    And the following fields should not be present "Use existing media" in the "demo paragraphs element" region
+    Then the following fields should be present "Alignment, Size, Title, Description, URL, Link text, Display as full width" in the "demo paragraphs element" region
+    And the following fields should not be present "Banner type, Use existing media" in the "demo paragraphs element" region
     When I press "Save"
     Then I should see the following error messages:
       | error messages                                     |
       | Description field is required                      |
-      | Banner type field is required                      |
+      | Alignment field is required                        |
+      | Size field is required                             |
       | Link text field is required if there is URL input. |
 
     # Test the fields in the Image banner variant.
     When I select "Image banner" from "Variant"
     And I press "Change variant"
-    Then the following fields should be present "Banner type, Title, Description, URL, Link text, Use existing media, Display as full width" in the "demo paragraphs element" region
+    Then the following fields should be present "Alignment, Size, Title, Description, URL, Link text, Use existing media, Display as full width" in the "demo paragraphs element" region
+    And the following fields should not be present "Banner type" in the "demo paragraphs element" region
     When I press "Save"
     Then I should see the following error messages:
       | error messages                                     |
       | Description field is required                      |
-      | Banner type field is required                      |
+      | Alignment field is required                        |
+      | Size field is required                             |
       | Use existing media field is required               |
       | Link text field is required if there is URL input. |
 
     # Test the fields in the Image shade banner variant.
     When I select "Image shade banner" from "Variant"
     And I press "Change variant"
-    Then the following fields should be present "Banner type, Title, Description, URL, Link text, Use existing media, Display as full width" in the "demo paragraphs element" region
+    Then the following fields should be present "Alignment, Size, Title, Description, URL, Link text, Use existing media, Display as full width" in the "demo paragraphs element" region
+    And the following fields should not be present "Banner type" in the "demo paragraphs element" region
     When I press "Save"
     Then I should see the following error messages:
       | error messages                                     |
       | Description field is required                      |
-      | Banner type field is required                      |
+      | Alignment field is required                        |
+      | Size field is required                             |
       | Use existing media field is required               |
       | Link text field is required if there is URL input. |
 
-    When I select "Page banner, centered" from "Banner type"
+    When I select "Centered" from "Alignment"
+    And I select "Small (5:1)" from "Size"
     And I fill in "Title" with "Banner title" in the 1st "Banner" paragraph
     And I fill in "Description" with "Description"
     And I fill in "Link text" with "Example"
@@ -86,3 +96,5 @@ Feature: Banner paragraph.
     And I should see the text "Description"
     And I should see the link "Example"
     And I should see the image "example_1.jpeg"
+    And I should see the text "Small (5:1)"
+    And I should see the text "Centered"
