@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_carousel_size
+    - paragraphs.paragraphs_type.oe_carousel
+  module:
+    - options
+id: paragraph.oe_carousel.field_oe_carousel_size
+field_name: field_oe_carousel_size
+entity_type: paragraph
+bundle: oe_carousel
+label: Size
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: medium
+default_value_callback: ''
+settings: {  }
+field_type: list_string

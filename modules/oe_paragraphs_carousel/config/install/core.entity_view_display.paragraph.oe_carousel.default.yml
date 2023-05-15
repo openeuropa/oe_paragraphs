@@ -2,15 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_carousel.field_oe_carousel_size
     - field.field.paragraph.oe_carousel.field_oe_carousel_items
     - paragraphs.paragraphs_type.oe_carousel
   module:
     - entity_reference_revisions
+    - options
 id: paragraph.oe_carousel.default
 targetEntityType: paragraph
 bundle: oe_carousel
 mode: default
 content:
+  field_oe_carousel_size:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_oe_carousel_items:
     type: entity_reference_revisions_entity_view
     label: above
