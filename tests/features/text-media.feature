@@ -6,7 +6,7 @@ Feature: Text with featured media paragraph.
 
   @cleanup:media
   Scenario: Text with featured media paragraph creation.
-    Given I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content, create image media, create remote_video media, create av_portal_video media, access content overview" permission
+    Given I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content, create image media, create remote_video media, create av_portal_video media, create webtools_chart media, create webtools_countdown media, create webtools_map media, create webtools_social_feed media,access content overview" permission
 
     # Create an "Image" media.
     When I go to "the image creation page"
@@ -14,17 +14,41 @@ Feature: Text with featured media paragraph.
     And I attach the file "example_1.jpeg" to "Image"
     And I press "Upload"
     And I fill in "Alternative text" with "Image Alt Text 1"
-    And I press "Save"
+    Then I press "Save"
 
     # Create an "Remote video" media.
     When I go to "the remote video creation page"
     And I fill in "Remote video URL" with "https://www.youtube.com/watch?v=1-g73ty9v04"
-    And I press "Save"
+    Then I press "Save"
 
     # Create an "AV Portal video" media
     When I go to "the avportal video creation page"
     And I fill in "Media AV Portal Video" with "https://audiovisual.ec.europa.eu/en/video/I-162747"
-    And I press "Save"
+    Then I press "Save"
+
+    # Create an "Webtools chart" media
+    When I visit "the Webtools chart creation page"
+    And I fill in "Name" with "Basic chart"
+    And I fill in "Webtools chart snippet" with "{\"service\":\"charts\",\"data\":{\"series\":[{\"name\":\"Y\",\"data\":[{\"name\":\"1\",\"y\":0.5}]}]},\"provider\":\"highcharts\"}"
+    Then I press "Save"
+
+    # Create an "Webtools map" media
+    When I visit "the Webtools map creation page"
+    And I fill in "Name" with "World map"
+    And I fill in "Webtools map snippet" with "{\"service\": \"map\"}"
+    Then I press "Save"
+
+    # Create an "Webtools social feed" media
+    When I visit "the Webtools social feed creation page"
+    And I fill in "Name" with "My social feed"
+    And I fill in "Webtools social feed snippet" with "{\"service\":\"smk\",\"type\":\"list\",\"slug\":\"ec-spokespersons\"}"
+    Then I press "Save"
+
+    # Create an "Webtools countdown" media
+    When I visit "the Webtools countdown creation page"
+    And I fill in "Name" with "My countdown"
+    And I fill in "Webtools countdown snippet" with "{\"service\":\"cdown\",\"date\":\"30/04/2052\",\"timezone\":\"Etc/Universal\",\"title\":\"Event countdown\",\"end\":true,\"show\":{\"day\":true,\"time\":true}}"
+    Then I press "Save"
 
     When I go to "the content management page"
     And I click "Add content"
@@ -67,6 +91,30 @@ Feature: Text with featured media paragraph.
     And I fill in "Use existing media" with "Midday press briefing from 25/10/2018"
     And I press "Save"
     Then I should see the AV Portal video "Midday press briefing from 25/10/2018"
+
+    # Use an webtools chart on the Text with featured media paragraph.
+    When I click "Edit"
+    And I fill in "Use existing media" with "Basic chart"
+    And I press "Save"
+    Then I should see the Webtools chart "Basic chart" on the page
+
+    # Use an webtools map on the Text with featured media paragraph.
+    When I click "Edit"
+    And I fill in "Use existing media" with "World map"
+    And I press "Save"
+    Then I should see the Webtools map "World map" on the page
+
+    # Use an webtools social feed on the Text with featured media paragraph.
+    When I click "Edit"
+    And I fill in "Use existing media" with "My social feed"
+    And I press "Save"
+    Then I should see the Webtools social feed "My social feed" on the page
+
+    # Use an webtools countdown on the Text with featured media paragraph.
+    When I click "Edit"
+    And I fill in "Use existing media" with "My countdown"
+    And I press "Save"
+    Then I should see the Webtools countdown "My countdown" on the page
 
     # Change of variants to ensure presence of the fields.
     When I click "Edit"
