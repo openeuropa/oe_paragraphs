@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_illustration_list_flags.field_oe_center
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_alternate
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_columns
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_ratio
@@ -16,45 +17,55 @@ targetEntityType: paragraph
 bundle: oe_illustration_list_flags
 mode: default
 content:
-  field_oe_illustration_alternate:
+  field_oe_center:
     type: boolean
-    weight: 2
-    region: content
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
+    weight: 4
+    region: content
+  field_oe_illustration_alternate:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_oe_illustration_columns:
     type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
     weight: 3
     region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_oe_illustration_ratio:
-    weight: 4
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 5
     region: content
   field_oe_paragraphs:
     type: entity_reference_revisions_entity_view
-    weight: 1
-    region: content
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_oe_title:
     type: string
-    weight: 0
-    region: content
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden: {  }
