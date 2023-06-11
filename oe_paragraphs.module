@@ -11,11 +11,11 @@ use Drupal\Component\Utility\Crypt;
 use Drupal\Core\Config\Entity\ConfigEntityInterface;
 use Drupal\Core\Config\StorageInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\oe_paragraphs\Event\FlagOptionsEvent;
 use Drupal\oe_paragraphs\Event\IconOptionsEvent;
-use Drupal\Core\Entity\FieldableEntityInterface;
-use Drupal\Core\Field\FieldStorageDefinitionInterface;
 
 /**
  * Implements hook_entity_base_field_info().

@@ -23,11 +23,9 @@ Feature: Banner paragraph.
       | Image shade banner |
       | Primary banner     |
     And the available options in the "Alignment" select should be:
-      | - Select a value - |
       | Left               |
       | Centered           |
     And the available options in the "Size" select should be:
-      | - Select a value - |
       | Small (5:1)        |
       | Medium (4:1)       |
       | Large (3:1)        |
@@ -40,8 +38,6 @@ Feature: Banner paragraph.
     Then I should see the following error messages:
       | error messages                                     |
       | Description field is required                      |
-      | Alignment field is required                        |
-      | Size field is required                             |
       | Link text field is required if there is URL input. |
 
     # Test the fields in the Primary banner variant.
@@ -53,8 +49,6 @@ Feature: Banner paragraph.
     Then I should see the following error messages:
       | error messages                                     |
       | Description field is required                      |
-      | Alignment field is required                        |
-      | Size field is required                             |
       | Link text field is required if there is URL input. |
 
     # Test the fields in the Image banner variant.
@@ -66,8 +60,6 @@ Feature: Banner paragraph.
     Then I should see the following error messages:
       | error messages                                     |
       | Description field is required                      |
-      | Alignment field is required                        |
-      | Size field is required                             |
       | Use existing media field is required               |
       | Link text field is required if there is URL input. |
 
@@ -80,8 +72,6 @@ Feature: Banner paragraph.
     Then I should see the following error messages:
       | error messages                                     |
       | Description field is required                      |
-      | Alignment field is required                        |
-      | Size field is required                             |
       | Use existing media field is required               |
       | Link text field is required if there is URL input. |
 
