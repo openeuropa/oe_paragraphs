@@ -24,7 +24,7 @@ class UpdateBannerDataTest extends ParagraphsTestBase {
   /**
    * Ensures the drush command migrates the data from the deprecated field.
    */
-  public function testUpdatePersonData(): void {
+  public function testUpdateBannerData(): void {
     $paragraph_storage = $this->container->get('entity_type.manager')->getStorage('paragraph');
     $banners_data = [
       1 => [
@@ -76,6 +76,9 @@ class UpdateBannerDataTest extends ParagraphsTestBase {
       $banner->set('field_oe_title', $banners_data[$i]['revision_title']);
       $banner->setNewRevision();
       $banner->save();
+      // Create another revision for the same data.
+      $banner->setNewRevision();
+      $banner->save();
     }
 
     // Assert we have 8 total paragraph revisions.
@@ -83,7 +86,7 @@ class UpdateBannerDataTest extends ParagraphsTestBase {
       ->allRevisions()
       ->accessCheck(FALSE)
       ->execute();
-    $this->assertEquals(8, count($revision_ids));
+    $this->assertEquals(12, count($revision_ids));
 
     // Run the command and assert no new revision was created.
     $this->drush('oe-paragraphs-update-banner-data:run');
@@ -91,7 +94,7 @@ class UpdateBannerDataTest extends ParagraphsTestBase {
       ->allRevisions()
       ->accessCheck(FALSE)
       ->execute();
-    $this->assertEquals(8, count($revision_ids));
+    $this->assertEquals(12, count($revision_ids));
 
     // Load all the revisions.
     $revisions = $paragraph_storage->loadMultipleRevisions(array_keys($revision_ids));

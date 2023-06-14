@@ -7,11 +7,11 @@
 
 declare(strict_types = 1);
 
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\Entity\FieldableEntityInterface;
-use Drupal\oe_paragraphs_illustrations_lists\Event\RatioOptionsEvent;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\oe_paragraphs_illustrations_lists\Event\ColumnOptionsEvent;
+use Drupal\oe_paragraphs_illustrations_lists\Event\RatioOptionsEvent;
 
 /**
  * Sets allowed values for the "Image ratio" field.
