@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_av_media.field_oe_media
+    - paragraphs.paragraphs_type.oe_av_media
+id: paragraph.oe_av_media.default
+targetEntityType: paragraph
+bundle: oe_av_media
+mode: default
+content:
+  field_oe_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

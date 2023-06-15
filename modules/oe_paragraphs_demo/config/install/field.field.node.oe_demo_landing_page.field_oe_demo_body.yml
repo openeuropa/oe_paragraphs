@@ -5,6 +5,7 @@ dependencies:
     - field.storage.node.field_oe_demo_body
     - node.type.oe_demo_landing_page
     - paragraphs.paragraphs_type.oe_accordion
+    - paragraphs.paragraphs_type.oe_av_media
     - paragraphs.paragraphs_type.oe_banner
     - paragraphs.paragraphs_type.oe_carousel
     - paragraphs.paragraphs_type.oe_chart
@@ -74,6 +75,7 @@ settings:
       oe_illustration_list_flags: oe_illustration_list_flags
       oe_illustration_list_images: oe_illustration_list_images
       oe_carousel: oe_carousel
+      oe_av_media: oe_av_media
       oe_gallery: oe_gallery
     negate: 0
     target_bundles_drag_drop:
@@ -83,6 +85,9 @@ settings:
       oe_accordion_item:
         weight: -54
         enabled: false
+      oe_av_media:
+        weight: 35
+        enabled: true
       oe_banner:
         weight: -47
         enabled: true
