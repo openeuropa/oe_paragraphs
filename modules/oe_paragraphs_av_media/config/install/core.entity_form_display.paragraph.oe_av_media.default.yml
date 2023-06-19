@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_av_media.field_oe_media
+    - paragraphs.paragraphs_type.oe_av_media
+id: paragraph.oe_av_media.default
+targetEntityType: paragraph
+bundle: oe_av_media
+mode: default
+content:
+  field_oe_media:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
