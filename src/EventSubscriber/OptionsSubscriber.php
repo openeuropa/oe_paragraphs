@@ -4,10 +4,10 @@ declare(strict_types = 1);
 
 namespace Drupal\oe_paragraphs\EventSubscriber;
 
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Drupal\oe_paragraphs\Event\IconOptionsEvent;
-use Drupal\oe_paragraphs\Event\FlagOptionsEvent;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\oe_paragraphs\Event\FlagOptionsEvent;
+use Drupal\oe_paragraphs\Event\IconOptionsEvent;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
  * Provides options for the icon and flag fields.

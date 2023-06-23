@@ -46,3 +46,21 @@ function oe_paragraphs_banner_post_update_00001() {
     }
   }
 }
+
+/**
+ * Deprecate "Banner type" field in favour of "Size" and "Alignment" fields.
+ */
+function oe_paragraphs_banner_post_update_00002(): void {
+  $storage = new FileStorage(\Drupal::service('extension.list.module')->getPath('oe_paragraphs_banner') . '/config/post_updates/00002_size_alignment_fields');
+  // Crate the new fields.
+  foreach ($storage->listAll('field.storage') as $name) {
+    _oe_paragraphs_import_config_from_file($name, $storage);
+  }
+  foreach ($storage->listAll('field.field') as $name) {
+    _oe_paragraphs_import_config_from_file($name, $storage);
+  }
+  // Hide the deprecated field from the form displays and add the new ones.
+  foreach ($storage->listAll('core') as $name) {
+    _oe_paragraphs_import_config_from_file($name, $storage);
+  }
+}

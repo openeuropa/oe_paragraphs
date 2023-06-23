@@ -1,0 +1,9 @@
+services:
+  oe_paragraphs_carousel.paragraph_updater:
+    class: Drupal\oe_paragraphs_carousel\CarouselParagraphUpdater
+    arguments: [ '@entity_type.manager' ]
+  oe_paragraphs_carousel.carousel_paragraph_update:
+    class: Drupal\oe_paragraphs_carousel\Commands\UpdateCarouselData
+    arguments: [ '@entity_type.manager', '@oe_paragraphs_carousel.paragraph_updater', '@messenger' ]
+    tags:
+      - { name: drush.command }

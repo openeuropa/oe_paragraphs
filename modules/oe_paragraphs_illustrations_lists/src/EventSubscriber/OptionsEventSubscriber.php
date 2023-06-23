@@ -4,9 +4,9 @@ declare(strict_types = 1);
 
 namespace Drupal\oe_paragraphs_illustrations_lists\EventSubscriber;
 
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\oe_paragraphs_illustrations_lists\Event\ColumnOptionsEvent;
 use Drupal\oe_paragraphs_illustrations_lists\Event\RatioOptionsEvent;
-use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
