@@ -2,9 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.oe_illustration_list_icons.field_oe_center
     - field.field.paragraph.oe_illustration_list_icons.field_oe_illustration_alternate
     - field.field.paragraph.oe_illustration_list_icons.field_oe_illustration_columns
     - field.field.paragraph.oe_illustration_list_icons.field_oe_paragraphs
+    - field.field.paragraph.oe_illustration_list_icons.field_oe_size
     - field.field.paragraph.oe_illustration_list_icons.field_oe_title
     - paragraphs.paragraphs_type.oe_illustration_list_icons
   module:
@@ -14,14 +16,23 @@ targetEntityType: paragraph
 bundle: oe_illustration_list_icons
 mode: default
 content:
+  field_oe_center:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_oe_illustration_columns:
+    type: options_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_oe_paragraphs:
+    type: oe_paragraphs_variants
     weight: 1
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -37,16 +48,20 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    type: oe_paragraphs_variants
+  field_oe_size:
+    type: options_select
+    weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_oe_title:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   translation:
     weight: 3
     region: content

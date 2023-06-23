@@ -28,31 +28,43 @@ config_devel:
     - core.entity_view_display.paragraph.oe_illustration_list_images.default
     - core.entity_form_mode.paragraph.oe_illustration_vertical
     - field.field.paragraph.oe_illustration_item_flag.field_oe_flag
+    - field.field.paragraph.oe_illustration_item_flag.field_oe_subtitle
     - field.field.paragraph.oe_illustration_item_flag.field_oe_text_long
     - field.field.paragraph.oe_illustration_item_flag.field_oe_title
     - field.field.paragraph.oe_illustration_item_icon.field_oe_icon
+    - field.field.paragraph.oe_illustration_item_icon.field_oe_subtitle
     - field.field.paragraph.oe_illustration_item_icon.field_oe_text_long
     - field.field.paragraph.oe_illustration_item_icon.field_oe_title
     - field.field.paragraph.oe_illustration_item_image.field_oe_media
+    - field.field.paragraph.oe_illustration_item_image.field_oe_subtitle
     - field.field.paragraph.oe_illustration_item_image.field_oe_text_long
     - field.field.paragraph.oe_illustration_item_image.field_oe_title
+    - field.field.paragraph.oe_illustration_list_flags.field_oe_center
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_alternate
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_columns
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_ratio
     - field.field.paragraph.oe_illustration_list_flags.field_oe_paragraphs
     - field.field.paragraph.oe_illustration_list_flags.field_oe_title
+    - field.field.paragraph.oe_illustration_list_icons.field_oe_center
     - field.field.paragraph.oe_illustration_list_icons.field_oe_illustration_alternate
     - field.field.paragraph.oe_illustration_list_icons.field_oe_illustration_columns
     - field.field.paragraph.oe_illustration_list_icons.field_oe_paragraphs
+    - field.field.paragraph.oe_illustration_list_icons.field_oe_size
+    - field.field.paragraph.oe_illustration_list_icons.field_oe_subtitle
     - field.field.paragraph.oe_illustration_list_icons.field_oe_title
+    - field.field.paragraph.oe_illustration_list_images.field_oe_center
     - field.field.paragraph.oe_illustration_list_images.field_oe_illustration_alternate
     - field.field.paragraph.oe_illustration_list_images.field_oe_illustration_columns
     - field.field.paragraph.oe_illustration_list_images.field_oe_illustration_ratio
     - field.field.paragraph.oe_illustration_list_images.field_oe_paragraphs
+    - field.field.paragraph.oe_illustration_list_images.field_oe_size
+    - field.field.paragraph.oe_illustration_list_images.field_oe_subtitle
     - field.field.paragraph.oe_illustration_list_images.field_oe_title
+    - field.storage.paragraph.field_oe_center
     - field.storage.paragraph.field_oe_illustration_alternate
     - field.storage.paragraph.field_oe_illustration_columns
     - field.storage.paragraph.field_oe_illustration_ratio
+    - field.storage.paragraph.field_oe_size
     - paragraphs.paragraphs_type.oe_illustration_item_flag
     - paragraphs.paragraphs_type.oe_illustration_item_icon
     - paragraphs.paragraphs_type.oe_illustration_item_image

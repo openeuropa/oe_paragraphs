@@ -12,37 +12,53 @@ Feature: Illustration list with icons and Illustration item with icon paragraphs
     And I fill in "Content owner" with "Committee on Agriculture and Rural Development"
     And I press "Add Illustration list with icons"
     # Check Illustration list with icons paragraph fields.
-    Then the following fields should be present "Variant, Title, Columns" in the "demo paragraphs element" region
+    Then the following fields should be present "Variant, Title, Columns, Center the content, Size" in the "demo paragraphs element" region
     And the available options in the "Columns" select should be:
       | - Select a value - |
       | Two columns        |
       | Three columns      |
       | Four columns       |
+    And the available options in the "Size" select should be:
+      | - Select a value - |
+      | Small              |
+      | Medium             |
+      | Large              |
     # Check Illustration item with icon paragraphs fields.
-    And the following fields should be present "Icon, Title, Body" in the "demo paragraphs element" region
+    And the following fields should be present "Icon, Highlight, Title, Body" in the "demo paragraphs element" region
 
     When I press "Save"
     Then I should see the following error messages:
       | error messages             |
       | Icon field is required.    |
       | Columns field is required. |
+      | Size field is required.    |
 
     When I fill in "Title" with "Illustration list with icons title" in the 1st "Illustration list with icons" paragraph
+    And I select "Medium" from "Size" in the 1st "Illustration list with icons" paragraph
     And I select "Two columns" from "Columns" in the 1st "Illustration list with icons" paragraph
+    And I check the box "Center the content"
     And I select "Budget" from "Icon" in the 1st "Illustration item with icon" paragraph
+    And I fill in "Highlight" with "Highlighted icon term 1" in the 1st "Illustration item with icon" paragraph
     And I fill in "Title" with "Illustration item with icon term 1" in the 1st "Illustration item with icon" paragraph
     And I fill in "Body" with "Illustration item with icon description 1" in the 1st "Illustration item with icon" paragraph
     And I press "Illustration item with icon"
     And I select "Digital" from "Icon" in the 2nd "Illustration item with icon" paragraph
+    And I fill in "Highlight" with "Highlighted icon term 2" in the 2nd "Illustration item with icon" paragraph
     And I fill in "Title" with "Illustration item with icon term 2" in the 2nd "Illustration item with icon" paragraph
     And I fill in "Body" with "Illustration item with icon description 2" in the 2nd "Illustration item with icon" paragraph
     And I press "Save"
     Then I should see the heading "Illustration list with icons paragraph test page"
     And I should see the text "Illustration list with icons title"
+    And I should see the text "Center the content"
+    And I should see the text "On"
+    And I should see the text "Size"
+    And I should see the text "Medium"
     And I should see the text "Budget"
+    And I should see the text "Highlighted icon term 1"
     And I should see the text "Illustration item with icon term 1"
     And I should see the text "Illustration item with icon description 1"
     And I should see the text "Digital"
+    And I should see the text "Highlighted icon term 2"
     And I should see the text "Illustration item with icon term 2"
     And I should see the text "Illustration item with icon description 2"
     And I should see the text "Two columns"
@@ -52,7 +68,7 @@ Feature: Illustration list with icons and Illustration item with icon paragraphs
     When I click "Edit"
     And I select "Vertical" from "Variant"
     And I press "Change variant"
-    Then the following field should be present "Alternating background" in the "demo paragraphs element" region
+    Then the following fields should be present "Variant, Title, Alternating background, Center the content, Size" in the "demo paragraphs element" region
     And the following field should not be present "Columns" in the "demo paragraphs element" region
 
     When I check "Alternating background"

@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.oe_illustration_item_icon.field_oe_icon
+    - field.field.paragraph.oe_illustration_item_icon.field_oe_subtitle
     - field.field.paragraph.oe_illustration_item_icon.field_oe_text_long
     - field.field.paragraph.oe_illustration_item_icon.field_oe_title
     - paragraphs.paragraphs_type.oe_illustration_item_icon
@@ -16,24 +17,32 @@ mode: default
 content:
   field_oe_icon:
     type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_oe_text_long:
-    type: text_default
-    weight: 2
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_oe_title:
+  field_oe_subtitle:
     type: string
-    weight: 1
-    region: content
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 2
+    region: content
+  field_oe_text_long:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_oe_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden: {  }

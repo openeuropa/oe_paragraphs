@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_center
+    - paragraphs.paragraphs_type.oe_illustration_list_flags
+id: paragraph.oe_illustration_list_flags.field_oe_center
+field_name: field_oe_center
+entity_type: paragraph
+bundle: oe_illustration_list_flags
+label: 'Center the content'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

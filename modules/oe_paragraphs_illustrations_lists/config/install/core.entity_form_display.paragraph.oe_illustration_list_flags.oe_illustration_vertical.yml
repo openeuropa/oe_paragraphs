@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.paragraph.oe_illustration_vertical
+    - field.field.paragraph.oe_illustration_list_flags.field_oe_center
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_alternate
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_columns
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_ratio
@@ -16,13 +17,20 @@ targetEntityType: paragraph
 bundle: oe_illustration_list_flags
 mode: oe_illustration_vertical
 content:
-  field_oe_illustration_alternate:
-    weight: 2
+  field_oe_center:
+    type: boolean_checkbox
+    weight: 4
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  field_oe_illustration_alternate:
     type: boolean_checkbox
+    weight: 2
     region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_oe_illustration_ratio:
     type: options_select
     weight: 3
@@ -30,7 +38,9 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_oe_paragraphs:
+    type: oe_paragraphs_variants
     weight: 1
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -46,21 +56,19 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    type: oe_paragraphs_variants
-    region: content
   field_oe_title:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   translation:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   field_oe_illustration_columns: true
