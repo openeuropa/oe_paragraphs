@@ -26,3 +26,4 @@ config_devel:
 
   optional:
     - language.content_settings.paragraph.oe_carousel_item
+    - language.content_settings.paragraph.oe_carousel
