@@ -1,13 +1,32 @@
-# Change Log
+# Changelog
+
+## [1.20.0](https://github.com/openeuropa/oe_paragraphs/tree/1.20.0) (2023-06-30)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.19.0...1.20.0)
+
+**Merged pull requests:**
+
+- EWPP-3269: Banner and carousel new fields. [\#209](https://github.com/openeuropa/oe_paragraphs/pull/209) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-3274: Add optional config for Carousel content language settings. [\#208](https://github.com/openeuropa/oe_paragraphs/pull/208) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-3269: Update epic branch. [\#207](https://github.com/openeuropa/oe_paragraphs/pull/207) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-3367: Set default values for Size and Alignment Banner fields and add Carousel updater. [\#206](https://github.com/openeuropa/oe_paragraphs/pull/206) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-3320: Add new fields to Illustration lists paragraphs. [\#205](https://github.com/openeuropa/oe_paragraphs/pull/205) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-3318: Add webtools chart, map, countdown, social feed to text with featured media. [\#204](https://github.com/openeuropa/oe_paragraphs/pull/204) ([nagyad](https://github.com/nagyad))
+- EWPP-3295: Create new Media paragraph. [\#200](https://github.com/openeuropa/oe_paragraphs/pull/200) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-3272: Add Size field to Carousel item paragraph. [\#198](https://github.com/openeuropa/oe_paragraphs/pull/198) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-3270: Add new fields to Banner paragraph. [\#197](https://github.com/openeuropa/oe_paragraphs/pull/197) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.19.0](https://github.com/openeuropa/oe_paragraphs/tree/1.19.0) (2023-05-12)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.18.0...1.19.0)
 
 **Merged pull requests:**
 
+- Prepare changelog for release 1.19.0. [\#202](https://github.com/openeuropa/oe_paragraphs/pull/202) ([brummbar](https://github.com/brummbar))
 - EWPP-3017: Drupal 10 compatibility. [\#199](https://github.com/openeuropa/oe_paragraphs/pull/199) ([brummbar](https://github.com/brummbar))
 
 ## [1.18.0](https://github.com/openeuropa/oe_paragraphs/tree/1.18.0) (2023-03-21)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.17.0...1.18.0)
 
 **Merged pull requests:**
@@ -16,6 +35,7 @@
 - EWPP-2904: Update to PHP8.1 and D9.4. [\#195](https://github.com/openeuropa/oe_paragraphs/pull/195) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.17.0](https://github.com/openeuropa/oe_paragraphs/tree/1.17.0) (2022-11-21)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.16.0...1.17.0)
 
 **Merged pull requests:**
