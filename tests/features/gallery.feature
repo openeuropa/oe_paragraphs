@@ -4,7 +4,7 @@ Feature: Gallery paragraph.
   I need to be able to use gallery paragraphs
   so I can create collections of images and videos.
 
-  @cleanup:media
+  @cleanup:media @remote-video-services
   Scenario: Gallery paragraph creation.
     Given the following remote video:
       | url                                         |

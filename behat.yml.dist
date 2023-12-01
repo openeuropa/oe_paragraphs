@@ -13,6 +13,7 @@ default:
         - Drupal\Tests\oe_paragraphs\Behat\CleanupContext
         - Drupal\Tests\oe_paragraphs\Behat\DrupalContext
         - Drupal\Tests\oe_paragraphs\Behat\FieldsContext
+        - Drupal\Tests\oe_paragraphs\Behat\MediaContext
         - Drupal\Tests\oe_paragraphs\Behat\ParagraphsContext
         - OpenEuropa\Behat\TransformationContext:
             pages:
