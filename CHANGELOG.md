@@ -1,11 +1,24 @@
-# Changelog
+# Change Log
+
+## [1.21.0](https://github.com/openeuropa/oe_paragraphs/tree/1.21.0) (2023-12-01)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.20.0...1.21.0)
+
+**Closed issues:**
+
+- Bump up allowed\_formats module to 3.0.0 [\#213](https://github.com/openeuropa/oe_paragraphs/issues/213)
+
+**Merged pull requests:**
+
+- OEL-2768: Use mocked responses for tests that handle remote videos. [\#216](https://github.com/openeuropa/oe_paragraphs/pull/216) ([brummbar](https://github.com/brummbar))
+- OEL-2555: Allow to use 3.0 of allowed\_formats. [\#214](https://github.com/openeuropa/oe_paragraphs/pull/214) ([brummbar](https://github.com/brummbar))
+- OEL-0000: Add @brummbar as code owner of the repo to automatically request reviews. [\#212](https://github.com/openeuropa/oe_paragraphs/pull/212) ([brummbar](https://github.com/brummbar))
 
 ## [1.20.0](https://github.com/openeuropa/oe_paragraphs/tree/1.20.0) (2023-06-30)
-
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.19.0...1.20.0)
 
 **Merged pull requests:**
 
+- Release-1.20.0: Update changelog. [\#210](https://github.com/openeuropa/oe_paragraphs/pull/210) ([nagyad](https://github.com/nagyad))
 - EWPP-3269: Banner and carousel new fields. [\#209](https://github.com/openeuropa/oe_paragraphs/pull/209) ([22Alexandra](https://github.com/22Alexandra))
 - EWPP-3274: Add optional config for Carousel content language settings. [\#208](https://github.com/openeuropa/oe_paragraphs/pull/208) ([22Alexandra](https://github.com/22Alexandra))
 - EWPP-3269: Update epic branch. [\#207](https://github.com/openeuropa/oe_paragraphs/pull/207) ([22Alexandra](https://github.com/22Alexandra))
