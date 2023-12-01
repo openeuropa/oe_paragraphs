@@ -4,7 +4,7 @@ Feature: Illustration list with images and Illustration item with image paragrap
   I need to be able to use Illustration list with images and Illustration item with image paragraphs
   so I can add items with image to the content.
 
-  @cleanup:media
+  @cleanup:media @remote-video-services
   Scenario: Illustration list with images paragraph creation.
     Given I am logged in as a user with the "access content, create oe_demo_landing_page content, edit any oe_demo_landing_page content, create av_portal_photo media, access content overview" permission
     And the following images:

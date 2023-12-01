@@ -4,7 +4,7 @@ Feature: Media paragraph.
   I need to be able to use Media paragraphs
   so that I can add media items to the content.
 
-  @cleanup:node @cleanup:media
+  @cleanup:node @cleanup:media @remote-video-services
   Scenario: Media paragraph creation.
     Given I am logged in as a user with the "create oe_demo_landing_page content, access content, access content overview, edit any oe_demo_landing_page content, create image media, create video_iframe media, create av_portal_video media, use text format oe_media_iframe" permissions
     # Create an "Image" media.

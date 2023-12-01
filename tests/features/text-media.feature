@@ -4,7 +4,7 @@ Feature: Text with featured media paragraph.
   I need to be able to use Text with featured media paragraphs
   so that I can add featured media together with explanatory text.
 
-  @cleanup:media
+  @cleanup:media @remote-video-services
   Scenario: Text with featured media paragraph creation.
     Given I am logged in as a user with the "create oe_demo_landing_page content, access content, edit any oe_demo_landing_page content, create image media, create remote_video media, create av_portal_video media, create webtools_chart media, create webtools_countdown media, create webtools_map media, create webtools_social_feed media,access content overview" permission
 

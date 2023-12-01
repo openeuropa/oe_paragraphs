@@ -31,6 +31,7 @@ drupal:
         - "vendor"
         - "${drupal.root}"
       file_private_path: "sites/default/files/private"
+      extension_discovery_scan_tests: TRUE
     databases:
       sparql_default:
         default:
