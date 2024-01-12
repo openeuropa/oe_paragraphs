@@ -74,6 +74,11 @@
                 "web-root": "./build"
             }
         },
+        "drush": {
+            "services": {
+                "drush.services.yml": "^11"
+            }
+        },
         "_readme": [
             "Explicit requirement of symfony/phpunit-bridge to replace drupal/core-dev testing classes and traits.",
             "Using symfony/validator v6.2.5 for D10 like core-recommended does because 6.3 breaks BC with the signature changes to the ExecutionContextInterface. Remove when 6.3.1 is realased."

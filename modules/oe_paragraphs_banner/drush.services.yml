@@ -1,0 +1,6 @@
+services:
+  oe_paragraphs_banner.banner_paragraph_update:
+    class: Drupal\oe_paragraphs_banner\Commands\UpdateBannerData
+    arguments: [ '@entity_type.manager', '@oe_paragraphs_banner.paragraph_updater', '@messenger' ]
+    tags:
+      - { name: drush.command }
