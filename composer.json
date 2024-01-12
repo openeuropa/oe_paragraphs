@@ -25,7 +25,7 @@
         "drupal/entity_browser": "^2.5",
         "drupal/inline_entity_form": "^1.0-rc12",
         "drupal/json_field": "^1.1",
-        "drush/drush": "^11.1",
+        "drush/drush": "^11.1 || ^12",
         "openeuropa/behat-transformation-context": "^0.1",
         "openeuropa/code-review": "^2.0",
         "openeuropa/oe_content": "^3.0.0-alpha11",
