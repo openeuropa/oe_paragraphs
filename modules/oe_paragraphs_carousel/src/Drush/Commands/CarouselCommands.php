@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Drupal\oe_paragraphs_carousel\Commands;
+namespace Drupal\oe_paragraphs_carousel\Drush\Commands;
 
 use Drupal\Core\Batch\BatchBuilder;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
@@ -17,7 +17,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Sets default "Size" value for existing Carousel paragraphs.
  */
-final class UpdateCarouselData extends DrushCommands {
+final class CarouselCommands extends DrushCommands {
 
   use StringTranslationTrait;
   use DependencySerializationTrait;
@@ -60,11 +60,11 @@ final class UpdateCarouselData extends DrushCommands {
    * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
    *   The container.
    *
-   * @return \Drupal\oe_paragraphs_carousel\Commands\UpdateCarouselData
+   * @return \Drupal\oe_paragraphs_carousel\Drush\Commands\CarouselCommands
    *   The instance of Drush commands.
    */
-  public static function create(ContainerInterface $container): UpdateCarouselData {
-    return new UpdateCarouselData(
+  public static function create(ContainerInterface $container): CarouselCommands {
+    return new CarouselCommands(
       $container->get('entity_type.manager'),
       $container->get('oe_paragraphs_carousel.paragraph_updater'),
       $container->get('messenger'),

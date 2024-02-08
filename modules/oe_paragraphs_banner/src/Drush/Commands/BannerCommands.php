@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Drupal\oe_paragraphs_banner\Commands;
+namespace Drupal\oe_paragraphs_banner\Drush\Commands;
 
 use Drupal\Core\Batch\BatchBuilder;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *
  * Migrates the "Banner type" field value to "Alignment" and "Size" fields.
  */
-final class UpdateBannerData extends DrushCommands {
+final class BannerCommands extends DrushCommands {
 
   use StringTranslationTrait;
   use DependencySerializationTrait;
@@ -62,11 +62,11 @@ final class UpdateBannerData extends DrushCommands {
    * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
    *   The container.
    *
-   * @return \Drupal\oe_paragraphs_banner\Commands\UpdateBannerData
+   * @return \Drupal\oe_paragraphs_banner\Drush\Commands\BannerCommands
    *   The instance of Drush commands.
    */
-  public static function create(ContainerInterface $container): UpdateBannerData {
-    return new UpdateBannerData(
+  public static function create(ContainerInterface $container): BannerCommands {
+    return new BannerCommands(
       $container->get('entity_type.manager'),
       $container->get('oe_paragraphs_banner.paragraph_updater'),
       $container->get('messenger'),
