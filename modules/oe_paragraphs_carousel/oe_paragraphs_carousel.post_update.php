@@ -5,7 +5,7 @@
  * Post update functions for the OE Paragraphs Carousel module.
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 use Drupal\Core\Config\FileStorage;
 

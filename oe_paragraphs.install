@@ -5,7 +5,7 @@
  * Install, update and uninstall functions for the OE Paragraphs module.
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 use Drupal\Core\Config\FileStorage;
 use Drupal\Core\Entity\Entity\EntityFormDisplay;

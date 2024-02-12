@@ -5,7 +5,7 @@
  * Contains \OeParagraphsSubContext.
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 use Behat\Gherkin\Node\TableNode;
 use Drupal\Core\Entity\ContentEntityInterface;
