@@ -20,6 +20,7 @@ Feature: Listing item block paragraph.
       | One column         |
       | Two columns        |
       | Three columns      |
+      | Four columns       |
     # This paragraph has no variants.
     And the following field should not be present "Variant" in the "demo paragraphs element" region
     # Only listing item paragraphs can be added to this paragraph.

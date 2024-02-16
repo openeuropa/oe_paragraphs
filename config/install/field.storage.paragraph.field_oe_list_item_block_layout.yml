@@ -19,6 +19,9 @@ settings:
     -
       value: three_columns
       label: 'Three columns'
+    -
+      value: four_columns
+      label: 'Four columns'
   allowed_values_function: ''
 module: options
 locked: false
