@@ -2,7 +2,7 @@ name: 'OpenEuropa Paragraphs Description list'
 type: module
 description: 'Provides Description list paragraph that renders items grouped in HTML Description list tag.'
 package: OpenEuropa
-core_version_requirement: ^9.4 || ^10
+core_version_requirement: ^10
 
 dependencies:
   - description_list_field:description_list_field

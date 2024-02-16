@@ -1,8 +1,8 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
-namespace Drupal\oe_paragraphs_carousel\Commands;
+namespace Drupal\oe_paragraphs_carousel\Drush\Commands;
 
 use Drupal\Core\Batch\BatchBuilder;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
@@ -10,12 +10,14 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\oe_paragraphs_carousel\CarouselParagraphUpdater;
+use Drush\Attributes as CLI;
 use Drush\Commands\DrushCommands;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Sets default "Size" value for existing Carousel paragraphs.
  */
-class UpdateCarouselData extends DrushCommands {
+final class CarouselCommands extends DrushCommands {
 
   use StringTranslationTrait;
   use DependencySerializationTrait;
@@ -53,10 +55,27 @@ class UpdateCarouselData extends DrushCommands {
   }
 
   /**
-   * Triggers the update of the Carousel paragraph data.
+   * Return an instance of these Drush commands.
    *
-   * @command oe-paragraphs-update-carousel-data:run
+   * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+   *   The container.
+   *
+   * @return \Drupal\oe_paragraphs_carousel\Drush\Commands\CarouselCommands
+   *   The instance of Drush commands.
    */
+  public static function create(ContainerInterface $container): CarouselCommands {
+    return new CarouselCommands(
+      $container->get('entity_type.manager'),
+      $container->get('oe_paragraphs_carousel.paragraph_updater'),
+      $container->get('messenger'),
+    );
+  }
+
+  /**
+   * Triggers the update of the Carousel paragraph data.
+   */
+  #[CLI\Command(name: 'oe-paragraphs-update-carousel-data:run', aliases: [])]
+  #[CLI\Usage(name: 'oe-paragraphs-update-carousel-data:run', description: 'Updates Carousel paragraph data.')]
   public function updateCarouselData(): void {
     $ids = $this->entityTypeManager->getStorage('paragraph')->getQuery()
       ->condition('type', 'oe_carousel')

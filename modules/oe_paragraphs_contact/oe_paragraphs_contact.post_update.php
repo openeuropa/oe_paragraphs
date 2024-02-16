@@ -5,7 +5,7 @@
  * OpenEuropa Paragraphs Contact post updates.
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 use Drupal\field\Entity\FieldConfig;
 

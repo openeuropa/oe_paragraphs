@@ -6,10 +6,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.0",
-        "cweagans/composer-patches": "~1.4",
+        "php": ">=8.1",
+        "cweagans/composer-patches": "^1.7 || ^2.0",
         "drupal/allowed_formats": "^2.0 || ^3.0",
-        "drupal/core": "^9.4 || ^10",
+        "drupal/core": "^10",
         "drupal/paragraphs": "^1.15",
         "drupal/typed_link": "^2.0"
     },
@@ -18,24 +18,24 @@
         "drupal/address": "^1.9",
         "drupal/composite_reference": "^2.1",
         "drupal/config_devel": "^1.9",
-        "drupal/core-composer-scaffold": "^9.4 || ^10",
-        "drupal/core-utility": "^9.4 || ^10",
+        "drupal/core-composer-scaffold": "^10",
+        "drupal/core-utility": "^10",
         "drupal/description_list_field": "^1.0",
         "drupal/drupal-extension": "^5.0",
         "drupal/entity_browser": "^2.5",
         "drupal/inline_entity_form": "^1.0-rc12",
         "drupal/json_field": "^1.1",
-        "drush/drush": "^11.1",
+        "drush/drush": "^12",
+        "nikic/php-parser": "^4",
         "openeuropa/behat-transformation-context": "^0.1",
         "openeuropa/code-review": "^2.0",
-        "openeuropa/oe_content": "^3.0.0-alpha11",
+        "openeuropa/oe_content": "^3.0.0",
         "openeuropa/oe_media": "^1.23.1",
         "openeuropa/oe_webtools": "^1.22",
         "openeuropa/rdf_skos": "^1.0.0-alpha10",
         "openeuropa/task-runner-drupal-project-symlink": "^1.0-beta6",
         "phpspec/prophecy-phpunit": "^2",
-        "symfony/phpunit-bridge": "^6.0",
-        "symfony/validator": "~v4.4.48 || ~v6.2.5"
+        "symfony/phpunit-bridge": "^6.0"
     },
     "suggest": {
         "openeuropa/oe_media": "Allows usage of paragraphs with different media attached to it."
@@ -76,7 +76,7 @@
         },
         "_readme": [
             "Explicit requirement of symfony/phpunit-bridge to replace drupal/core-dev testing classes and traits.",
-            "Using symfony/validator v6.2.5 for D10 like core-recommended does because 6.3 breaks BC with the signature changes to the ExecutionContextInterface. Remove when 6.3.1 is realased."
+            "Explicit requirement of nikic/php-parser ^4 as later versions are not compatible with grumphp @see https://github.com/phpro/grumphp/issues/1119"
         ]
     },
     "repositories": [

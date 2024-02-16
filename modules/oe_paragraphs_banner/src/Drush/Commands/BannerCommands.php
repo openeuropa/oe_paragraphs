@@ -1,8 +1,8 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
-namespace Drupal\oe_paragraphs_banner\Commands;
+namespace Drupal\oe_paragraphs_banner\Drush\Commands;
 
 use Drupal\Core\Batch\BatchBuilder;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
@@ -10,14 +10,16 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\oe_paragraphs_banner\BannerParagraphUpdater;
+use Drush\Attributes as CLI;
 use Drush\Commands\DrushCommands;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Updates Banner paragraph data.
  *
  * Migrates the "Banner type" field value to "Alignment" and "Size" fields.
  */
-class UpdateBannerData extends DrushCommands {
+final class BannerCommands extends DrushCommands {
 
   use StringTranslationTrait;
   use DependencySerializationTrait;
@@ -55,10 +57,27 @@ class UpdateBannerData extends DrushCommands {
   }
 
   /**
-   * Triggers the update of the Banner paragraph data.
+   * Return an instance of these Drush commands.
    *
-   * @command oe-paragraphs-update-banner-data:run
+   * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+   *   The container.
+   *
+   * @return \Drupal\oe_paragraphs_banner\Drush\Commands\BannerCommands
+   *   The instance of Drush commands.
    */
+  public static function create(ContainerInterface $container): BannerCommands {
+    return new BannerCommands(
+      $container->get('entity_type.manager'),
+      $container->get('oe_paragraphs_banner.paragraph_updater'),
+      $container->get('messenger'),
+    );
+  }
+
+  /**
+   * Triggers the update of the Banner paragraph data.
+   */
+  #[CLI\Command(name: 'oe-paragraphs-update-banner-data:run', aliases: [])]
+  #[CLI\Usage(name: 'oe-paragraphs-update-banner-data:run', description: 'Updates Banner paragraph data.')]
   public function updateBannerData(): void {
     $ids = $this->entityTypeManager->getStorage('paragraph')->getQuery()
       ->condition('type', 'oe_banner')
