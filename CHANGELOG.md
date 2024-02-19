@@ -1,6 +1,19 @@
-# Change Log
+# Changelog
+
+## [1.22.0](https://github.com/openeuropa/oe_paragraphs/tree/1.22.0) (2024-02-16)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.21.0...1.22.0)
+
+**Closed issues:**
+
+- Drush commands not available using Drush 12 [\#217](https://github.com/openeuropa/oe_paragraphs/issues/217)
+
+**Merged pull requests:**
+
+- EWPP-3966: Support D10.2 and drop D9. [\#219](https://github.com/openeuropa/oe_paragraphs/pull/219) ([brummbar](https://github.com/brummbar))
 
 ## [1.21.0](https://github.com/openeuropa/oe_paragraphs/tree/1.21.0) (2023-12-01)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.20.0...1.21.0)
 
 **Closed issues:**
@@ -10,10 +23,12 @@
 **Merged pull requests:**
 
 - OEL-2768: Use mocked responses for tests that handle remote videos. [\#216](https://github.com/openeuropa/oe_paragraphs/pull/216) ([brummbar](https://github.com/brummbar))
+- Prepare changelog for release 1.21.0. [\#215](https://github.com/openeuropa/oe_paragraphs/pull/215) ([brummbar](https://github.com/brummbar))
 - OEL-2555: Allow to use 3.0 of allowed\_formats. [\#214](https://github.com/openeuropa/oe_paragraphs/pull/214) ([brummbar](https://github.com/brummbar))
 - OEL-0000: Add @brummbar as code owner of the repo to automatically request reviews. [\#212](https://github.com/openeuropa/oe_paragraphs/pull/212) ([brummbar](https://github.com/brummbar))
 
 ## [1.20.0](https://github.com/openeuropa/oe_paragraphs/tree/1.20.0) (2023-06-30)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.19.0...1.20.0)
 
 **Merged pull requests:**
