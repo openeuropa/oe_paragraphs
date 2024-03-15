@@ -11,7 +11,7 @@
         "drupal/allowed_formats": "^2.0 || ^3.0",
         "drupal/core": "^10",
         "drupal/paragraphs": "^1.15",
-        "drupal/typed_link": "^2.0"
+        "drupal/typed_link": "^2.1"
     },
     "require-dev": {
         "composer/installers": "^1.5",
