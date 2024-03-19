@@ -11,7 +11,7 @@
         "drupal/allowed_formats": "^2.0 || ^3.0",
         "drupal/core": "^10",
         "drupal/paragraphs": "^1.15",
-        "drupal/typed_link": "^2.0"
+        "drupal/typed_link": "dev-2.0.x"
     },
     "require-dev": {
         "composer/installers": "^1.5",
@@ -67,6 +67,9 @@
         "patches": {
             "drupal/paragraphs": {
                 "https://www.drupal.org/project/paragraphs/issues/2890086": "https://www.drupal.org/files/issues/2021-12-23/respect-display-on-validation-2890086-55.patch"
+            },
+            "drupal/typed_link": {
+                "https://git.drupalcode.org/project/typed_link/-/merge_requests/3/": "https://git.drupalcode.org/project/typed_link/-/merge_requests/3.diff"
             }
         },
         "drupal-scaffold": {
