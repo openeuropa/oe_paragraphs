@@ -87,7 +87,7 @@ class OptionsSubscriber implements EventSubscriberInterface {
       'spreadsheet' => $this->t('Spreadsheet'),
       'success' => $this->t('Success'),
       'tag-close' => $this->t('Tag close'),
-      'twitter' => $this->t('Twitter'),
+      'twitter' => $this->t('X'),
       'up' => $this->t('Up'),
       'video' => $this->t('Video'),
       'warning' => $this->t('Warning'),
