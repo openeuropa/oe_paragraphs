@@ -1,6 +1,15 @@
 # Changelog
 
-## [1.22.0](https://github.com/openeuropa/oe_paragraphs/tree/1.22.0) (2024-02-16)
+## [1.23.0](https://github.com/openeuropa/oe_paragraphs/tree/1.23.0) (2024-04-15)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.22.0...1.23.0)
+
+**Merged pull requests:**
+
+- EWPP-4011: Update Twitter label to X. [\#225](https://github.com/openeuropa/oe_paragraphs/pull/225) ([22Alexandra](https://github.com/22Alexandra))
+- OEL-0000: Add imanoleguskiza as code owner. [\#223](https://github.com/openeuropa/oe_paragraphs/pull/223) ([brummbar](https://github.com/brummbar))
+
+## [1.22.0](https://github.com/openeuropa/oe_paragraphs/tree/1.22.0) (2024-02-19)
 
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.21.0...1.22.0)
 
@@ -10,6 +19,7 @@
 
 **Merged pull requests:**
 
+- Release-1.22.0: Update changelog. [\#220](https://github.com/openeuropa/oe_paragraphs/pull/220) ([nagyad](https://github.com/nagyad))
 - EWPP-3966: Support D10.2 and drop D9. [\#219](https://github.com/openeuropa/oe_paragraphs/pull/219) ([brummbar](https://github.com/brummbar))
 
 ## [1.21.0](https://github.com/openeuropa/oe_paragraphs/tree/1.21.0) (2023-12-01)
