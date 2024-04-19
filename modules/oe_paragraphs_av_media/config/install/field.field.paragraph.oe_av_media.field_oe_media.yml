@@ -9,12 +9,6 @@ dependencies:
     - media.type.remote_video
     - media.type.video_iframe
     - paragraphs.paragraphs_type.oe_av_media
-  module:
-    - composite_reference
-third_party_settings:
-  composite_reference:
-    composite: false
-    composite_revisions: false
 id: paragraph.oe_av_media.field_oe_media
 field_name: field_oe_media
 entity_type: paragraph
