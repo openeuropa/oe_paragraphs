@@ -189,13 +189,8 @@ class ParagraphsContext extends RawDrupalContext {
     $paragraph = $this->findParagraph($paragraph_type, $position);
     $element = $this->getParagraphReferenceField($paragraph, $field);
 
-    // The div wrapping the buttons have a different class since 10.2.x.
-    // @todo Remove this when support for 10.1.x is dropped.
-    $actions_class = version_compare(\Drupal::VERSION, '10.2', '>')
-      ? 'field-actions'
-      : 'form-actions';
     // After the multi-value field table, a div is wrapping all the buttons.
-    $xpath = '/table/following-sibling::div' . $this->xpathHasClassSelector($actions_class) .
+    $xpath = '/table/following-sibling::div' . $this->xpathHasClassSelector('field-actions') .
       '//input' . $this->xpathHasClassSelector('field-add-more-submit');
     $buttons = $element->findAll('xpath', $xpath);
 
