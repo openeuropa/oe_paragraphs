@@ -1,13 +1,25 @@
-# Change Log
+# Changelog
+
+## [1.23.2](https://github.com/openeuropa/oe_paragraphs/tree/1.23.2) (2024-08-08)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.23.1...1.23.2)
+
+**Merged pull requests:**
+
+- EWPP-4602: Reroll paragraphs patch for form validation. [\#232](https://github.com/openeuropa/oe_paragraphs/pull/232) ([nagyad](https://github.com/nagyad))
+- OEL-3046: Update to Drupal 10.3 [\#230](https://github.com/openeuropa/oe_paragraphs/pull/230) ([AaronGilMartinez](https://github.com/AaronGilMartinez))
 
 ## [1.23.1](https://github.com/openeuropa/oe_paragraphs/tree/1.23.1) (2024-05-03)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.23.0...1.23.1)
 
 **Merged pull requests:**
 
+- Prepare changelog for release 1.23.1. [\#229](https://github.com/openeuropa/oe_paragraphs/pull/229) ([brummbar](https://github.com/brummbar))
 - EPHEH-48: Avoid dependency on composite\_reference. [\#228](https://github.com/openeuropa/oe_paragraphs/pull/228) ([brummbar](https://github.com/brummbar))
 
 ## [1.23.0](https://github.com/openeuropa/oe_paragraphs/tree/1.23.0) (2024-04-16)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.22.0...1.23.0)
 
 **Merged pull requests:**
@@ -17,6 +29,7 @@
 - OEL-0000: Add imanoleguskiza as code owner. [\#223](https://github.com/openeuropa/oe_paragraphs/pull/223) ([brummbar](https://github.com/brummbar))
 
 ## [1.22.0](https://github.com/openeuropa/oe_paragraphs/tree/1.22.0) (2024-02-19)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.21.0...1.22.0)
 
 **Closed issues:**
