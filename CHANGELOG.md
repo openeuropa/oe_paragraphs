@@ -1,11 +1,20 @@
 # Changelog
 
+## [1.23.3](https://github.com/openeuropa/oe_paragraphs/tree/1.23.3) (2024-08-09)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.23.2...1.23.3)
+
+**Merged pull requests:**
+
+- EWPP-4602: Bump paragraphs version to 1.18. [\#234](https://github.com/openeuropa/oe_paragraphs/pull/234) ([nagyad](https://github.com/nagyad))
+
 ## [1.23.2](https://github.com/openeuropa/oe_paragraphs/tree/1.23.2) (2024-08-08)
 
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.23.1...1.23.2)
 
 **Merged pull requests:**
 
+- Release-1.23.2: Update changelog. [\#233](https://github.com/openeuropa/oe_paragraphs/pull/233) ([nagyad](https://github.com/nagyad))
 - EWPP-4602: Reroll paragraphs patch for form validation. [\#232](https://github.com/openeuropa/oe_paragraphs/pull/232) ([nagyad](https://github.com/nagyad))
 - OEL-3046: Update to Drupal 10.3 [\#230](https://github.com/openeuropa/oe_paragraphs/pull/230) ([AaronGilMartinez](https://github.com/AaronGilMartinez))
 
