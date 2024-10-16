@@ -82,7 +82,7 @@ trait FieldsTrait {
    * @return \Behat\Mink\Element\NodeElement|null
    *   The field if found, NULL otherwise.
    */
-  protected function findField(string $label, NodeElement $container = NULL): ?NodeElement {
+  protected function findField(string $label, ?NodeElement $container = NULL): ?NodeElement {
     $container = $container ?? $this->getSession()->getPage();
 
     // Try to find the field with the standard method.
