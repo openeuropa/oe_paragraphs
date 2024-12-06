@@ -107,7 +107,7 @@ class OptionsSubscriber implements EventSubscriberInterface {
       'bulgaria' => $this->t('Bulgaria'),
       'croatia' => $this->t('Croatia'),
       'cyprus' => $this->t('Cyprus'),
-      'czech-republic' => $this->t('Czech republic'),
+      'czech-republic' => $this->t('Czechia'),
       'denmark' => $this->t('Denmark'),
       'estonia' => $this->t('Estonia'),
       'EU' => $this->t('EU'),
