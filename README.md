@@ -85,7 +85,7 @@ the OpenEuropa Paragraphs Map submodule.
 Allows editors to create paragraphs that show a rich text with a title and a featured media on the right, if any.
 To get this paragraph type enable the OpenEuropa Text with featured Media paragraph submodule.
 
-#### Social feed
+#### Social feed - Deprecated (will be removed in 2.0 as the Webtools *smk* service is no longer supported)
 Allows editors to create paragraphs that display Webtools social feed media entities. To get this paragraph type enable
 the OpenEuropa Paragraphs Social feed submodule.
 

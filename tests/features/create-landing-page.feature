@@ -26,7 +26,7 @@ Feature: Create a landing page
       | Facts and figures             |
       | Timeline                      |
       | Map                           |
-      | Social feed                   |
+      | Social feed - Deprecated      |
       | Document                      |
       | Contact                       |
       | Illustration list with flags  |
