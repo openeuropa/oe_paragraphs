@@ -1,4 +1,4 @@
-name: OpenEuropa Paragraphs Social feed
+name: OpenEuropa Paragraphs Social feed - Deprecated (will be removed in 2.0)
 type: module
 description: Provides Social feed paragraph that uses social feed media type.
 package: OpenEuropa
