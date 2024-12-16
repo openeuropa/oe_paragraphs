@@ -1,7 +1,13 @@
-# Changelog
+# Change Log
+
+## [1.24.0](https://github.com/openeuropa/oe_paragraphs/tree/1.24.0) (2024-12-16)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.23.3...1.24.0)
+
+**Merged pull requests:**
+
+- EWPP-4739: Update label of szech-republic option to 'Czechia'. [\#236](https://github.com/openeuropa/oe_paragraphs/pull/236) ([sergepavle](https://github.com/sergepavle))
 
 ## [1.23.3](https://github.com/openeuropa/oe_paragraphs/tree/1.23.3) (2024-08-09)
-
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.23.2...1.23.3)
 
 **Merged pull requests:**
