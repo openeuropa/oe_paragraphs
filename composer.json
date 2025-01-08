@@ -24,6 +24,7 @@
         "drupal/entity_browser": "^2.5",
         "drupal/inline_entity_form": "^1.0-rc12",
         "drupal/json_field": "^1.1",
+        "drupal/media_avportal": "1.8.0",
         "drush/drush": "^12",
         "nikic/php-parser": "^4",
         "openeuropa/behat-transformation-context": "^0.1",
@@ -75,7 +76,8 @@
         },
         "_readme": [
             "Explicit requirement of symfony/phpunit-bridge to replace drupal/core-dev testing classes and traits.",
-            "Explicit requirement of nikic/php-parser ^4 as later versions are not compatible with grumphp @see https://github.com/phpro/grumphp/issues/1119"
+            "Explicit requirement of nikic/php-parser ^4 as later versions are not compatible with grumphp @see https://github.com/phpro/grumphp/issues/1119",
+            "Locking drupal/media_avportal to 1.8.0 until D10.2 support is dropped."
         ]
     },
     "repositories": [
