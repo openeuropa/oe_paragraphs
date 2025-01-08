@@ -5,9 +5,7 @@ dependencies:
     - field.storage.paragraph.field_oe_text_long
     - paragraphs.paragraphs_type.oe_illustration_item_flag
   module:
-    - allowed_formats
     - text
-third_party_settings: { }
 id: paragraph.oe_illustration_item_flag.field_oe_text_long
 field_name: field_oe_text_long
 entity_type: paragraph
@@ -18,5 +16,6 @@ required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats: {  }
 field_type: text_long
