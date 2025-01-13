@@ -23,8 +23,7 @@ trait TraversingTrait {
    * @throws \Exception
    *   Thrown when no select field is found.
    */
-  protected function findSelect($select): NodeElement {
-    /** @var \Behat\Mink\Element\NodeElement $element */
+  protected function findSelect(string $select): NodeElement {
     $element = $this->getSession()->getPage()->find('named', ['select', $select]);
 
     if (empty($element)) {

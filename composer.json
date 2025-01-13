@@ -28,7 +28,7 @@
         "drush/drush": "^12",
         "nikic/php-parser": "^4",
         "openeuropa/behat-transformation-context": "^0.1",
-        "openeuropa/code-review": "^2.0",
+        "openeuropa/code-review-drupal": "^1.0.0-alpha",
         "openeuropa/oe_content": "^3.0.0",
         "openeuropa/oe_media": "^1.23.1",
         "openeuropa/oe_webtools": "^1.22",
@@ -81,12 +81,16 @@
     },
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://git.drupalcode.org/project/description_list_field.git"
-        },
-        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/openeuropa/DrupalDriver.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/openeuropa/code-review-drupal.git"
         }
     ],
     "config": {
@@ -94,10 +98,11 @@
         "discard-changes": true,
         "allow-plugins": {
             "composer/installers": true,
-            "drupal/core-composer-scaffold": true,
             "cweagans/composer-patches": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-composer-scaffold": true,
             "phpro/grumphp": true,
+            "phpro/grumphp-shim": true,
             "phpstan/extension-installer": true
         }
     }

@@ -26,7 +26,7 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
       'oe_list_item_block' => 'field_oe_list_item_block_variant',
       'oe_list_item' => 'field_oe_list_item_variant',
     ];
-    $paragraph_ids = [];
+    $sandbox['paragraph_ids'] = [];
 
     foreach ($sandbox['variant_fields'] as $bundle => $field) {
       // Make sure we have the old fields in the database.
@@ -40,11 +40,11 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
       $query->exists($field);
       $result = $query->execute();
       if (!empty($result)) {
-        $paragraph_ids += $result;
+        $sandbox['paragraph_ids'] += $result;
       }
     }
 
-    $sandbox['total'] = count($paragraph_ids);
+    $sandbox['total'] = count($sandbox['paragraph_ids']);
     $sandbox['current'] = 0;
     $sandbox['paragraphs_per_batch'] = 25;
 
@@ -139,7 +139,7 @@ function oe_paragraphs_update_8001(array &$sandbox): void {
   }
 
   // Get the current slice of paragraph ids.
-  $pids = array_slice($paragraph_ids, $sandbox['current'], $sandbox['paragraphs_per_batch']);
+  $pids = array_slice($sandbox['paragraph_ids'], $sandbox['current'], $sandbox['paragraphs_per_batch']);
   $entity_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
 
   foreach ($pids as $pid) {

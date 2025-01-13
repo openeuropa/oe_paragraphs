@@ -414,7 +414,7 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
 
         $context = [
           'form' => $form,
-          'widget' => self::getWidgetState($parents, $field_name, $form_state, $widget_state),
+          'widget' => self::getWidgetState($parents, $field_name, $form_state),
           'items' => $items,
           'delta' => $delta,
           'element' => $element,
@@ -470,8 +470,10 @@ class ParagraphVariantsWidget extends ParagraphsWidget {
           'mode' => $display->getMode(),
         ];
 
+        // @phpstan-ignore-next-line
         field_group_attach_groups($element['subform'], $context);
         $element['subform']['#process'][] = [
+          // @phpstan-ignore-next-line
           FormatterHelper::class,
           'formProcess',
         ];
