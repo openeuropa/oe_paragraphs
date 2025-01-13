@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Drupal\oe_paragraphs_banner\Drush\Commands;
 
-use CLI\Usage;
-use CLI\Command;
 use Drupal\Core\Batch\BatchBuilder;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\oe_paragraphs_banner\BannerParagraphUpdater;
+use Drush\Attributes as CLI;
 use Drush\Commands\DrushCommands;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -76,10 +75,13 @@ final class BannerCommands extends DrushCommands {
 
   /**
    * Triggers the update of the Banner paragraph data.
+   *
+   * phpcs:disable
    */
-  #[Command(name: 'oe-paragraphs-update-banner-data:run', aliases: [])]
-  #[Usage(name: 'oe-paragraphs-update-banner-data:run', description: 'Updates Banner paragraph data.')]
+  #[CLI\Command(name: 'oe-paragraphs-update-banner-data:run', aliases: [])]
+  #[CLI\Usage(name: 'oe-paragraphs-update-banner-data:run', description: 'Updates Banner paragraph data.')]
   public function updateBannerData(): void {
+    // phpcs:enable
     $ids = $this->entityTypeManager->getStorage('paragraph')->getQuery()
       ->condition('type', 'oe_banner')
       ->exists('field_oe_banner_type')
