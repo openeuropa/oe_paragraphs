@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Drupal\oe_paragraphs_carousel\Drush\Commands;
 
+use CLI\Usage;
+use CLI\Command;
 use Drupal\Core\Batch\BatchBuilder;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\oe_paragraphs_carousel\CarouselParagraphUpdater;
-use Drush\Attributes as CLI;
 use Drush\Commands\DrushCommands;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -74,8 +75,8 @@ final class CarouselCommands extends DrushCommands {
   /**
    * Triggers the update of the Carousel paragraph data.
    */
-  #[CLI\Command(name: 'oe-paragraphs-update-carousel-data:run', aliases: [])]
-  #[CLI\Usage(name: 'oe-paragraphs-update-carousel-data:run', description: 'Updates Carousel paragraph data.')]
+  #[Command(name: 'oe-paragraphs-update-carousel-data:run', aliases: [])]
+  #[Usage(name: 'oe-paragraphs-update-carousel-data:run', description: 'Updates Carousel paragraph data.')]
   public function updateCarouselData(): void {
     $ids = $this->entityTypeManager->getStorage('paragraph')->getQuery()
       ->condition('type', 'oe_carousel')
