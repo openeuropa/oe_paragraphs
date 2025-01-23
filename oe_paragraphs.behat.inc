@@ -64,7 +64,7 @@ class OeParagraphsSubContext extends DrupalSubContextBase {
       // Only check fields that reference paragraph types.
       if ($this->getEntityReferenceTargetEntityId($entity, $field_name) !== 'paragraph') {
         continue;
-      };
+      }
 
       $actual_par_type_ids = $this->getEntityReferenceTargetBundles($entity, $field_name);
 

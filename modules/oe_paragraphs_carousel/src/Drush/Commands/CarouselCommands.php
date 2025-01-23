@@ -73,10 +73,13 @@ final class CarouselCommands extends DrushCommands {
 
   /**
    * Triggers the update of the Carousel paragraph data.
+   *
+   * phpcs:disable
    */
   #[CLI\Command(name: 'oe-paragraphs-update-carousel-data:run', aliases: [])]
   #[CLI\Usage(name: 'oe-paragraphs-update-carousel-data:run', description: 'Updates Carousel paragraph data.')]
   public function updateCarouselData(): void {
+    // phpcs:enable
     $ids = $this->entityTypeManager->getStorage('paragraph')->getQuery()
       ->condition('type', 'oe_carousel')
       ->allRevisions()
