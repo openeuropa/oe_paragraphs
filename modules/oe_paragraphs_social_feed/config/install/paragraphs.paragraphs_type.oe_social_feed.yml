@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: oe_social_feed
-label: 'Social feed'
+label: 'Social feed - Deprecated'
 icon_uuid: null
 icon_default: null
-description: 'The Social feed paragraph allows editors to add Webtools social feed on the page.'
+description: 'The Social feed paragraph allows editors to add Webtools social feed on the page - The Webtools smk service is no longer supported.'
 behavior_plugins: {  }
