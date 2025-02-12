@@ -1,10 +1,19 @@
 # Change Log
 
+## [1.26.0](https://github.com/openeuropa/oe_paragraphs/tree/1.26.0) (2025-02-12)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.25.0...1.26.0)
+
+**Merged pull requests:**
+
+- EWPP-4984: Remove test for deprecated paragraph. [\#244](https://github.com/openeuropa/oe_paragraphs/pull/244) ([nagyad](https://github.com/nagyad))
+- EWPP-4984: Deprecate the Social feed paragraph. [\#238](https://github.com/openeuropa/oe_paragraphs/pull/238) ([22Alexandra](https://github.com/22Alexandra))
+
 ## [1.25.0](https://github.com/openeuropa/oe_paragraphs/tree/1.25.0) (2025-01-29)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.24.0...1.25.0)
 
 **Merged pull requests:**
 
+- Release-1.25.0: Update changelog. [\#242](https://github.com/openeuropa/oe_paragraphs/pull/242) ([nagyad](https://github.com/nagyad))
 - EWPP-4991: Ensure PHP8.3 compatibility. [\#241](https://github.com/openeuropa/oe_paragraphs/pull/241) ([nagyad](https://github.com/nagyad))
 
 ## [1.24.0](https://github.com/openeuropa/oe_paragraphs/tree/1.24.0) (2024-12-16)
