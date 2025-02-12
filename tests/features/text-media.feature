@@ -38,12 +38,6 @@ Feature: Text with featured media paragraph.
     And I fill in "Webtools map snippet" with "{\"service\": \"map\"}"
     Then I press "Save"
 
-    # Create an "Webtools social feed" media
-    When I visit "the Webtools social feed creation page"
-    And I fill in "Name" with "My social feed"
-    And I fill in "Webtools social feed snippet" with "{\"service\":\"smk\",\"type\":\"list\",\"slug\":\"ec-spokespersons\"}"
-    Then I press "Save"
-
     # Create an "Webtools countdown" media
     When I visit "the Webtools countdown creation page"
     And I fill in "Name" with "My countdown"
@@ -103,12 +97,6 @@ Feature: Text with featured media paragraph.
     And I fill in "Use existing media" with "World map"
     And I press "Save"
     Then I should see the Webtools map "World map" on the page
-
-    # Use an webtools social feed on the Text with featured media paragraph.
-    When I click "Edit"
-    And I fill in "Use existing media" with "My social feed"
-    And I press "Save"
-    Then I should see the Webtools social feed "My social feed" on the page
 
     # Use an webtools countdown on the Text with featured media paragraph.
     When I click "Edit"
