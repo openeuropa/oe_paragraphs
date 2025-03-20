@@ -26,6 +26,8 @@
         "drupal/entity_browser": "^2.5",
         "drupal/inline_entity_form": "^1.0-rc12 || ^3.0@RC",
         "drupal/json_field": "^1.1",
+        "drupal/media_avportal": "dev-3431855-automated-drupal-11",
+        "drupal/remote_stream_wrapper": "dev-d11-compatibility#5e9eb8d290f78f69464ab01ed374439992985811",
         "drush/drush": "^12 || ^13",
         "openeuropa/behat-transformation-context": "~0.2",
         "openeuropa/code-review-drupal": "^1.0.0-alpha",
@@ -76,7 +78,29 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packages.drupal.org/8"
+            "url": "https://packages.drupal.org/8",
+            "exclude": [
+              "drupal/media_avportal",
+             "drupal/remote_stream_wrapper"
+           ]
+        },
+        {
+          "type": "git",
+          "url": "https://git.drupalcode.org/issue/media_avportal-3431855.git",
+          "reference": "1475bf7a0795f337cd007bc94780dc6041787cf3"
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "drupal/remote_stream_wrapper",
+            "version": "dev-d11-compatibility",
+            "type": "drupal-module",
+            "source": {
+              "type": "git",
+              "url": "https://git.drupalcode.org/issue/remote_stream_wrapper-3434168.git",
+              "reference": "5e9eb8d290f78f69464ab01ed374439992985811"
+            }
+          }
         }
     ],
     "config": {
