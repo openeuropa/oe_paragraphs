@@ -263,3 +263,59 @@ function oe_paragraphs_post_update_10010() {
   $field_storage->set('settings', $settings);
   $field_storage->save();
 }
+
+/**
+ * Remove allowed_formats' third party setting from config files.
+ */
+function oe_paragraphs_post_update_10011(): void {
+  // Update the field configs.
+  $field_ids = [
+    'paragraph.oe_list_item.field_oe_text_long',
+    'paragraph.oe_illustration_item_flag.field_oe_text_long',
+    'paragraph.oe_illustration_item_icon.field_oe_text_long',
+    'paragraph.oe_illustration_item_image.field_oe_text_long',
+    'paragraph.oe_text_feature_media.field_oe_text_long',
+    'paragraph.oe_timeline.field_oe_text_long',
+  ];
+  foreach ($field_ids as $field_id) {
+    $field_config = FieldConfig::load($field_id);
+    if (!$field_config) {
+      continue;
+    }
+    $allowed_text_formats = $field_config->getThirdPartySetting('allowed_formats', 'allowed_formats');
+    if (!empty($allowed_text_formats)) {
+      // If there are allowed text formats set on the field, move them to the
+      // core key allowed_formats and then remove the third party setting.
+      $settings = $field_config->get('settings');
+      if (array_diff($allowed_text_formats, $settings['allowed_formats'])) {
+        continue;
+      }
+      $settings['allowed_formats'] = $allowed_text_formats;
+      $field_config->set('settings', $settings);
+    }
+    $field_config->unsetThirdPartySetting('allowed_formats', 'allowed_formats');
+    $field_config->save();
+  }
+
+  // Remove the third party setting from entity form displays.
+  $form_display_field = [
+    'paragraph.oe_list_item.date' => 'field_oe_text_long',
+    'paragraph.oe_list_item.default' => 'field_oe_text_long',
+    'paragraph.oe_list_item.highlight' => 'field_oe_text_long',
+    'paragraph.oe_list_item.thumbnail_primary' => 'field_oe_text_long',
+    'paragraph.oe_list_item.thumbnail_secondary' => 'field_oe_text_long',
+  ];
+  foreach ($form_display_field as $form_id => $field) {
+    $form_display = EntityFormDisplay::load($form_id);
+    if (!$form_display) {
+      continue;
+    }
+    $component = $form_display->getComponent($field);
+    if (!isset($component['third_party_settings']['allowed_formats'])) {
+      continue;
+    }
+    unset($component['third_party_settings']['allowed_formats']);
+    $form_display->setComponent($field, $component);
+    $form_display->save();
+  }
+}
