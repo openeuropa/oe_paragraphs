@@ -4,7 +4,7 @@ Feature: Document media paragraph.
   I need to be able to use the Document paragraph
   so that I can attach documents to a content.
   
-  @cleanup:media
+  @cleanup:media @cleanup:file
   Scenario: Document creation.
     Given I am logged in as a user with the "create oe_demo_landing_page content, edit any oe_demo_landing_page content, access content overview, create document media, delete any document media, update any media" permission
     
