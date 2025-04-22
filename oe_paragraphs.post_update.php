@@ -287,11 +287,10 @@ function oe_paragraphs_post_update_10011(): void {
       // If there are allowed text formats set on the field, move them to the
       // core key allowed_formats and then remove the third party setting.
       $settings = $field_config->get('settings');
-      if (array_diff($allowed_text_formats, $settings['allowed_formats'])) {
-        continue;
+      if (empty($settings['allowed_formats'])) {
+        $settings['allowed_formats'] = $allowed_text_formats;
+        $field_config->set('settings', $settings);
       }
-      $settings['allowed_formats'] = $allowed_text_formats;
-      $field_config->set('settings', $settings);
     }
     $field_config->unsetThirdPartySetting('allowed_formats', 'allowed_formats');
     $field_config->save();
