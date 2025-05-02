@@ -1,11 +1,21 @@
 # Change Log
 
+## [1.27.0](https://github.com/openeuropa/oe_paragraphs/tree/1.27.0) (2025-05-02)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.26.0...1.27.0)
+
+**Merged pull requests:**
+
+- EWPP-3795: Fix the allowed\_formats post update. [\#247](https://github.com/openeuropa/oe_paragraphs/pull/247) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-5461: Update sparql image in docker-compose.yml and for drone.yml. [\#246](https://github.com/openeuropa/oe_paragraphs/pull/246) ([sergepavle](https://github.com/sergepavle))
+- EWPP-3795: Remove the requirement for allowed\_formats module. [\#240](https://github.com/openeuropa/oe_paragraphs/pull/240) ([22Alexandra](https://github.com/22Alexandra))
+
 ## [1.26.0](https://github.com/openeuropa/oe_paragraphs/tree/1.26.0) (2025-02-12)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.25.0...1.26.0)
 
 **Merged pull requests:**
 
 - EWPP-4984: Remove test for deprecated paragraph. [\#244](https://github.com/openeuropa/oe_paragraphs/pull/244) ([nagyad](https://github.com/nagyad))
+- Release-1.26.0: Update changelog. [\#243](https://github.com/openeuropa/oe_paragraphs/pull/243) ([nagyad](https://github.com/nagyad))
 - EWPP-4984: Deprecate the Social feed paragraph. [\#238](https://github.com/openeuropa/oe_paragraphs/pull/238) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.25.0](https://github.com/openeuropa/oe_paragraphs/tree/1.25.0) (2025-01-29)
