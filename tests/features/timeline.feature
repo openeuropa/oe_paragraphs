@@ -33,7 +33,8 @@ Feature: Timeline paragraph.
     When I click "Edit"
     # Verify that the title field is required if a value is entered in the
     # label field.
-    When I fill in "Label" with "Item 2 label" in the second "Items" field element
+    When I press the "Add another item" button in the "demo paragraphs element" region
+    And I fill in "Label" with "Item 2 label" in the second "Items" field element
     And I press "Save"
     Then I should see the following error message:
       | error messages                                                 |
@@ -80,6 +81,7 @@ Feature: Timeline paragraph.
 
     # Verify that an item can be deleted by emptying its values.
     When I click "Edit"
+    And I press the "Edit all" button in the "demo paragraphs element" region
     And I fill in "Label" with "" in the second "Items" field element
     And I fill in "Title" with "" in the second "Items" field element
     And I fill in "Content" with "" in the second "Items" field element
@@ -165,6 +167,7 @@ Feature: Timeline paragraph.
 
     # Re-edit the page and verify that on load fields are marked are required.
     When I click "Edit"
+    And I press the "Edit all" button in the "demo paragraphs element" region
     Then the "Label" field in the 2nd item of the "Items" field should be marked as required
     And the "Title" field in the 2nd item of the "Items" field should be marked as required
 
