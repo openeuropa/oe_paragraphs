@@ -1,15 +1,26 @@
-# Change Log
+# Changelog
 
-## [1.27.0](https://github.com/openeuropa/oe_paragraphs/tree/1.27.0) (2025-05-02)
+## [1.28.0](https://github.com/openeuropa/oe_paragraphs/tree/1.28.0) (2025-05-23)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.27.0...1.28.0)
+
+**Merged pull requests:**
+
+- EWPP-4643: Update to Drupal 11. [\#245](https://github.com/openeuropa/oe_paragraphs/pull/245) ([kp77](https://github.com/kp77))
+
+## [1.27.0](https://github.com/openeuropa/oe_paragraphs/tree/1.27.0) (2025-05-05)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.26.0...1.27.0)
 
 **Merged pull requests:**
 
+- 1.27.0: Update changelog. [\#248](https://github.com/openeuropa/oe_paragraphs/pull/248) ([nagyad](https://github.com/nagyad))
 - EWPP-3795: Fix the allowed\_formats post update. [\#247](https://github.com/openeuropa/oe_paragraphs/pull/247) ([22Alexandra](https://github.com/22Alexandra))
 - EWPP-5461: Update sparql image in docker-compose.yml and for drone.yml. [\#246](https://github.com/openeuropa/oe_paragraphs/pull/246) ([sergepavle](https://github.com/sergepavle))
 - EWPP-3795: Remove the requirement for allowed\_formats module. [\#240](https://github.com/openeuropa/oe_paragraphs/pull/240) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.26.0](https://github.com/openeuropa/oe_paragraphs/tree/1.26.0) (2025-02-12)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.25.0...1.26.0)
 
 **Merged pull requests:**
