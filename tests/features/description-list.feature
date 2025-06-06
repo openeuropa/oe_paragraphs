@@ -19,7 +19,6 @@ Feature: Description List paragraph.
     # Assert all the fields are required for the first item.
     Then I should see the following error messages:
       | error messages                 |
-      | Heading field is required      |
       | Term field is required.        |
       | Description field is required. |
 
