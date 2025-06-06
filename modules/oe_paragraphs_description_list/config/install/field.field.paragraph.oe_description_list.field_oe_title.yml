@@ -10,7 +10,7 @@ entity_type: paragraph
 bundle: oe_description_list
 label: Heading
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
