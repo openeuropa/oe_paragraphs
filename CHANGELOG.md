@@ -1,11 +1,22 @@
 # Changelog
 
+## [1.29.0](https://github.com/openeuropa/oe_paragraphs/tree/1.29.0) (2025-06-18)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.28.0...1.29.0)
+
+**Merged pull requests:**
+
+- EWPP-5628: Remove flag ratio field. [\#252](https://github.com/openeuropa/oe_paragraphs/pull/252) ([nagyad](https://github.com/nagyad))
+- EWPP-5662: Make the description list heading optional. [\#251](https://github.com/openeuropa/oe_paragraphs/pull/251) ([intelektron](https://github.com/intelektron))
+- EWPP-5553: Update sparql image in docker-compose.yml and .drone.yml. [\#249](https://github.com/openeuropa/oe_paragraphs/pull/249) ([sergepavle](https://github.com/sergepavle))
+
 ## [1.28.0](https://github.com/openeuropa/oe_paragraphs/tree/1.28.0) (2025-05-23)
 
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.27.0...1.28.0)
 
 **Merged pull requests:**
 
+- Release-1.28.0: Update changelog. [\#250](https://github.com/openeuropa/oe_paragraphs/pull/250) ([nagyad](https://github.com/nagyad))
 - EWPP-4643: Update to Drupal 11. [\#245](https://github.com/openeuropa/oe_paragraphs/pull/245) ([kp77](https://github.com/kp77))
 
 ## [1.27.0](https://github.com/openeuropa/oe_paragraphs/tree/1.27.0) (2025-05-05)
