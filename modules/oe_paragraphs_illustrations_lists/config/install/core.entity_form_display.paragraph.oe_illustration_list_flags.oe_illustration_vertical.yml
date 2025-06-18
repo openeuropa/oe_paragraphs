@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.oe_illustration_list_flags.field_oe_center
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_alternate
     - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_columns
-    - field.field.paragraph.oe_illustration_list_flags.field_oe_illustration_ratio
     - field.field.paragraph.oe_illustration_list_flags.field_oe_paragraphs
     - field.field.paragraph.oe_illustration_list_flags.field_oe_title
     - paragraphs.paragraphs_type.oe_illustration_list_flags
@@ -30,12 +29,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  field_oe_illustration_ratio:
-    type: options_select
-    weight: 3
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_oe_paragraphs:
     type: oe_paragraphs_variants
