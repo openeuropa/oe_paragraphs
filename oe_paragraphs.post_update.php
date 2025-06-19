@@ -323,7 +323,8 @@ function oe_paragraphs_post_update_10011(): void {
  * Set description list's heading field optional.
  */
 function oe_paragraphs_post_update_10012(): void {
-  $field_config = FieldConfig::load('paragraph.oe_description_list.field_oe_title');
-  $field_config->setRequired(FALSE);
-  $field_config->save();
+  if ($field_config = FieldConfig::load('paragraph.oe_description_list.field_oe_title')) {
+    $field_config->setRequired(FALSE);
+    $field_config->save();
+  }
 }
