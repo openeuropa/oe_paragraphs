@@ -1,4 +1,13 @@
-# Changelog
+# Change Log
+
+## [1.30.0](https://github.com/openeuropa/oe_paragraphs/tree/1.30.0) (2025-09-09)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.29.0...1.30.0)
+
+**Merged pull requests:**
+
+- OEL-4008: Check that paragraph type oe\_description\_list exists. [\#259](https://github.com/openeuropa/oe_paragraphs/pull/259) ([nagyad](https://github.com/nagyad))
+- EWPP-5768: Update to Drupal 10.5. [\#258](https://github.com/openeuropa/oe_paragraphs/pull/258) ([intelektron](https://github.com/intelektron))
+- EWPP-5655: Remove allowed\_formats from composer.json. [\#256](https://github.com/openeuropa/oe_paragraphs/pull/256) ([sergepavle](https://github.com/sergepavle))
 
 ## [1.29.0](https://github.com/openeuropa/oe_paragraphs/tree/1.29.0) (2025-06-18)
 
@@ -6,6 +15,7 @@
 
 **Merged pull requests:**
 
+- Release-1.29.0: Update changelog and docker PHP images. [\#253](https://github.com/openeuropa/oe_paragraphs/pull/253) ([nagyad](https://github.com/nagyad))
 - EWPP-5628: Remove flag ratio field. [\#252](https://github.com/openeuropa/oe_paragraphs/pull/252) ([nagyad](https://github.com/nagyad))
 - EWPP-5662: Make the description list heading optional. [\#251](https://github.com/openeuropa/oe_paragraphs/pull/251) ([intelektron](https://github.com/intelektron))
 - EWPP-5553: Update sparql image in docker-compose.yml and .drone.yml. [\#249](https://github.com/openeuropa/oe_paragraphs/pull/249) ([sergepavle](https://github.com/sergepavle))
