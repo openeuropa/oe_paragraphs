@@ -1,10 +1,19 @@
 # Change Log
 
+## [1.31.0](https://github.com/openeuropa/oe_paragraphs/tree/1.31.0) (2025-09-25)
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.30.0...1.31.0)
+
+**Merged pull requests:**
+
+- EWPP-5805: Unlock entity\_browser. [\#264](https://github.com/openeuropa/oe_paragraphs/pull/264) ([nagyad](https://github.com/nagyad))
+- EWPP-6006: Move CI to github actions. [\#263](https://github.com/openeuropa/oe_paragraphs/pull/263) ([hernani](https://github.com/hernani))
+
 ## [1.30.0](https://github.com/openeuropa/oe_paragraphs/tree/1.30.0) (2025-09-09)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.29.0...1.30.0)
 
 **Merged pull requests:**
 
+- Release-1.30.0: Update changelog. [\#262](https://github.com/openeuropa/oe_paragraphs/pull/262) ([nagyad](https://github.com/nagyad))
 - OEL-4008: Check that paragraph type oe\_description\_list exists. [\#259](https://github.com/openeuropa/oe_paragraphs/pull/259) ([nagyad](https://github.com/nagyad))
 - EWPP-5768: Update to Drupal 10.5. [\#258](https://github.com/openeuropa/oe_paragraphs/pull/258) ([intelektron](https://github.com/intelektron))
 - EWPP-5655: Remove allowed\_formats from composer.json. [\#256](https://github.com/openeuropa/oe_paragraphs/pull/256) ([sergepavle](https://github.com/sergepavle))
