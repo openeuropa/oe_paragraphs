@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.32.0](https://github.com/openeuropa/oe_paragraphs/tree/1.32.0) (2025-11-18)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.31.0...1.32.0)
+
+**Merged pull requests:**
+
+- EWPP-6075: Support Drupal Core 11.2. [\#267](https://github.com/openeuropa/oe_paragraphs/pull/267) ([hernani](https://github.com/hernani))
+
 ## [1.31.0](https://github.com/openeuropa/oe_paragraphs/tree/1.31.0) (2025-09-25)
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.30.0...1.31.0)
 
