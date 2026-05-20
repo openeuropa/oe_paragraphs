@@ -15,6 +15,23 @@ Feature: Social media follow paragraph.
     And the available options in the Variant select should be:
       | Horizontal |
       | Vertical   |
+    And the available options in the "Link type" select should be:
+      | - Select -|
+      | Bluesky   |
+      | Email     |
+      | Facebook  |
+      | Flickr    |
+      | Google+   |
+      | Instagram |
+      | Linkedin  |
+      | Mastodon  |
+      | Pinterest |
+      | RSS       |
+      | Storify   |
+      | Telegram  |
+      | X         |
+      | Yammer    |
+      | YouTube   |
     When I press "Save"
     Then I should see the following error messages:
       | error messages          |
