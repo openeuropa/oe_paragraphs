@@ -328,3 +328,18 @@ function oe_paragraphs_post_update_10012(): void {
     $field_config->save();
   }
 }
+
+/**
+ * Add Bluesky option to social media follow paragraph field.
+ */
+function oe_paragraphs_post_update_10013(): void {
+  $field_storage = \Drupal::entityTypeManager()->getStorage('field_storage_config')->load('paragraph.field_oe_social_media_links');
+  if (!$field_storage) {
+    return;
+  }
+
+  $settings = $field_storage->get('settings');
+  $settings['allowed_values']['bluesky'] = 'Bluesky';
+  $field_storage->set('settings', $settings);
+  $field_storage->save();
+}
