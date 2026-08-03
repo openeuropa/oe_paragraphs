@@ -1,4 +1,14 @@
-# Change Log
+# Changelog
+
+## [1.33.0](https://github.com/openeuropa/oe_paragraphs/tree/1.33.0) (2026-08-03)
+
+[Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.32.0...1.33.0)
+
+**Merged pull requests:**
+
+- OEL-4748: Add support for bluesky link type in social follow paragraph. [\#271](https://github.com/openeuropa/oe_paragraphs/pull/271) ([AaronGilMartinez](https://github.com/AaronGilMartinez))
+- EWPP-6514: Support D11.3. [\#270](https://github.com/openeuropa/oe_paragraphs/pull/270) ([nagyad](https://github.com/nagyad))
+- EWPP-6339: Cache docker images for GitHub actions. [\#269](https://github.com/openeuropa/oe_paragraphs/pull/269) ([nagyad](https://github.com/nagyad))
 
 ## [1.32.0](https://github.com/openeuropa/oe_paragraphs/tree/1.32.0) (2025-11-18)
 
@@ -6,6 +16,7 @@
 
 **Merged pull requests:**
 
+- Release-1.32.0: Update changelog. [\#268](https://github.com/openeuropa/oe_paragraphs/pull/268) ([hernani](https://github.com/hernani))
 - EWPP-6075: Support Drupal Core 11.2. [\#267](https://github.com/openeuropa/oe_paragraphs/pull/267) ([hernani](https://github.com/hernani))
 
 ## [1.31.0](https://github.com/openeuropa/oe_paragraphs/tree/1.31.0) (2025-09-25)
@@ -13,6 +24,7 @@
 
 **Merged pull requests:**
 
+- Release-1.31.0: Update changelog. [\#265](https://github.com/openeuropa/oe_paragraphs/pull/265) ([nagyad](https://github.com/nagyad))
 - EWPP-5805: Unlock entity\_browser. [\#264](https://github.com/openeuropa/oe_paragraphs/pull/264) ([nagyad](https://github.com/nagyad))
 - EWPP-6006: Move CI to github actions. [\#263](https://github.com/openeuropa/oe_paragraphs/pull/263) ([hernani](https://github.com/hernani))
 
@@ -84,6 +96,7 @@
 - EWPP-4739: Update label of szech-republic option to 'Czechia'. [\#236](https://github.com/openeuropa/oe_paragraphs/pull/236) ([sergepavle](https://github.com/sergepavle))
 
 ## [1.23.3](https://github.com/openeuropa/oe_paragraphs/tree/1.23.3) (2024-08-09)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.23.2...1.23.3)
 
 **Merged pull requests:**
@@ -92,6 +105,7 @@
 - EWPP-4602: Bump paragraphs version to 1.18. [\#234](https://github.com/openeuropa/oe_paragraphs/pull/234) ([nagyad](https://github.com/nagyad))
 
 ## [1.23.2](https://github.com/openeuropa/oe_paragraphs/tree/1.23.2) (2024-08-08)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.23.1...1.23.2)
 
 **Merged pull requests:**
@@ -101,6 +115,7 @@
 - OEL-3046: Update to Drupal 10.3 [\#230](https://github.com/openeuropa/oe_paragraphs/pull/230) ([AaronGilMartinez](https://github.com/AaronGilMartinez))
 
 ## [1.23.1](https://github.com/openeuropa/oe_paragraphs/tree/1.23.1) (2024-05-03)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.23.0...1.23.1)
 
 **Merged pull requests:**
@@ -109,6 +124,7 @@
 - EPHEH-48: Avoid dependency on composite\_reference. [\#228](https://github.com/openeuropa/oe_paragraphs/pull/228) ([brummbar](https://github.com/brummbar))
 
 ## [1.23.0](https://github.com/openeuropa/oe_paragraphs/tree/1.23.0) (2024-04-16)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.22.0...1.23.0)
 
 **Merged pull requests:**
@@ -118,6 +134,7 @@
 - OEL-0000: Add imanoleguskiza as code owner. [\#223](https://github.com/openeuropa/oe_paragraphs/pull/223) ([brummbar](https://github.com/brummbar))
 
 ## [1.22.0](https://github.com/openeuropa/oe_paragraphs/tree/1.22.0) (2024-02-19)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.21.0...1.22.0)
 
 **Closed issues:**
@@ -130,6 +147,7 @@
 - EWPP-3966: Support D10.2 and drop D9. [\#219](https://github.com/openeuropa/oe_paragraphs/pull/219) ([brummbar](https://github.com/brummbar))
 
 ## [1.21.0](https://github.com/openeuropa/oe_paragraphs/tree/1.21.0) (2023-12-01)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.20.0...1.21.0)
 
 **Closed issues:**
@@ -144,6 +162,7 @@
 - OEL-0000: Add @brummbar as code owner of the repo to automatically request reviews. [\#212](https://github.com/openeuropa/oe_paragraphs/pull/212) ([brummbar](https://github.com/brummbar))
 
 ## [1.20.0](https://github.com/openeuropa/oe_paragraphs/tree/1.20.0) (2023-06-30)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.19.0...1.20.0)
 
 **Merged pull requests:**
@@ -160,6 +179,7 @@
 - EWPP-3270: Add new fields to Banner paragraph. [\#197](https://github.com/openeuropa/oe_paragraphs/pull/197) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.19.0](https://github.com/openeuropa/oe_paragraphs/tree/1.19.0) (2023-05-12)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.18.0...1.19.0)
 
 **Merged pull requests:**
@@ -168,6 +188,7 @@
 - EWPP-3017: Drupal 10 compatibility. [\#199](https://github.com/openeuropa/oe_paragraphs/pull/199) ([brummbar](https://github.com/brummbar))
 
 ## [1.18.0](https://github.com/openeuropa/oe_paragraphs/tree/1.18.0) (2023-03-21)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.17.0...1.18.0)
 
 **Merged pull requests:**
@@ -176,6 +197,7 @@
 - EWPP-2904: Update to PHP8.1 and D9.4. [\#195](https://github.com/openeuropa/oe_paragraphs/pull/195) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.17.0](https://github.com/openeuropa/oe_paragraphs/tree/1.17.0) (2022-11-21)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.16.0...1.17.0)
 
 **Merged pull requests:**
@@ -185,6 +207,7 @@
 - OEL-2069: Gallery paragraph. [\#190](https://github.com/openeuropa/oe_paragraphs/pull/190) ([brummbar](https://github.com/brummbar))
 
 ## [1.16.0](https://github.com/openeuropa/oe_paragraphs/tree/1.16.0) (2022-11-04)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.15.0...1.16.0)
 
 **Merged pull requests:**
@@ -194,6 +217,7 @@
 - EWPP-2651: Change oe\_subtitle maxlength to 255. [\#189](https://github.com/openeuropa/oe_paragraphs/pull/189) ([nagyad](https://github.com/nagyad))
 
 ## [1.15.0](https://github.com/openeuropa/oe_paragraphs/tree/1.15.0) (2022-09-16)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.14.0...1.15.0)
 
 **Merged pull requests:**
@@ -204,6 +228,7 @@
 - OEL-1747: Remove misleading text in edit form. [\#179](https://github.com/openeuropa/oe_paragraphs/pull/179) ([donquixote](https://github.com/donquixote))
 
 ## [1.14.0](https://github.com/openeuropa/oe_paragraphs/tree/1.14.0) (2022-08-02)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.13.1...1.14.0)
 
 **Closed issues:**
@@ -231,6 +256,7 @@
 - \[EWPP-2106\] EWPP-2108: Add Carousel paragraph. [\#169](https://github.com/openeuropa/oe_paragraphs/pull/169) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.13.1](https://github.com/openeuropa/oe_paragraphs/tree/1.13.1) (2022-06-22)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.13.0...1.13.1)
 
 **Merged pull requests:**
@@ -241,6 +267,7 @@
 - EWPP-2183: Fix dependency from composer patches. [\#170](https://github.com/openeuropa/oe_paragraphs/pull/170) ([yenyasinn](https://github.com/yenyasinn))
 
 ## [1.13.0](https://github.com/openeuropa/oe_paragraphs/tree/1.13.0) (2022-04-07)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.12.0...1.13.0)
 
 **Merged pull requests:**
@@ -251,6 +278,7 @@
 - EWPP-1563: Adds optional Introduction field to Timeline paragraph. [\#157](https://github.com/openeuropa/oe_paragraphs/pull/157) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.12.0](https://github.com/openeuropa/oe_paragraphs/tree/1.12.0) (2022-03-07)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.11.0...1.12.0)
 
 **Merged pull requests:**
@@ -261,6 +289,7 @@
 -  OEL-775: Remove "Horizontal" from description list label [\#155](https://github.com/openeuropa/oe_paragraphs/pull/155) ([abel-santos-corral](https://github.com/abel-santos-corral))
 
 ## [1.11.0](https://github.com/openeuropa/oe_paragraphs/tree/1.11.0) (2022-02-17)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.10.0...1.11.0)
 
 **Merged pull requests:**
@@ -274,6 +303,7 @@
 - OEL-267: New paragraph type `Document` [\#150](https://github.com/openeuropa/oe_paragraphs/pull/150) ([GilNovacomm](https://github.com/GilNovacomm))
 
 ## [1.10.0](https://github.com/openeuropa/oe_paragraphs/tree/1.10.0) (2021-09-23)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.9.0...1.10.0)
 
 **Merged pull requests:**
@@ -291,6 +321,7 @@
 - EWPP-874: Add Link field to the Text with featured media paragraph. [\#133](https://github.com/openeuropa/oe_paragraphs/pull/133) ([yenyasinn](https://github.com/yenyasinn))
 
 ## [1.9.0](https://github.com/openeuropa/oe_paragraphs/tree/1.9.0) (2021-08-16)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.8.0...1.9.0)
 
 **Merged pull requests:**
@@ -300,6 +331,7 @@
 - \[EWPP-1194\] EWPP-1195: Adds Contact paragraph. [\#135](https://github.com/openeuropa/oe_paragraphs/pull/135) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.8.0](https://github.com/openeuropa/oe_paragraphs/tree/1.8.0) (2021-06-15)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.7.0...1.8.0)
 
 **Merged pull requests:**
@@ -310,6 +342,7 @@
 - EWPP-721: Update xdebug configuration. [\#123](https://github.com/openeuropa/oe_paragraphs/pull/123) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.7.0](https://github.com/openeuropa/oe_paragraphs/tree/1.7.0) (2021-04-09)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.6.0...1.7.0)
 
 **Merged pull requests:**
@@ -322,6 +355,7 @@
 - EWPP-516: Update docker images. [\#120](https://github.com/openeuropa/oe_paragraphs/pull/120) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.6.0](https://github.com/openeuropa/oe_paragraphs/tree/1.6.0) (2020-06-22)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.5.1...1.6.0)
 
 **Merged pull requests:**
@@ -337,6 +371,7 @@
 - OPENEUROPA-2951: Enabling content translation for the paragraphs currently not translatable. [\#94](https://github.com/openeuropa/oe_paragraphs/pull/94) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.5.1](https://github.com/openeuropa/oe_paragraphs/tree/1.5.1) (2020-04-29)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.5.0...1.5.1)
 
 **Merged pull requests:**
@@ -345,6 +380,7 @@
 - OPENEUROPA-3149: Do not add states on content element as they don't play nicely with editors. [\#104](https://github.com/openeuropa/oe_paragraphs/pull/104) ([brummbar](https://github.com/brummbar))
 
 ## [1.5.0](https://github.com/openeuropa/oe_paragraphs/tree/1.5.0) (2020-04-29)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.4.0...1.5.0)
 
 **Merged pull requests:**
@@ -359,6 +395,7 @@
 - OPENEUROPA-2976: \[oe\_paragraphs\] Chart paragraph. [\#95](https://github.com/openeuropa/oe_paragraphs/pull/95) ([sergepavle](https://github.com/sergepavle))
 
 ## [1.4.0](https://github.com/openeuropa/oe_paragraphs/tree/1.4.0) (2020-03-30)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.3.0...1.4.0)
 
 **Merged pull requests:**
@@ -375,6 +412,7 @@
 - OPENEUROPA-2872: Create Facts and figures paragraph. [\#85](https://github.com/openeuropa/oe_paragraphs/pull/85) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.3.0](https://github.com/openeuropa/oe_paragraphs/tree/1.3.0) (2019-12-16)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.2.0...1.3.0)
 
 **Merged pull requests:**
@@ -383,6 +421,7 @@
 - OPENEUROPA-2606: Add optional link field to Social media follow paragraph. [\#82](https://github.com/openeuropa/oe_paragraphs/pull/82) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.2.0](https://github.com/openeuropa/oe_paragraphs/tree/1.2.0) (2019-11-27)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.1.0...1.2.0)
 
 **Merged pull requests:**
@@ -394,6 +433,7 @@
 - OPENEUROPA-0000: Update changelog for release 1.1.0. [\#77](https://github.com/openeuropa/oe_paragraphs/pull/77) ([brummbar](https://github.com/brummbar))
 
 ## [1.1.0](https://github.com/openeuropa/oe_paragraphs/tree/1.1.0) (2019-11-07)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.0.0...1.1.0)
 
 **Merged pull requests:**
@@ -405,6 +445,7 @@
 - OPENEUROPA-2258: Use PHP 7.2 [\#70](https://github.com/openeuropa/oe_paragraphs/pull/70) ([dxvargas](https://github.com/dxvargas))
 
 ## [1.0.0](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0) (2019-10-17)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.0.0-beta2...1.0.0)
 
 **Merged pull requests:**
@@ -414,6 +455,7 @@
 - OPENEUROPA-2113: Provide a missing post update. [\#68](https://github.com/openeuropa/oe_paragraphs/pull/68) ([nagyad](https://github.com/nagyad))
 
 ## [1.0.0-beta2](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0-beta2) (2019-06-18)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/1.0.0-beta1...1.0.0-beta2)
 
 **Merged pull requests:**
@@ -425,6 +467,7 @@
 - OPENEUROPA-1789: Create Behat tests for all the Paragraph types and variants [\#52](https://github.com/openeuropa/oe_paragraphs/pull/52) ([brummbar](https://github.com/brummbar))
 
 ## [1.0.0-beta1](https://github.com/openeuropa/oe_paragraphs/tree/1.0.0-beta1) (2019-05-15)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.6.0...1.0.0-beta1)
 
 **Merged pull requests:**
@@ -435,6 +478,7 @@
 - OPENEUROPA-1848: Remove hard dependency from content\_translation. [\#50](https://github.com/openeuropa/oe_paragraphs/pull/50) ([nagyad](https://github.com/nagyad))
 
 ## [0.6.0](https://github.com/openeuropa/oe_paragraphs/tree/0.6.0) (2019-05-07)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.5.0...0.6.0)
 
 **Closed issues:**
@@ -448,6 +492,7 @@
 - OPENEUROPA-1813: Upgrading to 8.7. [\#49](https://github.com/openeuropa/oe_paragraphs/pull/49) ([upchuk](https://github.com/upchuk))
 
 ## [0.5.0](https://github.com/openeuropa/oe_paragraphs/tree/0.5.0) (2019-04-22)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.4.1...0.5.0)
 
 **Merged pull requests:**
@@ -455,9 +500,9 @@
 - Update CHANGELOG.md for release 0.5.0. [\#48](https://github.com/openeuropa/oe_paragraphs/pull/48) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-1843: Paragraph variant doesn't stay selected when resaving the content [\#47](https://github.com/openeuropa/oe_paragraphs/pull/47) ([brummbar](https://github.com/brummbar))
 - OPENEUROPA-1803: Create new Contextual navigation paragraph type. [\#46](https://github.com/openeuropa/oe_paragraphs/pull/46) ([sergepavle](https://github.com/sergepavle))
-- OPENEUROPA-1752: Hiding non-translatable fields on translation forms for all paragraph types. [\#44](https://github.com/openeuropa/oe_paragraphs/pull/44) ([upchuk](https://github.com/upchuk))
 
 ## [0.4.1](https://github.com/openeuropa/oe_paragraphs/tree/0.4.1) (2019-03-26)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.4.0...0.4.1)
 
 **Merged pull requests:**
@@ -466,6 +511,7 @@
 - Maintenance: Add missing use statement. [\#41](https://github.com/openeuropa/oe_paragraphs/pull/41) ([nagyad](https://github.com/nagyad))
 
 ## [0.4.0](https://github.com/openeuropa/oe_paragraphs/tree/0.4.0) (2019-02-28)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.3.0...0.4.0)
 
 **Merged pull requests:**
@@ -480,6 +526,7 @@
 - OPENEUROPA-1322: Use the proper Docker way of overriding docker-composer.yml file. [\#30](https://github.com/openeuropa/oe_paragraphs/pull/30) ([drupol](https://github.com/drupol))
 
 ## [0.3.0](https://github.com/openeuropa/oe_paragraphs/tree/0.3.0) (2018-10-15)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.3...0.3.0)
 
 **Merged pull requests:**
@@ -488,6 +535,7 @@
 - OPENEUROPA-794: Use new plain long text field for quote text. [\#28](https://github.com/openeuropa/oe_paragraphs/pull/28) ([nagyad](https://github.com/nagyad))
 
 ## [0.2.3](https://github.com/openeuropa/oe_paragraphs/tree/0.2.3) (2018-09-27)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.2...0.2.3)
 
 **Merged pull requests:**
@@ -498,6 +546,7 @@
 - OPENEUROPA-1165: Create a docker-compose.yml.dist file [\#23](https://github.com/openeuropa/oe_paragraphs/pull/23) ([netlooker](https://github.com/netlooker))
 
 ## [0.2.2](https://github.com/openeuropa/oe_paragraphs/tree/0.2.2) (2018-08-09)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.1...0.2.2)
 
 **Merged pull requests:**
@@ -507,6 +556,7 @@
 - OPENEUROPA-721: Update code-review and grump.yml.dist file. [\#20](https://github.com/openeuropa/oe_paragraphs/pull/20) ([imanoleguskiza](https://github.com/imanoleguskiza))
 
 ## [0.2.1](https://github.com/openeuropa/oe_paragraphs/tree/0.2.1) (2018-07-19)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.2.0...0.2.1)
 
 **Merged pull requests:**
@@ -515,6 +565,7 @@
 - OPENEUROPA-582: Update images on docker-compose and drone file. [\#18](https://github.com/openeuropa/oe_paragraphs/pull/18) ([voidtek](https://github.com/voidtek))
 
 ## [0.2.0](https://github.com/openeuropa/oe_paragraphs/tree/0.2.0) (2018-06-22)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.1.1...0.2.0)
 
 **Merged pull requests:**
@@ -523,6 +574,7 @@
 - OPENEUROPA-687: Add the content row paragraph type [\#15](https://github.com/openeuropa/oe_paragraphs/pull/15) ([brummbar](https://github.com/brummbar))
 
 ## [0.1.1](https://github.com/openeuropa/oe_paragraphs/tree/0.1.1) (2018-06-18)
+
 [Full Changelog](https://github.com/openeuropa/oe_paragraphs/compare/0.1.0...0.1.1)
 
 **Merged pull requests:**
@@ -553,4 +605,4 @@
 
 
 
-\* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
