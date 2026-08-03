@@ -63,7 +63,7 @@
         },
         "patches": {
             "drupal/paragraphs": {
-                "Paragraphs widgets validates fields that are not in the current form display @see https://www.drupal.org/project/paragraphs/issues/2890086": "https://www.drupal.org/files/issues/2024-08-08/respect-display-on-validation-2890086-65.patch"
+                "Paragraphs widgets validates fields that are not in the current form display @see https://www.drupal.org/project/paragraphs/issues/2890086": "https://www.drupal.org/files/issues/2026-08-03/respect-display-on-validation-2890086-67.diff"
             }
         },
         "drupal-scaffold": {
