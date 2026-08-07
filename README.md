@@ -225,3 +225,4 @@ We use [SemVer](http://semver.org/) for versioning. For the available versions, 
 In 1.27.0 the requirement of the contrib [allowed_formats](https://www.drupal.org/project/allowed_formats) module has been removed.
 When upgrading to this version, specifically require the contrib module in your project's code base and uninstall the module. This
 should be released and then the requirement can be safely removed in a feature release.
+
