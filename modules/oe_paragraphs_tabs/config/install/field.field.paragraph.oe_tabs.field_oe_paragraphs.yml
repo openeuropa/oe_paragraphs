@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_paragraphs
+    - paragraphs.paragraphs_type.oe_tab
+    - paragraphs.paragraphs_type.oe_tabs
+  module:
+    - entity_reference_revisions
+id: paragraph.oe_tabs.field_oe_paragraphs
+field_name: field_oe_paragraphs
+entity_type: paragraph
+bundle: oe_tabs
+label: Tabs
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      oe_tab: oe_tab
+    target_bundles_drag_drop:
+      oe_tab:
+        enabled: true
+        weight: 0
+field_type: entity_reference_revisions

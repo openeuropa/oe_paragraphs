@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * OpenEuropa Paragraphs Tabs module.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function oe_paragraphs_tabs_entity_bundle_field_info_alter(array &$fields, EntityTypeInterface $entity_type, string $bundle): void {
+  // No tabs inside a tab, also through a Content row.
+  if ($entity_type->id() === 'paragraph' && $bundle === 'oe_tab' && isset($fields['field_oe_paragraphs'])) {
+    $fields['field_oe_paragraphs']->addConstraint('OeParagraphsNoNestedTabs');
+  }
+}
+
+/**
+ * Implements hook_field_widget_single_element_form_alter().
+ */
+function oe_paragraphs_tabs_field_widget_single_element_form_alter(array &$element, FormStateInterface $form_state, array $context): void {
+  // A Content row inside a Tab cannot use the in-page navigation variant.
+  if (($element['#paragraph_type'] ?? NULL) !== 'oe_content_row' || !isset($element['variant']['#options'])) {
+    return;
+  }
+  $parent = $context['items']->getEntity();
+  if ($parent->getEntityTypeId() === 'paragraph' && $parent->bundle() === 'oe_tab') {
+    unset($element['variant']['#options']['inpage_navigation']);
+  }
+}
