@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oe_paragraphs
+    - paragraphs.paragraphs_type.oe_accordion
+    - paragraphs.paragraphs_type.oe_content_row
+    - paragraphs.paragraphs_type.oe_links_block
+    - paragraphs.paragraphs_type.oe_list_item_block
+    - paragraphs.paragraphs_type.oe_quote
+    - paragraphs.paragraphs_type.oe_rich_text
+    - paragraphs.paragraphs_type.oe_tab
+  module:
+    - entity_reference_revisions
+id: paragraph.oe_tab.field_oe_paragraphs
+field_name: field_oe_paragraphs
+entity_type: paragraph
+bundle: oe_tab
+label: Content
+description: 'Paragraphs shown in the tab. Tabs cannot be added in a tab.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      oe_rich_text: oe_rich_text
+      oe_accordion: oe_accordion
+      oe_content_row: oe_content_row
+      oe_links_block: oe_links_block
+      oe_list_item_block: oe_list_item_block
+      oe_quote: oe_quote
+field_type: entity_reference_revisions
