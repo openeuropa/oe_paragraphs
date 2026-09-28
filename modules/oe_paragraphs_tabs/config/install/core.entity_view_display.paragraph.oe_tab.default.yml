@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_tab.field_oe_paragraphs
+    - field.field.paragraph.oe_tab.field_oe_title
+    - paragraphs.paragraphs_type.oe_tab
+  module:
+    - entity_reference_revisions
+id: paragraph.oe_tab.default
+targetEntityType: paragraph
+bundle: oe_tab
+mode: default
+content:
+  field_oe_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_oe_title: true
