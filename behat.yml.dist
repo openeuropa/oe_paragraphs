@@ -7,14 +7,12 @@ default:
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
-        - Drupal\Tests\oe_media\Behat\MediaContext
-        - Drupal\Tests\oe_media\Behat\WebtoolsContext
-        - Drupal\Tests\oe_content\Behat\FeatureContext
         - Drupal\Tests\oe_paragraphs\Behat\CleanupContext
         - Drupal\Tests\oe_paragraphs\Behat\DrupalContext
         - Drupal\Tests\oe_paragraphs\Behat\FieldsContext
         - Drupal\Tests\oe_paragraphs\Behat\MediaContext
         - Drupal\Tests\oe_paragraphs\Behat\ParagraphsContext
+        - Drupal\Tests\oe_paragraphs\Behat\WebtoolsContext
         - OpenEuropa\Behat\TransformationContext:
             pages:
               content management: "/admin/content"
