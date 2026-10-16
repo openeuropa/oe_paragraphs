@@ -51,7 +51,7 @@ Feature: Gallery paragraph.
     And I should see the embedded video player for "https://www.youtube.com/watch?v=YaUGTOnf6k0"
     And I should see the image "example_1.jpeg"
     And I should see the AV Portal video " Economic and Financial Affairs Council - Arrivals"
-    And I should see the AV Portal photo "Euro with miniature figurines" with source "//ec.europa.eu/avservices/avs/files/video6/repository/prod/photo/store/store2/4/P038924-352937.jpg"
+    And I should see the AV Portal photo "Euro with miniature figurines" with source "//ec.europa.eu/avservices/repository/photo/03/89/24/P-038924_00-15_01-ORIGINAL-394989.jpg"
 
     When I click "Edit"
     And I fill in "Medias (value 5)" with "Document 1"
