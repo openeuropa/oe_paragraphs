@@ -134,3 +134,13 @@ function _oe_paragraphs_import_config_from_file(string $name, StorageInterface $
   $entity = $entity_storage->updateFromStorageRecord($entity, $config);
   $entity->save();
 }
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function oe_paragraphs_module_implements_alter(&$implementations, $hook) {
+  if ($hook === 'requirements') {
+    // We have our own version.
+    unset($implementations['sparql_entity_storage']);
+  }
+}
