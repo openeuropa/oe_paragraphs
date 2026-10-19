@@ -11,7 +11,8 @@ drupal:
     password: ""
   sparql:
     host: "sparql"
-    port: "8890"
+    port: "3030"
+    database: "triplestore"
   post_install:
     - "./vendor/bin/drush en oe_paragraphs_demo -y"
     - "./vendor/bin/drush en config_devel -y"
@@ -38,6 +39,7 @@ drupal:
           prefix: ""
           host: ${drupal.sparql.host}
           port: ${drupal.sparql.port}
+          database: ${drupal.sparql.database}
           namespace: 'Drupal\sparql_entity_storage\Driver\Database\sparql'
           driver: 'sparql'
 selenium:
