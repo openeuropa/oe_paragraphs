@@ -7,19 +7,33 @@ namespace Drupal\Tests\oe_paragraphs\Functional;
 use Drupal\Tests\BrowserTestBase;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
+use OpenEuropa\TestingUtilities\Traits\CachedDatabaseInstallTrait;
 
 /**
  * Base class to test paragraphs.
  */
 abstract class ParagraphsTestBase extends BrowserTestBase {
 
+  use CachedDatabaseInstallTrait;
+
   /**
    * {@inheritdoc}
+   *
+   * The modules needed by all the subclasses are installed here, so that they
+   * share the same cached database install.
+   *
+   * @see \OpenEuropa\TestingUtilities\Traits\CachedDatabaseInstallTrait
    */
   protected static $modules = [
     'node',
     'field_ui',
+    'composite_reference',
     'oe_paragraphs',
+    'oe_paragraphs_banner',
+    'oe_paragraphs_carousel',
+    'oe_paragraphs_illustrations_lists',
+    'oe_paragraphs_illustrations_lists_test',
+    'oe_paragraphs_options_event_test',
   ];
 
   /**
@@ -38,6 +52,7 @@ abstract class ParagraphsTestBase extends BrowserTestBase {
    * {@inheritdoc}
    */
   protected function setUp(): void {
+    $this->cacheDbInstall = TRUE;
     parent::setUp();
 
     $this->drupalLogin($this->drupalCreateUser([], '', TRUE));

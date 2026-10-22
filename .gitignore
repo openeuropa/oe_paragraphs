@@ -1,5 +1,4 @@
 .idea
-behat.yml
 build
 composer.lock
 grumphp.yml

@@ -2,24 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Drupal\Tests\oe_paragraphs_banner\Kernel;
+namespace Drupal\Tests\oe_paragraphs_banner\Functional;
 
 use Drupal\Tests\oe_paragraphs\Functional\ParagraphsTestBase;
 use Drush\TestTraits\DrushTestTrait;
 
 /**
  * Test the oe-paragraphs-update-banner-data:run drush command.
+ *
+ * @group batch1
  */
 class UpdateBannerDataTest extends ParagraphsTestBase {
 
   use DrushTestTrait;
-
-  /**
-   * {@inheritdoc}
-   */
-  protected static $modules = [
-    'oe_paragraphs_banner',
-  ];
 
   /**
    * Ensures the drush command migrates the data from the deprecated field.

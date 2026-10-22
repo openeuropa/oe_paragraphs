@@ -9,18 +9,12 @@ use Drush\TestTraits\DrushTestTrait;
 
 /**
  * Test the oe-paragraphs-update-carousel-data:run drush command.
+ *
+ * @group batch1
  */
 class UpdateCarouselDataTest extends ParagraphsTestBase {
 
   use DrushTestTrait;
-
-  /**
-   * {@inheritdoc}
-   */
-  protected static $modules = [
-    'oe_paragraphs_carousel',
-    'composite_reference',
-  ];
 
   /**
    * Ensures the drush command sets the 'medium' value for the new 'Size' field.
