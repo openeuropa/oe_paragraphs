@@ -70,7 +70,7 @@ trait TraversingTrait {
     $row = $table->find('xpath', '/tbody/tr[' . ($index + 1) . ']');
 
     if (empty($row)) {
-      throw new \Exception('Could not find row %s in table.', $index);
+      throw new \Exception(sprintf('Could not find row %s in table.', $index));
     }
 
     return $row;
