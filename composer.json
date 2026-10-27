@@ -30,7 +30,7 @@
         "openeuropa/oe_media": "^1.23.1",
         "openeuropa/oe_testing_utils": "dev-main",
         "openeuropa/oe_webtools": "^1.22",
-        "openeuropa/rdf_skos": "^1.2",
+        "drupal/rdf_skos": "^1.2",
         "openeuropa/task-runner-drupal-project-symlink": "^1.0",
         "ec-europa/toolkit": "^10.23"
     },
