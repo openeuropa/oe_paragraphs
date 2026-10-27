@@ -8,16 +8,10 @@ use Drupal\Tests\oe_paragraphs\Functional\ParagraphsTestBase;
 
 /**
  * Tests illustration lists paragraphs forms.
+ *
+ * @group batch1
  */
 class ParagraphsTest extends ParagraphsTestBase {
-
-  /**
-   * {@inheritdoc}
-   */
-  protected static $modules = [
-    'oe_paragraphs_illustrations_lists',
-    'oe_paragraphs_illustrations_lists_test',
-  ];
 
   /**
    * Test column options and ratio options event subscribers.

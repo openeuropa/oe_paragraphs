@@ -188,12 +188,6 @@ To run the phpunit tests:
 docker-compose exec web ./vendor/bin/phpunit
 ```
 
-To run the behat tests:
-
-```bash
-docker-compose exec web ./vendor/bin/behat
-```
-
 #### Step debugging
 
 To enable step debugging from the command line, pass the `XDEBUG_SESSION` environment variable with any value to

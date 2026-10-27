@@ -6,16 +6,10 @@ namespace Drupal\Tests\oe_paragraphs\Functional;
 
 /**
  * Tests paragraphs forms.
+ *
+ * @group batch1
  */
 class ParagraphsTest extends ParagraphsTestBase {
-
-  /**
-   * {@inheritdoc}
-   */
-  protected static $modules = [
-    'oe_paragraphs_illustrations_lists',
-    'oe_paragraphs_options_event_test',
-  ];
 
   /**
    * Test icon options event subscriber.
