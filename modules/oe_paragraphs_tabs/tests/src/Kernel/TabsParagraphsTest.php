@@ -10,6 +10,8 @@ use Drupal\paragraphs\Entity\Paragraph;
 
 /**
  * Tests the Tabs and Tab paragraph types.
+ *
+ * @group batch3
  */
 class TabsParagraphsTest extends KernelTestBase {
 
@@ -86,6 +88,21 @@ class TabsParagraphsTest extends KernelTestBase {
     $row = Paragraph::create(['type' => 'oe_content_row', 'field_oe_paragraphs' => [$inner_tabs]]);
     $tab = Paragraph::create(['type' => 'oe_tab', 'field_oe_title' => 'Tab', 'field_oe_paragraphs' => [$row]]);
     $this->assertContains('A Tab cannot contain Tabs.', $this->getMessages($tab));
+  }
+
+  /**
+   * A Content row inside a Tab cannot use the in-page navigation variant.
+   */
+  public function testNoInpageNavigation(): void {
+    $message = 'A Content row inside a Tab cannot use the in-page navigation variant.';
+
+    $row = Paragraph::create(['type' => 'oe_content_row', 'oe_paragraphs_variant' => 'default']);
+    $tab = Paragraph::create(['type' => 'oe_tab', 'field_oe_title' => 'Tab', 'field_oe_paragraphs' => [$row]]);
+    $this->assertNotContains($message, $this->getMessages($tab));
+
+    $row = Paragraph::create(['type' => 'oe_content_row', 'oe_paragraphs_variant' => 'inpage_navigation']);
+    $tab = Paragraph::create(['type' => 'oe_tab', 'field_oe_title' => 'Tab', 'field_oe_paragraphs' => [$row]]);
+    $this->assertContains($message, $this->getMessages($tab));
   }
 
   /**
