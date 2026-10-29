@@ -89,6 +89,21 @@ class TabsParagraphsTest extends KernelTestBase {
   }
 
   /**
+   * A Content row inside a Tab cannot use the in-page navigation variant.
+   */
+  public function testNoInpageNavigation(): void {
+    $message = 'A Content row inside a Tab cannot use the in-page navigation variant.';
+
+    $row = Paragraph::create(['type' => 'oe_content_row', 'oe_paragraphs_variant' => 'default']);
+    $tab = Paragraph::create(['type' => 'oe_tab', 'field_oe_title' => 'Tab', 'field_oe_paragraphs' => [$row]]);
+    $this->assertNotContains($message, $this->getMessages($tab));
+
+    $row = Paragraph::create(['type' => 'oe_content_row', 'oe_paragraphs_variant' => 'inpage_navigation']);
+    $tab = Paragraph::create(['type' => 'oe_tab', 'field_oe_title' => 'Tab', 'field_oe_paragraphs' => [$row]]);
+    $this->assertContains($message, $this->getMessages($tab));
+  }
+
+  /**
    * Returns the configurable field names of a paragraph type.
    *
    * @param string $bundle
