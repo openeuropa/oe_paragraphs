@@ -62,12 +62,14 @@ class TabsParagraphsTest extends KernelTestBase {
 
     $body = FieldConfig::loadByName('paragraph', 'oe_tab', 'field_oe_paragraphs');
     $this->assertTrue($body->isRequired());
-    $allowed = $body->getSetting('handler_settings')['target_bundles'];
-    $this->assertArrayHasKey('oe_rich_text', $allowed);
-    $this->assertArrayHasKey('oe_accordion', $allowed);
-    $this->assertArrayHasKey('oe_content_row', $allowed);
-    $this->assertArrayNotHasKey('oe_tabs', $allowed);
-    $this->assertArrayNotHasKey('oe_tab', $allowed);
+    $this->assertSame([
+      'oe_rich_text' => 'oe_rich_text',
+      'oe_accordion' => 'oe_accordion',
+      'oe_content_row' => 'oe_content_row',
+      'oe_links_block' => 'oe_links_block',
+      'oe_list_item_block' => 'oe_list_item_block',
+      'oe_quote' => 'oe_quote',
+    ], $body->getSetting('handler_settings')['target_bundles']);
     $this->assertSame(['field_oe_paragraphs', 'field_oe_title'], $this->getConfigurableFields('oe_tab'));
   }
 
@@ -116,7 +118,7 @@ class TabsParagraphsTest extends KernelTestBase {
    */
   protected function getConfigurableFields(string $bundle): array {
     $fields = array_keys(array_filter(
-      \Drupal::service('entity_field.manager')->getFieldDefinitions('paragraph', $bundle),
+      $this->container->get('entity_field.manager')->getFieldDefinitions('paragraph', $bundle),
       fn($definition) => $definition instanceof FieldConfig,
     ));
     sort($fields);
