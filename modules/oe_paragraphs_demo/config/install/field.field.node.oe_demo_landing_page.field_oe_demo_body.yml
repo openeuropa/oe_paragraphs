@@ -28,6 +28,7 @@ dependencies:
     - paragraphs.paragraphs_type.oe_rich_text
     - paragraphs.paragraphs_type.oe_social_feed
     - paragraphs.paragraphs_type.oe_social_media_follow
+    - paragraphs.paragraphs_type.oe_tabs
     - paragraphs.paragraphs_type.oe_text_feature_media
     - paragraphs.paragraphs_type.oe_timeline
   module:
@@ -77,6 +78,7 @@ settings:
       oe_carousel: oe_carousel
       oe_av_media: oe_av_media
       oe_gallery: oe_gallery
+      oe_tabs: oe_tabs
     negate: 0
     target_bundles_drag_drop:
       oe_accordion:
@@ -168,6 +170,12 @@ settings:
         enabled: true
       oe_social_media_follow:
         weight: -46
+        enabled: true
+      oe_tab:
+        weight: 47
+        enabled: false
+      oe_tabs:
+        weight: 46
         enabled: true
       oe_text_feature_media:
         weight: -44

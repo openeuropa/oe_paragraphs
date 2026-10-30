@@ -45,6 +45,7 @@ class DemoLandingPageTest extends ParagraphsDemoTestBase {
       'Illustration list with flags',
       'Illustration list with icons',
       'Illustration list with images',
+      'Tabs',
     ];
 
     $target_bundles = FieldConfig::loadByName('node', 'oe_demo_landing_page', 'field_oe_demo_body')->getSetting('handler_settings')['target_bundles'];
