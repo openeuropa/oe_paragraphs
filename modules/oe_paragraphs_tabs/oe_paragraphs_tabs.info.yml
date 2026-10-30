@@ -1,0 +1,23 @@
+name: OpenEuropa Paragraphs Tabs
+type: module
+description: Provides a Tabs paragraph that holds Tab paragraphs, each Tab having a label and its own paragraphs.
+package: OpenEuropa
+core_version_requirement: ^10 || ^11
+
+dependencies:
+  - oe_paragraphs:oe_paragraphs
+
+config_devel:
+  install:
+    - core.entity_form_display.paragraph.oe_tab.default
+    - core.entity_form_display.paragraph.oe_tabs.default
+    - core.entity_view_display.paragraph.oe_tab.default
+    - core.entity_view_display.paragraph.oe_tabs.default
+    - field.field.paragraph.oe_tab.field_oe_paragraphs
+    - field.field.paragraph.oe_tab.field_oe_title
+    - field.field.paragraph.oe_tabs.field_oe_paragraphs
+    - paragraphs.paragraphs_type.oe_tab
+    - paragraphs.paragraphs_type.oe_tabs
+  optional:
+    - language.content_settings.paragraph.oe_tab
+    - language.content_settings.paragraph.oe_tabs

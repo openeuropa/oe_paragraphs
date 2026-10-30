@@ -22,6 +22,7 @@ dependencies:
   - oe_paragraphs:oe_paragraphs_carousel
   - oe_paragraphs:oe_paragraphs_gallery
   - oe_paragraphs:oe_paragraphs_av_media
+  - oe_paragraphs:oe_paragraphs_tabs
 
 config_devel:
   install:
