@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.oe_tabs.field_oe_paragraphs
+    - paragraphs.paragraphs_type.oe_tabs
+  module:
+    - oe_paragraphs
+id: paragraph.oe_tabs.default
+targetEntityType: paragraph
+bundle: oe_tabs
+mode: default
+content:
+  field_oe_paragraphs:
+    type: oe_paragraphs_variants
+    weight: 0
+    settings:
+      title: Tab
+      title_plural: Tabs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: oe_tab
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

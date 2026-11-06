@@ -89,6 +89,11 @@ To get this paragraph type enable the OpenEuropa Text with featured Media paragr
 Allows editors to create paragraphs that display Webtools social feed media entities. To get this paragraph type enable
 the OpenEuropa Paragraphs Social feed submodule.
 
+#### Tabs
+Allows editors to create Tabs: each Tab has a label and its own paragraphs (Rich text, Accordion, Content row...).
+A Tab cannot contain Tabs, and a Content row inside a Tab cannot use the in-page navigation variant. To get these
+paragraph types enable the OpenEuropa Paragraphs Tabs submodule.
+
 #### Timeline
 Allows editors to create paragraphs that display displays concurrent and/or sequential items visually on a time axis.
 To get this paragraph type enable the OpenEuropa Paragraphs Timeline submodule.
