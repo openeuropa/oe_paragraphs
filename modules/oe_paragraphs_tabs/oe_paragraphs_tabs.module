@@ -14,10 +14,8 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_entity_bundle_field_info_alter().
  */
 function oe_paragraphs_tabs_entity_bundle_field_info_alter(array &$fields, EntityTypeInterface $entity_type, string $bundle): void {
-  // No tabs inside a tab, also through a Content row, and no in-page
-  // navigation Content row.
+  // No in-page navigation Content row inside a Tab.
   if ($entity_type->id() === 'paragraph' && $bundle === 'oe_tab' && isset($fields['field_oe_paragraphs'])) {
-    $fields['field_oe_paragraphs']->addConstraint('OeParagraphsNoNestedTabs');
     $fields['field_oe_paragraphs']->addConstraint('OeParagraphsTabNoInpageNavigation');
   }
 }
