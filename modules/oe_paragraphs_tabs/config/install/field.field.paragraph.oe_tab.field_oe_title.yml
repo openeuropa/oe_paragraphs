@@ -8,8 +8,8 @@ id: paragraph.oe_tab.field_oe_title
 field_name: field_oe_title
 entity_type: paragraph
 bundle: oe_tab
-label: Label
-description: 'Label of the tab button.'
+label: Heading
+description: ''
 required: true
 translatable: true
 default_value: {  }

@@ -1,6 +1,6 @@
 name: OpenEuropa Paragraphs Tabs
 type: module
-description: Provides a Tabs paragraph that holds Tab paragraphs, each Tab having a label and its own paragraphs.
+description: Provides a Tabs paragraph that holds Tab paragraphs, each Tab having a heading and its own paragraphs.
 package: OpenEuropa
 core_version_requirement: ^10 || ^11
 

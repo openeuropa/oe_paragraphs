@@ -4,11 +4,12 @@ dependencies:
   config:
     - field.storage.paragraph.field_oe_paragraphs
     - paragraphs.paragraphs_type.oe_accordion
-    - paragraphs.paragraphs_type.oe_content_row
-    - paragraphs.paragraphs_type.oe_links_block
+    - paragraphs.paragraphs_type.oe_contextual_navigation
+    - paragraphs.paragraphs_type.oe_facts_figures
     - paragraphs.paragraphs_type.oe_list_item_block
     - paragraphs.paragraphs_type.oe_quote
     - paragraphs.paragraphs_type.oe_rich_text
+    - paragraphs.paragraphs_type.oe_social_media_follow
     - paragraphs.paragraphs_type.oe_tab
   module:
     - entity_reference_revisions
@@ -17,7 +18,7 @@ field_name: field_oe_paragraphs
 entity_type: paragraph
 bundle: oe_tab
 label: Content
-description: 'Paragraphs shown in the tab. Tabs cannot be added in a tab.'
+description: ''
 required: true
 translatable: false
 default_value: {  }
@@ -29,10 +30,11 @@ settings:
     target_bundles:
       oe_rich_text: oe_rich_text
       oe_accordion: oe_accordion
-      oe_content_row: oe_content_row
-      oe_links_block: oe_links_block
+      oe_contextual_navigation: oe_contextual_navigation
+      oe_facts_figures: oe_facts_figures
       oe_list_item_block: oe_list_item_block
       oe_quote: oe_quote
+      oe_social_media_follow: oe_social_media_follow
     target_bundles_drag_drop:
       oe_rich_text:
         enabled: true
@@ -40,10 +42,10 @@ settings:
       oe_accordion:
         enabled: true
         weight: 1
-      oe_content_row:
+      oe_contextual_navigation:
         enabled: true
         weight: 2
-      oe_links_block:
+      oe_facts_figures:
         enabled: true
         weight: 3
       oe_list_item_block:
@@ -52,4 +54,7 @@ settings:
       oe_quote:
         enabled: true
         weight: 5
+      oe_social_media_follow:
+        enabled: true
+        weight: 6
 field_type: entity_reference_revisions

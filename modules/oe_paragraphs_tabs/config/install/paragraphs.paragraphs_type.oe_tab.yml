@@ -5,5 +5,5 @@ id: oe_tab
 label: Tab
 icon_uuid: null
 icon_default: null
-description: 'One tab: a label and the paragraphs shown in the tab.'
+description: 'Single Tab item, to be used exclusively in conjunction with the "Tabs" paragraph type.'
 behavior_plugins: {  }
