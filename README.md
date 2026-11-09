@@ -90,9 +90,8 @@ Allows editors to create paragraphs that display Webtools social feed media enti
 the OpenEuropa Paragraphs Social feed submodule.
 
 #### Tabs
-Allows editors to create Tabs: each Tab has a heading and its own paragraphs (Rich text, Accordion, Quote...).
-A Tab cannot contain Tabs or a Content row. To get these paragraph types enable the OpenEuropa Paragraphs Tabs
-submodule.
+Allows editors to create Tabs, each with a heading and its own paragraphs. To get these paragraph types enable the
+OpenEuropa Paragraphs Tabs submodule.
 
 #### Timeline
 Allows editors to create paragraphs that display displays concurrent and/or sequential items visually on a time axis.

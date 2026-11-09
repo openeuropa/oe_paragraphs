@@ -19,7 +19,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_oe_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: 0
     region: content
-hidden:
-  field_oe_title: true
+hidden: {  }

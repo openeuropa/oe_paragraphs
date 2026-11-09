@@ -5,5 +5,5 @@ id: oe_tabs
 label: Tabs
 icon_uuid: null
 icon_default: null
-description: 'Groups content into tabs. Each tab is a "Tab" paragraph.'
+description: 'Groups content into tabs.'
 behavior_plugins: {  }

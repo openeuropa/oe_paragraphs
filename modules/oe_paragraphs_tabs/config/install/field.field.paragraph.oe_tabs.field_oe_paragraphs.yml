@@ -11,7 +11,7 @@ id: paragraph.oe_tabs.field_oe_paragraphs
 field_name: field_oe_paragraphs
 entity_type: paragraph
 bundle: oe_tabs
-label: Tabs
+label: Items
 description: ''
 required: true
 translatable: false
